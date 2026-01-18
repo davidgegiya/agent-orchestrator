@@ -1,0 +1,386 @@
+from __future__ import annotations
+
+import importlib
+import os
+import traceback
+from datetime import datetime
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - optional for local dev
+    def load_dotenv(*_args, **_kwargs) -> bool:
+        return False
+
+from .models import RunContext
+from .policies import MAX_ROUNDS, MAX_TURNS, ReviewDecision, is_stuck, model_for_role, parse_reviewer_output
+from .reporting import RunReport, create_run_dir
+from .utils import is_effectively_empty, read_text
+
+DEMO_TASK = """Create a tiny Python package inside workspace/:
+- app/greeter.py with a greet(name: str) -> str function
+- pytest tests for greet
+- workspace/requirements.txt listing pytest
+- workspace/README.md with usage and test instructions
+"""
+
+
+def _load_optional(path: Path) -> str:
+    return read_text(path, required=False)
+
+
+def _truncate_for_prompt(text: str, max_chars: int, *, label: str) -> str:
+    if max_chars <= 0:
+        return ""
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars].rstrip() + f"\n\n...[{label} truncated to {max_chars} chars]"
+
+
+def _build_planner_input(task: str, backlog: str, vision: str, architecture: str, conventions: str) -> str:
+    return (
+        "TASK:\n"
+        f"{task.strip()}\n\n"
+        "BACKLOG:\n"
+        f"{backlog.strip()}\n\n"
+        "VISION:\n"
+        f"{vision.strip()}\n\n"
+        "ARCHITECTURE:\n"
+        f"{architecture.strip()}\n\n"
+        "CONVENTIONS:\n"
+        f"{conventions.strip()}\n"
+    )
+
+
+def _build_implementer_input(
+    task: str,
+    plan: str,
+    fixes: Optional[List[str]],
+    architecture: str,
+    conventions: str,
+) -> str:
+    fixes_block = "\n".join(f"- {fix}" for fix in fixes) if fixes else "- None"
+    return (
+        "TASK:\n"
+        f"{task.strip()}\n\n"
+        "PLAN:\n"
+        f"{plan.strip()}\n\n"
+        "ARCHITECTURE:\n"
+        f"{architecture.strip()}\n\n"
+        "CONVENTIONS:\n"
+        f"{conventions.strip()}\n\n"
+        "REVIEW_FIXES:\n"
+        f"{fixes_block}\n"
+    )
+
+
+def _build_reviewer_input(task: str, plan: str, tool_outputs: str, implementer_report: str) -> str:
+    return (
+        "TASK:\n"
+        f"{task.strip()}\n\n"
+        "PLAN:\n"
+        f"{plan.strip()}\n\n"
+        "TOOL_OUTPUTS:\n"
+        f"{tool_outputs.strip()}\n\n"
+        "IMPLEMENTER_REPORT:\n"
+        f"{implementer_report.strip()}\n"
+    )
+
+
+def _build_tech_writer_input(task: str, plan: str, reviewer: ReviewDecision) -> str:
+    return (
+        "TASK:\n"
+        f"{task.strip()}\n\n"
+        "PLAN:\n"
+        f"{plan.strip()}\n\n"
+        "REVIEW:\n"
+        f"{reviewer.raw.strip()}\n"
+    )
+
+
+def _collect_tool_events(ctx: RunContext) -> Dict[str, Any]:
+    commands = [event for event in ctx.tool_events if event.get("tool") == "run_cmd"]
+    files_written = [event for event in ctx.tool_events if event.get("tool") == "fs_write"]
+    return {
+        "commands": commands,
+        "files_written": files_written,
+        "events": ctx.tool_events,
+    }
+
+
+def _needs_docs_update(decision: ReviewDecision) -> bool:
+    return any(fix.strip().upper().startswith("DOCS:") for fix in decision.fixes)
+
+
+def _format_tool_outputs(events: List[Dict[str, Any]]) -> str:
+    run_cmd_events = [e for e in events if e.get("tool") == "run_cmd"]
+    fs_write_events = [e for e in events if e.get("tool") == "fs_write"]
+
+    lines: List[str] = []
+    if fs_write_events:
+        lines.append("FILES_WRITTEN:")
+        for e in fs_write_events:
+            lines.append(f"- {e.get('path')}")
+    if run_cmd_events:
+        lines.append("COMMAND_RESULTS:")
+        for e in run_cmd_events:
+            cmd = (e.get("cmd") or "").strip()
+            rc = e.get("returncode")
+            blocked = bool(e.get("blocked"))
+            lines.append(f"- {cmd} -> {rc}{' (BLOCKED)' if blocked else ''}")
+            stderr = (e.get("stderr") or "").strip()
+            if stderr:
+                snippet = stderr if len(stderr) <= 400 else (stderr[:400] + "...<truncated>")
+                lines.append(f"  stderr: {snippet}")
+    if not lines:
+        return "- None"
+    return "\n".join(lines)
+
+
+def _safe_run(
+    agent,
+    input_text: str,
+    max_turns: int,
+    context: Optional[RunContext] = None,
+) -> Tuple[str, Optional[str]]:
+    try:
+        from agents import Runner
+
+        result = Runner.run_sync(
+            agent,
+            input=input_text,
+            max_turns=max_turns,
+            context=context,
+        )
+        return (result.final_output or "", None)
+    except Exception as exc:  # noqa: BLE001
+        return ("", f"{type(exc).__name__}: {exc}\n{traceback.format_exc()}")
+
+
+def main() -> int:
+    repo_root = Path(__file__).resolve().parents[1]
+    load_dotenv(repo_root / ".env")
+
+    run_dir = create_run_dir(repo_root / "project" / "reports")
+    report = RunReport(run_dir)
+
+    print(f"Reports: {run_dir}")
+
+    artifacts: Dict[str, Any] = {
+        "run_dir": str(run_dir),
+        "started_at": datetime.now().isoformat(timespec="seconds"),
+        "rounds": [],
+        "final_verdict": "FAIL",
+        "final_action": "SKIP",
+        "models": {
+            "planner": model_for_role("planner"),
+            "implementer": model_for_role("implementer"),
+            "reviewer": model_for_role("reviewer"),
+            "tech_writer": model_for_role("tech_writer"),
+        },
+    }
+
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        artifacts["error"] = "Missing OPENAI_API_KEY"
+        report.write_artifacts(artifacts)
+        print("Verdict: FAIL")
+        print("Action: SKIP")
+        return 1
+
+    try:
+        importlib.import_module("agents")
+    except ImportError as exc:
+        artifacts["error"] = f"Missing dependency: {exc}"
+        report.write_artifacts(artifacts)
+        print("Verdict: FAIL")
+        print("Action: SKIP")
+        return 1
+
+    from .agents import (
+        build_implementer_agent,
+        build_planner_agent,
+        build_reviewer_agent,
+        build_tech_writer_agent,
+    )
+
+    task_path = repo_root / "project" / "tasks" / "current.md"
+    task_text = read_text(task_path, required=True)
+    task_source = "current.md"
+    if is_effectively_empty(task_text):
+        task_text = DEMO_TASK
+        task_source = "demo"
+    artifacts["task_source"] = task_source
+
+    vision = _load_optional(repo_root / "project" / "vision.md")
+    architecture = _load_optional(repo_root / "project" / "architecture.md")
+    conventions = _load_optional(repo_root / "project" / "conventions.md")
+    backlog_raw = _load_optional(repo_root / "project" / "tasks" / "backlog.md")
+    backlog_max_chars = int(os.environ.get("ORCH_PLANNER_BACKLOG_MAX_CHARS", "8000"))
+    backlog = "" if is_effectively_empty(backlog_raw) else _truncate_for_prompt(backlog_raw, backlog_max_chars, label="BACKLOG")
+    artifacts["backlog_included"] = bool(backlog.strip())
+    artifacts["backlog_max_chars"] = backlog_max_chars
+
+    planner = build_planner_agent()
+    planner_input = _build_planner_input(task_text, backlog, vision, architecture, conventions)
+    plan_text, plan_error = _safe_run(
+        planner,
+        planner_input,
+        MAX_TURNS["planner"],
+    )
+    if plan_error:
+        artifacts["error"] = f"Planner failed: {plan_error}"
+        report.write_artifacts(artifacts)
+        print("Verdict: FAIL")
+        print("Action: SKIP")
+        return 1
+    report.write_plan(plan_text)
+    artifacts["plan_path"] = str(report.plan_path)
+
+    implementer = build_implementer_agent()
+    reviewer = build_reviewer_agent()
+    tech_writer = build_tech_writer_agent()
+
+    previous_reviewer_text = ""
+    review_decision: Optional[ReviewDecision] = None
+
+    loop_exhausted = True
+    for round_idx in range(1, MAX_ROUNDS + 1):
+        implementer_ctx = RunContext(
+            role="implementer",
+            repo_root=repo_root,
+            fs_base=repo_root / "workspace",
+            allow_write=True,
+            shell_cwd=repo_root / "workspace",
+        )
+        implementer_input = _build_implementer_input(
+            task_text,
+            plan_text,
+            review_decision.fixes if review_decision else None,
+            architecture,
+            conventions,
+        )
+        implementer_report, impl_error = _safe_run(
+            implementer,
+            implementer_input,
+            MAX_TURNS["implementer"],
+            context=implementer_ctx,
+        )
+        if impl_error:
+            artifacts["error"] = f"Implementer failed: {impl_error}"
+            report.write_artifacts(artifacts)
+            print(f"Round {round_idx}: FAIL SKIP")
+            print("Verdict: FAIL")
+            print("Action: SKIP")
+            return 1
+        report.append_implementer(round_idx, implementer_report)
+
+        tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
+        reviewer_input = _build_reviewer_input(task_text, plan_text, tool_outputs, implementer_report)
+        reviewer_report, review_error = _safe_run(
+            reviewer,
+            reviewer_input,
+            MAX_TURNS["reviewer"],
+        )
+        if review_error:
+            artifacts["error"] = f"Reviewer failed: {review_error}"
+            report.write_artifacts(artifacts)
+            print(f"Round {round_idx}: FAIL SKIP")
+            print("Verdict: FAIL")
+            print("Action: SKIP")
+            return 1
+        report.append_reviewer(round_idx, reviewer_report)
+
+        review_decision = parse_reviewer_output(reviewer_report)
+        round_record = {
+            "round": round_idx,
+            "implementer_report": str(report.implementer_path),
+            "reviewer_report": str(report.reviewer_path),
+            "review_decision": {
+                "verdict": review_decision.verdict,
+                "action": review_decision.action,
+                "fixes": review_decision.fixes,
+            },
+            "tool_events": _collect_tool_events(implementer_ctx),
+        }
+        artifacts["rounds"].append(round_record)
+
+        if is_stuck(previous_reviewer_text, reviewer_report):
+            review_decision = ReviewDecision(
+                verdict="FAIL",
+                action="SKIP",
+                fixes=review_decision.fixes,
+                raw=reviewer_report,
+            )
+            print(f"Round {round_idx}: FAIL SKIP")
+            artifacts["stuck"] = True
+            artifacts["final_verdict"] = "FAIL"
+            artifacts["final_action"] = "SKIP"
+            loop_exhausted = False
+            break
+
+        previous_reviewer_text = reviewer_report
+
+        if review_decision.verdict == "PASS":
+            print(f"Round {round_idx}: PASS")
+            artifacts["final_verdict"] = "PASS"
+            artifacts["final_action"] = "PASS"
+            loop_exhausted = False
+            break
+
+        if review_decision.action == "SKIP":
+            print(f"Round {round_idx}: FAIL SKIP")
+            artifacts["final_verdict"] = "FAIL"
+            artifacts["final_action"] = "SKIP"
+            loop_exhausted = False
+            break
+
+        print(f"Round {round_idx}: FAIL CONTINUE")
+
+    if review_decision and loop_exhausted and review_decision.action == "CONTINUE":
+        artifacts["final_verdict"] = "FAIL"
+        artifacts["final_action"] = "SKIP"
+        artifacts["reason"] = "max_rounds"
+
+    docs_update = review_decision is not None and _needs_docs_update(review_decision)
+    if review_decision and (review_decision.verdict == "PASS" or docs_update):
+        tech_ctx = RunContext(
+            role="tech_writer",
+            repo_root=repo_root,
+            fs_base=repo_root / "project",
+            allow_write=True,
+            shell_cwd=repo_root / "workspace",
+        )
+        tech_input = _build_tech_writer_input(task_text, plan_text, review_decision)
+        tech_report, tech_error = _safe_run(
+            tech_writer,
+            tech_input,
+            MAX_TURNS["tech_writer"],
+            context=tech_ctx,
+        )
+        if tech_error:
+            artifacts["error"] = f"Tech writer failed: {tech_error}"
+            report.write_artifacts(artifacts)
+            print("Verdict: FAIL")
+            print("Action: SKIP")
+            return 1
+        report.write_tech_writer(tech_report)
+        artifacts["docs_updated"] = True
+
+    artifacts["ended_at"] = datetime.now().isoformat(timespec="seconds")
+    report.write_artifacts(artifacts)
+
+    final_verdict = artifacts.get("final_verdict", "FAIL")
+    final_action = artifacts.get("final_action", "SKIP")
+    print(f"Verdict: {final_verdict}")
+    if final_verdict == "PASS":
+        print("Action: PASS")
+    else:
+        print(f"Action: {final_action}")
+
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
