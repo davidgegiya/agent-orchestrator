@@ -6,12 +6,31 @@ from typing import List
 
 MAX_ROUNDS = 8
 
-MAX_TURNS = {
+DEFAULT_MAX_TURNS = {
     "planner": 6,
-    "implementer": 40,
+    "implementer": 80,
     "reviewer": 10,
     "tech_writer": 10,
 }
+
+ROLE_MAX_TURNS_ENVS = {
+    "planner": "ORCH_MAX_TURNS_PLANNER",
+    "implementer": "ORCH_MAX_TURNS_IMPLEMENTER",
+    "reviewer": "ORCH_MAX_TURNS_REVIEWER",
+    "tech_writer": "ORCH_MAX_TURNS_TECH_WRITER",
+}
+
+
+def max_turns_for_role(role: str) -> int:
+    env_var = ROLE_MAX_TURNS_ENVS.get(role)
+    if env_var:
+        value = os.environ.get(env_var)
+        if value and value.strip().isdigit():
+            return max(1, int(value.strip()))
+    value = os.environ.get("ORCH_MAX_TURNS")
+    if value and value.strip().isdigit():
+        return max(1, int(value.strip()))
+    return DEFAULT_MAX_TURNS.get(role, 10)
 
 MODEL_DEFAULT = "gpt-5.1-codex-mini"
 

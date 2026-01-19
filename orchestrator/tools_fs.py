@@ -16,6 +16,8 @@ def _resolve_path(base: Path, rel_path: str) -> Path:
     if rel_path.startswith("~"):
         raise ValueError("Tilde paths are not allowed")
     candidate = Path(rel_path)
+    if candidate.parts and candidate.parts[0] == base.name:
+        candidate = Path(*candidate.parts[1:]) if len(candidate.parts) > 1 else Path(".")
     if candidate.is_absolute():
         raise ValueError("Absolute paths are not allowed")
     resolved = (base / candidate).resolve()

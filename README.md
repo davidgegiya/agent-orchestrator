@@ -157,3 +157,15 @@ project/reports/run-YYYYMMDD-HHMMSS/
 - `ORCH_RETRY_PLANNER_MAX_ATTEMPTS`, `ORCH_RETRY_IMPLEMENTER_MAX_ATTEMPTS`, `ORCH_RETRY_REVIEWER_MAX_ATTEMPTS`, `ORCH_RETRY_TECH_WRITER_MAX_ATTEMPTS`
 - `ORCH_RETRY_BASE_DELAY_SECONDS` (по умолчанию 1)
 - `ORCH_RETRY_MAX_DELAY_SECONDS` (по умолчанию 8)
+
+## Лимиты шагов (max_turns)
+
+Agents SDK ограничивает “длину” диалога агента в шагах (`max_turns`). Если агент зациклился (слишком много tool-вызовов/перепланирования), шаг может упасть с `MaxTurnsExceeded`.
+
+Переменные:
+
+- `ORCH_MAX_TURNS` (глобально, опционально)
+- `ORCH_MAX_TURNS_PLANNER` (по умолчанию 6)
+- `ORCH_MAX_TURNS_IMPLEMENTER` (по умолчанию 80)
+- `ORCH_MAX_TURNS_REVIEWER` (по умолчанию 10)
+- `ORCH_MAX_TURNS_TECH_WRITER` (по умолчанию 10)

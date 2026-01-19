@@ -17,9 +17,9 @@ except ImportError:  # pragma: no cover - optional for local dev
 from .models import RunContext
 from .policies import (
     MAX_ROUNDS,
-    MAX_TURNS,
     ReviewDecision,
     is_stuck,
+    max_turns_for_role,
     model_for_role,
     parse_reviewer_output,
     retry_base_delay_seconds,
@@ -267,6 +267,12 @@ def main() -> int:
             "reviewer": model_for_role("reviewer"),
             "tech_writer": model_for_role("tech_writer"),
         },
+        "max_turns": {
+            "planner": max_turns_for_role("planner"),
+            "implementer": max_turns_for_role("implementer"),
+            "reviewer": max_turns_for_role("reviewer"),
+            "tech_writer": max_turns_for_role("tech_writer"),
+        },
     }
 
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -315,7 +321,7 @@ def main() -> int:
     plan_text, plan_error, plan_meta = _safe_run(
         planner,
         planner_input,
-        MAX_TURNS["planner"],
+        artifacts["max_turns"]["planner"],
         role="planner",
     )
     artifacts["planner_run"] = plan_meta
@@ -354,7 +360,7 @@ def main() -> int:
         implementer_report, impl_error, implementer_meta = _safe_run(
             implementer,
             implementer_input,
-            MAX_TURNS["implementer"],
+            artifacts["max_turns"]["implementer"],
             context=implementer_ctx,
             role="implementer",
         )
@@ -378,7 +384,7 @@ def main() -> int:
         reviewer_report, review_error, reviewer_meta = _safe_run(
             reviewer,
             reviewer_input,
-            MAX_TURNS["reviewer"],
+            artifacts["max_turns"]["reviewer"],
             role="reviewer",
         )
         round_record["reviewer_run"] = reviewer_meta
@@ -454,7 +460,7 @@ def main() -> int:
         tech_report, tech_error, tech_meta = _safe_run(
             tech_writer,
             tech_input,
-            MAX_TURNS["tech_writer"],
+            artifacts["max_turns"]["tech_writer"],
             context=tech_ctx,
             role="tech_writer",
         )
