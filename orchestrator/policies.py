@@ -38,6 +38,46 @@ def model_for_role(role: str) -> str:
             return value.strip()
     return DEFAULT_ROLE_MODELS.get(role, MODEL_DEFAULT)
 
+
+DEFAULT_RETRY_MAX_ATTEMPTS = {
+    "planner": 3,
+    "implementer": 3,
+    "reviewer": 3,
+    "tech_writer": 3,
+}
+
+ROLE_RETRY_MAX_ATTEMPTS_ENVS = {
+    "planner": "ORCH_RETRY_PLANNER_MAX_ATTEMPTS",
+    "implementer": "ORCH_RETRY_IMPLEMENTER_MAX_ATTEMPTS",
+    "reviewer": "ORCH_RETRY_REVIEWER_MAX_ATTEMPTS",
+    "tech_writer": "ORCH_RETRY_TECH_WRITER_MAX_ATTEMPTS",
+}
+
+
+def retry_max_attempts_for_role(role: str) -> int:
+    env_var = ROLE_RETRY_MAX_ATTEMPTS_ENVS.get(role)
+    if env_var:
+        value = os.environ.get(env_var)
+        if value and value.strip().isdigit():
+            return max(1, int(value.strip()))
+    return int(os.environ.get("ORCH_RETRY_MAX_ATTEMPTS", DEFAULT_RETRY_MAX_ATTEMPTS.get(role, 3)))
+
+
+def retry_base_delay_seconds() -> float:
+    value = os.environ.get("ORCH_RETRY_BASE_DELAY_SECONDS", "1")
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        return 1.0
+
+
+def retry_max_delay_seconds() -> float:
+    value = os.environ.get("ORCH_RETRY_MAX_DELAY_SECONDS", "8")
+    try:
+        return max(0.0, float(value))
+    except ValueError:
+        return 8.0
+
 PLAN_FILENAME = "plan.txt"
 IMPLEMENTER_FILENAME = "implementer.txt"
 REVIEWER_FILENAME = "reviewer.txt"

@@ -146,3 +146,14 @@ project/reports/run-YYYYMMDD-HHMMSS/
 Правило: если файл фактически пустой (например, только заголовок/`TODO`), используется встроенный дефолт.
 
 Важно: не ломай форматы вывода, иначе оркестратор не сможет распарсить результаты (особенно `Reviewer` с `VERDICT/ACTION/FIXES`).
+
+## Ретраи (устойчивость к сетевым сбоям)
+
+Если во время шага (Planner/Implementer/Reviewer/Tech Writer) происходит временная сетевая ошибка (например `APIConnectionError`), оркестратор повторяет шаг целиком детерминированно с exponential backoff и пишет детали попыток в `artifacts.json`.
+
+Переменные:
+
+- `ORCH_RETRY_MAX_ATTEMPTS` (по умолчанию 3)
+- `ORCH_RETRY_PLANNER_MAX_ATTEMPTS`, `ORCH_RETRY_IMPLEMENTER_MAX_ATTEMPTS`, `ORCH_RETRY_REVIEWER_MAX_ATTEMPTS`, `ORCH_RETRY_TECH_WRITER_MAX_ATTEMPTS`
+- `ORCH_RETRY_BASE_DELAY_SECONDS` (по умолчанию 1)
+- `ORCH_RETRY_MAX_DELAY_SECONDS` (по умолчанию 8)

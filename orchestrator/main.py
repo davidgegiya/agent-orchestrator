@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import os
+import time
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -14,7 +15,17 @@ except ImportError:  # pragma: no cover - optional for local dev
         return False
 
 from .models import RunContext
-from .policies import MAX_ROUNDS, MAX_TURNS, ReviewDecision, is_stuck, model_for_role, parse_reviewer_output
+from .policies import (
+    MAX_ROUNDS,
+    MAX_TURNS,
+    ReviewDecision,
+    is_stuck,
+    model_for_role,
+    parse_reviewer_output,
+    retry_base_delay_seconds,
+    retry_max_attempts_for_role,
+    retry_max_delay_seconds,
+)
 from .reporting import RunReport, create_run_dir
 from .utils import is_effectively_empty, read_text
 
@@ -143,19 +154,96 @@ def _safe_run(
     input_text: str,
     max_turns: int,
     context: Optional[RunContext] = None,
-) -> Tuple[str, Optional[str]]:
-    try:
-        from agents import Runner
+    *,
+    role: str,
+) -> Tuple[str, Optional[str], Dict[str, Any]]:
+    max_attempts = retry_max_attempts_for_role(role)
+    base_delay = retry_base_delay_seconds()
+    max_delay = retry_max_delay_seconds()
 
-        result = Runner.run_sync(
-            agent,
-            input=input_text,
-            max_turns=max_turns,
-            context=context,
-        )
-        return (result.final_output or "", None)
-    except Exception as exc:  # noqa: BLE001
-        return ("", f"{type(exc).__name__}: {exc}\n{traceback.format_exc()}")
+    errors: List[Dict[str, Any]] = []
+
+    def is_retryable(exc: Exception) -> bool:
+        try:
+            import openai
+        except Exception:  # noqa: BLE001
+            openai = None  # type: ignore[assignment]
+        try:
+            import httpx
+        except Exception:  # noqa: BLE001
+            httpx = None  # type: ignore[assignment]
+        try:
+            import httpcore
+        except Exception:  # noqa: BLE001
+            httpcore = None  # type: ignore[assignment]
+
+        if openai is not None:
+            retryable = (
+                openai.APIConnectionError,
+                openai.APITimeoutError,
+                openai.RateLimitError,
+                openai.InternalServerError,
+            )
+            if isinstance(exc, retryable):
+                return True
+
+        if httpx is not None:
+            if isinstance(exc, (httpx.TimeoutException, httpx.TransportError)):
+                return True
+
+        if httpcore is not None:
+            if isinstance(exc, (httpcore.TimeoutException, httpcore.NetworkError, httpcore.RemoteProtocolError)):
+                return True
+
+        return False
+
+    last_error: Optional[str] = None
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            from agents import Runner
+
+            result = Runner.run_sync(
+                agent,
+                input=input_text,
+                max_turns=max_turns,
+                context=context,
+            )
+            meta = {
+                "role": role,
+                "attempts": attempt,
+                "max_attempts": max_attempts,
+                "base_delay_seconds": base_delay,
+                "max_delay_seconds": max_delay,
+                "errors": errors,
+            }
+            return (result.final_output or "", None, meta)
+        except Exception as exc:  # noqa: BLE001
+            retryable = is_retryable(exc)
+            last_error = f"{type(exc).__name__}: {exc}\n{traceback.format_exc()}"
+            errors.append(
+                {
+                    "attempt": attempt,
+                    "retryable": retryable,
+                    "error": f"{type(exc).__name__}: {exc}",
+                }
+            )
+            if (not retryable) or attempt >= max_attempts:
+                break
+
+            delay = min(max_delay, base_delay * (2 ** (attempt - 1)))
+            errors[-1]["sleep_seconds"] = delay
+            time.sleep(delay)
+
+    meta = {
+        "role": role,
+        "attempts": len(errors),
+        "max_attempts": max_attempts,
+        "base_delay_seconds": base_delay,
+        "max_delay_seconds": max_delay,
+        "errors": errors,
+    }
+    return ("", last_error, meta)
 
 
 def main() -> int:
@@ -224,11 +312,13 @@ def main() -> int:
 
     planner = build_planner_agent()
     planner_input = _build_planner_input(task_text, backlog, vision, architecture, conventions)
-    plan_text, plan_error = _safe_run(
+    plan_text, plan_error, plan_meta = _safe_run(
         planner,
         planner_input,
         MAX_TURNS["planner"],
+        role="planner",
     )
+    artifacts["planner_run"] = plan_meta
     if plan_error:
         artifacts["error"] = f"Planner failed: {plan_error}"
         report.write_artifacts(artifacts)
@@ -261,14 +351,21 @@ def main() -> int:
             architecture,
             conventions,
         )
-        implementer_report, impl_error = _safe_run(
+        implementer_report, impl_error, implementer_meta = _safe_run(
             implementer,
             implementer_input,
             MAX_TURNS["implementer"],
             context=implementer_ctx,
+            role="implementer",
         )
+        round_record: Dict[str, Any] = {
+            "round": round_idx,
+            "implementer_run": implementer_meta,
+            "tool_events": _collect_tool_events(implementer_ctx),
+        }
         if impl_error:
             artifacts["error"] = f"Implementer failed: {impl_error}"
+            artifacts["rounds"].append(round_record)
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP")
             print("Verdict: FAIL")
@@ -278,13 +375,16 @@ def main() -> int:
 
         tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
         reviewer_input = _build_reviewer_input(task_text, plan_text, tool_outputs, implementer_report)
-        reviewer_report, review_error = _safe_run(
+        reviewer_report, review_error, reviewer_meta = _safe_run(
             reviewer,
             reviewer_input,
             MAX_TURNS["reviewer"],
+            role="reviewer",
         )
+        round_record["reviewer_run"] = reviewer_meta
         if review_error:
             artifacts["error"] = f"Reviewer failed: {review_error}"
+            artifacts["rounds"].append(round_record)
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP")
             print("Verdict: FAIL")
@@ -293,8 +393,7 @@ def main() -> int:
         report.append_reviewer(round_idx, reviewer_report)
 
         review_decision = parse_reviewer_output(reviewer_report)
-        round_record = {
-            "round": round_idx,
+        round_record.update({
             "implementer_report": str(report.implementer_path),
             "reviewer_report": str(report.reviewer_path),
             "review_decision": {
@@ -302,8 +401,7 @@ def main() -> int:
                 "action": review_decision.action,
                 "fixes": review_decision.fixes,
             },
-            "tool_events": _collect_tool_events(implementer_ctx),
-        }
+        })
         artifacts["rounds"].append(round_record)
 
         if is_stuck(previous_reviewer_text, reviewer_report):
@@ -353,12 +451,14 @@ def main() -> int:
             shell_cwd=repo_root / "workspace",
         )
         tech_input = _build_tech_writer_input(task_text, plan_text, review_decision)
-        tech_report, tech_error = _safe_run(
+        tech_report, tech_error, tech_meta = _safe_run(
             tech_writer,
             tech_input,
             MAX_TURNS["tech_writer"],
             context=tech_ctx,
+            role="tech_writer",
         )
+        artifacts["tech_writer_run"] = tech_meta
         if tech_error:
             artifacts["error"] = f"Tech writer failed: {tech_error}"
             report.write_artifacts(artifacts)
