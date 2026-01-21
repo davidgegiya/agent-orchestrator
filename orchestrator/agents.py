@@ -49,6 +49,7 @@ NOTES:
 REVIEWER_INSTRUCTIONS = """You are Reviewer.
 You must not modify files or call tools.
 Judge whether the implementer output satisfies the task and plan.
+Use the provided DIFF (git patch) when available to review code changes; do not ask the user to open files.
 Rules:
 - If the implementation meets the task+plan AND tests ran successfully, set VERDICT: PASS.
 - If tests did NOT run successfully due to missing dependencies or environment setup (e.g. pytest not installed),

@@ -70,6 +70,7 @@ python -m orchestrator.main
    - **Reviewer** проверяет отчёт Implementer’а и выносит решение:
      - `VERDICT: PASS|FAIL`
      - `ACTION: CONTINUE|SKIP`
+     - получает `git diff`/patch по изменениям в `workspace/` (чтобы реально ревьюить код без доступа к файловой системе)
      Если проблема в окружении/зависимостях (например, нет `pytest`) — Reviewer обязан поставить `VERDICT: FAIL` и `ACTION: SKIP` и написать точные ручные шаги установки.
    - Если Reviewer повторяет один и тот же текст 2 раза подряд — включается “stuck detection” и прогон останавливается (`SKIP`).
 
@@ -93,6 +94,7 @@ project/reports/run-YYYYMMDD-HHMMSS/
 - `implementer.txt` — отчёты Implementer по раундам.
 - `reviewer.txt` — вердикты Reviewer по раундам.
 - `tech_writer.txt` — изменения документации (если запускался).
+- `diff_round_N.patch` — `git diff`/patch по `workspace/` для соответствующего раунда (включая новые файлы).
 - `artifacts.json` — структурированные данные: команды, результаты, пути файлов, вердикты.
 
 ## Как писать задачи (практика)
@@ -146,6 +148,14 @@ project/reports/run-YYYYMMDD-HHMMSS/
 Правило: если файл фактически пустой (например, только заголовок/`TODO`), используется встроенный дефолт.
 
 Важно: не ломай форматы вывода, иначе оркестратор не сможет распарсить результаты (особенно `Reviewer` с `VERDICT/ACTION/FIXES`).
+
+## Diff для Reviewer (git diff)
+
+Оркестратор автоматически прикладывает в вход Reviewer секцию `DIFF:` — это `git diff`/patch по изменениям в `workspace/` (включая новые файлы). Это позволяет Reviewer делать настоящее code review без доступа к файловой системе.
+
+Переменная:
+
+- `ORCH_REVIEWER_DIFF_MAX_CHARS` (по умолчанию 12000) — ограничение размера `DIFF:` в промпте Reviewer (полный патч всё равно сохраняется в `project/reports/run-.../diff_round_N.patch`).
 
 ## Ретраи (устойчивость к сетевым сбоям)
 

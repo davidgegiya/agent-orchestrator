@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import os
+import subprocess
 import time
 import traceback
 from datetime import datetime
@@ -86,7 +87,7 @@ def _build_implementer_input(
     )
 
 
-def _build_reviewer_input(task: str, plan: str, tool_outputs: str, implementer_report: str) -> str:
+def _build_reviewer_input(task: str, plan: str, tool_outputs: str, diff_text: str, implementer_report: str) -> str:
     return (
         "TASK:\n"
         f"{task.strip()}\n\n"
@@ -94,6 +95,8 @@ def _build_reviewer_input(task: str, plan: str, tool_outputs: str, implementer_r
         f"{plan.strip()}\n\n"
         "TOOL_OUTPUTS:\n"
         f"{tool_outputs.strip()}\n\n"
+        "DIFF:\n"
+        f"{diff_text.strip()}\n\n"
         "IMPLEMENTER_REPORT:\n"
         f"{implementer_report.strip()}\n"
     )
@@ -147,6 +150,126 @@ def _format_tool_outputs(events: List[Dict[str, Any]]) -> str:
     if not lines:
         return "- None"
     return "\n".join(lines)
+
+
+def _truncate(text: str, limit: int) -> str:
+    if limit <= 0:
+        return ""
+    if len(text) <= limit:
+        return text
+    return text[:limit].rstrip() + f"\n\n...[truncated to {limit} chars]"
+
+
+def _run_local_cmd(args: List[str], *, cwd: Path, timeout_seconds: int) -> Dict[str, Any]:
+    try:
+        result = subprocess.run(
+            args,
+            cwd=str(cwd),
+            capture_output=True,
+            text=True,
+            timeout=timeout_seconds,
+        )
+        return {
+            "cmd": " ".join(args),
+            "returncode": result.returncode,
+            "stdout": result.stdout or "",
+            "stderr": result.stderr or "",
+        }
+    except FileNotFoundError:
+        return {
+            "cmd": " ".join(args),
+            "returncode": 127,
+            "stdout": "",
+            "stderr": "COMMAND_NOT_FOUND",
+        }
+    except subprocess.TimeoutExpired as exc:
+        return {
+            "cmd": " ".join(args),
+            "returncode": 124,
+            "stdout": exc.stdout or "",
+            "stderr": f"TIMEOUT after {timeout_seconds}s",
+        }
+
+
+def _cmd_meta(result: Dict[str, Any], *, limit: int = 800) -> Dict[str, Any]:
+    def _truncate_stdio(text: str, max_chars: int) -> Tuple[str, bool]:
+        if text is None:
+            return ("", False)
+        if len(text) <= max_chars:
+            return (text, False)
+        return (text[:max_chars] + "...<truncated>", True)
+
+    stdout_raw = result.get("stdout") or ""
+    stderr_raw = result.get("stderr") or ""
+    stdout_preview, stdout_truncated = _truncate_stdio(stdout_raw, limit)
+    stderr_preview, stderr_truncated = _truncate_stdio(stderr_raw, limit)
+    return {
+        "cmd": result.get("cmd"),
+        "returncode": result.get("returncode"),
+        "stdout": stdout_preview,
+        "stderr": stderr_preview,
+        "stdout_len": len(stdout_raw),
+        "stderr_len": len(stderr_raw),
+        "stdout_truncated": stdout_truncated,
+        "stderr_truncated": stderr_truncated,
+    }
+
+
+def _compute_workspace_diff(repo_root: Path) -> Tuple[str, Dict[str, Any]]:
+    """
+    Produces a patch-like diff for workspace/ using git.
+
+    Includes:
+    - tracked changes via `git diff`
+    - untracked new files via `git diff --no-index /dev/null <file>`
+    """
+    meta: Dict[str, Any] = {"available": False, "commands": []}
+    workspace_rel = "workspace"
+
+    probe = _run_local_cmd(["git", "rev-parse", "--is-inside-work-tree"], cwd=repo_root, timeout_seconds=5)
+    meta["commands"].append({**_cmd_meta(probe), "tool": "local_cmd"})
+    if probe["returncode"] != 0 or "true" not in (probe["stdout"] or "").strip().lower():
+        return ("- None", meta)
+
+    meta["available"] = True
+    diff_parts: List[str] = []
+
+    status = _run_local_cmd(["git", "status", "--porcelain", "--", workspace_rel], cwd=repo_root, timeout_seconds=10)
+    meta["commands"].append({**_cmd_meta(status), "tool": "local_cmd"})
+    status_out = (status.get("stdout") or "").rstrip()
+    if status_out:
+        diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
+
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--", workspace_rel], cwd=repo_root, timeout_seconds=30)
+    meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd"})
+    tracked_out = (tracked.get("stdout") or "").rstrip()
+    if tracked_out:
+        diff_parts.append("# GIT DIFF (workspace)\n" + tracked_out)
+
+    untracked = _run_local_cmd(
+        ["git", "ls-files", "--others", "--exclude-standard", "--", workspace_rel],
+        cwd=repo_root,
+        timeout_seconds=10,
+    )
+    meta["commands"].append({**_cmd_meta(untracked), "tool": "local_cmd"})
+    untracked_files = sorted([line.strip() for line in (untracked.get("stdout") or "").splitlines() if line.strip()])
+
+    null_path = "/dev/null" if Path("/dev/null").exists() else "NUL"
+    for rel_path in untracked_files:
+        patch = _run_local_cmd(
+            ["git", "diff", "--no-color", "--no-index", "--", null_path, rel_path],
+            cwd=repo_root,
+            timeout_seconds=30,
+        )
+        meta["commands"].append({**_cmd_meta(patch), "tool": "local_cmd"})
+        patch_out = (patch.get("stdout") or "").rstrip()
+        if patch_out:
+            diff_parts.append("# NEW FILE (untracked)\n" + patch_out)
+
+    if not diff_parts:
+        return ("- None", meta)
+
+    return ("\n\n".join(diff_parts).rstrip() + "\n", meta)
 
 
 def _safe_run(
@@ -380,7 +503,26 @@ def main() -> int:
         report.append_implementer(round_idx, implementer_report)
 
         tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
-        reviewer_input = _build_reviewer_input(task_text, plan_text, tool_outputs, implementer_report)
+
+        diff_text, diff_meta = _compute_workspace_diff(repo_root)
+        diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
+        reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
+        diff_path = run_dir / f"diff_round_{round_idx}.patch"
+        diff_path.write_text(diff_text, encoding="utf-8")
+        round_record["diff"] = {
+            "path": str(diff_path),
+            "max_chars": diff_max_chars,
+            "included": reviewer_diff.strip() != "- None",
+            "meta": diff_meta,
+        }
+
+        reviewer_input = _build_reviewer_input(
+            task_text,
+            plan_text,
+            tool_outputs,
+            reviewer_diff,
+            implementer_report,
+        )
         reviewer_report, review_error, reviewer_meta = _safe_run(
             reviewer,
             reviewer_input,
