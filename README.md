@@ -153,6 +153,11 @@ project/reports/run-YYYYMMDD-HHMMSS/
 
 Оркестратор автоматически прикладывает в вход Reviewer секцию `DIFF:` — это `git diff`/patch по изменениям в `workspace/` (включая новые файлы). Это позволяет Reviewer делать настоящее code review без доступа к файловой системе.
 
+Поддерживаются оба варианта структуры:
+
+- `workspace/` — отдельный git‑репозиторий продукта (есть `workspace/.git`) → diff берётся **изнутри `workspace/`**.
+- git‑репозиторий на верхнем уровне → diff берётся по поддереву `workspace/`.
+
 Переменная:
 
 - `ORCH_REVIEWER_DIFF_MAX_CHARS` (по умолчанию 12000) — ограничение размера `DIFF:` в промпте Reviewer (полный патч всё равно сохраняется в `project/reports/run-.../diff_round_N.patch`).

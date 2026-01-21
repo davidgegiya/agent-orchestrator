@@ -215,7 +215,7 @@ def _cmd_meta(result: Dict[str, Any], *, limit: int = 800) -> Dict[str, Any]:
     }
 
 
-def _compute_workspace_diff(repo_root: Path) -> Tuple[str, Dict[str, Any]]:
+def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, Dict[str, Any]]:
     """
     Produces a patch-like diff for workspace/ using git.
 
@@ -223,45 +223,74 @@ def _compute_workspace_diff(repo_root: Path) -> Tuple[str, Dict[str, Any]]:
     - tracked changes via `git diff`
     - untracked new files via `git diff --no-index /dev/null <file>`
     """
-    meta: Dict[str, Any] = {"available": False, "commands": []}
-    workspace_rel = "workspace"
+    meta: Dict[str, Any] = {"available": False, "commands": [], "probes": []}
 
-    probe = _run_local_cmd(["git", "rev-parse", "--is-inside-work-tree"], cwd=repo_root, timeout_seconds=5)
-    meta["commands"].append({**_cmd_meta(probe), "tool": "local_cmd"})
-    if probe["returncode"] != 0 or "true" not in (probe["stdout"] or "").strip().lower():
+    def _git_toplevel(cwd: Path, *, label: str) -> Path | None:
+        probe = _run_local_cmd(["git", "rev-parse", "--show-toplevel"], cwd=cwd, timeout_seconds=5)
+        meta["commands"].append({**_cmd_meta(probe), "tool": "local_cmd", "cwd": str(cwd)})
+        meta["probes"].append({"label": label, "cwd": str(cwd), **_cmd_meta(probe)})
+        if probe["returncode"] != 0:
+            return None
+        raw = (probe.get("stdout") or "").strip()
+        if not raw:
+            return None
+        return Path(raw).resolve()
+
+    # Prefer probing from workspace/ because it supports both layouts:
+    # - workspace/ is its own git repo (product repo lives inside workspace/)
+    # - repo_root is the git repo and workspace/ is a subdirectory
+    workspace_top = _git_toplevel(workspace_dir, label="workspace")
+    if workspace_top is None:
+        workspace_top = _git_toplevel(repo_root, label="repo_root")
+    if workspace_top is None:
         return ("- None", meta)
+
+    git_cwd = workspace_top
+    try:
+        workspace_rel = os.path.relpath(workspace_dir.resolve(), workspace_top.resolve())
+    except ValueError:
+        return ("- None", meta)
+
+    if workspace_rel == ".":
+        pathspec: List[str] = ["."]
+        meta["git_base"] = "workspace_repo"
+    else:
+        pathspec = [workspace_rel]
+        meta["git_base"] = "repo_root_repo"
+    meta["git_toplevel"] = str(workspace_top)
+    meta["workspace_pathspec"] = workspace_rel
 
     meta["available"] = True
     diff_parts: List[str] = []
 
-    status = _run_local_cmd(["git", "status", "--porcelain", "--", workspace_rel], cwd=repo_root, timeout_seconds=10)
-    meta["commands"].append({**_cmd_meta(status), "tool": "local_cmd"})
+    status = _run_local_cmd(["git", "status", "--porcelain", "--", *pathspec], cwd=git_cwd, timeout_seconds=10)
+    meta["commands"].append({**_cmd_meta(status), "tool": "local_cmd", "cwd": str(git_cwd)})
     status_out = (status.get("stdout") or "").rstrip()
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--", workspace_rel], cwd=repo_root, timeout_seconds=30)
-    meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd"})
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
+    meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     tracked_out = (tracked.get("stdout") or "").rstrip()
     if tracked_out:
         diff_parts.append("# GIT DIFF (workspace)\n" + tracked_out)
 
     untracked = _run_local_cmd(
-        ["git", "ls-files", "--others", "--exclude-standard", "--", workspace_rel],
-        cwd=repo_root,
+        ["git", "ls-files", "--others", "--exclude-standard", "--", *pathspec],
+        cwd=git_cwd,
         timeout_seconds=10,
     )
-    meta["commands"].append({**_cmd_meta(untracked), "tool": "local_cmd"})
+    meta["commands"].append({**_cmd_meta(untracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     untracked_files = sorted([line.strip() for line in (untracked.get("stdout") or "").splitlines() if line.strip()])
 
     null_path = "/dev/null" if Path("/dev/null").exists() else "NUL"
     for rel_path in untracked_files:
         patch = _run_local_cmd(
             ["git", "diff", "--no-color", "--no-index", "--", null_path, rel_path],
-            cwd=repo_root,
+            cwd=git_cwd,
             timeout_seconds=30,
         )
-        meta["commands"].append({**_cmd_meta(patch), "tool": "local_cmd"})
+        meta["commands"].append({**_cmd_meta(patch), "tool": "local_cmd", "cwd": str(git_cwd)})
         patch_out = (patch.get("stdout") or "").rstrip()
         if patch_out:
             diff_parts.append("# NEW FILE (untracked)\n" + patch_out)
@@ -504,7 +533,7 @@ def main() -> int:
 
         tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
 
-        diff_text, diff_meta = _compute_workspace_diff(repo_root)
+        diff_text, diff_meta = _compute_workspace_diff(repo_root, repo_root / "workspace")
         diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
         reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
         diff_path = run_dir / f"diff_round_{round_idx}.patch"
