@@ -162,6 +162,19 @@ project/reports/run-YYYYMMDD-HHMMSS/
 
 - `ORCH_REVIEWER_DIFF_MAX_CHARS` (по умолчанию 12000) — ограничение размера `DIFF:` в промпте Reviewer (полный патч всё равно сохраняется в `project/reports/run-.../diff_round_N.patch`).
 
+## Red Flags (автоскан для Reviewer)
+
+Оркестратор выполняет статический скан `workspace/` (по `.py/.pyi` файлам) на потенциально рискованные паттерны:
+`InMemory*`, `Mock/Fake`, `:memory:` и т.п. Результат передаётся Reviewer в секцию `RED_FLAGS:`.
+
+Это **не** заменяет ревью, но служит сигналом:
+если `RED_FLAGS` показывает in‑memory/моки **в рабочем коде**, а `TASK/PLAN/ACCEPTANCE` требуют реальную
+инфраструктуру (Postgres/RabbitMQ/MinIO/Docker Compose и т.п.), Reviewer обязан выдать `FAIL + CONTINUE`.
+
+Переменная:
+
+- `ORCH_REVIEWER_RED_FLAGS_MAX_CHARS` (по умолчанию 4000) — лимит длины секции `RED_FLAGS:`.
+
 ## Ретраи (устойчивость к сетевым сбоям)
 
 Если во время шага (Planner/Implementer/Reviewer/Tech Writer) происходит временная сетевая ошибка (например `APIConnectionError`), оркестратор повторяет шаг целиком детерминированно с exponential backoff и пишет детали попыток в `artifacts.json`.

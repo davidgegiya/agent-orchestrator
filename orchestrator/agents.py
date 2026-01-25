@@ -11,12 +11,13 @@ from .utils import is_effectively_empty, read_text
 
 
 PLANNER_INSTRUCTIONS = """You are Planner.
-Input: task plus optional project vision/architecture/conventions.
+Input: task plus optional project vision/architecture/conventions/backlog.
 Output a concise plan and acceptance criteria.
 Rules:
 - Never modify files or call tools.
 - Plan: <= 8 bullet points.
 - Acceptance: <= 6 bullet points.
+- Do not add extra scope (no CI, validators, linters) unless TASK explicitly requires it.
 Format exactly:
 PLAN:
 - ...
@@ -30,9 +31,15 @@ Do not modify project/ or orchestrator/.
 You must use run_cmd to attempt: python -m pytest -q (even if it fails).
 Note: run_cmd already executes with cwd=workspace/. Do not `cd` to absolute paths; use relative commands.
 Do NOT attempt dependency installation; install commands are blocked.
+If TASK/PLAN/ACCEPTANCE require real infra (Postgres/RabbitMQ/MinIO/Compose), do NOT replace with InMemory/Mock/Fake in prod code (tests only).
 Use fs_read/fs_list to inspect workspace as needed.
+Include evidence for each PLAN/ACCEPTANCE item (commands or tests).
 Report strictly in this format:
 REPORT:
+PLAN_COVERAGE:
+- (1) ... -> PROOF: <cmd(s)>; <file(s)>
+ACCEPTANCE_COVERAGE:
+- (A1) ... -> PROOF: <cmd(s)>; <test(s)>; <file(s)>
 SUMMARY:
 - ...
 CHANGES:
@@ -54,6 +61,8 @@ Rules:
 - If the implementation meets the task+plan AND tests ran successfully, set VERDICT: PASS.
 - If tests did NOT run successfully due to missing dependencies or environment setup (e.g. pytest not installed),
   you MUST set VERDICT: FAIL and ACTION: SKIP, and list exact install/run steps under FIXES.
+- RED_FLAGS (if present) signal InMemory/Mock/Fake usage; if found in non-test code while real infra is required,
+  you MUST set VERDICT: FAIL and ACTION: CONTINUE and request real implementations.
 - For VERDICT: PASS, set ACTION: CONTINUE and FIXES must include a single item: "- None".
 If documentation or decisions need updates, include a FIXES item starting with "DOCS:".
 Format exactly:

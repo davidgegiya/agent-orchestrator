@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import os
+import re
 import subprocess
 import time
 import traceback
@@ -52,16 +53,16 @@ def _truncate_for_prompt(text: str, max_chars: int, *, label: str) -> str:
 
 def _build_planner_input(task: str, backlog: str, vision: str, architecture: str, conventions: str) -> str:
     return (
-        "TASK:\n"
-        f"{task.strip()}\n\n"
-        "BACKLOG:\n"
-        f"{backlog.strip()}\n\n"
         "VISION:\n"
         f"{vision.strip()}\n\n"
         "ARCHITECTURE:\n"
         f"{architecture.strip()}\n\n"
         "CONVENTIONS:\n"
-        f"{conventions.strip()}\n"
+        f"{conventions.strip()}\n\n"
+        "BACKLOG:\n"
+        f"{backlog.strip()}\n\n"
+        "TASK:\n"
+        f"{task.strip()}\n"
     )
 
 
@@ -74,36 +75,57 @@ def _build_implementer_input(
 ) -> str:
     fixes_block = "\n".join(f"- {fix}" for fix in fixes) if fixes else "- None"
     return (
-        "TASK:\n"
-        f"{task.strip()}\n\n"
-        "PLAN:\n"
-        f"{plan.strip()}\n\n"
         "ARCHITECTURE:\n"
         f"{architecture.strip()}\n\n"
         "CONVENTIONS:\n"
         f"{conventions.strip()}\n\n"
+        "TASK:\n"
+        f"{task.strip()}\n\n"
+        "PLAN:\n"
+        f"{plan.strip()}\n\n"
         "REVIEW_FIXES:\n"
         f"{fixes_block}\n"
     )
 
 
-def _build_reviewer_input(task: str, plan: str, tool_outputs: str, diff_text: str, implementer_report: str) -> str:
+def _build_reviewer_input(
+    architecture: str,
+    conventions: str,
+    task: str,
+    plan: str,
+    red_flags: str,
+    diff_text: str,
+    tool_outputs: str,
+    implementer_report: str,
+) -> str:
     return (
+        "ARCHITECTURE:\n"
+        f"{architecture.strip()}\n\n"
+        "CONVENTIONS:\n"
+        f"{conventions.strip()}\n\n"
         "TASK:\n"
         f"{task.strip()}\n\n"
         "PLAN:\n"
         f"{plan.strip()}\n\n"
-        "TOOL_OUTPUTS:\n"
-        f"{tool_outputs.strip()}\n\n"
+        "RED_FLAGS:\n"
+        f"{red_flags.strip()}\n\n"
         "DIFF:\n"
         f"{diff_text.strip()}\n\n"
+        "TOOL_OUTPUTS:\n"
+        f"{tool_outputs.strip()}\n\n"
         "IMPLEMENTER_REPORT:\n"
         f"{implementer_report.strip()}\n"
     )
 
 
-def _build_tech_writer_input(task: str, plan: str, reviewer: ReviewDecision) -> str:
+def _build_tech_writer_input(vision: str, architecture: str, conventions: str, task: str, plan: str, reviewer: ReviewDecision) -> str:
     return (
+        "VISION:\n"
+        f"{vision.strip()}\n\n"
+        "ARCHITECTURE:\n"
+        f"{architecture.strip()}\n\n"
+        "CONVENTIONS:\n"
+        f"{conventions.strip()}\n\n"
         "TASK:\n"
         f"{task.strip()}\n\n"
         "PLAN:\n"
@@ -158,6 +180,71 @@ def _truncate(text: str, limit: int) -> str:
     if len(text) <= limit:
         return text
     return text[:limit].rstrip() + f"\n\n...[truncated to {limit} chars]"
+
+
+_RED_FLAG_PATTERNS = [
+    ("InMemoryClass", re.compile(r"\bInMemory[A-Za-z0-9_]*\b")),
+    ("SQLiteMemory", re.compile(r":memory:")),
+    ("MockOrFake", re.compile(r"\b(Mock|Fake)[A-Za-z0-9_]*\b")),
+]
+
+
+def _scan_red_flags(workspace_dir: Path) -> Tuple[str, Dict[str, Any]]:
+    meta: Dict[str, Any] = {"files_scanned": 0, "matches": []}
+    hits: List[str] = []
+
+    exclude_dirs = {".git", ".venv", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
+    max_file_bytes = 512_000
+    code_exts = {".py", ".pyi"}
+
+    def is_test_path(rel_path: str) -> bool:
+        norm = rel_path.replace("\\", "/")
+        return (
+            "/tests/" in norm
+            or norm.startswith("tests/")
+            or norm.endswith("_test.py")
+            or "/test_" in norm
+        )
+
+    for root, dirs, files in os.walk(workspace_dir):
+        dirs[:] = [d for d in dirs if d not in exclude_dirs and not d.startswith(".")]
+        for filename in files:
+            if filename.startswith("."):
+                continue
+            path = Path(root) / filename
+            if path.suffix not in code_exts:
+                continue
+            try:
+                if path.stat().st_size > max_file_bytes:
+                    continue
+            except FileNotFoundError:
+                continue
+            try:
+                content = path.read_text(encoding="utf-8", errors="ignore")
+            except Exception:
+                continue
+            meta["files_scanned"] += 1
+            rel_path = str(path.relative_to(workspace_dir))
+            scope = "tests" if is_test_path(rel_path) else "code"
+            for name, pattern in _RED_FLAG_PATTERNS:
+                for match in pattern.finditer(content):
+                    line_no = content.count("\n", 0, match.start()) + 1
+                    entry = f"- {name} ({scope}): {rel_path}:{line_no}"
+                    hits.append(entry)
+                    meta["matches"].append(
+                        {
+                            "pattern": name,
+                            "path": rel_path,
+                            "line": line_no,
+                            "scope": scope,
+                        }
+                    )
+                    break
+
+    if not hits:
+        return ("- None", meta)
+
+    return ("\n".join(hits), meta)
 
 
 def _run_local_cmd(args: List[str], *, cwd: Path, timeout_seconds: int) -> Dict[str, Any]:
@@ -533,6 +620,10 @@ def main() -> int:
 
         tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
 
+        red_flags_text, red_flags_meta = _scan_red_flags(repo_root / "workspace")
+        red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
+        reviewer_red_flags = _truncate(red_flags_text, red_flags_max_chars) if red_flags_text.strip() != "- None" else "- None"
+
         diff_text, diff_meta = _compute_workspace_diff(repo_root, repo_root / "workspace")
         diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
         reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
@@ -544,12 +635,20 @@ def main() -> int:
             "included": reviewer_diff.strip() != "- None",
             "meta": diff_meta,
         }
+        round_record["red_flags"] = {
+            "max_chars": red_flags_max_chars,
+            "included": reviewer_red_flags.strip() != "- None",
+            "meta": red_flags_meta,
+        }
 
         reviewer_input = _build_reviewer_input(
+            architecture,
+            conventions,
             task_text,
             plan_text,
-            tool_outputs,
+            reviewer_red_flags,
             reviewer_diff,
+            tool_outputs,
             implementer_report,
         )
         reviewer_report, review_error, reviewer_meta = _safe_run(
@@ -627,7 +726,7 @@ def main() -> int:
             allow_write=True,
             shell_cwd=repo_root / "workspace",
         )
-        tech_input = _build_tech_writer_input(task_text, plan_text, review_decision)
+        tech_input = _build_tech_writer_input(vision, architecture, conventions, task_text, plan_text, review_decision)
         tech_report, tech_error, tech_meta = _safe_run(
             tech_writer,
             tech_input,
