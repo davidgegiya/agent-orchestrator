@@ -1,0 +1,14 @@
+{
+  "id": "django__django-12734",
+  "repository": "django/django",
+  "base_commit": "505fec6badba0622bbf97bb659188c3d62a9bc58",
+  "topic": "Migration doesn't detect precision changes in fields that ManyToMany points to",
+  "upstream_created_at": "2020-04-17T05:00:59Z",
+  "dataset_row": 360,
+  "problem_sha256": "c495d106e46a301cc40db102ca457bde3da2aa4aec78268e703cc2a287295418",
+  "regression_checks": [
+    "test_alter_field_pk_fk (migrations.test_operations.OperationTests)",
+    "test_alter_field_reloads_state_on_fk_with_to_field_target_type_change (migrations.test_operations.OperationTests)"
+  ],
+  "passing_checks": 99
+}
