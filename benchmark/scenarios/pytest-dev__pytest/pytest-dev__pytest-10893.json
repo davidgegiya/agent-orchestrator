@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-10893",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "22524046cff84c66f128da9e3cdb993082445c75",
+  "topic": "Use of `rmtree` causes `DeprecationWarning` on Python 3.12 alpha",
+  "upstream_created_at": "2023-04-11T10:10:51Z",
+  "dataset_row": 1384,
+  "problem_sha256": "758fae76a5d108596289927441ad1810f82a300905e0b8ac518488146b6ddad4",
+  "regression_checks": [
+    "testing/test_tmpdir.py::TestRmRf::test_on_rm_rf_error"
+  ],
+  "passing_checks": 37
+}
