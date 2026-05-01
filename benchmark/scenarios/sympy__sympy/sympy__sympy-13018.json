@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13018",
+  "repository": "sympy/sympy",
+  "base_commit": "e95969f314e084e8125d913099c1091a2643e530",
+  "topic": "Wrong/surprising result from noncommutative Pow.subs",
+  "upstream_created_at": "2017-07-20T22:09:54Z",
+  "dataset_row": 1953,
+  "problem_sha256": "e3db44c3de43f72639fbc75d898b263908a0e9477211b4b049ead12641c3de8f",
+  "regression_checks": [
+    "test_subs_noncommutative"
+  ],
+  "passing_checks": 47
+}
