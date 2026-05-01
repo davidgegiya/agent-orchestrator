@@ -81,7 +81,11 @@ def retry_max_attempts_for_role(role: str) -> int:
         value = os.environ.get(env_var)
         if value and value.strip().isdigit():
             return max(1, int(value.strip()))
-    return int(os.environ.get("ORCH_RETRY_MAX_ATTEMPTS", DEFAULT_RETRY_MAX_ATTEMPTS.get(role, 3)))
+    fallback = DEFAULT_RETRY_MAX_ATTEMPTS.get(role, 3)
+    try:
+        return max(1, int(os.environ.get("ORCH_RETRY_MAX_ATTEMPTS", str(fallback))))
+    except ValueError:
+        return fallback
 
 
 def retry_base_delay_seconds() -> float:

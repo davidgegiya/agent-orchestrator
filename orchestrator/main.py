@@ -447,6 +447,22 @@ def _run_workflow(
             parser.error("--workspace must be clean before starting; use a separate Git worktree")
     load_dotenv(repo_root / ".env")
 
+    limit_defaults = {
+        "ORCH_PLANNER_BACKLOG_MAX_CHARS": 8000,
+        "ORCH_REVIEWER_DIFF_MAX_CHARS": 12000,
+        "ORCH_REVIEWER_RED_FLAGS_MAX_CHARS": 4000,
+    }
+    limits = {}
+    for name, default in limit_defaults.items():
+        raw_value = os.environ.get(name, str(default))
+        try:
+            value = int(raw_value)
+        except ValueError:
+            parser.error(f"{name} must be an integer")
+        if value < 0 or (name == "ORCH_REVIEWER_DIFF_MAX_CHARS" and value == 0):
+            parser.error(f"{name} is outside its supported range")
+        limits[name] = value
+
     run_dir = create_run_dir(repo_root / "project" / "reports")
     report = RunReport(run_dir)
 
@@ -516,7 +532,7 @@ def _run_workflow(
     architecture = _load_optional(repo_root / "project" / "architecture.md")
     conventions = _load_optional(repo_root / "project" / "conventions.md")
     backlog_raw = _load_optional(repo_root / "project" / "tasks" / "backlog.md")
-    backlog_max_chars = int(os.environ.get("ORCH_PLANNER_BACKLOG_MAX_CHARS", "8000"))
+    backlog_max_chars = limits["ORCH_PLANNER_BACKLOG_MAX_CHARS"]
     backlog = "" if is_effectively_empty(backlog_raw) else _truncate_for_prompt(backlog_raw, backlog_max_chars, label="BACKLOG")
     artifacts["backlog_included"] = bool(backlog.strip())
     artifacts["backlog_max_chars"] = backlog_max_chars
@@ -642,11 +658,11 @@ def _run_workflow(
         ])
 
         red_flags_text, red_flags_meta = _scan_red_flags(workspace)
-        red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
+        red_flags_max_chars = limits["ORCH_REVIEWER_RED_FLAGS_MAX_CHARS"]
         reviewer_red_flags = _truncate(red_flags_text, red_flags_max_chars) if red_flags_text.strip() != "- None" else "- None"
 
         diff_text, diff_meta = _compute_workspace_diff(workspace, base_sha)
-        diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
+        diff_max_chars = limits["ORCH_REVIEWER_DIFF_MAX_CHARS"]
         reviewer_diff = diff_text
         diff_path = run_dir / f"diff_round_{round_idx}.patch"
         diff_path.write_text(diff_text, encoding="utf-8")
