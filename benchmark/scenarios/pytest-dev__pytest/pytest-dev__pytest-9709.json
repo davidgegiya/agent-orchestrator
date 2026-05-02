@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-9709",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "0c80a1c836616b0206a4af2fe72001ff797a5f8f",
+  "topic": "Current implementation of `pytest.approx()` cannot be used to compare sets",
+  "upstream_created_at": "2022-02-23T11:25:45Z",
+  "dataset_row": 1487,
+  "problem_sha256": "1d69d654cd9f96e416b6939a24bc91f7a1c7745012cf130fba9deb89babe5d1f",
+  "regression_checks": [
+    "testing/python/approx.py::TestApprox::test_generic_ordered_sequence",
+    "testing/python/approx.py::TestApprox::test_allow_ordered_sequences_only"
+  ],
+  "passing_checks": 56
+}
