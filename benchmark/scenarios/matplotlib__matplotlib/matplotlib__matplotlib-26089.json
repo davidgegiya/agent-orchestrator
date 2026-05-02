@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-26089",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f588d2b06e5b3c3296046d2ee9f0c13831cafe1c",
+  "topic": "Add public method to update `Legend` object's loc property",
+  "upstream_created_at": "2023-06-08T02:56:42Z",
+  "dataset_row": 1106,
+  "problem_sha256": "2b43ded9d97be134544ec73ad33b47c1cec605e0b2a6e9294b02adeda3916f79",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_ax_legend_set_loc[center]",
+    "lib/matplotlib/tests/test_legend.py::test_ax_legend_set_loc[best]",
+    "lib/matplotlib/tests/test_legend.py::test_fig_legend_set_loc[outside",
+    "lib/matplotlib/tests/test_legend.py::test_fig_legend_set_loc[right]"
+  ],
+  "passing_checks": 126
+}
