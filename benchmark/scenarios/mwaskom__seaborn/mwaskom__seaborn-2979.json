@@ -1,0 +1,15 @@
+{
+  "id": "mwaskom__seaborn-2979",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "ebc4bfe9f8bf5c4ff10b14da8a49c8baa1ba76d0",
+  "topic": "Visibility of internal axis labels is wrong with wrapped pair plot",
+  "upstream_created_at": "2022-08-26T11:07:57Z",
+  "dataset_row": 1138,
+  "problem_sha256": "3bafcaab77093571ca9ed90b4aec4abf9291f0cbbfd86830d9dec387c2674750",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestPairInterface::test_x_wrapping",
+    "tests/_core/test_plot.py::TestPairInterface::test_y_wrapping",
+    "tests/_core/test_subplots.py::TestSubplotSpec::test_y_paired_and_wrapped_single_row"
+  ],
+  "passing_checks": 127
+}
