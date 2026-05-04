@@ -1,0 +1,18 @@
+{
+  "id": "psf__requests-1768",
+  "repository": "psf/requests",
+  "base_commit": "847735553aeda6e6633f2b32e14ba14ba86887a4",
+  "topic": "HTTP Basic Auth credentials extracted from URL are %-encoded",
+  "upstream_created_at": "2013-12-01T11:34:25Z",
+  "dataset_row": 1174,
+  "problem_sha256": "e9065b573c8cbfba0df40e368c5306017c7bb9cbd014f47ed3c66de2d248e3f7",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_GET_ALTERNATIVE",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_HEAD",
+    "test_requests.py::RequestsTestCase::test_cookie_sent_on_redirect",
+    "test_requests.py::RequestsTestCase::test_get_auth_from_url_encoded_spaces"
+  ],
+  "passing_checks": 84
+}
