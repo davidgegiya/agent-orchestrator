@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4992",
+  "repository": "pallets/flask",
+  "base_commit": "4c288bc97ea371817199908d0d9b12de9dae327e",
+  "topic": "Add a file mode parameter to flask.Config.from_file()",
+  "upstream_created_at": "2023-02-22T14:00:17Z",
+  "dataset_row": 1159,
+  "problem_sha256": "03ed916f6b6a2c6ece8c3d6d0cf54af2fb7b2ab7708c5794c643001b1b95d7a3",
+  "regression_checks": [
+    "tests/test_config.py::test_config_from_file_toml"
+  ],
+  "passing_checks": 18
+}
