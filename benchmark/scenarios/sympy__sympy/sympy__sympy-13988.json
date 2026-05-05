@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13988",
+  "repository": "sympy/sympy",
+  "base_commit": "219d0b02f3402e158ebd809c8e91420208870467",
+  "topic": "Integral.as_sum() should output a Sum() object",
+  "upstream_created_at": "2018-01-22T07:22:00Z",
+  "dataset_row": 2009,
+  "problem_sha256": "e1424a9461e73818bdbc5a8b75139cf0d01c85d9ba5c11247a16aa0ddee027c9",
+  "regression_checks": [
+    "test_as_sum_raises"
+  ],
+  "passing_checks": 44
+}
