@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-8422",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "32ad70dea8fe2978e5f6025070278cc3796f4e47",
+  "topic": "approx: Better handle Decimal in sequences and mappings",
+  "upstream_created_at": "2021-03-09T09:05:32Z",
+  "dataset_row": 1466,
+  "problem_sha256": "8954832536819c00422e4e4bc89b51ef77854e34e9fbdf95da2868fd5bc63772",
+  "regression_checks": [
+    "testing/python/approx.py::TestApprox::test_list_decimal",
+    "testing/python/approx.py::TestApprox::test_dict_decimal"
+  ],
+  "passing_checks": 53
+}
