@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26232",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9fdf6adf70819c8d34e9f47eeb8470aea35d78c0",
+  "topic": "pcolor writing to read-only input mask",
+  "upstream_created_at": "2023-07-01T12:47:31Z",
+  "dataset_row": 1114,
+  "problem_sha256": "b780a113cc0e4d46f218829cecf27fd3d98affaab4a464052d73b0d3815fca18",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_pcolorargs_with_read_only"
+  ],
+  "passing_checks": 815
+}
