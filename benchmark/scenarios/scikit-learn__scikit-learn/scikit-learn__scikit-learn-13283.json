@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-13283",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "12705bb4371c294db4461882007f40a101d74a81",
+  "topic": "Isolation forest - decision_function & average_path_length method are memory inefficient",
+  "upstream_created_at": "2019-02-26T14:44:46Z",
+  "dataset_row": 1589,
+  "problem_sha256": "a82dc8d3e1a1a983fdc32b1d37c20ef6677e9d22b33294f9bc2dd6d56730cc82",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_iforest.py::test_iforest_chunks_works1[0.25-3]",
+    "sklearn/ensemble/tests/test_iforest.py::test_iforest_chunks_works1[auto-2]",
+    "sklearn/ensemble/tests/test_iforest.py::test_iforest_chunks_works2[0.25-3]",
+    "sklearn/ensemble/tests/test_iforest.py::test_iforest_chunks_works2[auto-2]"
+  ],
+  "passing_checks": 15
+}
