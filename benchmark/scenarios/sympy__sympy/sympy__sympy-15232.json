@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15232",
+  "repository": "sympy/sympy",
+  "base_commit": "4f41286b22a05d5d75f456f1e574d8c115bab5d4",
+  "topic": "factor() function issue for non-commutative objects",
+  "upstream_created_at": "2018-09-13T18:55:36Z",
+  "dataset_row": 2044,
+  "problem_sha256": "0c6a3eb964e69f7ebfa6fd09ec99bee2c35b00a4a740fc30be678cffb39e6391",
+  "regression_checks": [
+    "test_issue_8263"
+  ],
+  "passing_checks": 9
+}
