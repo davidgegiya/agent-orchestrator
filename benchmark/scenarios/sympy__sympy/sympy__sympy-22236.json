@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-22236",
+  "repository": "sympy/sympy",
+  "base_commit": "cf523854d68e078ae0c027c7dda24ce1b745f2cb",
+  "topic": "Printing of unevaluated Mul needs brackets",
+  "upstream_created_at": "2021-10-08T09:32:03Z",
+  "dataset_row": 2254,
+  "problem_sha256": "7134046a82c90a1d90f61af477d09171dcc80abe8deb67e019549755224aff3c",
+  "regression_checks": [
+    "test_Mul"
+  ],
+  "passing_checks": 143
+}
