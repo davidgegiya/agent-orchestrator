@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-13983",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "76db50151a65927c19c83a8c3c195c87dbcc0556",
+  "topic": "Remove()ing a shared axes prevents the remaining axes from using unit-provided formatters",
+  "upstream_created_at": "2019-04-18T10:55:40Z",
+  "dataset_row": 950,
+  "problem_sha256": "8d692212c5c5432e1257c9102e4d95beab01bcd0712e1a5c73e490e058c539c3",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_axes_removal"
+  ],
+  "passing_checks": 33
+}
