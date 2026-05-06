@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26020",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f6a781f77f5ddf1204c60ca7c544809407d4a807",
+  "topic": "Error creating AxisGrid with non-default axis class",
+  "upstream_created_at": "2023-05-31T21:36:23Z",
+  "dataset_row": 1103,
+  "problem_sha256": "6203020a5f33bf692aa658455367795582c251913683507e5011224add2e489b",
+  "regression_checks": [
+    "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_grid_with_axes_class_not_overriding_axis"
+  ],
+  "passing_checks": 48
+}
