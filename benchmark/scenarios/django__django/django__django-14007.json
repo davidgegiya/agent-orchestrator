@@ -1,0 +1,13 @@
+{
+  "id": "django__django-14007",
+  "repository": "django/django",
+  "base_commit": "619f26d2895d121854b1bed1b535d42b722e2eba",
+  "topic": "Database converters (from_db_value) not called for returning_fields on insert",
+  "upstream_created_at": "2021-02-13T09:00:02Z",
+  "dataset_row": 541,
+  "problem_sha256": "d736436e72163c451a83f8e060a2f5fb2b140187afdc823f45c402ac23c61ee1",
+  "regression_checks": [
+    "test_auto_field_subclass_create (custom_pk.tests.CustomPKTests)"
+  ],
+  "passing_checks": 12
+}
