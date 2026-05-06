@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5231",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "76a7553066130a7dbf4d10922b2530161b2ec5b0",
+  "topic": "False positive missing-param-doc on numpy style when ` : <type>` omitted",
+  "upstream_created_at": "2021-10-30T14:37:50Z",
+  "dataset_row": 1334,
+  "problem_sha256": "b10794fe46dac7d2b701af4cf23f13f41f9fed07a115b02953e5516c75459934",
+  "regression_checks": [
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_args_without_type_numpy"
+  ],
+  "passing_checks": 122
+}
