@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4169",
+  "repository": "pallets/flask",
+  "base_commit": "66d9d4fa8d07dd50e4cb3036a9ae5f92c4693b84",
+  "topic": "Exceptions are sometimes replaced with \"TypeError: exceptions must derive from BaseException\"",
+  "upstream_created_at": "2021-06-22T23:57:43Z",
+  "dataset_row": 1154,
+  "problem_sha256": "b426ac997e679352eae36053a64b3b52011f04134751290c2ffb60954c17e7e7",
+  "regression_checks": [
+    "tests/test_cli.py::test_lazy_load_error"
+  ],
+  "passing_checks": 24
+}
