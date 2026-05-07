@@ -1,0 +1,19 @@
+{
+  "id": "psf__requests-1888",
+  "repository": "psf/requests",
+  "base_commit": "19756d57f73c2062240dd477dd8f8d8a7c0c512a",
+  "topic": "301 redirect broken with latest pyopenssl/SNI",
+  "upstream_created_at": "2014-01-28T17:18:12Z",
+  "dataset_row": 1176,
+  "problem_sha256": "3df4d4adf64e70afd6e6471c10e01358bb19a3fecfef1798edec84474804531c",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGEST_AUTH_SETS_SESSION_COOKIES",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_GET_WITH_MIXED_PARAMS",
+    "test_requests.py::RequestsTestCase::test_cookie_persists_via_api",
+    "test_requests.py::RequestsTestCase::test_params_are_merged_case_sensitive",
+    "test_requests.py::RequestsTestCase::test_unicode_multipart_post",
+    "test_requests.py::RequestsTestCase::test_urlencoded_get_query_multivalued_param",
+    "test_requests.py::RequestsTestCase::test_user_agent_transfers"
+  ],
+  "passing_checks": 105
+}
