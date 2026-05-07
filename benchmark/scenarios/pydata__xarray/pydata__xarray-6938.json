@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6938",
+  "repository": "pydata/xarray",
+  "base_commit": "c4e40d991c28be51de9ac560ce895ac7f9b14924",
+  "topic": "`.swap_dims()` can modify original object",
+  "upstream_created_at": "2022-08-20T16:45:22Z",
+  "dataset_row": 1293,
+  "problem_sha256": "445a8a0e9d12358b082f11b3c9ae632d92215afe485e73408b277b3fbf665756",
+  "regression_checks": [
+    "xarray/tests/test_variable.py::TestIndexVariable::test_to_index_variable_copy"
+  ],
+  "passing_checks": 430
+}
