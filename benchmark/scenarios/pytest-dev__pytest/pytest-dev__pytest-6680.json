@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-6680",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "194b52145b98fda8ad1c62ebacf96b9e2916309c",
+  "topic": "Improve deprecation docs for Node.from_parent",
+  "upstream_created_at": "2020-02-05T23:00:43Z",
+  "dataset_row": 1425,
+  "problem_sha256": "bd73c30f35d5c4c8c01acf63dbb3d6f1417071bd4913711942ce7920148d871b",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_node_direct_ctor_warning"
+  ],
+  "passing_checks": 10
+}
