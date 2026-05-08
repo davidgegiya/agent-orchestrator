@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9229",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "876fa81e0a038cda466925b85ccf6c5452e0f685",
+  "topic": "Inconsistent behaviour with type alias documentation (not overwriting all the default messages, just some)",
+  "upstream_created_at": "2021-05-15T07:21:49Z",
+  "dataset_row": 1868,
+  "problem_sha256": "8f93960d53bc3dd5f94fe5e80999b0957b7d7734c0205178a1686731fe8163af",
+  "regression_checks": [
+    "tests/test_ext_autodoc_autoclass.py::test_class_alias_having_doccomment"
+  ],
+  "passing_checks": 13
+}
