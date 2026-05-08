@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-2813",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "60e58eb07e4448694ca25e887684d39d5138babd",
+  "topic": "histplot stat=count does not count all data points",
+  "upstream_created_at": "2022-05-18T00:32:38Z",
+  "dataset_row": 1133,
+  "problem_sha256": "58ba934f0c12c5e5cfdf3c5fc449d3efe7eca83b2fb79c19cf486699433f7f71",
+  "regression_checks": [
+    "seaborn/tests/test_statistics.py::TestHistogram::test_odd_single_observation",
+    "seaborn/tests/test_statistics.py::TestHistogram::test_binwidth_roundoff"
+  ],
+  "passing_checks": 56
+}
