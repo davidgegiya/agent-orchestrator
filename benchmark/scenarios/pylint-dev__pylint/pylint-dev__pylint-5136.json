@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5136",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "3a5a91c0fa0761555aed2cb03270e2bb63b400fb",
+  "topic": "Possibly move ``MessagesHandlerMixIn`` into ``PyLinter``",
+  "upstream_created_at": "2021-10-10T16:41:55Z",
+  "dataset_row": 1331,
+  "problem_sha256": "62df36ed8d3e67c7165740a8aa631fcf593938b42372d4e0ad27ad333e0a8657",
+  "regression_checks": [
+    "tests/test_regr.py::test_pylint_config_attr"
+  ],
+  "passing_checks": 18
+}
