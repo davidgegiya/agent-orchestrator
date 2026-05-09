@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24627",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9d22ab09d52d279b125d8770967569de070913b2",
+  "topic": "cla(), clf() should unset the `.axes` and `.figure` attributes of deparented artists",
+  "upstream_created_at": "2022-12-05T00:05:54Z",
+  "dataset_row": 1049,
+  "problem_sha256": "df7a23ab989356fee313c68118f6f7dc72d52abe536caf900b0e9152660f09d7",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_cla_clears_children_axes_and_fig"
+  ],
+  "passing_checks": 776
+}
