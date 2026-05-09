@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4094",
+  "repository": "pydata/xarray",
+  "base_commit": "a64cf2d5476e7bbda099b34c40b7be1880dbd39a",
+  "topic": "to_unstacked_dataset broken for single-dim variables",
+  "upstream_created_at": "2020-05-26T00:36:02Z",
+  "dataset_row": 1233,
+  "problem_sha256": "4c87ffda490e602a7fd6491257d01b4b649f36d7f364d05201c7656186c88b94",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::TestDataset::test_to_stacked_array_to_unstacked_dataset"
+  ],
+  "passing_checks": 862
+}
