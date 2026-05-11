@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-3362",
+  "repository": "psf/requests",
+  "base_commit": "36453b95b13079296776d11b09cab2567ea3e703",
+  "topic": "Uncertain about content/text vs iter_content(decode_unicode=True/False)",
+  "upstream_created_at": "2016-06-24T13:31:31Z",
+  "dataset_row": 1195,
+  "problem_sha256": "c9f64af25b7b031342da31d161efeaadd8453fa8963ba52467c93c2c21e1ef73",
+  "regression_checks": [
+    "tests/test_requests.py::TestRequests::test_response_decode_unicode"
+  ],
+  "passing_checks": 75
+}
