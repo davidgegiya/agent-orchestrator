@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-9459",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "8dd84bc8aba782d924854174c5f9ad4a65cfccf1",
+  "topic": "Add an option to not use intersphinx references as a fallback",
+  "upstream_created_at": "2021-07-16T13:12:15Z",
+  "dataset_row": 1884,
+  "problem_sha256": "764c48e7f8220ff1763376f3160dd1911e8cf943fcec369c57575949a785b340",
+  "regression_checks": [
+    "tests/test_ext_intersphinx.py::test_missing_reference",
+    "tests/test_ext_intersphinx.py::test_missing_reference_disabled_domain"
+  ],
+  "passing_checks": 17
+}
