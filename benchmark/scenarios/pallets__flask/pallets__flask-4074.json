@@ -1,0 +1,14 @@
+{
+  "id": "pallets__flask-4074",
+  "repository": "pallets/flask",
+  "base_commit": "a541c2ac8b05c2b23e11bd8540088fce1abc2373",
+  "topic": "url_for can't distinguish a blueprint mounted two times",
+  "upstream_created_at": "2021-05-18T12:40:47Z",
+  "dataset_row": 1152,
+  "problem_sha256": "3bc30af9d8a6409a4b0b74c377ab3a2abcc5ab1d164f92dc0da92efabf383b65",
+  "regression_checks": [
+    "tests/test_blueprints.py::test_unique_blueprint_names",
+    "tests/test_blueprints.py::test_self_registration"
+  ],
+  "passing_checks": 11
+}
