@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-2996",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "a5816697cbcab195a987f5e074204a052c13e1d5",
+  "topic": "Rename layout(algo=) to layout(engine=)",
+  "upstream_created_at": "2022-09-04T22:06:59Z",
+  "dataset_row": 1139,
+  "problem_sha256": "88d1730434bbbaa891c98446827f21911ac4f64f888a7820bba4640852d84009",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestFacetInterface::test_layout_algo[tight]",
+    "tests/_core/test_plot.py::TestFacetInterface::test_layout_algo[constrained]"
+  ],
+  "passing_checks": 91
+}
