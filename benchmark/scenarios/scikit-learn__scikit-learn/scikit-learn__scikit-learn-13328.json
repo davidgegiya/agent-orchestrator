@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13328",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "37b0e66c871e8fb032a9c7086b2a1d5419838154",
+  "topic": "TypeError when supplying a boolean X to HuberRegressor fit",
+  "upstream_created_at": "2019-02-28T12:47:52Z",
+  "dataset_row": 1592,
+  "problem_sha256": "066db935beb992aafeda476ea89dd8c8c1e7ce52bb9f1e53318e46f327dd3ef7",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_huber.py::test_huber_bool"
+  ],
+  "passing_checks": 9
+}
