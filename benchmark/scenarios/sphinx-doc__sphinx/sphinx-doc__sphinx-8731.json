@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8731",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "a71028bf9e18cf9fb6314c8a13a467d724cd9328",
+  "topic": "Return type for Yield attribute not properly hyperlinked in apidocs",
+  "upstream_created_at": "2021-01-23T05:17:35Z",
+  "dataset_row": 1854,
+  "problem_sha256": "96f63d4d9700872f0b0f7aac6729881cda14b02ec473226975e3c6787ce2e9b9",
+  "regression_checks": [
+    "tests/test_ext_napoleon_docstring.py::GoogleDocstringTest::test_preprocess_types"
+  ],
+  "passing_checks": 46
+}
