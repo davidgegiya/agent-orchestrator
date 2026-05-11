@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13933",
+  "repository": "django/django",
+  "base_commit": "42e8cf47c7ee2db238bf91197ea398126c546741",
+  "topic": "ModelChoiceField does not provide value of invalid choice when raising ValidationError",
+  "upstream_created_at": "2021-01-26T03:58:23Z",
+  "dataset_row": 536,
+  "problem_sha256": "26777f3e1d848707946a695c0630002cf2ff9ee480a1101934cef17b905aa895",
+  "regression_checks": [
+    "test_modelchoicefield_value_placeholder (forms_tests.tests.test_error_messages.ModelChoiceFieldErrorMessagesTestCase)"
+  ],
+  "passing_checks": 19
+}
