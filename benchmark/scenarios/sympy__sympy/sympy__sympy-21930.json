@@ -1,0 +1,18 @@
+{
+  "id": "sympy__sympy-21930",
+  "repository": "sympy/sympy",
+  "base_commit": "de446c6d85f633271dfec1452f6f28ea783e293f",
+  "topic": "Issues with Latex printing output in second quantization module",
+  "upstream_created_at": "2021-08-22T20:29:08Z",
+  "dataset_row": 2247,
+  "problem_sha256": "8746fe78fb036fed1ca004f78b97e9a2fecd3e29ec581b132221d1c58bfc193c",
+  "regression_checks": [
+    "test_create",
+    "test_commutation",
+    "test_create_f",
+    "test_NO",
+    "test_Tensors",
+    "test_issue_19661"
+  ],
+  "passing_checks": 45
+}
