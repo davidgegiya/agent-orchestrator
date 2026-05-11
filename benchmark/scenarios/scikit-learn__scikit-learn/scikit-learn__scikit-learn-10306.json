@@ -1,0 +1,19 @@
+{
+  "id": "scikit-learn__scikit-learn-10306",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b90661d6a46aa3619d3eec94d5281f5888add501",
+  "topic": "Some UserWarnings should be ConvergenceWarnings",
+  "upstream_created_at": "2017-12-13T15:10:48Z",
+  "dataset_row": 1494,
+  "problem_sha256": "342b6e209b56c3973451d55b01ebb7d28db8c02200ceebb343794fb75b1825a0",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_affinity_propagation.py::test_affinity_propagation_predict_non_convergence",
+    "sklearn/cluster/tests/test_birch.py::test_n_clusters",
+    "sklearn/cross_decomposition/tests/test_pls.py::test_convergence_fail",
+    "sklearn/decomposition/tests/test_fastica.py::test_fastica_convergence_fail",
+    "sklearn/linear_model/tests/test_logistic.py::test_logistic_regression_path_convergence_fail",
+    "sklearn/linear_model/tests/test_ransac.py::test_ransac_warn_exceed_max_skips",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_convergence_fail"
+  ],
+  "passing_checks": 118
+}
