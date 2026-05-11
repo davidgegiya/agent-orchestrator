@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24362",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "aca6e9d5e98811ca37c442217914b15e78127c89",
+  "topic": "sharex and sharey don't accept 0 and 1 as bool values",
+  "upstream_created_at": "2022-11-04T10:37:58Z",
+  "dataset_row": 1042,
+  "problem_sha256": "117d092a18d7d040fa5ea4f8eb174ff4ad22e097c368b5629cb2bdc7fbc730b8",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_subplots.py::test_shared"
+  ],
+  "passing_checks": 39
+}
