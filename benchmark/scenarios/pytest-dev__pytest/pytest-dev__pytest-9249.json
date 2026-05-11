@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9249",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "1824349f74298112722396be6f84a121bc9d6d63",
+  "topic": "test ids with `/`s cannot be selected with `-k`",
+  "upstream_created_at": "2021-10-29T13:58:57Z",
+  "dataset_row": 1480,
+  "problem_sha256": "8ead6ff1077459cf8ad0c07974c436682d79d9faed9516078e64e8feaf5347a5",
+  "regression_checks": [
+    "testing/test_mark_expression.py::test_valid_idents[a/b]"
+  ],
+  "passing_checks": 141
+}
