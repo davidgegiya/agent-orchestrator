@@ -356,7 +356,7 @@ def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, 
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "HEAD", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
     meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     tracked_out = (tracked.get("stdout") or "").rstrip()
     if tracked_out:
