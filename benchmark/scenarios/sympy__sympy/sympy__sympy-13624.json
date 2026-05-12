@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13624",
+  "repository": "sympy/sympy",
+  "base_commit": "a67e45eecc972b53e95effb09fe503a05325d3f5",
+  "topic": "Python code printer (pycode) should support Assignment",
+  "upstream_created_at": "2017-11-18T12:14:09Z",
+  "dataset_row": 1985,
+  "problem_sha256": "e224b502a8a0bbf797ec7cfbed079191a34be9b0c0902354d4604f14ff7d17fd",
+  "regression_checks": [
+    "test_PythonCodePrinter"
+  ],
+  "passing_checks": 2
+}
