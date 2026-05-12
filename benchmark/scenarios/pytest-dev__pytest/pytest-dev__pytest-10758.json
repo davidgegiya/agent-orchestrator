@@ -1,0 +1,18 @@
+{
+  "id": "pytest-dev__pytest-10758",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "d5dda84ef346b83e0b634a92e00c62a8a10e0061",
+  "topic": "Walrus operator causes different behavior in PyTest",
+  "upstream_created_at": "2023-02-22T21:43:37Z",
+  "dataset_row": 1383,
+  "problem_sha256": "e101f9a0d2ebd66cf9fd0b4a262129badb673c155a8d1dda78044d74fb6b5ecf",
+  "regression_checks": [
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_walrus_operator",
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_inline_walrus_operator",
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_walrus_operator_true_assertion_and_changes_variable_value",
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_walrus_operator_fail_assertion",
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_walrus_operator_compare_boolean_fails",
+    "testing/test_assertrewrite.py::TestIssue10743::test_assertion_walrus_operator_boolean_none_fails"
+  ],
+  "passing_checks": 102
+}
