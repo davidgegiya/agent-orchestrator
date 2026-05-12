@@ -755,7 +755,7 @@ def main() -> int:
     else:
         print(f"Action: {final_action}")
 
-    return 0
+    return 0 if final_verdict == "PASS" else 1
 
 
 if __name__ == "__main__":
