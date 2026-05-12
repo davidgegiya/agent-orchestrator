@@ -1,0 +1,19 @@
+{
+  "id": "astropy__astropy-14413",
+  "repository": "astropy/astropy",
+  "base_commit": "34d79ea59b3ba25820dfe7fc9782e9014826e8b0",
+  "topic": "Unicode and console unit representations sometimes include an extraneous space",
+  "upstream_created_at": "2023-02-18T01:17:04Z",
+  "dataset_row": 55,
+  "problem_sha256": "9ce8d0eb2d0131e561015625f8947391083390d937a4d6c12284c5d4c24e3d2b",
+  "regression_checks": [
+    "astropy/units/tests/test_format.py::test_format_styles[console-erg",
+    "astropy/units/tests/test_format.py::test_format_styles[unicode-erg",
+    "astropy/units/tests/test_format.py::test_format_styles_inline[console-False-",
+    "astropy/units/tests/test_format.py::test_format_styles_inline[unicode-False-",
+    "astropy/units/tests/test_format.py::test_scale_only[latex-$\\\\mathrm{10}$]",
+    "astropy/units/tests/test_format.py::test_function_format_styles_inline[console-False-",
+    "astropy/units/tests/test_format.py::test_function_format_styles_inline[unicode-False-"
+  ],
+  "passing_checks": 746
+}
