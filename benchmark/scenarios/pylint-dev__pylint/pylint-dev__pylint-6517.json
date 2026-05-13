@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-6517",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "58c4f370c7395d9d4e202ba83623768abcc3ac24",
+  "topic": "Pylint runs unexpectedly pass if `confidence=` in pylintrc",
+  "upstream_created_at": "2022-05-05T22:04:31Z",
+  "dataset_row": 1350,
+  "problem_sha256": "3bc8812c7fb9546720af4e3c049cd8f9f9523662ea4793c8c0d115659b4b1032",
+  "regression_checks": [
+    "tests/config/test_config.py::test_empty_confidence"
+  ],
+  "passing_checks": 8
+}
