@@ -1,0 +1,26 @@
+{
+  "id": "scikit-learn__scikit-learn-25308",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "9b537396488a70de06e00de2330c4f00d7db1fc1",
+  "topic": "Make error message uniform when calling `get_feature_names_out` before `fit`",
+  "upstream_created_at": "2023-01-05T20:48:29Z",
+  "dataset_row": 1684,
+  "problem_sha256": "c880fd126d6810702e59245923e0852e89edd28c227e24fa81ed96703c793d7b",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_from_model.py::test_prefit_get_feature_names_out",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[GaussianRandomProjection()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[GenericUnivariateSelect()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[RFE(estimator=LogisticRegression(C=1))]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[RFECV(estimator=LogisticRegression(C=1))]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectFdr()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectFpr()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectFromModel(estimator=SGDRegressor(random_state=0))]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectFwe()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectKBest()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SelectPercentile()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SequentialFeatureSelector(estimator=LogisticRegression(C=1))]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[SparseRandomProjection()]",
+    "sklearn/tests/test_common.py::test_estimators_get_feature_names_out_error[VarianceThreshold()]"
+  ],
+  "passing_checks": 9445
+}
