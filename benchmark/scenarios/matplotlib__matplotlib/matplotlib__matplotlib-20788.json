@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20788",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "89645b86300a82ea769a80929d61a14afea13759",
+  "topic": "Colorbar creation from pcolormesh with cell specific alpha values",
+  "upstream_created_at": "2021-08-04T01:43:27Z",
+  "dataset_row": 970,
+  "problem_sha256": "456a80793be0a7856c51b6ae6ab35ca7bbeb4ca1e15926bb480fd4a38a0c7c35",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_mappable_2d_alpha"
+  ],
+  "passing_checks": 38
+}
