@@ -15,6 +15,7 @@ class Scenario(BaseModel):
     topic: str = Field(min_length=1, max_length=140)
     upstream_created_at: datetime
     dataset_row: int = Field(ge=0)
+    problem_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     regression_checks: tuple[str, ...] = Field(min_length=1)
     passing_checks: int = Field(ge=0)
 

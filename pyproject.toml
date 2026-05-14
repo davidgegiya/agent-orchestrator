@@ -21,6 +21,7 @@ agent-orchestrator = "orchestrator.main:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
+benchmark = ["pyarrow>=15"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
