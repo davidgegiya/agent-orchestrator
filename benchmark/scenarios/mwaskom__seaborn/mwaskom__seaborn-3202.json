@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-3202",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "d25872b0fc99dbf7e666a91f59bd4ed125186aa1",
+  "topic": "Objects interface raises if faceting on partially-crossed row and column",
+  "upstream_created_at": "2022-12-23T02:15:50Z",
+  "dataset_row": 1145,
+  "problem_sha256": "7c09980ed68453aa76a4c7f0f6c378433a0f65146149c241e0cf742a4e4733f8",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestPlotting::test_empty",
+    "tests/_core/test_scales.py::TestNominal::test_empty_data"
+  ],
+  "passing_checks": 256
+}
