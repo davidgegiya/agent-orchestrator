@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4642",
+  "repository": "pallets/flask",
+  "base_commit": "97298e06fe19298c3ff9d2e0ed9ba70bb3fda2c8",
+  "topic": "FlaskGroup does not work when nested in a click.group",
+  "upstream_created_at": "2022-06-15T21:14:32Z",
+  "dataset_row": 1157,
+  "problem_sha256": "589d388a1c06b43fa3473fb9267e8cf8538ead15650eea1df34060468eca3394",
+  "regression_checks": [
+    "tests/test_cli.py::test_flaskgroup_nested"
+  ],
+  "passing_checks": 52
+}
