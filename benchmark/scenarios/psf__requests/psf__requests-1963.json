@@ -1,0 +1,19 @@
+{
+  "id": "psf__requests-1963",
+  "repository": "psf/requests",
+  "base_commit": "110048f9837f8441ea536804115e80b69f400277",
+  "topic": "`Session.resolve_redirects` copies the original request for all subsequent requests, can cause incorrect method selection",
+  "upstream_created_at": "2014-03-15T17:42:11Z",
+  "dataset_row": 1180,
+  "problem_sha256": "0a8917323221e8e9e116f6c831221efb4babd4ca072de162f67a7a9fcccfd8f1",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_QUOTES_QOP_VALUE",
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_DIGEST_AUTH_RETURNS_COOKIE",
+    "test_requests.py::RequestsTestCase::test_DIGEST_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA",
+    "test_requests.py::RequestsTestCase::test_param_cookiejar_works",
+    "test_requests.py::TestRedirects::test_requests_are_updated_each_time"
+  ],
+  "passing_checks": 112
+}
