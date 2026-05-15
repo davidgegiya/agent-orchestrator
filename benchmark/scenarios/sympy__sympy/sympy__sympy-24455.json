@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-24455",
+  "repository": "sympy/sympy",
+  "base_commit": "5ee2ecd575818f578961bec7d12aa626d4e78ed5",
+  "topic": "`PermutationGroup.is_cyclic` incorrect on \"unnamed\" S3",
+  "upstream_created_at": "2022-12-31T20:17:57Z",
+  "dataset_row": 2287,
+  "problem_sha256": "4b8cb9197b6183e7c6620f43e8cff8c3da9037ec37250d7ebd1078eda156c444",
+  "regression_checks": [
+    "test_cyclic"
+  ],
+  "passing_checks": 57
+}
