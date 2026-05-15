@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-14702",
+  "repository": "astropy/astropy",
+  "base_commit": "b3b8295c4b0478558bd0e4c6ec28bf16b90880b8",
+  "topic": "BUG: change representation of votable.tree.Table vs table.Table",
+  "upstream_created_at": "2023-04-27T15:10:47Z",
+  "dataset_row": 67,
+  "problem_sha256": "8233783bbc6f3cd9a7d12c75198a21416fa888995637e006b1945a8e4fd994b2",
+  "regression_checks": [
+    "astropy/io/votable/tests/vo_test.py::TestParse::test_repr",
+    "astropy/io/votable/tests/vo_test.py::TestThroughTableData::test_repr",
+    "astropy/io/votable/tests/vo_test.py::TestThroughBinary::test_repr",
+    "astropy/io/votable/tests/vo_test.py::TestThroughBinary2::test_repr"
+  ],
+  "passing_checks": 163
+}
