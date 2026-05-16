@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25346",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "fbe7a446a60e603e44a7a6fbdd77f2be39d6796c",
+  "topic": "constrained layout with wrapped titles",
+  "upstream_created_at": "2023-02-28T14:31:39Z",
+  "dataset_row": 1074,
+  "problem_sha256": "a923ffac06f702a6a2d248e4289b4c1c65bd193ff0d5ad874a405147463186dd",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_text.py::test_get_window_extent_wrapped"
+  ],
+  "passing_checks": 83
+}
