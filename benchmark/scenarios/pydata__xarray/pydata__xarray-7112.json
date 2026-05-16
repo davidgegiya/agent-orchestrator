@@ -1,0 +1,17 @@
+{
+  "id": "pydata__xarray-7112",
+  "repository": "pydata/xarray",
+  "base_commit": "114bf98719f31a653f2ef7bc7fcdfaf010eb3612",
+  "topic": "New deep copy behavior in 2022.9.0 causes maximum recursion error",
+  "upstream_created_at": "2022-10-01T15:24:40Z",
+  "dataset_row": 1303,
+  "problem_sha256": "16a10ceff7b62fa960c6a46ae82d5b626a5bd657332e7841eb94546824a4511d",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::test_deepcopy_recursive",
+    "xarray/tests/test_dataset.py::test_deepcopy_recursive",
+    "xarray/tests/test_formatting.py::TestFormatting::test_array_repr_recursive",
+    "xarray/tests/test_variable.py::TestVariable::test_copy_deep_recursive",
+    "xarray/tests/test_variable.py::TestIndexVariable::test_copy_deep_recursive"
+  ],
+  "passing_checks": 1369
+}
