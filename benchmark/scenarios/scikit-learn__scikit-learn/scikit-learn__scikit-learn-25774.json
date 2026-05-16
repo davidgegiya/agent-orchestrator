@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25774",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "1ae0eb570beee304082f70824b8867cc8d9c08b8",
+  "topic": "FIX ignore nan values in partial dependence computation",
+  "upstream_created_at": "2023-03-07T11:33:16Z",
+  "dataset_row": 1700,
+  "problem_sha256": "33467664d7738cf33f096b6a6f0b53000fb30aa6c4cce529c6f6f9963a2ff803",
+  "regression_checks": [
+    "sklearn/inspection/tests/test_partial_dependence.py::test_mixed_type_categorical"
+  ],
+  "passing_checks": 258
+}
