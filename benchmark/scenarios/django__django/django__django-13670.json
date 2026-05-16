@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13670",
+  "repository": "django/django",
+  "base_commit": "c448e614c60cc97c6194c62052363f4f501e0953",
+  "topic": "dateformat.y() doesn't support years < 1000",
+  "upstream_created_at": "2020-11-12T11:45:51Z",
+  "dataset_row": 497,
+  "problem_sha256": "81d2da98be5c092d9fa512b19c353034878e2ca95377065ede8768d0afa20509",
+  "regression_checks": [
+    "test_year_before_1000 (utils_tests.test_dateformat.DateFormatTests)"
+  ],
+  "passing_checks": 17
+}
