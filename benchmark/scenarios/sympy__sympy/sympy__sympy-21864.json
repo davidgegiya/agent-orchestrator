@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21864",
+  "repository": "sympy/sympy",
+  "base_commit": "ec0fe8c5f3e59840e8aa5d3d6a7c976e40f76b64",
+  "topic": "multiset_permutations needs to handle []",
+  "upstream_created_at": "2021-08-12T19:02:26Z",
+  "dataset_row": 2246,
+  "problem_sha256": "773f6b152bacbc4aa1aaff9c9c82178ff68f70acd36f7bc963efd39a07d90916",
+  "regression_checks": [
+    "test_multiset_permutations"
+  ],
+  "passing_checks": 41
+}
