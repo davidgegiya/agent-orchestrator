@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5743",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "dc4c709e9bca44952decdb74d76cf4e62799890a",
+  "topic": "Investigate #5495 (crash without a provided template)",
+  "upstream_created_at": "2022-01-29T16:04:04Z",
+  "dataset_row": 1339,
+  "problem_sha256": "f0cff3bbcae919239f3a38c1d3964c87ba40abf32f798f5354eefe35da34d5a9",
+  "regression_checks": [
+    "tests/lint/test_utils.py::test_issue_template_on_fatal_errors"
+  ],
+  "passing_checks": 2
+}
