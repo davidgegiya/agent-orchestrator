@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-10371",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "bc2c3b66aa084fa4ff64f836aee73eae4cb72818",
+  "topic": "RFE: allow to selectively disable loggers from command-line",
+  "upstream_created_at": "2022-10-11T20:27:58Z",
+  "dataset_row": 1378,
+  "problem_sha256": "9e416377f2a87a0c8bb3606fa93e725ceb366f9296417d9432e39b968d47b721",
+  "regression_checks": [
+    "testing/logging/test_reporting.py::test_disable_loggers",
+    "testing/logging/test_reporting.py::test_disable_loggers_does_not_propagate",
+    "testing/logging/test_reporting.py::test_log_disabling_works_with_log_cli"
+  ],
+  "passing_checks": 43
+}
