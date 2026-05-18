@@ -1,0 +1,20 @@
+{
+  "id": "psf__requests-2617",
+  "repository": "psf/requests",
+  "base_commit": "636b946af5eac8ba4cffa63a727523cd8c2c01ab",
+  "topic": "Prepared requests containing binary files will not send when unicode_literals is imported",
+  "upstream_created_at": "2015-05-28T17:09:51Z",
+  "dataset_row": 1188,
+  "problem_sha256": "960de7fbf2f6fbcbd15a229376d3a46a7d99c5dd240602885673943d1943b937",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_GET_WITH_PARAMS",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA",
+    "test_requests.py::RequestsTestCase::test_mixed_case_scheme_acceptable",
+    "test_requests.py::RequestsTestCase::test_param_cookiejar_works",
+    "test_requests.py::RequestsTestCase::test_unicode_multipart_post",
+    "test_requests.py::RequestsTestCase::test_uppercase_scheme_redirect"
+  ],
+  "passing_checks": 146
+}
