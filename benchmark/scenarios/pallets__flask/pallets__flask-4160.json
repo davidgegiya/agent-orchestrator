@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4160",
+  "repository": "pallets/flask",
+  "base_commit": "06cf349bb8b69d9946c3a6a64d32eb552cc7c28b",
+  "topic": "handle Decimal in json encoder",
+  "upstream_created_at": "2021-06-19T12:01:43Z",
+  "dataset_row": 1153,
+  "problem_sha256": "54001dbace4ebfc6ebcf5d6d0c419c217f9e9653611d4a15e57086c95dcf34d7",
+  "regression_checks": [
+    "tests/test_json.py::test_json_decimal"
+  ],
+  "passing_checks": 7
+}
