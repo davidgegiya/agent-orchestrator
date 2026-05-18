@@ -1,0 +1,15 @@
+{
+  "id": "mwaskom__seaborn-2846",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "8bae24f665f3732b66f8edf8d9bfd4a6d0db1906",
+  "topic": "relplot does not handle numpy-types for dimensional variables",
+  "upstream_created_at": "2022-06-11T16:24:34Z",
+  "dataset_row": 1134,
+  "problem_sha256": "caf4d9b0b01e86be67108f4fb1480cef7346911324104890ce63028d49b3d2de",
+  "regression_checks": [
+    "tests/test_relational.py::TestRelationalPlotter::test_relplot_vectors[numpy]",
+    "tests/test_relational.py::TestRelationalPlotter::test_relplot_vectors[list]",
+    "tests/test_relational.py::TestRelationalPlotter::test_relplot_wide"
+  ],
+  "passing_checks": 47
+}
