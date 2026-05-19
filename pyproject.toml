@@ -18,6 +18,7 @@ dependencies = [
 
 [project.scripts]
 agent-orchestrator = "orchestrator.main:main"
+agent-orchestrator-bench = "orchestrator.benchmark.cli:main"
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
