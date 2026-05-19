@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24849",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "75e2d2202dc19ee39c8b9a80b01475b90f07c75c",
+  "topic": "gapcolor not supported for LineCollections",
+  "upstream_created_at": "2022-12-31T10:19:18Z",
+  "dataset_row": 1054,
+  "problem_sha256": "5acc62feef031bf9c31fe356cab5e4bc1b0fda1f92b74fca8c3161f6dbc2fb3e",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_collections.py::test_striped_lines[png-orange]",
+    "lib/matplotlib/tests/test_collections.py::test_striped_lines[png-gapcolor1]"
+  ],
+  "passing_checks": 75
+}
