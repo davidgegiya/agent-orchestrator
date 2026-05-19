@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9547",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "8fd4373d3aec07b8d9a4fb159b6236f4dc715b21",
+  "topic": "Missing support for GNU extension types like `_Complex` or `_Fract`",
+  "upstream_created_at": "2021-08-14T14:02:03Z",
+  "dataset_row": 1888,
+  "problem_sha256": "34ec3b2a6cc2f37eb9f7ac5e1e751803f138a907fd4846ca5486c730f3697b3a",
+  "regression_checks": [
+    "tests/test_domain_c.py::test_domain_c_ast_fundamental_types"
+  ],
+  "passing_checks": 58
+}
