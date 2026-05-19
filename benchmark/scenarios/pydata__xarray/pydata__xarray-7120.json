@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7120",
+  "repository": "pydata/xarray",
+  "base_commit": "58ab594aa4315e75281569902e29c8c69834151f",
+  "topic": "Raise nicer error if passing a list of dimension names to transpose",
+  "upstream_created_at": "2022-10-03T23:53:43Z",
+  "dataset_row": 1304,
+  "problem_sha256": "ccd833de23853dab25b1b3dcfd57b08f425d687d296fa94de989ef44a9fd03a2",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::test_transpose_error"
+  ],
+  "passing_checks": 383
+}
