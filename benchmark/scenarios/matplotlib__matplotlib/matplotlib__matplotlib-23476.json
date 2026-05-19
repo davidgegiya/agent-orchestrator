@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23476",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "33a0599711d26dc2b79f851c6daed4947df7c167",
+  "topic": "DPI of a figure is doubled after unpickling on M1 Mac",
+  "upstream_created_at": "2022-07-22T18:58:22Z",
+  "dataset_row": 1020,
+  "problem_sha256": "9780ea7e406a54f9869a1ebee7e8a11cd7e894d9d85fb50416884c1cb4a07187",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_unpickle_with_device_pixel_ratio"
+  ],
+  "passing_checks": 104
+}
