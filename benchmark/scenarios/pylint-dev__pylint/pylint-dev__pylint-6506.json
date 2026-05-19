@@ -1,0 +1,14 @@
+{
+  "id": "pylint-dev__pylint-6506",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "0a4204fd7555cfedd43f43017c94d24ef48244a5",
+  "topic": "Traceback printed for unrecognized option",
+  "upstream_created_at": "2022-05-05T13:01:41Z",
+  "dataset_row": 1349,
+  "problem_sha256": "157d98e5392b033c1eca42917f49272de2e41d0169480b0752b2de68f85bff3d",
+  "regression_checks": [
+    "tests/config/test_config.py::test_unknown_option_name",
+    "tests/config/test_config.py::test_unknown_short_option_name"
+  ],
+  "passing_checks": 6
+}
