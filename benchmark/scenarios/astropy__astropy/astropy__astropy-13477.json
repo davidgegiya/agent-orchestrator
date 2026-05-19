@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13477",
+  "repository": "astropy/astropy",
+  "base_commit": "c40b75720a64186b57ad1de94ad7f21fa7728880",
+  "topic": "Comparing Frame with data and SkyCoord with same data raises exception",
+  "upstream_created_at": "2022-07-22T07:51:19Z",
+  "dataset_row": 30,
+  "problem_sha256": "da6360e0e35ec3b5c61e648c592c2cc80a05a3735eb1c9b911c9c52c48d8f84d",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_frames.py::test_frame_coord_comparison"
+  ],
+  "passing_checks": 54
+}
