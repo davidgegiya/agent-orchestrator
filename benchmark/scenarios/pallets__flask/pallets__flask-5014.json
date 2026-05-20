@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-5014",
+  "repository": "pallets/flask",
+  "base_commit": "7ee9ceb71e868944a46e1ff00b506772a53a4f1d",
+  "topic": "Require a non-empty name for Blueprints",
+  "upstream_created_at": "2023-03-04T18:36:21Z",
+  "dataset_row": 1160,
+  "problem_sha256": "269ff543ad4c5fca9c2401b75509d525f01d64961d2093674d04f226f53a550f",
+  "regression_checks": [
+    "tests/test_blueprints.py::test_empty_name_not_allowed"
+  ],
+  "passing_checks": 59
+}
