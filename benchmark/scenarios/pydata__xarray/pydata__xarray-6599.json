@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6599",
+  "repository": "pydata/xarray",
+  "base_commit": "6bb2b855498b5c68d7cca8cceb710365d58e6048",
+  "topic": "`polyval` with timedelta64 coordinates produces wrong results",
+  "upstream_created_at": "2022-05-12T15:12:41Z",
+  "dataset_row": 1283,
+  "problem_sha256": "dcbeefe12471e22fc2b22b220d846895b2e46a22131e732fdfbeb3c83a1e3b58",
+  "regression_checks": [
+    "xarray/tests/test_computation.py::test_polyval[timedelta-False]"
+  ],
+  "passing_checks": 264
+}
