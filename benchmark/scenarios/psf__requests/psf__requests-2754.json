@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-2754",
+  "repository": "psf/requests",
+  "base_commit": "0acbf2b91d9a196a58535e926531f810d44c4d3f",
+  "topic": ".htaccesss redirect to non ASCII folder does not work",
+  "upstream_created_at": "2015-09-01T08:35:36Z",
+  "dataset_row": 1191,
+  "problem_sha256": "799bde7d3280bd44211db2596975aeaceb08dba0e844cb5db3491a488901215d",
+  "regression_checks": [
+    "test_requests.py::TestUtils::test_unquote_unreserved_handles_bytes"
+  ],
+  "passing_checks": 91
+}
