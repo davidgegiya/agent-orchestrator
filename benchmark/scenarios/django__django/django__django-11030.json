@@ -1,0 +1,14 @@
+{
+  "id": "django__django-11030",
+  "repository": "django/django",
+  "base_commit": "2aaabe2004e1953eb7d7057edcf2fabd37f7394d",
+  "topic": "Subquery expressions unnecessarily added to group by",
+  "upstream_created_at": "2019-02-27T04:33:12Z",
+  "dataset_row": 126,
+  "problem_sha256": "cbb1717d45ffe2b86231a6e25c3b858177592c94e06d8e6baee3438205f3d7be",
+  "regression_checks": [
+    "test_missing_alias (expressions.test_deprecation.GetGroupByColsTest)",
+    "Subquery annotations are excluded from the GROUP BY if they are"
+  ],
+  "passing_checks": 94
+}
