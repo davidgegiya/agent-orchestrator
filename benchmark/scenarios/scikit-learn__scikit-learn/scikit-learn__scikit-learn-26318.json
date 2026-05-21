@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-26318",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "42d235924efa64987a19e945035c85414c53d4f0",
+  "topic": "Incorrect documentation for `warm_start` behavior on BaseForest-derived classes",
+  "upstream_created_at": "2023-05-02T15:11:07Z",
+  "dataset_row": 1708,
+  "problem_sha256": "ba3a28c20a25eef665585eaa7ea7927b61c767a93410c36f6438e72b35af8d18",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_forest.py::test_oob_not_computed_twice[ExtraTreesClassifier]",
+    "sklearn/ensemble/tests/test_forest.py::test_oob_not_computed_twice[RandomForestClassifier]",
+    "sklearn/ensemble/tests/test_forest.py::test_oob_not_computed_twice[ExtraTreesRegressor]",
+    "sklearn/ensemble/tests/test_forest.py::test_oob_not_computed_twice[RandomForestRegressor]"
+  ],
+  "passing_checks": 263
+}
