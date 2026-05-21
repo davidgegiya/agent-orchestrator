@@ -118,7 +118,7 @@ def normalize_review(text: str) -> str:
 
 def parse_reviewer_output(text: str) -> ReviewDecision:
     verdict = "FAIL"
-    action = "CONTINUE"
+    action = ""
     fixes: List[str] = []
     for line in text.splitlines():
         line = line.strip()
@@ -130,6 +130,10 @@ def parse_reviewer_output(text: str) -> ReviewDecision:
             action = line.split(":", 1)[1].strip().upper()
         elif line.startswith("-"):
             fixes.append(line.lstrip("- ").strip())
+    if verdict not in {"PASS", "FAIL"} or action not in {"CONTINUE", "SKIP"}:
+        return ReviewDecision("FAIL", "CONTINUE", ["Reviewer returned an invalid decision."], text)
+    if verdict == "PASS" and (action != "CONTINUE" or fixes != ["None"]):
+        return ReviewDecision("FAIL", "CONTINUE", ["Reviewer returned an inconsistent PASS."], text)
     return ReviewDecision(verdict=verdict, action=action, fixes=fixes, raw=text)
 
 
