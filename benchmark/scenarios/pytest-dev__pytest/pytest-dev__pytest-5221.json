@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-5221",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "4a2fdce62b73944030cff9b3e52862868ca9584d",
+  "topic": "Display fixture scope with `pytest --fixtures`",
+  "upstream_created_at": "2019-05-06T22:36:44Z",
+  "dataset_row": 1397,
+  "problem_sha256": "879d2f4396253f9cb0d98d88fed8039bf332c93e72ee85c7b7a86d2ce0f06082",
+  "regression_checks": [
+    "testing/python/fixtures.py::TestShowFixtures::test_show_fixtures",
+    "testing/python/fixtures.py::TestShowFixtures::test_show_fixtures_verbose"
+  ],
+  "passing_checks": 170
+}
