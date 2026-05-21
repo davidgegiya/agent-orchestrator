@@ -1,0 +1,15 @@
+{
+  "id": "mwaskom__seaborn-2576",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "430c1bf1fcc690f0431e6fc87b481b7b43776594",
+  "topic": "The following code behaves as if `sharey=True`",
+  "upstream_created_at": "2021-05-06T18:35:25Z",
+  "dataset_row": 1131,
+  "problem_sha256": "4017fd3796990624b2ce3de9b3c6bd015cff52bf2ca55c6a332c2c40c1c6abf3",
+  "regression_checks": [
+    "seaborn/tests/test_regression.py::TestRegressionPlots::test_lmplot_facet_truncate[True]",
+    "seaborn/tests/test_regression.py::TestRegressionPlots::test_lmplot_facet_truncate[False]",
+    "seaborn/tests/test_regression.py::TestRegressionPlots::test_lmplot_facet_kws"
+  ],
+  "passing_checks": 44
+}
