@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-14531",
+  "repository": "sympy/sympy",
+  "base_commit": "205da797006360fc629110937e39a19c9561313e",
+  "topic": "StrPrinter setting are not respected by certain subexpressions",
+  "upstream_created_at": "2018-03-18T18:15:33Z",
+  "dataset_row": 2026,
+  "problem_sha256": "e70542cc8f5165e457375dfbfa7fd7bc843cb94db23cfb860a9b63af962b4727",
+  "regression_checks": [
+    "test_python_relational",
+    "test_Rational"
+  ],
+  "passing_checks": 84
+}
