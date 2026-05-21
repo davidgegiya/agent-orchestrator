@@ -1,0 +1,15 @@
+{
+  "id": "matplotlib__matplotlib-22865",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "c6c7ec1978c22ae2c704555a873d0ec6e1e2eaa8",
+  "topic": "Colorbar with drawedges=True and extend='both' does not draw edges at extremities",
+  "upstream_created_at": "2022-04-20T15:15:11Z",
+  "dataset_row": 993,
+  "problem_sha256": "a1b3ef1b06fd5e43751e9ec9f1b5724086a7a28b3a02adb3ae7fd897436576f7",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[both-1-res0]",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[min-0-res1]",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_extend_drawedges[max-0-res2]"
+  ],
+  "passing_checks": 57
+}
