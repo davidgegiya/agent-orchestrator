@@ -1,0 +1,15 @@
+{
+  "id": "pydata__xarray-5580",
+  "repository": "pydata/xarray",
+  "base_commit": "4bb9d9c6df77137f05e85c7cc6508fe7a93dc0e4",
+  "topic": "This must have been introduced into `xr.set_options()` somewhere around version 0.17",
+  "upstream_created_at": "2021-07-05T20:03:55Z",
+  "dataset_row": 1272,
+  "problem_sha256": "a379c2ae5443535508525d2422413945ecb62b49227b6b978697321888ab50c0",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test__mapping_repr[35-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[11-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[1-40-30]"
+  ],
+  "passing_checks": 21
+}
