@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-14253",
+  "repository": "astropy/astropy",
+  "base_commit": "dd2304672cdf4ea1b6f124f9f22ec5069a13c9f5",
+  "topic": "When should `info` be linked to a new object?",
+  "upstream_created_at": "2023-01-04T19:59:52Z",
+  "dataset_row": 48,
+  "problem_sha256": "4fc95314533aaa2af625ecc7361c1665b1ae80febf2bc6d4598f0a5266f2f20f",
+  "regression_checks": [
+    "astropy/units/tests/test_quantity_info.py::TestQuantityInfo::test_unary_op",
+    "astropy/units/tests/test_quantity_info.py::TestQuantityInfo::test_binary_op",
+    "astropy/units/tests/test_quantity_info.py::TestQuantityInfo::test_unit_change",
+    "astropy/units/tests/test_quantity_info.py::TestStructuredQuantity::test_keying"
+  ],
+  "passing_checks": 103
+}
