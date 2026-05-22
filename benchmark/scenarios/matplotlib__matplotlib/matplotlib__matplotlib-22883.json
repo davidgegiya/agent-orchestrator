@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-22883",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e0773948af38c8c5123fda0d90cf40140d8b020c",
+  "topic": "Missing `f` prefix on f-strings",
+  "upstream_created_at": "2022-04-23T23:27:05Z",
+  "dataset_row": 995,
+  "problem_sha256": "25a66404204f4fe80b55dab30ab985927bfc6af084625014e7753878b3f3df92",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_triangulation.py::test_tripcolor_color",
+    "lib/matplotlib/tests/test_triangulation.py::test_tripcolor_warnings"
+  ],
+  "passing_checks": 45
+}
