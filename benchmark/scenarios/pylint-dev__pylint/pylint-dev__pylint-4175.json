@@ -1,0 +1,30 @@
+{
+  "id": "pylint-dev__pylint-4175",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "ae6cbd1062c0a8e68d32a5cdc67c993da26d0f4a",
+  "topic": "Pylint 2.7.0 seems to ignore the min-similarity-lines setting",
+  "upstream_created_at": "2021-03-02T15:18:14Z",
+  "dataset_row": 1316,
+  "problem_sha256": "f9f66a43417a7822e1cea94e23c3aecd8bcb00342f49fec416a18ba47b9949b4",
+  "regression_checks": [
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-2-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-2-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-2-3]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-2-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-2-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-2-3]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-1-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-1-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-1-3]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-5-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-5-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[3-5-3]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[10-2-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[10-2-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[10-2-3]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-10-1]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-10-2]",
+    "tests/test_check_parallel.py::TestCheckParallel::test_map_reduce[2-10-3]"
+  ],
+  "passing_checks": 27
+}
