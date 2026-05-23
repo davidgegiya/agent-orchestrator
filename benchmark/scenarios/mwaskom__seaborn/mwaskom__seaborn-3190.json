@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3190",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "4a9e54962a29c12a8b103d75f838e0e795a6974d",
+  "topic": "Color mapping fails with boolean data",
+  "upstream_created_at": "2022-12-18T17:13:51Z",
+  "dataset_row": 1144,
+  "problem_sha256": "469f042a8e2949cf94693f2c165d0dd1929b4f6c4b6cba70d03fcf83a3c41a86",
+  "regression_checks": [
+    "tests/_core/test_scales.py::TestContinuous::test_interval_with_bools"
+  ],
+  "passing_checks": 84
+}
