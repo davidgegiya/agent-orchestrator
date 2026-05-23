@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14520",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "7e7b5092991cf7a7cf6bd95d56b08deef5eb9847",
+  "topic": "Copy param ignored in TfidfVectorizer",
+  "upstream_created_at": "2019-07-30T15:19:44Z",
+  "dataset_row": 1643,
+  "problem_sha256": "9d1ddf8615485bd38f30a9385a6fe9fd87dce6d6944247ecfc03d596f30d2a2f",
+  "regression_checks": [
+    "sklearn/feature_extraction/tests/test_text.py::test_tfidf_vectorizer_deprecationwarning"
+  ],
+  "passing_checks": 87
+}
