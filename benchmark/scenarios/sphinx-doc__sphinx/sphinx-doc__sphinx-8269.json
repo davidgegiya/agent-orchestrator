@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8269",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "1e2ccd8f0eca0870cf6f8fce6934e2da8eba9b72",
+  "topic": "Linkcheck should report HTTP errors instead of Anchor not found",
+  "upstream_created_at": "2020-10-03T11:08:37Z",
+  "dataset_row": 1816,
+  "problem_sha256": "4851b82d7dc466c376f1a5a1f34f912cc09aeee064ae2e97444e5c47518880ff",
+  "regression_checks": [
+    "tests/test_build_linkcheck.py::test_raises_for_invalid_status"
+  ],
+  "passing_checks": 5
+}
