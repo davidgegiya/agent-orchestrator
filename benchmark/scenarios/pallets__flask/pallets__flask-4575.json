@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4575",
+  "repository": "pallets/flask",
+  "base_commit": "bd56d19b167822a9a23e2e9e2a07ccccc36baa8d",
+  "topic": "Move `redirect` to the `Flask` app object",
+  "upstream_created_at": "2022-05-02T16:46:41Z",
+  "dataset_row": 1156,
+  "problem_sha256": "74ca8bd7765bd093649ff780ad567180eaf2ee0cc1081f347413db3885af22fe",
+  "regression_checks": [
+    "tests/test_helpers.py::test_redirect_with_app"
+  ],
+  "passing_checks": 18
+}
