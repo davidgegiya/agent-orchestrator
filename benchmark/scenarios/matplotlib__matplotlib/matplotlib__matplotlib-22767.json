@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22767",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "b36ef478bd07be1cf525789696d8d0334d913b67",
+  "topic": "Issue with find_nearest_contour in contour.py",
+  "upstream_created_at": "2022-04-01T19:11:12Z",
+  "dataset_row": 990,
+  "problem_sha256": "b316d4de8cfbfa00346fe30b0aaaf102ebe21db838865621331c6c2ffe62b369",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_find_nearest_contour_no_filled"
+  ],
+  "passing_checks": 49
+}
