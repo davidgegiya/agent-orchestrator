@@ -1,0 +1,23 @@
+{
+  "id": "pytest-dev__pytest-7168",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "4787fd64a4ca0dba5528b5651bddd254102fe9f3",
+  "topic": "INTERNALERROR when exception in __repr__",
+  "upstream_created_at": "2020-05-05T22:23:38Z",
+  "dataset_row": 1431,
+  "problem_sha256": "25a2a97cd2d869536cdfcf86cc8e001c5f79602dee2a4c2009e3b55f713d558f",
+  "regression_checks": [
+    "testing/io/test_saferepr.py::test_simple_repr",
+    "testing/io/test_saferepr.py::test_maxsize",
+    "testing/io/test_saferepr.py::test_maxsize_error_on_instance",
+    "testing/io/test_saferepr.py::test_exceptions",
+    "testing/io/test_saferepr.py::test_baseexception",
+    "testing/io/test_saferepr.py::test_buggy_builtin_repr",
+    "testing/io/test_saferepr.py::test_big_repr",
+    "testing/io/test_saferepr.py::test_repr_on_newstyle",
+    "testing/io/test_saferepr.py::test_unicode",
+    "testing/io/test_saferepr.py::test_pformat_dispatch",
+    "testing/io/test_saferepr.py::test_broken_getattribute"
+  ],
+  "passing_checks": 0
+}
