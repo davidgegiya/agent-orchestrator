@@ -1,0 +1,16 @@
+{
+  "id": "psf__requests-2413",
+  "repository": "psf/requests",
+  "base_commit": "d2d576b6b1101e2871c82f63adf2c2b534c2dabc",
+  "topic": "Requests 2.5.1 doesn't recognize unicode filenames for uploads",
+  "upstream_created_at": "2015-01-19T03:54:01Z",
+  "dataset_row": 1186,
+  "problem_sha256": "8e24fa4bcf74fa313ac1db89dbbfc0a59b1e73b63229fd8b3b05dded89a26678",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA",
+    "test_requests.py::RequestsTestCase::test_auth_is_stripped_on_redirect_off_host",
+    "test_requests.py::UtilsTestCase::test_guess_filename_with_file_like_obj"
+  ],
+  "passing_checks": 127
+}
