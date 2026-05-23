@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7982",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "a7e38c5c61928033a2dc1915cbee8caa8544a4d0",
+  "topic": "Symlinked directories not collected since pytest 6.1.0",
+  "upstream_created_at": "2020-10-31T12:27:03Z",
+  "dataset_row": 1457,
+  "problem_sha256": "feffda06cf2245490c9b71d3f84fa212f71b7cceb67d1a6dc0aec2f35347f36c",
+  "regression_checks": [
+    "testing/test_collection.py::test_collect_symlink_dir"
+  ],
+  "passing_checks": 78
+}
