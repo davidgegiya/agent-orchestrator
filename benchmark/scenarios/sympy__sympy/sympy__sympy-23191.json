@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-23191",
+  "repository": "sympy/sympy",
+  "base_commit": "fa9b4b140ec0eaf75a62c1111131626ef0f6f524",
+  "topic": "display bug while using pretty_print with sympy.vector object in the terminal",
+  "upstream_created_at": "2022-03-01T17:22:06Z",
+  "dataset_row": 2269,
+  "problem_sha256": "90007cf5a5b90c3315bcdae4b5c0ca8920926ceca0c63f80e30a2b539c1cccf8",
+  "regression_checks": [
+    "test_issue_23058"
+  ],
+  "passing_checks": 3
+}
