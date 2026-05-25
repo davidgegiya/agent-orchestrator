@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17821",
+  "repository": "sympy/sympy",
+  "base_commit": "647a123703e0f5de659087bef860adc3cdf4f9b6",
+  "topic": "Catalan rewrite and doctests for latex equations",
+  "upstream_created_at": "2019-10-29T15:29:09Z",
+  "dataset_row": 2140,
+  "problem_sha256": "7a809e937db1b88df2a2a76237bc73e9138b79820d9fa69b7221abdb2c05a5e1",
+  "regression_checks": [
+    "test_Catalan_rewrite"
+  ],
+  "passing_checks": 96
+}
