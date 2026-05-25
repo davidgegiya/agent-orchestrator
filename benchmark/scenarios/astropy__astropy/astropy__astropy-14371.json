@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-14371",
+  "repository": "astropy/astropy",
+  "base_commit": "e2a2ca3eab1defc71aedf4cf3982f7d4793faacf",
+  "topic": "Add ``atol`` argument to function ``is_O3``",
+  "upstream_created_at": "2023-02-08T19:31:02Z",
+  "dataset_row": 53,
+  "problem_sha256": "bd085cdbae25971e5966ec7165b85840b52bb052f6a71938e4248ee70ce04803",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_matrix_utilities.py::test_is_O3",
+    "astropy/coordinates/tests/test_matrix_utilities.py::test_is_rotation"
+  ],
+  "passing_checks": 3
+}
