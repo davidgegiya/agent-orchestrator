@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7151",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "2b51ed46d54be58da6bbcd28f68149b3fc2cd104",
+  "topic": "unittest.TestCase cleanup functions not invoked on test failure",
+  "upstream_created_at": "2020-05-01T20:35:40Z",
+  "dataset_row": 1429,
+  "problem_sha256": "1bea1ad5f5a0dbd0c313c3efaa193d378b67c887b6f251e6d5c7bcf9e2f8ad31",
+  "regression_checks": [
+    "testing/test_unittest.py::test_cleanup_functions"
+  ],
+  "passing_checks": 49
+}
