@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3156",
+  "repository": "pydata/xarray",
+  "base_commit": "118f4d996e7711c9aced916e6049af9f28d5ec66",
+  "topic": "groupby on empty DataArray raises StopIteration",
+  "upstream_created_at": "2019-07-21T11:27:25Z",
+  "dataset_row": 1211,
+  "problem_sha256": "10ce36f1ca85bb51a95c1676568afdd7493a4fa857b4d439d96db324a5f08dc0",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_da_groupby_empty"
+  ],
+  "passing_checks": 9
+}
