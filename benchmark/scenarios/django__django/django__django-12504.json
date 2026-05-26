@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12504",
+  "repository": "django/django",
+  "base_commit": "d4bf3b4c75c0e1229062ad4c937725931f699fb7",
+  "topic": "Logout link should be protected",
+  "upstream_created_at": "2020-02-27T17:07:31Z",
+  "dataset_row": 337,
+  "problem_sha256": "deaa9173043142566a506391141253f4e31a345f30597746b613b7b25fc323a5",
+  "regression_checks": [
+    "test_logout_with_get_raises_deprecation_warning (auth_tests.test_views.LogoutTest)"
+  ],
+  "passing_checks": 115
+}
