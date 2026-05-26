@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23111",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "b31c5ae782876386006a544a5cc833ddddb4b877",
+  "topic": "Imshow with all negative values leads to math domain errors",
+  "upstream_created_at": "2022-05-23T17:55:16Z",
+  "dataset_row": 1006,
+  "problem_sha256": "0107d821dfcb0213d422ac7ad96b40ac702b2b01cb04d5ef8394e0a5b2d0bdf3",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_image.py::test_format_cursor_data[data4-[-1.0000000000000000]]"
+  ],
+  "passing_checks": 126
+}
