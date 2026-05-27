@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-2853",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "a674a83cc894b5941a86d4c51ba2e57c632882c1",
+  "topic": "x_estimator bars now inherit scatter_kws alpha",
+  "upstream_created_at": "2022-06-12T14:31:48Z",
+  "dataset_row": 1136,
+  "problem_sha256": "01d4809be1326a4733cec049cf4f44c78dfff068f2a29310caf06354c3c9270f",
+  "regression_checks": [
+    "tests/test_regression.py::TestRegressionPlots::test_regplot_scatter_kws_alpha"
+  ],
+  "passing_checks": 46
+}
