@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-11496",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "cb0140017740d985960911c4f34820beea915846",
+  "topic": "BUG: SimpleImputer gives wrong result on sparse matrix with explicit zeros",
+  "upstream_created_at": "2018-07-12T17:05:58Z",
+  "dataset_row": 1539,
+  "problem_sha256": "493d8d66961c231067fabe382abda2816d630e535fae262324f6576d537fca44",
+  "regression_checks": [
+    "sklearn/tests/test_impute.py::test_imputation_error_sparse_0[mean]",
+    "sklearn/tests/test_impute.py::test_imputation_error_sparse_0[median]",
+    "sklearn/tests/test_impute.py::test_imputation_error_sparse_0[most_frequent]",
+    "sklearn/tests/test_impute.py::test_imputation_error_sparse_0[constant]"
+  ],
+  "passing_checks": 61
+}
