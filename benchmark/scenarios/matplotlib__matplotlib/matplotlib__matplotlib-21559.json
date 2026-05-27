@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21559",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "95463c32e684ffd752da1c303bdbdf21eed22fff",
+  "topic": "eventplot cannot handle multiple datetime-based series",
+  "upstream_created_at": "2021-11-07T15:59:23Z",
+  "dataset_row": 983,
+  "problem_sha256": "b809ad8d3c841ab2e8c722aa984c684007b0e129d4a0fd5a6e58c16a624e32f8",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_eventplot_units_list[png]"
+  ],
+  "passing_checks": 680
+}
