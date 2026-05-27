@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-1142",
+  "repository": "psf/requests",
+  "base_commit": "22623bd8c265b78b161542663ee980738441c307",
+  "topic": "requests.get is ALWAYS sending content length",
+  "upstream_created_at": "2013-01-25T05:19:16Z",
+  "dataset_row": 1162,
+  "problem_sha256": "eade6f49f359c6ddf9524b8675c4a9ab7a1a3d5eda14e4fe6e769a2dea429387",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_no_content_length"
+  ],
+  "passing_checks": 5
+}
