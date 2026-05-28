@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13572",
+  "repository": "astropy/astropy",
+  "base_commit": "986123f73ce94d4511f453dbdd4470c72f47402a",
+  "topic": "Problem in function nutation_matrix in earth_orientation.py",
+  "upstream_created_at": "2022-08-25T03:49:28Z",
+  "dataset_row": 31,
+  "problem_sha256": "9a986b062a02ad4a288400e1f4ee138a360203d364e7e70c6f9899b212f58253",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_earth_orientation.py::test_nutation_matrix"
+  ],
+  "passing_checks": 431
+}
