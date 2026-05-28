@@ -16,7 +16,9 @@ def _run_local_cmd(
             args,
             cwd=str(cwd),
             capture_output=True,
-            text=True,
+            stdin=subprocess.DEVNULL,
+            encoding="utf-8",
+            errors="surrogateescape",
             timeout=timeout_seconds,
             env=env,
         )
@@ -42,6 +44,10 @@ def _run_local_cmd(
         }
 
 
+def _escape_invalid_utf8(text: str) -> str:
+    return text.encode("utf-8", errors="backslashreplace").decode("utf-8")
+
+
 def _cmd_meta(result: Dict[str, Any], *, limit: int = 800) -> Dict[str, Any]:
     def _truncate_stdio(text: str, max_chars: int) -> Tuple[str, bool]:
         if text is None:
@@ -50,8 +56,8 @@ def _cmd_meta(result: Dict[str, Any], *, limit: int = 800) -> Dict[str, Any]:
             return (text, False)
         return (text[:max_chars] + "...<truncated>", True)
 
-    stdout_raw = result.get("stdout") or ""
-    stderr_raw = result.get("stderr") or ""
+    stdout_raw = _escape_invalid_utf8(result.get("stdout") or "")
+    stderr_raw = _escape_invalid_utf8(result.get("stderr") or "")
     stdout_preview, stdout_truncated = _truncate_stdio(stdout_raw, limit)
     stderr_preview, stderr_truncated = _truncate_stdio(stderr_raw, limit)
     return {
@@ -152,4 +158,4 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
     if not diff_parts:
         return ("- None", meta)
 
-    return ("\n\n".join(diff_parts).rstrip() + "\n", meta)
+    return (_escape_invalid_utf8("\n\n".join(diff_parts).rstrip()) + "\n", meta)

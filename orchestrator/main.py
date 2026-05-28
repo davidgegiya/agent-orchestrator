@@ -365,10 +365,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--codex-timeout", type=int, default=900)
     parser.add_argument("--write-project-notes", action="store_true",
                         help="Allow the documentation role to update this project's notes")
+    parser.add_argument("--check-timeout", type=int, default=120)
     parser.add_argument("--check", action="append", help="Required check command (repeatable; no shell)")
     args = parser.parse_args(argv)
-    if args.codex_timeout < 1:
-        parser.error("--codex-timeout must be positive")
+    if args.codex_timeout < 1 or args.check_timeout < 1:
+        parser.error("command timeouts must be positive")
     if args.implementer == "codex" and not args.workspace:
         parser.error("--implementer codex requires an explicit --workspace checkout")
     try:
@@ -553,12 +554,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             return 1
         check_env = {key: value for key, value in os.environ.items() if key != "OPENAI_API_KEY"}
         check_results = [
-            _run_local_cmd(command, cwd=workspace, timeout_seconds=120, env=check_env)
+            _run_local_cmd(command, cwd=workspace, timeout_seconds=args.check_timeout, env=check_env)
             for command in checks
         ]
         round_record["checks"] = [_cmd_meta(check, limit=4000) for check in check_results]
         tool_outputs = _format_tool_outputs([
-            *implementer_ctx.tool_events, *({"tool": "run_cmd", **check} for check in check_results),
+            *implementer_ctx.tool_events, *({"tool": "run_cmd", **check} for check in round_record["checks"]),
         ])
 
         red_flags_text, red_flags_meta = _scan_red_flags(workspace)
