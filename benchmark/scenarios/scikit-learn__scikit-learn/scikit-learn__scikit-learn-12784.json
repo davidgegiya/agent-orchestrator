@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-12784",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "55bf5d93e5674f13a1134d93a11fd0cd11aabcd1",
+  "topic": "KNeighborsRegressor gives different results for different n_jobs values",
+  "upstream_created_at": "2018-12-14T16:48:26Z",
+  "dataset_row": 1563,
+  "problem_sha256": "faece9f0303f94423103b3ef6d379c1f17a08add0befb8eb32944191ee311dd9",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_make_column_transformer_pandas",
+    "sklearn/utils/tests/test_validation.py::test_check_array_series"
+  ],
+  "passing_checks": 397
+}
