@@ -1,0 +1,15 @@
+{
+  "id": "pylint-dev__pylint-5951",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "6de7100e4bed8641f898cef160e1874ec788ab96",
+  "topic": "DOC: pyreverse supported format not recognized missing puml, plantuml, mmd, etc",
+  "upstream_created_at": "2022-03-22T08:27:39Z",
+  "dataset_row": 1342,
+  "problem_sha256": "3775a1110b052d41515f1beff687ce006bcbf1114e8ede5fb5d1127f39768387",
+  "regression_checks": [
+    "tests/pyreverse/test_main.py::test_graphviz_supported_image_format",
+    "tests/pyreverse/test_main.py::test_graphviz_cant_determine_supported_formats",
+    "tests/pyreverse/test_main.py::test_graphviz_unsupported_image_format"
+  ],
+  "passing_checks": 2
+}
