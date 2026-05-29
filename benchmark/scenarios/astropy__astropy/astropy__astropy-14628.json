@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14628",
+  "repository": "astropy/astropy",
+  "base_commit": "c667e73df92215cf1446c3eda71a56fdaebba426",
+  "topic": "Make getting a topocentric ITRS position easier",
+  "upstream_created_at": "2023-04-12T10:00:55Z",
+  "dataset_row": 65,
+  "problem_sha256": "5165a34aa841a3ac38002713a3c407d39d23ae287a5a349502a52f1f9d53ba3c",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_intermediate_transformations.py::test_itrs_straight_overhead"
+  ],
+  "passing_checks": 71
+}
