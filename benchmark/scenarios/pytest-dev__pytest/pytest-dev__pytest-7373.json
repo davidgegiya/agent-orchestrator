@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7373",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7b77fc086aab8b3a8ebc890200371884555eea1e",
+  "topic": "Incorrect caching of skipif/xfail string condition evaluation",
+  "upstream_created_at": "2020-06-15T17:12:08Z",
+  "dataset_row": 1441,
+  "problem_sha256": "0daa46ec68c9c184354717dab07d3a5e1cd8f75f4924266276fa82102f5545f4",
+  "regression_checks": [
+    "testing/test_mark.py::TestFunctional::test_reevaluate_dynamic_expr"
+  ],
+  "passing_checks": 81
+}
