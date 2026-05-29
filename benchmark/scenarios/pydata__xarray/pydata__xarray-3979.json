@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3979",
+  "repository": "pydata/xarray",
+  "base_commit": "2c77eb531b6689f9f1d2adbde0d8bf852f1f7362",
+  "topic": "xr.full_like (often) fails when other is chunked and fill_value is non-scalar",
+  "upstream_created_at": "2020-04-16T19:18:50Z",
+  "dataset_row": 1230,
+  "problem_sha256": "42dc26e01aaad165765caa92858f818034b1ff6ad36b1e05f151f4464a75fb6f",
+  "regression_checks": [
+    "xarray/tests/test_variable.py::TestAsCompatibleData::test_full_like"
+  ],
+  "passing_checks": 359
+}
