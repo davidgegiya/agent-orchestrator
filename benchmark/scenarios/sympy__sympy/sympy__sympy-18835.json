@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-18835",
+  "repository": "sympy/sympy",
+  "base_commit": "516fa83e69caf1e68306cfc912a13f36c434d51c",
+  "topic": "uniq modifies list argument",
+  "upstream_created_at": "2020-03-11T23:39:56Z",
+  "dataset_row": 2177,
+  "problem_sha256": "6c81e956a2b6167e159bad9d33176c78b1cfa16bab5136d8633d3e8abbbf1369",
+  "regression_checks": [
+    "test_uniq"
+  ],
+  "passing_checks": 41
+}
