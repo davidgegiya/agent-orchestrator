@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22929",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "89b21b517df0b2a9c378913bae8e1f184988b554",
+  "topic": "bar_label fails with nan errorbar values",
+  "upstream_created_at": "2022-04-28T16:00:17Z",
+  "dataset_row": 997,
+  "problem_sha256": "d3187c687d071bcfc00edbf318af484cff92823ae14a2eb49c2951dcb8e86c70",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_nan_barlabels"
+  ],
+  "passing_checks": 733
+}
