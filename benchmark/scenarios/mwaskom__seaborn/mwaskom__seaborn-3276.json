@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3276",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "3733590d86a7f2c2a95cd9940a34aa7df5f5a3d2",
+  "topic": "`heatmap(..., norm=None, ...)` has different behaviour than without specifying the `norm` argument",
+  "upstream_created_at": "2023-02-23T14:34:53Z",
+  "dataset_row": 1148,
+  "problem_sha256": "cfaff48d5d611028bab68d3d9e549febd380edda71a95a5e23ac138d618ceda5",
+  "regression_checks": [
+    "tests/test_matrix.py::TestHeatmap::test_explicit_none_norm"
+  ],
+  "passing_checks": 88
+}
