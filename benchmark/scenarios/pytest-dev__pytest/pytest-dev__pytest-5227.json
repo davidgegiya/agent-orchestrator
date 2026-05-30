@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-5227",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "2051e30b9b596e944524ccb787ed20f9f5be93e3",
+  "topic": "Improve default logging format",
+  "upstream_created_at": "2019-05-07T20:27:24Z",
+  "dataset_row": 1398,
+  "problem_sha256": "39ee84cf97db20c51ba7dac2d44c84f26f02f8fa3308938c34c7faf498ea2c9e",
+  "regression_checks": [
+    "testing/logging/test_reporting.py::test_log_cli_enabled_disabled[True]",
+    "testing/logging/test_reporting.py::test_log_cli_default_level",
+    "testing/logging/test_reporting.py::test_sections_single_new_line_after_test_outcome"
+  ],
+  "passing_checks": 34
+}
