@@ -1,0 +1,18 @@
+{
+  "id": "psf__requests-1921",
+  "repository": "psf/requests",
+  "base_commit": "3c88e520da24ae6f736929a750876e7654accc3d",
+  "topic": "Removing a default header of a session",
+  "upstream_created_at": "2014-02-14T22:15:56Z",
+  "dataset_row": 1177,
+  "problem_sha256": "9d0f8ec018bc4d898a81bcc9d5fc9174bf8cbb56705f6cf32ef11c81e198ca70",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES",
+    "test_requests.py::RequestsTestCase::test_basicauth_with_netrc",
+    "test_requests.py::RequestsTestCase::test_cookie_persists_via_api",
+    "test_requests.py::RequestsTestCase::test_headers_on_session_with_None_are_not_sent",
+    "test_requests.py::RequestsTestCase::test_uppercase_scheme_redirect"
+  ],
+  "passing_checks": 107
+}
