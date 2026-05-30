@@ -1,0 +1,13 @@
+{
+  "id": "pallets__flask-4544",
+  "repository": "pallets/flask",
+  "base_commit": "dba2be9311d2abfd1b973c6bb578f416ee771fda",
+  "topic": "`flask run` rejects `--key foo.pem --cert foo.cert`",
+  "upstream_created_at": "2022-04-18T13:39:46Z",
+  "dataset_row": 1155,
+  "problem_sha256": "af7698921f0d2092c732ec80274409dd9cea6c72b82585d720b633659dd18794",
+  "regression_checks": [
+    "tests/test_cli.py::test_run_cert_path"
+  ],
+  "passing_checks": 51
+}
