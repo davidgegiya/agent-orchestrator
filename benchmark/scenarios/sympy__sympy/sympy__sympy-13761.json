@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13761",
+  "repository": "sympy/sympy",
+  "base_commit": "a5e6a101869e027e7930e694f8b1cfb082603453",
+  "topic": "Cannot simplify x + csch(sinc(1))",
+  "upstream_created_at": "2017-12-18T14:24:24Z",
+  "dataset_row": 1991,
+  "problem_sha256": "73fabd5400d4f1c3a5ffa7f0dbeee657f470832372039069bc2f63105cdaa9f7",
+  "regression_checks": [
+    "test_issue_13474"
+  ],
+  "passing_checks": 26
+}
