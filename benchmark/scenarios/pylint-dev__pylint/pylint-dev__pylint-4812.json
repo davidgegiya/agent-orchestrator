@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-4812",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "47b483ae037e35c25e84b5b697303f2dd79a0e4e",
+  "topic": "Config File Does not Expand Environment Variables",
+  "upstream_created_at": "2021-08-07T15:55:29Z",
+  "dataset_row": 1328,
+  "problem_sha256": "5ca15b8ddb0b892a9f94cdc193fd615d0607031fd0cf27ef05b755c6536ae23b",
+  "regression_checks": [
+    "tests/test_config.py::test_can_read_env_variable"
+  ],
+  "passing_checks": 4
+}
