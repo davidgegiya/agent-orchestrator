@@ -1,0 +1,19 @@
+{
+  "id": "astropy__astropy-7737",
+  "repository": "astropy/astropy",
+  "base_commit": "153e9447ae032d92be74e54272565f6e39c69b3c",
+  "topic": "biweight_location of a constant array returns nan",
+  "upstream_created_at": "2018-08-14T18:13:03Z",
+  "dataset_row": 81,
+  "problem_sha256": "f553e992e32027f0bc477d87372d14d84c1f9b3c12f9ad4886360bf3e9cfc138",
+  "regression_checks": [
+    "astropy/stats/tests/test_biweight.py::test_biweight_location_constant",
+    "astropy/stats/tests/test_biweight.py::test_biweight_location_constant_axis_2d",
+    "astropy/stats/tests/test_biweight.py::test_biweight_location_constant_axis_3d",
+    "astropy/stats/tests/test_biweight.py::test_biweight_midvariance_constant_axis",
+    "astropy/stats/tests/test_biweight.py::test_biweight_midvariance_constant_axis_2d",
+    "astropy/stats/tests/test_biweight.py::test_biweight_midvariance_constant_axis_3d",
+    "astropy/stats/tests/test_biweight.py::test_biweight_midcovariance_constant"
+  ],
+  "passing_checks": 19
+}
