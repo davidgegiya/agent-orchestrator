@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26469",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "67fa29336eda204572536d2cea1bf8a4cb04f6fa",
+  "topic": "Change PdfPages to default to keep_empty=False and eventually deprecate keep_empty",
+  "upstream_created_at": "2023-08-08T08:50:37Z",
+  "dataset_row": 1125,
+  "problem_sha256": "b497b5d88b576c2de93d763584ecbffc0a944ca6dad4248fcbe6b331b58d5314",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_pgf.py::test_multipage_keep_empty"
+  ],
+  "passing_checks": 41
+}
