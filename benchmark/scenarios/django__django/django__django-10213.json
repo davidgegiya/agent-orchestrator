@@ -1,0 +1,28 @@
+{
+  "id": "django__django-10213",
+  "repository": "django/django",
+  "base_commit": "a0ef6a0e22038a36c3646ea96f61fdc6d7ab7e5c",
+  "topic": "Add an option to django-admin to always colorize output",
+  "upstream_created_at": "2018-07-22T17:15:08Z",
+  "dataset_row": 97,
+  "problem_sha256": "e3481838b007b1eef0379bab7cf0cf1de98f04bab05ea296b9c7093f9bc4ea87",
+  "regression_checks": [
+    "Options passed before settings are correctly handled.",
+    "Options are correctly handled when they are passed before and after",
+    "Options passed after settings are correctly handled.",
+    "Short options passed after settings are correctly handled.",
+    "Short options passed before settings are correctly handled.",
+    "alternate: manage.py output syntax color can be deactivated with the `--no-color` option",
+    "alternate: manage.py can execute user commands if settings are provided in environment",
+    "alternate: manage.py can execute user commands if settings are provided as argument",
+    "User AppCommands raise an error when multiple app names are provided",
+    "User BaseCommands can execute when a label is provided",
+    "User BaseCommands can execute when no labels are provided",
+    "User BaseCommands can execute with options when a label is provided",
+    "User BaseCommands can execute with multiple options when a label is provided",
+    "User LabelCommands can execute when a label is provided",
+    "User LabelCommands are executed multiple times if multiple labels are provided",
+    "NoArg Commands can be executed"
+  ],
+  "passing_checks": 186
+}
