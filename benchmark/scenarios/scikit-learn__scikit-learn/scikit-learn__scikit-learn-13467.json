@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-13467",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "a83c8311dfdbf74dea584d45c6f254bc8171054d",
+  "topic": "Implement RMSE (root-mean-square error) metric and scorer",
+  "upstream_created_at": "2019-03-18T15:20:08Z",
+  "dataset_row": 1601,
+  "problem_sha256": "184fb5f7116745fb6aa5d6a0f4d3f63e89ce30db70098dd5d7ee0bea4c5b8fe8",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_regression.py::test_multioutput_regression",
+    "sklearn/metrics/tests/test_regression.py::test_regression_metrics_at_limits",
+    "sklearn/metrics/tests/test_regression.py::test_regression_custom_weights",
+    "sklearn/metrics/tests/test_score_objects.py::test_scorer_memmap_input[neg_root_mean_squared_error]"
+  ],
+  "passing_checks": 63
+}
