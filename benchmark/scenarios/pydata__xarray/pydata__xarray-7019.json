@@ -1,0 +1,31 @@
+{
+  "id": "pydata__xarray-7019",
+  "repository": "pydata/xarray",
+  "base_commit": "964d350a80fe21d4babf939c108986d5fd90a2cf",
+  "topic": "Alternative parallel execution frameworks in xarray",
+  "upstream_created_at": "2022-09-10T22:02:18Z",
+  "dataset_row": 1298,
+  "problem_sha256": "4d90099d889d14a559d9136199eebbd18d3f1b4fc757960a3fdb7bd20675a8db",
+  "regression_checks": [
+    "xarray/tests/test_parallelcompat.py::TestGetChunkManager::test_get_chunkmanger",
+    "xarray/tests/test_parallelcompat.py::TestGetChunkManager::test_fail_on_nonexistent_chunkmanager",
+    "xarray/tests/test_parallelcompat.py::TestGetChunkedArrayType::test_detect_chunked_arrays",
+    "xarray/tests/test_parallelcompat.py::TestGetChunkedArrayType::test_ignore_inmemory_arrays",
+    "xarray/tests/test_parallelcompat.py::TestGetChunkedArrayType::test_raise_if_no_arrays_chunked",
+    "xarray/tests/test_parallelcompat.py::TestGetChunkedArrayType::test_raise_if_no_matching_chunkmanagers",
+    "xarray/tests/test_plugins.py::test_remove_duplicates",
+    "xarray/tests/test_plugins.py::test_broken_plugin",
+    "xarray/tests/test_plugins.py::test_remove_duplicates_warnings",
+    "xarray/tests/test_plugins.py::test_backends_dict_from_pkg",
+    "xarray/tests/test_plugins.py::test_set_missing_parameters",
+    "xarray/tests/test_plugins.py::test_set_missing_parameters_raise_error",
+    "xarray/tests/test_plugins.py::test_build_engines",
+    "xarray/tests/test_plugins.py::test_build_engines_sorted",
+    "xarray/tests/test_plugins.py::test_no_matching_engine_found",
+    "xarray/tests/test_plugins.py::test_engines_not_installed",
+    "xarray/tests/test_plugins.py::test_lazy_import",
+    "xarray/tests/test_plugins.py::test_list_engines",
+    "xarray/tests/test_plugins.py::test_refresh_engines"
+  ],
+  "passing_checks": 0
+}
