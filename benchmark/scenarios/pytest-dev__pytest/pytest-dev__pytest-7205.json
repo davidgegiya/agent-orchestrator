@@ -1,0 +1,22 @@
+{
+  "id": "pytest-dev__pytest-7205",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "5e7f1ab4bf58e473e5d7f878eb2b499d7deabd29",
+  "topic": "BytesWarning when using --setup-show with bytes parameter",
+  "upstream_created_at": "2020-05-09T11:25:58Z",
+  "dataset_row": 1433,
+  "problem_sha256": "6f71acc26546cd336de989b3161f8df0074bd9b2bd0782727f01b1dc31532064",
+  "regression_checks": [
+    "testing/test_setuponly.py::test_show_fixtures_with_parameters[--setup-only]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids[--setup-only]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids_function[--setup-only]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameters[--setup-plan]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids[--setup-plan]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids_function[--setup-plan]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameters[--setup-show]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids[--setup-show]",
+    "testing/test_setuponly.py::test_show_fixtures_with_parameter_ids_function[--setup-show]",
+    "testing/test_setuponly.py::test_show_fixture_action_with_bytes"
+  ],
+  "passing_checks": 16
+}
