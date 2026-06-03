@@ -1,0 +1,19 @@
+{
+  "id": "psf__requests-1339",
+  "repository": "psf/requests",
+  "base_commit": "ab36f3cc6f91f1e4903a3f4b31501cb7fefe4555",
+  "topic": "CaseInsensitiveDict __setitem__ faulty for differing-case keys",
+  "upstream_created_at": "2013-04-30T20:05:30Z",
+  "dataset_row": 1164,
+  "problem_sha256": "2fb26e2454c9277e86e9709e8193fd782593ac7f9647d979556c6b132aa45140",
+  "regression_checks": [
+    "test_requests.py::TestCaseInsensitiveDict::test_equality",
+    "test_requests.py::TestCaseInsensitiveDict::test_fixes_649",
+    "test_requests.py::TestCaseInsensitiveDict::test_len",
+    "test_requests.py::TestCaseInsensitiveDict::test_lower_items",
+    "test_requests.py::TestCaseInsensitiveDict::test_preserve_last_key_case",
+    "test_requests.py::TestCaseInsensitiveDict::test_setdefault",
+    "test_requests.py::TestCaseInsensitiveDict::test_update"
+  ],
+  "passing_checks": 24
+}
