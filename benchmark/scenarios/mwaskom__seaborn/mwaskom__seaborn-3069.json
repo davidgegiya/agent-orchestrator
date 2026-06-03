@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-3069",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "54cab15bdacfaa05a88fbc5502a5b322d99f148e",
+  "topic": "Nominal scale should be drawn the same way as categorical scales",
+  "upstream_created_at": "2022-10-09T23:31:20Z",
+  "dataset_row": 1141,
+  "problem_sha256": "98826969a8237c06196a4602e3562c39838c26b4a364b6049825a2776f16d518",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestScaling::test_nominal_x_axis_tweaks",
+    "tests/_core/test_plot.py::TestScaling::test_nominal_y_axis_tweaks"
+  ],
+  "passing_checks": 94
+}
