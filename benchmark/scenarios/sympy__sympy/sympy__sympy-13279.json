@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13279",
+  "repository": "sympy/sympy",
+  "base_commit": "613373e31790f06b7324dd5ef887198538204bcc",
+  "topic": "TypeErrors encountered when doing subs with Matrices",
+  "upstream_created_at": "2017-09-08T16:54:04Z",
+  "dataset_row": 1966,
+  "problem_sha256": "5c6fa12982ce3147b113ff2b427b563afd21230f58aee6a257d10ed0ab5b6aa4",
+  "regression_checks": [
+    "test_subs_Matrix"
+  ],
+  "passing_checks": 54
+}
