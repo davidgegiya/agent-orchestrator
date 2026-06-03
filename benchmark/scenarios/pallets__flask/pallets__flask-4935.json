@@ -1,0 +1,14 @@
+{
+  "id": "pallets__flask-4935",
+  "repository": "pallets/flask",
+  "base_commit": "fa1ee7066807c21256e90089731c548b313394d2",
+  "topic": "Nested blueprints are not respected when mounted on subdomains",
+  "upstream_created_at": "2023-01-04T16:50:46Z",
+  "dataset_row": 1158,
+  "problem_sha256": "d3b5b2612639fe0a3cdb0cf3fbfe52a4d7e7c097a8fed555a03aa2325ad49369",
+  "regression_checks": [
+    "tests/test_blueprints.py::test_nesting_subdomains",
+    "tests/test_blueprints.py::test_child_and_parent_subdomain"
+  ],
+  "passing_checks": 14
+}
