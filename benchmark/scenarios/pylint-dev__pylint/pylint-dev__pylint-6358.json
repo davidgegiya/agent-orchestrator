@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-6358",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "1de6da157c260c5a1398bc59c5f2b57abc4912a6",
+  "topic": "The `ignore-imports=yes` option is ignored in 2.14",
+  "upstream_created_at": "2022-04-16T15:48:16Z",
+  "dataset_row": 1346,
+  "problem_sha256": "3447e88c23c20d29133e14605d1c24a93d532f34a07c58023e6391fa33ae5319",
+  "regression_checks": [
+    "tests/test_similar.py::TestSimilarCodeChecker::test_ignore_imports"
+  ],
+  "passing_checks": 10
+}
