@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15685",
+  "repository": "sympy/sympy",
+  "base_commit": "9ac430347eb80809a1dd89bbf5dad7ca593bbe63",
+  "topic": "Make .scale_factor private in the units module",
+  "upstream_created_at": "2018-12-23T07:13:37Z",
+  "dataset_row": 2066,
+  "problem_sha256": "cdabf6dbb91388fba8158055b9a164ab45f523b0360eb3042e3bdbc272ad3ed7",
+  "regression_checks": [
+    "test_print_unit_base"
+  ],
+  "passing_checks": 5
+}
