@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from tempfile import mkdtemp
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -56,9 +57,7 @@ class RunReport:
 def create_run_dir(reports_root: Path) -> Path:
     ensure_dir(reports_root)
     timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    run_dir = reports_root / f"run-{timestamp}"
-    ensure_dir(run_dir)
-    return run_dir
+    return Path(mkdtemp(prefix=f"run-{timestamp}-", dir=reports_root))
 
 
 def _append_round(path: Path, round_idx: int, content: str) -> None:
