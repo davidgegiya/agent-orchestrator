@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25551",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5b85655c84fb2e149a548374d7259230577b6181",
+  "topic": "handling of zeros in log-scale changes irreversibly after user zoom",
+  "upstream_created_at": "2023-03-26T13:51:14Z",
+  "dataset_row": 1086,
+  "problem_sha256": "62726c915215fef8380c26ba2464ad6cb6ef2b1d7bf93a7512fd324c6aba03c3",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_bases.py::test_toolbar_home_restores_autoscale"
+  ],
+  "passing_checks": 56
+}
