@@ -1,0 +1,14 @@
+{
+  "id": "pallets__flask-5063",
+  "repository": "pallets/flask",
+  "base_commit": "182ce3dd15dfa3537391c3efaf9c3ff407d134d4",
+  "topic": "Flask routes to return domain/sub-domains information",
+  "upstream_created_at": "2023-04-14T16:36:54Z",
+  "dataset_row": 1161,
+  "problem_sha256": "77c0abe5de775350b0d7eff64eee6b58c57a5f25dd38538da7dee7e5a68ce547",
+  "regression_checks": [
+    "tests/test_cli.py::TestRoutes::test_subdomain",
+    "tests/test_cli.py::TestRoutes::test_host"
+  ],
+  "passing_checks": 54
+}
