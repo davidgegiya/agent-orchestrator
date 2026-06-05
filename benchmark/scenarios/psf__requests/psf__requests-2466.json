@@ -1,0 +1,19 @@
+{
+  "id": "psf__requests-2466",
+  "repository": "psf/requests",
+  "base_commit": "461b740db6ae3d3ab1c5d975b657307f5c630fcb",
+  "topic": "Can't seem to wrap my head around this",
+  "upstream_created_at": "2015-02-28T16:53:27Z",
+  "dataset_row": 1187,
+  "problem_sha256": "7ad83f0dd15328e53cada6a56834287606ef9dae7cba77a720ea076565b1f0dd",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGEST_AUTH_RETURNS_COOKIE",
+    "test_requests.py::RequestsTestCase::test_auth_is_retained_for_redirect_on_host",
+    "test_requests.py::RequestsTestCase::test_auth_is_stripped_on_redirect_off_host",
+    "test_requests.py::RequestsTestCase::test_cookie_quote_wrapped",
+    "test_requests.py::RequestsTestCase::test_json_param_post_content_type_works",
+    "test_requests.py::RequestsTestCase::test_user_agent_transfers",
+    "test_requests.py::test_vendor_aliases"
+  ],
+  "passing_checks": 143
+}
