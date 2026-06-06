@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-8005",
+  "repository": "astropy/astropy",
+  "base_commit": "28efbb42ab8ef21b06473be4a2560f1871195efb",
+  "topic": "Cosmologies used in equivalencies",
+  "upstream_created_at": "2018-10-27T15:57:31Z",
+  "dataset_row": 85,
+  "problem_sha256": "1935e3774cabb7246083d93fe2435316aaa5b76e84b2ae8cd2b7b46ac40796c8",
+  "regression_checks": [
+    "astropy/units/tests/test_equivalencies.py::test_thermodynamic_temperature"
+  ],
+  "passing_checks": 62
+}
