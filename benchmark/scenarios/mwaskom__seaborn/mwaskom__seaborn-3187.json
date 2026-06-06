@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-3187",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "22cdfb0c93f8ec78492d87edb810f10cb7f57a31",
+  "topic": "Wrong legend values of large ranges",
+  "upstream_created_at": "2022-12-18T00:04:22Z",
+  "dataset_row": 1143,
+  "problem_sha256": "e647912ad5526ceacc1dd6b6c03996beeef0e47641455c7189c0e8ead9a7409f",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestLegend::test_legend_has_no_offset",
+    "tests/test_relational.py::TestRelationalPlotter::test_legend_has_no_offset"
+  ],
+  "passing_checks": 248
+}
