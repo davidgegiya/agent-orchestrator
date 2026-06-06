@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-5559",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "60a358fa2dc82a571c68d1be2d25703b51351538",
+  "topic": "pytest stepwise doesn't work with xfail strict failures",
+  "upstream_created_at": "2019-07-05T11:15:03Z",
+  "dataset_row": 1409,
+  "problem_sha256": "5ed176ff6af1a82fac464068848efe972e24e9a0ce2f6df0126ef9068209ef0a",
+  "regression_checks": [
+    "testing/python/raises.py::TestRaises::test_raises_match",
+    "testing/python/raises.py::TestRaises::test_match_failure_string_quoting",
+    "testing/test_stepwise.py::test_xfail_handling"
+  ],
+  "passing_checks": 28
+}
