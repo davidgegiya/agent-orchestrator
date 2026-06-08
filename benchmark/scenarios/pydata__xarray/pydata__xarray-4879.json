@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4879",
+  "repository": "pydata/xarray",
+  "base_commit": "15c68366b8ba8fd678d675df5688cf861d1c7235",
+  "topic": "jupyter repr caching deleted netcdf file",
+  "upstream_created_at": "2021-02-07T21:48:06Z",
+  "dataset_row": 1257,
+  "problem_sha256": "566a1dbe512f6d82bb9f152617674f082052c129b71cc5b1505045a6da5a1d3e",
+  "regression_checks": [
+    "xarray/tests/test_backends_file_manager.py::test_file_manager_cache_repeated_open"
+  ],
+  "passing_checks": 1251
+}
