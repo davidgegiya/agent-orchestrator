@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12062",
+  "repository": "django/django",
+  "base_commit": "3e5b349535f011a51dc308898924786143000631",
+  "topic": "Allow disabling of all migrations during tests",
+  "upstream_created_at": "2019-11-13T03:54:00Z",
+  "dataset_row": 277,
+  "problem_sha256": "d14d5b763bd929f0b09a749bd95ddb5c1db13423fa106c7addf2795c4a02b5b4",
+  "regression_checks": [
+    "test_migrate_test_setting_false (backends.base.test_creation.TestDbCreationTests)"
+  ],
+  "passing_checks": 4
+}
