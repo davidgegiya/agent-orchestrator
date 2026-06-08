@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24250",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f6e75121e11b6ba918c5f6e5c2cc1b9f4fccc8b0",
+  "topic": "pick events do not forward mouseevent-key on Linux",
+  "upstream_created_at": "2022-10-22T09:52:56Z",
+  "dataset_row": 1038,
+  "problem_sha256": "b245f60ad844f3e503797a74ea5679a4eb6ac9cf8c27069ff21c218f05abddc7",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_bases.py::test_pick"
+  ],
+  "passing_checks": 54
+}
