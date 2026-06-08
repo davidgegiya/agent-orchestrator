@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26291",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "fa68f46289adf4a8a4bc7ba97ded8258ec9d079c",
+  "topic": "Error while creating inset axes using `mpl_toolkits.axes_grid1.inset_locator.inset_axes`",
+  "upstream_created_at": "2023-07-12T04:29:07Z",
+  "dataset_row": 1118,
+  "problem_sha256": "84e9e9fa42137e980f13610ef7c295a02c309c893b6fb80cc44c7480a7a48419",
+  "regression_checks": [
+    "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_inset_axes_tight"
+  ],
+  "passing_checks": 49
+}
