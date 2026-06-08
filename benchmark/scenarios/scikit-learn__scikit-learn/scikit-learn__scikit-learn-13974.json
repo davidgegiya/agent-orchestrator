@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-13974",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "0bdd92036dcc3daac5ab5fb8cd668d54eab43390",
+  "topic": "Design of add_indicator in SimpleImputer may fail when running cross validation",
+  "upstream_created_at": "2019-05-29T01:34:39Z",
+  "dataset_row": 1625,
+  "problem_sha256": "162b2d03212abd96c277f24f98247c020829ae7bbbe58c66848b757facdba853",
+  "regression_checks": [
+    "sklearn/impute/tests/test_impute.py::test_imputation_missing_value_in_test_array[SimpleImputer]",
+    "sklearn/impute/tests/test_impute.py::test_imputation_missing_value_in_test_array[IterativeImputer]"
+  ],
+  "passing_checks": 150
+}
