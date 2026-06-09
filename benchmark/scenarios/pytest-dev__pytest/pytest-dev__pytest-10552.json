@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-10552",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "314e623304f32e7e9e31c49d63e58bc73b54dcd0",
+  "topic": "Inconsistent support for staticmethod/classmethod",
+  "upstream_created_at": "2022-12-01T19:54:20Z",
+  "dataset_row": 1381,
+  "problem_sha256": "7889731c46a8dd641643a2a0c8a6b7df89b60915629a1f41ede60de972fc208e",
+  "regression_checks": [
+    "testing/python/integration.py::test_function_instance",
+    "testing/test_collection.py::Test_genitems::test_classmethod_is_discovered"
+  ],
+  "passing_checks": 97
+}
