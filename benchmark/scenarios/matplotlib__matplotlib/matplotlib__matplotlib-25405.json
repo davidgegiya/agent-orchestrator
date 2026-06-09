@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25405",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "84e5f0251cea920d02b631646bd8832bc0e489e5",
+  "topic": "LogLocator with subs argument fragile",
+  "upstream_created_at": "2023-03-07T11:18:36Z",
+  "dataset_row": 1076,
+  "problem_sha256": "4a7c81f96cd3f39583225c164ca72264c2c2860977c4f731a0c94cd63111f24f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_ticker.py::TestLogLocator::test_tick_values_not_empty"
+  ],
+  "passing_checks": 465
+}
