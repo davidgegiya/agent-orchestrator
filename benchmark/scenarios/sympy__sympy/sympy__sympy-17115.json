@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17115",
+  "repository": "sympy/sympy",
+  "base_commit": "26aa686a20234f1f511c0f558d27665d0f95a21c",
+  "topic": "Piecewise doesn't works correctly",
+  "upstream_created_at": "2019-06-27T10:38:58Z",
+  "dataset_row": 2114,
+  "problem_sha256": "abaaa131b11050f70d432f78b40c9adc4c91e26b501c7c8520e00eb2ac614c49",
+  "regression_checks": [
+    "test_piecewise1"
+  ],
+  "passing_checks": 52
+}
