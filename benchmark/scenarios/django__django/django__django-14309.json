@@ -1,0 +1,14 @@
+{
+  "id": "django__django-14309",
+  "repository": "django/django",
+  "base_commit": "6e742dabc95b00ba896434293556adeb4dbaee8a",
+  "topic": "Combining an empty Q with a negated Exists un-negates the Exists lookup",
+  "upstream_created_at": "2021-04-24T05:24:23Z",
+  "dataset_row": 578,
+  "problem_sha256": "2ae55edf745c3ea4ee19e5eef060aabf5c886d1dfd1a56b94a33df9bffd473a6",
+  "regression_checks": [
+    "test_combine_negated_boolean_expression (queries.test_q.QTests)",
+    "test_combine_not_q_object (queries.test_q.QTests)"
+  ],
+  "passing_checks": 30
+}
