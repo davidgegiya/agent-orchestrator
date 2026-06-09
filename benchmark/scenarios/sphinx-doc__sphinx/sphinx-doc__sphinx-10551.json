@@ -1,0 +1,19 @@
+{
+  "id": "sphinx-doc__sphinx-10551",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "571b55328d401a6e1d50e37407df56586065a7be",
+  "topic": "Spurious space in default parameter values that are negative numbers in HTML output",
+  "upstream_created_at": "2022-06-14T09:27:19Z",
+  "dataset_row": 1743,
+  "problem_sha256": "447b0e28e1b5cfcd7860f7d88e8e66d9add7027d6be9b05db17b0c1e8b1037cd",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_pyfunction_with_unary_operators",
+    "tests/test_domain_py.py::test_pyfunction_with_binary_operators",
+    "tests/test_pycode_ast.py::test_unparse[~1-~1]",
+    "tests/test_pycode_ast.py::test_unparse[a**b-a**b]",
+    "tests/test_pycode_ast.py::test_unparse[+a-+a]",
+    "tests/test_pycode_ast.py::test_unparse[-1--1]",
+    "tests/test_pycode_ast.py::test_unparse[-a--a]"
+  ],
+  "passing_checks": 72
+}
