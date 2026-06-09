@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21379",
+  "repository": "sympy/sympy",
+  "base_commit": "624217179aaf8d094e6ff75b7493ad1ee47599b0",
+  "topic": "Unexpected `PolynomialError` when using simple `subs()` for particular expressions",
+  "upstream_created_at": "2021-04-24T19:49:52Z",
+  "dataset_row": 2231,
+  "problem_sha256": "3e8309f6f9e690c0f520edf4801a92827973c11d7b9dcb139c45450233fbaa31",
+  "regression_checks": [
+    "test_Mod"
+  ],
+  "passing_checks": 91
+}
