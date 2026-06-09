@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-2457",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "ba086c2096962bbffde2a8eb721b322f382f9e0e",
+  "topic": "sns.lineplot(x=[1, 1, 2, 2], y=[1, 2, 3, 4], ci=None)",
+  "upstream_created_at": "2021-01-30T22:18:52Z",
+  "dataset_row": 1130,
+  "problem_sha256": "d69ba66d0a694bd93ff8668d32e6143f39f60cd433642b3c3dfeefac36df39bb",
+  "regression_checks": [
+    "seaborn/tests/test_utils.py::test_deprecate_ci"
+  ],
+  "passing_checks": 39
+}
