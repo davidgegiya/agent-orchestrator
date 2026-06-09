@@ -1,0 +1,16 @@
+{
+  "id": "django__django-11560",
+  "repository": "django/django",
+  "base_commit": "7a42cfcfdc94c1e7cd653f3140b9eb30492bae4f",
+  "topic": "Raise ValueError in Extract lookups that don't work properly with DurationField",
+  "upstream_created_at": "2019-07-11T19:15:56Z",
+  "dataset_row": 215,
+  "problem_sha256": "8abe2357691e505169eaa2cb740a21500424704d98712f13f7bae840c1b6279d",
+  "regression_checks": [
+    "test_extract_duration_unsupported_lookups (db_functions.datetime.test_extract_trunc.DateFunctionTests)",
+    "test_extract_duration_without_native_duration_field (db_functions.datetime.test_extract_trunc.DateFunctionTests)",
+    "test_extract_duration_unsupported_lookups (db_functions.datetime.test_extract_trunc.DateFunctionWithTimeZoneTests)",
+    "test_extract_duration_without_native_duration_field (db_functions.datetime.test_extract_trunc.DateFunctionWithTimeZoneTests)"
+  ],
+  "passing_checks": 71
+}
