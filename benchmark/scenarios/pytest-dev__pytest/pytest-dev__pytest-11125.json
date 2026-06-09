@@ -1,0 +1,28 @@
+{
+  "id": "pytest-dev__pytest-11125",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "797b924fc44189d0b9c2ad905410f0bd89461ab7",
+  "topic": "Pytest 7.3.2 changes in behaviour regarding conftest.py and `testpaths`",
+  "upstream_created_at": "2023-06-20T18:36:34Z",
+  "dataset_row": 1389,
+  "problem_sha256": "76ba8b2d8bb9ac81de20ea816c5b09e5e0b9ca0512c292ab8b1b2ac9097f7a8f",
+  "regression_checks": [
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_not_existing[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_by_path[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_with_confmod[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_not_existing[inpackage]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_by_path[inpackage]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_with_confmod[inpackage]",
+    "testing/test_conftest.py::test_conftest_in_nonpkg_with_init",
+    "testing/test_collection.py::test_initial_conftests_with_testpaths",
+    "testing/test_conftest.py::test_doubledash_considered",
+    "testing/test_conftest.py::test_issue151_load_all_conftests",
+    "testing/test_conftest.py::test_conftestcutdir",
+    "testing/test_conftest.py::test_conftestcutdir_inplace_considered",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[test]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[tests]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[whatever]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[.dotdir]"
+  ],
+  "passing_checks": 123
+}
