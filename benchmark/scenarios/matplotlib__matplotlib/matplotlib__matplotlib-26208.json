@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-26208",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0f133943d3e4f1e2e665291fe1c8f658a84cc09",
+  "topic": "dataLims get replaced by inf for charts with twinx if ax1 is a stackplot",
+  "upstream_created_at": "2023-06-28T21:31:50Z",
+  "dataset_row": 1112,
+  "problem_sha256": "e7ca357847b21489028184c50664a345da8ae5378f763bf1f8f5f5325f81eefe",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_twin_units[x]",
+    "lib/matplotlib/tests/test_axes.py::test_twin_units[y]"
+  ],
+  "passing_checks": 813
+}
