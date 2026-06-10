@@ -1,0 +1,24 @@
+{
+  "id": "matplotlib__matplotlib-25122",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5ec2bd279729ff534719b8bf238dbbca907b93c5",
+  "topic": "Windows correction is not correct in `mlab._spectral_helper`",
+  "upstream_created_at": "2023-02-01T03:41:00Z",
+  "dataset_row": 1064,
+  "problem_sha256": "642ca925be8f9aaaf206888e0c5b7fc4193170e9ab4fcf68061dd32833832725",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-twosided-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-twosided-real]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-onesided-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-default-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-default-real]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-default-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-default-real]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-twosided-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-twosided-real]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-onesided-complex]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[FsAll-onesided-real]",
+    "lib/matplotlib/tests/test_mlab.py::TestSpectral::test_psd_window_flattop[Fs4-onesided-real]"
+  ],
+  "passing_checks": 2476
+}
