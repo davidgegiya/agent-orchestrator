@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9359",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "e2ee3144ed6e241dea8d96215fcdca18b3892551",
+  "topic": "Error message prints extra code line when using assert in python3.9",
+  "upstream_created_at": "2021-12-01T14:31:38Z",
+  "dataset_row": 1482,
+  "problem_sha256": "380d88fb1e34eec6a4ea688e270ba5ab77046a8ad285110ba575918f1a8c8754",
+  "regression_checks": [
+    "testing/code/test_source.py::test_decorator"
+  ],
+  "passing_checks": 54
+}
