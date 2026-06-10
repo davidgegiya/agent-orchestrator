@@ -1,0 +1,16 @@
+{
+  "id": "sympy__sympy-22773",
+  "repository": "sympy/sympy",
+  "base_commit": "96c9c40b2bd41105cf82440cc83c27f032ac5ffc",
+  "topic": "Incorrect LaTeX display of a determinant",
+  "upstream_created_at": "2021-12-31T12:47:30Z",
+  "dataset_row": 2261,
+  "problem_sha256": "741926b8528d9b26fd5da88324a3b1b510611850ed530cddc421a60cacf1acd0",
+  "regression_checks": [
+    "test_Adjoint",
+    "test_Transpose",
+    "test_pretty_Determinant",
+    "test_Determinant"
+  ],
+  "passing_checks": 292
+}
