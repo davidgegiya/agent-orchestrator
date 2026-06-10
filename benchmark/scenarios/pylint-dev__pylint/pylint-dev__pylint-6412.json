@@ -1,0 +1,15 @@
+{
+  "id": "pylint-dev__pylint-6412",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "4b73e81df60db3a5e3706124185a3d37a363f7e7",
+  "topic": "Support isinstance checks through ABCMeta for checkers and reporters",
+  "upstream_created_at": "2022-04-20T12:16:20Z",
+  "dataset_row": 1348,
+  "problem_sha256": "88de0a3f2f7630c78ce89a66313c29f63f1894eac305892c058d844b0f939873",
+  "regression_checks": [
+    "tests/test_deprecation.py::test_reporter_implements",
+    "tests/test_deprecation.py::test_checker_implements",
+    "tests/test_deprecation.py::test_interfaces"
+  ],
+  "passing_checks": 1
+}
