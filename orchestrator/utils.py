@@ -29,3 +29,8 @@ def is_effectively_empty(text: str) -> bool:
 
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
+
+
+def is_protected_path_part(part: str) -> bool:
+    """Identify Git internals and local dotenv files before reading or reporting them."""
+    return part == ".git" or (part.startswith(".env.") and part != ".env.example") or part == ".env"

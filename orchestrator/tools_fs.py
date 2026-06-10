@@ -8,11 +8,12 @@ from agents import function_tool
 from agents.tool_context import ToolContext
 
 from .models import RunContext
+from .utils import is_protected_path_part
 
 
 def _check_protected_parts(parts: tuple[str, ...]) -> None:
     for part in parts:
-        if part == ".git" or (part.startswith(".env.") and part != ".env.example") or part == ".env":
+        if is_protected_path_part(part):
             raise PermissionError("Git metadata and local environment files are protected")
 
 

@@ -7,6 +7,8 @@ from pathlib import Path
 import subprocess
 from typing import Any, Dict, List, Optional, Tuple
 
+from .utils import is_protected_path_part
+
 
 def _run_local_cmd(
     args: List[str], *, cwd: Path, timeout_seconds: int, env: Optional[Dict[str, str]] = None,
@@ -117,28 +119,41 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
 
     diff_parts: List[str] = []
 
-    status = _run_local_cmd(["git", "status", "--porcelain", "--", *pathspec], cwd=git_cwd, timeout_seconds=10)
+    status = _run_local_cmd(["git", "-c", "core.fsmonitor=false", "status", "--porcelain", "--", *pathspec], cwd=git_cwd, timeout_seconds=10)
     meta["commands"].append({**_cmd_meta(status), "tool": "local_cmd", "cwd": str(git_cwd)})
     status_out = (status.get("stdout") or "").rstrip()
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--binary", "--no-ext-diff", "--no-textconv", base_sha, "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
-    meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
-    tracked_out = (tracked.get("stdout") or "").rstrip()
-    if tracked_out:
-        diff_parts.append("# GIT DIFF (workspace)\n" + tracked_out)
-
+    changed = _run_local_cmd(
+        ["git", "diff", "--name-only", "-z", "--no-renames", "--no-ext-diff", base_sha, "--", *pathspec],
+        cwd=git_cwd, timeout_seconds=30,
+    )
     untracked = _run_local_cmd(
         ["git", "ls-files", "-z", "--others", "--exclude-standard", "--", *pathspec],
-        cwd=git_cwd,
-        timeout_seconds=10,
+        cwd=git_cwd, timeout_seconds=10,
     )
-    meta["commands"].append({**_cmd_meta(untracked), "tool": "local_cmd", "cwd": str(git_cwd)})
-    untracked_files = sorted(filter(None, untracked["stdout"].split("\0")))
-
-    if any(command["returncode"] != 0 for command in (status, tracked, untracked)):
+    for command in (changed, untracked):
+        meta["commands"].append({**_cmd_meta(command), "tool": "local_cmd", "cwd": str(git_cwd)})
+    if any(command["returncode"] != 0 for command in (status, changed, untracked)):
         return ("- None", meta)
+
+    untracked_files = sorted(filter(None, untracked["stdout"].split("\0")))
+    changed_files = [*changed["stdout"].split("\0"), *untracked_files]
+    if any(is_protected_path_part(part) for name in changed_files for part in Path(name).parts):
+        meta["reason"] = "A changed file contains protected Git metadata or local environment data."
+        return ("- None", meta)
+
+    tracked = _run_local_cmd(
+        ["git", "diff", "--no-color", "--binary", "--no-ext-diff", "--no-textconv", base_sha, "--", *pathspec],
+        cwd=git_cwd, timeout_seconds=30,
+    )
+    meta["commands"].append({**_cmd_meta(tracked, limit=0), "tool": "local_cmd", "cwd": str(git_cwd)})
+    if tracked["returncode"] != 0:
+        return ("- None", meta)
+    tracked_out = tracked["stdout"].rstrip()
+    if tracked_out:
+        diff_parts.append("# GIT DIFF (workspace)\n" + tracked_out)
 
     null_path = "/dev/null" if Path("/dev/null").exists() else "NUL"
     for rel_path in untracked_files:
@@ -147,7 +162,7 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
             cwd=git_cwd,
             timeout_seconds=30,
         )
-        meta["commands"].append({**_cmd_meta(patch), "tool": "local_cmd", "cwd": str(git_cwd)})
+        meta["commands"].append({**_cmd_meta(patch, limit=0), "tool": "local_cmd", "cwd": str(git_cwd)})
         if patch["returncode"] not in (0, 1):
             return ("- None", meta)
         patch_out = (patch.get("stdout") or "").rstrip()
