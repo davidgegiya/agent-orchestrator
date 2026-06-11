@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26160",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9fdf6adf70819c8d34e9f47eeb8470aea35d78c0",
+  "topic": "Add setters for _AxLine._xy1, ._xy2, ._slope",
+  "upstream_created_at": "2023-06-21T08:22:38Z",
+  "dataset_row": 1110,
+  "problem_sha256": "0acf9cff47d2427e83cb702cf1ac0f387ae9d7e311f524e3b64814aeadb3d65b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_lines.py::test_axline_setters"
+  ],
+  "passing_checks": 34
+}
