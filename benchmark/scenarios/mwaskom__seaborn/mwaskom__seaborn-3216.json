@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3216",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "557b0d29cdeae9703576f4bb0eb73dd997a1e4a4",
+  "topic": "Figure title being removed by seaborn objects API when plotting on subfigures",
+  "upstream_created_at": "2023-01-08T23:34:46Z",
+  "dataset_row": 1146,
+  "problem_sha256": "8a92678373424cc84916ff331ea8f085944e0e27a1075ab69d48bc7ff51a752e",
+  "regression_checks": [
+    "tests/_core/test_plot.py::TestPlotting::test_on_layout_algo_default"
+  ],
+  "passing_checks": 177
+}
