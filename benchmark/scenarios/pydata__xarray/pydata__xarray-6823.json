@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6823",
+  "repository": "pydata/xarray",
+  "base_commit": "a17a00f8f95195838e1d7360426454c8ed0570ea",
+  "topic": "RuntimeError when formatting sparse-backed DataArray in f-string",
+  "upstream_created_at": "2022-07-25T09:43:21Z",
+  "dataset_row": 1289,
+  "problem_sha256": "f6fff37ceed7acc0813438053f98b21bb1ff7b47ce7d3bffe956c7e2cddd13c7",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::TestFormatting::test_array_repr"
+  ],
+  "passing_checks": 27
+}
