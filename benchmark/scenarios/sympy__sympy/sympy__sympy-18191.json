@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-18191",
+  "repository": "sympy/sympy",
+  "base_commit": "1923822ddf8265199dbd9ef9ce09641d3fd042b9",
+  "topic": "Recursion error: sqrt(1 / tan(1 + I))",
+  "upstream_created_at": "2019-12-31T18:41:08Z",
+  "dataset_row": 2153,
+  "problem_sha256": "eb79d2537949baa36c8b424863abafacacdf1f63e085323f6832fcd08939258d",
+  "regression_checks": [
+    "test_better_sqrt"
+  ],
+  "passing_checks": 26
+}
