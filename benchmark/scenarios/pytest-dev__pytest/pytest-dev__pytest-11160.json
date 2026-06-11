@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-11160",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6995257cf470d2143ad1683824962de4071c0eb7",
+  "topic": "WarningsRecorder.pop() improperly matches warning",
+  "upstream_created_at": "2023-07-02T12:19:27Z",
+  "dataset_row": 1392,
+  "problem_sha256": "c54646ef3dcd9510ca6f2fa73e3d5564d82ab0384195c215f17918c81ae72a03",
+  "regression_checks": [
+    "testing/test_recwarn.py::TestSubclassWarningPop::test_pop_finds_exact_match",
+    "testing/test_recwarn.py::TestSubclassWarningPop::test_pop_finds_best_inexact_match"
+  ],
+  "passing_checks": 47
+}
