@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21238",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8a8dd9093d381500555bccf46fc5d46b42d132ec",
+  "topic": "mpl_connect silently does nothing when passed an invalid event type string",
+  "upstream_created_at": "2021-09-30T22:10:17Z",
+  "dataset_row": 976,
+  "problem_sha256": "7b9df3f2346cb9a537cb900efd3d842394a435f4a862666619280eaba04262ef",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_cbook.py::test_callbackregistry_signals"
+  ],
+  "passing_checks": 39
+}
