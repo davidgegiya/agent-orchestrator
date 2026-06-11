@@ -1,0 +1,15 @@
+{
+  "id": "django__django-16603",
+  "repository": "django/django",
+  "base_commit": "4e4eda6d6c8a5867dafd2ba9167ad8c064bb644a",
+  "topic": "ASGI http.disconnect not handled on requests with body",
+  "upstream_created_at": "2023-02-27T15:05:05Z",
+  "dataset_row": 873,
+  "problem_sha256": "4185f450ca1917e0a2560aa568a9a72d9a39a0194349367bb1e84759fbb5381c",
+  "regression_checks": [
+    "test_assert_in_listen_for_disconnect (asgi.tests.ASGITest.test_assert_in_listen_for_disconnect)",
+    "test_asyncio_cancel_error (asgi.tests.ASGITest.test_asyncio_cancel_error)",
+    "test_disconnect_with_body (asgi.tests.ASGITest.test_disconnect_with_body)"
+  ],
+  "passing_checks": 13
+}
