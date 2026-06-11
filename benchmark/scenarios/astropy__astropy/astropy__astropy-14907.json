@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-14907",
+  "repository": "astropy/astropy",
+  "base_commit": "7f0df518e6bd5542b64bd7073052d099ea09dcb4",
+  "topic": "TST: test_table_group_by[True] and test_group_by_masked[True] failed with numpy 1.25rc1",
+  "upstream_created_at": "2023-06-03T10:29:17Z",
+  "dataset_row": 68,
+  "problem_sha256": "a7d8f495ca40d75388b7bfef4c6a9d671a14edf6631487acc05f2e2bb55ff256",
+  "regression_checks": [
+    "astropy/table/tests/test_groups.py::test_table_group_by[True]",
+    "astropy/table/tests/test_groups.py::test_group_by_masked[True]",
+    "astropy/table/tests/test_groups.py::test_group_stable_sort[True]"
+  ],
+  "passing_checks": 42
+}
