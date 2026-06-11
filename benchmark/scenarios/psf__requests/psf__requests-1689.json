@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-1689",
+  "repository": "psf/requests",
+  "base_commit": "e91ee0e2461cc9b6822e7c3cc422038604ace08d",
+  "topic": "Problem POST'ing png file because of UnicodeError",
+  "upstream_created_at": "2013-10-18T17:35:07Z",
+  "dataset_row": 1169,
+  "problem_sha256": "5931e5684929b5e1f34c7a821a9be0d3225c70cc30e750c194d85ea87e2280dc",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_HEAD"
+  ],
+  "passing_checks": 77
+}
