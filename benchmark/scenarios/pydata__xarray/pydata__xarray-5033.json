@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-5033",
+  "repository": "pydata/xarray",
+  "base_commit": "f94de6b4504482ab206f93ec800608f2e1f47b19",
+  "topic": "Simplify adding custom backends",
+  "upstream_created_at": "2021-03-13T22:12:39Z",
+  "dataset_row": 1263,
+  "problem_sha256": "305637df57e747c144c9d9edcb92bbedaaac211cacd349faafc891b4d1a6ca93",
+  "regression_checks": [
+    "xarray/tests/test_backends_api.py::test_custom_engine"
+  ],
+  "passing_checks": 1
+}
