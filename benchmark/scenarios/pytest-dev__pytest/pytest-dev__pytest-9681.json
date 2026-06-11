@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9681",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "fc72ffa39ed3b34b21fba83d6f80144ab0ae8a36",
+  "topic": "7.0.0 regression: Existence of conftest.py messes up package discovery with importlib + pythonpath mode (ModuleNotFoundError: No module",
+  "upstream_created_at": "2022-02-13T12:46:19Z",
+  "dataset_row": 1486,
+  "problem_sha256": "7fa68cfa47de3c695dba0d96c77d177add0459de375b5f2aedaacee5b4caf099",
+  "regression_checks": [
+    "testing/test_collection.py::TestImportModeImportlib::test_using_python_path"
+  ],
+  "passing_checks": 132
+}
