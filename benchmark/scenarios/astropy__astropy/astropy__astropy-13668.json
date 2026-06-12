@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13668",
+  "repository": "astropy/astropy",
+  "base_commit": "7ea140de86b788b44f64ea5eeacfbd78ffd85b69",
+  "topic": "wcslint crashes on valid WCS",
+  "upstream_created_at": "2022-09-14T19:12:10Z",
+  "dataset_row": 34,
+  "problem_sha256": "71f36ce029a76e9ce6fe0035a19179ad9675bd737885792b414af1fa4c3dcfe4",
+  "regression_checks": [
+    "astropy/wcs/tests/test_wcs.py::test_validate_wcs_tab"
+  ],
+  "passing_checks": 65
+}
