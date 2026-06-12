@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10495",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "d6aa098dadc5eddca5287e823cacef474ac0d23f",
+  "topic": "check_array(X, dtype='numeric') should fail if X has strings",
+  "upstream_created_at": "2018-01-18T03:11:24Z",
+  "dataset_row": 1506,
+  "problem_sha256": "3cd0d1d1ec95b0b2eb08421c02ad23faf72b8dd123f016c02f7f0cda6e72fb05",
+  "regression_checks": [
+    "sklearn/utils/tests/test_validation.py::test_check_array"
+  ],
+  "passing_checks": 27
+}
