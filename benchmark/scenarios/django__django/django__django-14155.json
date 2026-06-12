@@ -1,0 +1,15 @@
+{
+  "id": "django__django-14155",
+  "repository": "django/django",
+  "base_commit": "2f13c476abe4ba787b6cb71131818341911f43cc",
+  "topic": "ResolverMatch.__repr__() doesn't handle functools.partial() nicely",
+  "upstream_created_at": "2021-03-19T15:44:25Z",
+  "dataset_row": 564,
+  "problem_sha256": "94e2081ce914ec86e36227d7af8b52935dc147d263231b20040e46a4cdf7ced2",
+  "regression_checks": [
+    "test_repr (urlpatterns_reverse.tests.ResolverMatchTests)",
+    "test_repr_functools_partial (urlpatterns_reverse.tests.ResolverMatchTests)",
+    "test_resolver_match_on_request (urlpatterns_reverse.tests.ResolverMatchTests)"
+  ],
+  "passing_checks": 89
+}
