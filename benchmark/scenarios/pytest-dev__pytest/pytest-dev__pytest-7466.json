@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-7466",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "678c1a0745f1cf175c442c719906a1f13e496910",
+  "topic": "Support NO_COLOR to disable colored output",
+  "upstream_created_at": "2020-07-08T19:54:01Z",
+  "dataset_row": 1443,
+  "problem_sha256": "d5cd486389a2e95b23c77a15933981f3ce2b198e54da7bbd0bc733372bd55836",
+  "regression_checks": [
+    "testing/io/test_terminalwriter.py::test_should_not_do_markup_NO_COLOR",
+    "testing/io/test_terminalwriter.py::test_should_do_markup_FORCE_COLOR",
+    "testing/io/test_terminalwriter.py::test_should_not_do_markup_NO_COLOR_and_FORCE_COLOR"
+  ],
+  "passing_checks": 39
+}
