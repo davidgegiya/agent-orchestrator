@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-7114",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "397c1703e8ae6349d33f7b99f45b2ccaf581e666",
+  "topic": "Linting fails if module contains module of the same name",
+  "upstream_created_at": "2022-07-03T04:36:40Z",
+  "dataset_row": 1359,
+  "problem_sha256": "b17b1e9bb46265d4ec4198a13e4eb44364b85d7e5c17d3615ae040ebb3edcc0d",
+  "regression_checks": [
+    "tests/lint/unittest_lint.py::test_identically_named_nested_module"
+  ],
+  "passing_checks": 56
+}
