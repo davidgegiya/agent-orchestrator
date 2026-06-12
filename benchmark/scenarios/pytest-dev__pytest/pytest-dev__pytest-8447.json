@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8447",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6447ca5f1e1f1e02fe1ac43621f642303f7bfe62",
+  "topic": "Unexpected keyword argument 'path' from plugins",
+  "upstream_created_at": "2021-03-14T22:03:00Z",
+  "dataset_row": 1468,
+  "problem_sha256": "2b7c4b9b3a820cbe30bbf0b4c150e8565b1e7fd74c894b3bbca51f9d6b6fb1eb",
+  "regression_checks": [
+    "testing/test_nodes.py::test_subclassing_both_item_and_collector_deprecated"
+  ],
+  "passing_checks": 16
+}
