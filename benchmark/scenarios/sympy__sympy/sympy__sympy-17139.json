@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-17139",
+  "repository": "sympy/sympy",
+  "base_commit": "1d3327b8e90a186df6972991963a5ae87053259d",
+  "topic": "simplify(cos(x)**I): Invalid comparison of complex I (fu.py)",
+  "upstream_created_at": "2019-07-01T19:17:18Z",
+  "dataset_row": 2115,
+  "problem_sha256": "1ebc2b10a3d0b6ac4f8e09a6dfcd1da374eb9dfe6f31498e9bd888ff1bdca86a",
+  "regression_checks": [
+    "test__TR56",
+    "test_issue_17137"
+  ],
+  "passing_checks": 67
+}
