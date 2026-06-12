@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23742",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "942aa77a4ba1bd5b50e22c0246240b27ba925305",
+  "topic": "Bug with toolbar instantiation in notebook",
+  "upstream_created_at": "2022-08-26T01:13:33Z",
+  "dataset_row": 1026,
+  "problem_sha256": "762f84d2c926ada1e057ab82de328ffc7e893437f53aff2a03ac7146d73bd3cb",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_webagg.py::test_webagg_core_no_toolbar"
+  ],
+  "passing_checks": 2
+}
