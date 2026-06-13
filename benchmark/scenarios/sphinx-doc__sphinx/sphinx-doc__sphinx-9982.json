@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-9982",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "8d0fd9e74a6d44ca1a518225d9be030d91917c9b",
+  "topic": "Different build warnings are colored differently",
+  "upstream_created_at": "2021-12-16T16:45:50Z",
+  "dataset_row": 1904,
+  "problem_sha256": "8dca2542d20c6fe9f071ddf73131c238a9724c53ea456149ea37e529042ab314",
+  "regression_checks": [
+    "tests/test_util_logging.py::test_info_and_warning",
+    "tests/test_util_logging.py::test_colored_logs"
+  ],
+  "passing_checks": 15
+}
