@@ -1,0 +1,20 @@
+{
+  "id": "psf__requests-2317",
+  "repository": "psf/requests",
+  "base_commit": "091991be0da19de9108dbe5e3752917fea3d7fdc",
+  "topic": "method = builtin_str(method) problem",
+  "upstream_created_at": "2014-11-01T02:20:16Z",
+  "dataset_row": 1184,
+  "problem_sha256": "e88ac9466b3f5af56349cac4703b31580efdb8d2736e61a5d3abfd4c54eebdbf",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_HTTP_302_ALLOW_REDIRECT_GET",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES",
+    "test_requests.py::RequestsTestCase::test_POSTBIN_GET_POST_FILES_WITH_DATA",
+    "test_requests.py::RequestsTestCase::test_basicauth_with_netrc",
+    "test_requests.py::RequestsTestCase::test_json_param_post_content_type_works",
+    "test_requests.py::RequestsTestCase::test_manual_redirect_with_partial_body_read",
+    "test_requests.py::RequestsTestCase::test_requests_history_is_saved",
+    "test_requests.py::TestTimeout::test_encoded_methods"
+  ],
+  "passing_checks": 133
+}
