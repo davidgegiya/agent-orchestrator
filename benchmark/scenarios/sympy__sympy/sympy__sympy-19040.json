@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-19040",
+  "repository": "sympy/sympy",
+  "base_commit": "b9179e80d2daa1bb6cba1ffe35ca9e6612e115c9",
+  "topic": "Factor with extension=True drops a factor of y-1",
+  "upstream_created_at": "2020-03-31T19:53:54Z",
+  "dataset_row": 2184,
+  "problem_sha256": "ed200d79cd5f10030d6ffa6ac2d8247310816658577268f7f46b66ce8338828f",
+  "regression_checks": [
+    "test_issue_5786"
+  ],
+  "passing_checks": 148
+}
