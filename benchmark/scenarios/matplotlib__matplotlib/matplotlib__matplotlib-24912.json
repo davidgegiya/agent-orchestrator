@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24912",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7bc69f27db70f87b59b0452216d7ae2b5babb329",
+  "topic": "Allow override of contour level autoscaling",
+  "upstream_created_at": "2023-01-09T11:48:29Z",
+  "dataset_row": 1056,
+  "problem_sha256": "4c5df489198d463577e0e18f45c181ad2499d1f263176313c214e55b95529c7b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_contour_no_valid_levels"
+  ],
+  "passing_checks": 63
+}
