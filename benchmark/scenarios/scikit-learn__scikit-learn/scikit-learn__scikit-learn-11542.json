@@ -1,0 +1,17 @@
+{
+  "id": "scikit-learn__scikit-learn-11542",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "cd7d9d985e1bbe2dbbbae17da0e9fbbba7e8c8c6",
+  "topic": "Change default n_estimators in RandomForest (to 100?)",
+  "upstream_created_at": "2018-07-15T22:29:04Z",
+  "dataset_row": 1540,
+  "problem_sha256": "0ab6927e76072d4b0ecf10383e8d5c97685a24ebbc36d131706022339c9c1167",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_forest.py::test_nestimators_future_warning[RandomForestClassifier]",
+    "sklearn/ensemble/tests/test_forest.py::test_nestimators_future_warning[RandomForestRegressor]",
+    "sklearn/ensemble/tests/test_forest.py::test_nestimators_future_warning[ExtraTreesClassifier]",
+    "sklearn/ensemble/tests/test_forest.py::test_nestimators_future_warning[ExtraTreesRegressor]",
+    "sklearn/ensemble/tests/test_forest.py::test_nestimators_future_warning[RandomTreesEmbedding]"
+  ],
+  "passing_checks": 222
+}
