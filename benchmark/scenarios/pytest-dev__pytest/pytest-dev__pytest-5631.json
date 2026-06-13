@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5631",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "cb828ebe70b4fa35cd5f9a7ee024272237eab351",
+  "topic": "ValueError when collecting tests that patch an array",
+  "upstream_created_at": "2019-07-19T20:13:12Z",
+  "dataset_row": 1410,
+  "problem_sha256": "ade3a64eea9243a6cb0ad99d44c2a401686c7ab7d93cad142e1a6b4ddbfec6a9",
+  "regression_checks": [
+    "testing/python/integration.py::TestMockDecoration::test_mock_sentinel_check_against_numpy_like"
+  ],
+  "passing_checks": 15
+}
