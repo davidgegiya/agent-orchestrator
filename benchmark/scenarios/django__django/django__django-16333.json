@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16333",
+  "repository": "django/django",
+  "base_commit": "60a7bd89860e504c0c33b02c78edcac87f6d1b5a",
+  "topic": "UserCreationForm should save data from ManyToMany form fields",
+  "upstream_created_at": "2022-11-27T20:09:15Z",
+  "dataset_row": 844,
+  "problem_sha256": "e0c84232980947c30bbf4ed81c944746f992603885ea8ca630af38aa2714763e",
+  "regression_checks": [
+    "test_custom_form_saves_many_to_many_field (auth_tests.test_forms.UserCreationFormTest)"
+  ],
+  "passing_checks": 87
+}
