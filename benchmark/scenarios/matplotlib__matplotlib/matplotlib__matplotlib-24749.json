@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24749",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "84cc898d6475a6bd1f14bd60d53e914484768ca3",
+  "topic": "contour raises IndexError if Z is specified as keyword argument",
+  "upstream_created_at": "2022-12-16T16:04:15Z",
+  "dataset_row": 1052,
+  "problem_sha256": "68a9670b5488efe2f65803aa0c57f4c4982397c5e4d4d445d74128223b940da1",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_contour_no_args"
+  ],
+  "passing_checks": 64
+}
