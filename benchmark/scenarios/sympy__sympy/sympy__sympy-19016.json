@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-19016",
+  "repository": "sympy/sympy",
+  "base_commit": "a8ddd0d457f9e34280b1cd64041ac90a32edbeb7",
+  "topic": "is_finite_set property not implemented for Range",
+  "upstream_created_at": "2020-03-29T22:34:10Z",
+  "dataset_row": 2183,
+  "problem_sha256": "34cb117c6a2065cd3ac815daf337c3f29e13040f5457fd624a652486aedc37df",
+  "regression_checks": [
+    "test_range_is_finite_set"
+  ],
+  "passing_checks": 46
+}
