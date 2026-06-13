@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14706",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "2812bb151fa03f8e5cc0785fbcd5845252d3a477",
+  "topic": "kernel_approximation.Nystroem does not support precomputed kernel",
+  "upstream_created_at": "2019-08-21T12:29:34Z",
+  "dataset_row": 1648,
+  "problem_sha256": "fae8acde5f0efc240632fd9e8f11fe189a99e43cb7ca3483664488c8ea334509",
+  "regression_checks": [
+    "sklearn/tests/test_kernel_approximation.py::test_nystroem_precomputed_kernel"
+  ],
+  "passing_checks": 9
+}
