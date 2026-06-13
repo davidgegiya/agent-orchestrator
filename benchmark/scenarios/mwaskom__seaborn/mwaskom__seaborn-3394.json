@@ -1,0 +1,14 @@
+{
+  "id": "mwaskom__seaborn-3394",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "9276e22a424fe2c834eff85231d0c916e293d613",
+  "topic": "pd.NA reverses axis ordering",
+  "upstream_created_at": "2023-06-19T20:59:52Z",
+  "dataset_row": 1149,
+  "problem_sha256": "7ab20e95db912406ba77aa0ce8436d173e879100f721dc38b96fa2d27049aebd",
+  "regression_checks": [
+    "tests/_core/test_rules.py::test_variable_type",
+    "tests/test_core.py::TestVectorPlotter::test_comp_data_nullable_dtype"
+  ],
+  "passing_checks": 163
+}
