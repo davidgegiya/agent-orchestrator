@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24403",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8d8ae7fe5b129af0fef45aefa0b3e11394fcbe51",
+  "topic": "Use `repr` instead of `str` in the error message",
+  "upstream_created_at": "2022-11-08T19:05:49Z",
+  "dataset_row": 1043,
+  "problem_sha256": "8de77156769449597a2c234f93bca691dfd8a0aa99a4ecbbbb14e844533dffd0",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_scatter_color_repr_error"
+  ],
+  "passing_checks": 770
+}
