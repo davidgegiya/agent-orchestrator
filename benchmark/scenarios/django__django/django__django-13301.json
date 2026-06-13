@@ -1,0 +1,14 @@
+{
+  "id": "django__django-13301",
+  "repository": "django/django",
+  "base_commit": "61a0ba43cfd4ff66f51a9d73dcd8ed6f6a6d9915",
+  "topic": "Default username in createsuperuser command doesn't respect the --database option",
+  "upstream_created_at": "2020-08-13T10:29:12Z",
+  "dataset_row": 437,
+  "problem_sha256": "fff83332acf7fcde5e3b038bab8b06a64c0808937ab82db210142c12c855f1d1",
+  "regression_checks": [
+    "test_with_database (auth_tests.test_management.GetDefaultUsernameTestCase)",
+    "test_createsuperuser_command_suggested_username_with_database_option (auth_tests.test_management.MultiDBCreatesuperuserTestCase)"
+  ],
+  "passing_checks": 53
+}
