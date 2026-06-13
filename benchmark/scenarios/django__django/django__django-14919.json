@@ -1,0 +1,16 @@
+{
+  "id": "django__django-14919",
+  "repository": "django/django",
+  "base_commit": "adb4100e58d9ea073ee8caa454bb7c885b6a83ed",
+  "topic": "Do not ignore transaction durability errors within TestCase",
+  "upstream_created_at": "2021-09-30T19:26:20Z",
+  "dataset_row": 664,
+  "problem_sha256": "4658f0ef0fea0dec9ceb0fbc6ce5ab7c1c6f8db710f49ae93a32fe39145cf0df",
+  "regression_checks": [
+    "test_commit (transactions.tests.DurableTests)",
+    "test_nested_both_durable (transactions.tests.DurableTests)",
+    "test_nested_outer_durable (transactions.tests.DurableTests)",
+    "test_sequence_of_durables (transactions.tests.DurableTests)"
+  ],
+  "passing_checks": 78
+}
