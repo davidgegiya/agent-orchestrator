@@ -1,0 +1,32 @@
+{
+  "id": "scikit-learn__scikit-learn-13363",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "eda99f3cec70ba90303de0ef3ab7f988657fadb9",
+  "topic": "return_intercept==True in ridge_regression raises an exception",
+  "upstream_created_at": "2019-03-01T16:25:10Z",
+  "dataset_row": 1594,
+  "problem_sha256": "fc8e8b91a5d290087cc3552ebb075d636d10c53da4b2a67e1530b59ee91981e1",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_ridge.py::test_raises_value_error_if_solver_not_supported",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_fit_intercept_sparse",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[auto-array-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[auto-array-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[sparse_cg-array-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[sparse_cg-array-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[sparse_cg-csr_matrix-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[sparse_cg-csr_matrix-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[cholesky-array-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[cholesky-array-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[cholesky-csr_matrix-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[cholesky-csr_matrix-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[lsqr-array-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[lsqr-array-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[lsqr-csr_matrix-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[lsqr-csr_matrix-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[saga-array-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[saga-array-sample_weight1-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[saga-csr_matrix-None-True]",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_regression_check_arguments_validity[saga-csr_matrix-sample_weight1-True]"
+  ],
+  "passing_checks": 72
+}
