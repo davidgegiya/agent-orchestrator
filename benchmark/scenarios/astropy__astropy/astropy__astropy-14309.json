@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14309",
+  "repository": "astropy/astropy",
+  "base_commit": "cdb66059a2feb44ee49021874605ba90801f9986",
+  "topic": "IndexError: tuple index out of range in identify_format (io.registry)",
+  "upstream_created_at": "2023-01-23T22:34:01Z",
+  "dataset_row": 50,
+  "problem_sha256": "9201a5a63070cc2a2ff6b6d500d14fe8563bde242610f43e961eb917c30f268c",
+  "regression_checks": [
+    "astropy/io/fits/tests/test_connect.py::test_is_fits_gh_14305"
+  ],
+  "passing_checks": 141
+}
