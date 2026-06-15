@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7231",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "85a06cfafbe49f2c56e22cef4fa88adcf7b54f59",
+  "topic": "warn when logging fails",
+  "upstream_created_at": "2020-05-19T08:17:40Z",
+  "dataset_row": 1435,
+  "problem_sha256": "4a12bae291edd01542e1d0cfdbbd6ab1b527daf10f466b42b5ea04ed1cd5e30e",
+  "regression_checks": [
+    "testing/logging/test_reporting.py::test_logging_emit_error"
+  ],
+  "passing_checks": 41
+}
