@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-21370",
+  "repository": "sympy/sympy",
+  "base_commit": "e5e0bfa9d08de736055f338f926327157149b019",
+  "topic": "minpoly fails for complicated algebraic number",
+  "upstream_created_at": "2021-04-22T23:42:22Z",
+  "dataset_row": 2230,
+  "problem_sha256": "f246190fa124ffebbd5b80720dc2977101ac52e25adb4b9ba62aba597753c8dc",
+  "regression_checks": [
+    "test_Factors",
+    "test_minimal_polynomial",
+    "test_minimal_polynomial_issue_19732"
+  ],
+  "passing_checks": 30
+}
