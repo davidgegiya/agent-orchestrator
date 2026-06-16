@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-4442",
+  "repository": "pydata/xarray",
+  "base_commit": "9a4313b4b75c181eade5a61f1a2f053b9d1bb293",
+  "topic": "to_dataframe/to_series fails when one out of more than one dims are stacked / multiindex",
+  "upstream_created_at": "2020-09-20T20:45:12Z",
+  "dataset_row": 1242,
+  "problem_sha256": "eec864541f0d6fa05c54702153bd0ffdd99059045b8fc84843d4a95f8c1748f9",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_to_dataframe_multiindex",
+    "xarray/tests/test_dataarray.py::TestDataArray::test_to_dataframe_0length"
+  ],
+  "passing_checks": 881
+}
