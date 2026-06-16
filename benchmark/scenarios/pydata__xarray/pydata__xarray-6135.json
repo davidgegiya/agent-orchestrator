@@ -1,0 +1,26 @@
+{
+  "id": "pydata__xarray-6135",
+  "repository": "pydata/xarray",
+  "base_commit": "48290fa14accd3ac87768d3f73d69493b82b0be6",
+  "topic": "Is your feature request related to a problem?",
+  "upstream_created_at": "2022-01-04T15:28:16Z",
+  "dataset_row": 1276,
+  "problem_sha256": "4a948e876d241f2171dd92859a2cf25f18857331fef7d1dedd5cc32e98e0c636",
+  "regression_checks": [
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[year]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[month]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[month-dash]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[day]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[day-dash]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[hour]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[hour-dash]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[hour-space-separator]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[minute]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[minute-dash]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[minute-space-separator]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[second]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[second-dash]",
+    "xarray/tests/test_cftimeindex.py::test_parse_iso8601_like[second-space-separator]"
+  ],
+  "passing_checks": 1949
+}
