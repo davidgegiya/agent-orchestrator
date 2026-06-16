@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-4669",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "c2d03c6b3881a9df7353432b109523984adf06f9",
+  "topic": "Similarities checker with \"ignore-signatures\" option enabled ignores functions with docstring-only bodies",
+  "upstream_created_at": "2021-07-04T19:07:27Z",
+  "dataset_row": 1326,
+  "problem_sha256": "678b0bad439355a23d3d73fe82e07186329624590e11dd3e060596d191256e4d",
+  "regression_checks": [
+    "tests/checkers/unittest_similar.py::test_ignore_signatures_empty_functions_pass"
+  ],
+  "passing_checks": 14
+}
