@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15320",
+  "repository": "sympy/sympy",
+  "base_commit": "ddcf91eef02de6e8de18ff49eb4967ddc98a96f1",
+  "topic": "RootOf might ignore generator",
+  "upstream_created_at": "2018-10-02T12:32:41Z",
+  "dataset_row": 2050,
+  "problem_sha256": "bdbc50e5b47d4aeeca9ba628de208a287701daccb1f30f5d603d7d90bbc39c7e",
+  "regression_checks": [
+    "test_CRootOf___new__"
+  ],
+  "passing_checks": 168
+}
