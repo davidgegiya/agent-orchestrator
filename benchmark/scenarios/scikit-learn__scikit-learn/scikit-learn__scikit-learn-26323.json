@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-26323",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "586f4318ffcdfbd9a1093f35ad43e81983740b66",
+  "topic": "`ColumnTransformer.set_output` ignores the `remainder` if it's an estimator",
+  "upstream_created_at": "2023-05-04T11:55:50Z",
+  "dataset_row": 1709,
+  "problem_sha256": "dec667a99cd31294dfecfd79cf87495c8c63e250c29ee90a51b50a443bcfd4d5",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_remainder_set_output"
+  ],
+  "passing_checks": 188
+}
