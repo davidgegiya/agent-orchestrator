@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-25299",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "d9cfe3f6b1c58dd253dc87cb676ce5171ff1f8a1",
+  "topic": "BUG log_loss renormalizes the predictions",
+  "upstream_created_at": "2023-01-05T07:16:22Z",
+  "dataset_row": 1683,
+  "problem_sha256": "52931344eac7a17944a563a6f16dcdfcbebd6fa44424eababf8d3887f3cc8ccf",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_classification.py::test_log_loss",
+    "sklearn/metrics/tests/test_classification.py::test_log_loss_pandas_input"
+  ],
+  "passing_checks": 151
+}
