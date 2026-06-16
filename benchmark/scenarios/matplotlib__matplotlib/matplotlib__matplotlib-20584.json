@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20584",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "06141dab06373d0cb2806b3aa87ca621fbf5c426",
+  "topic": "set_segments(get_segments()) makes lines coarse",
+  "upstream_created_at": "2021-07-06T19:51:52Z",
+  "dataset_row": 965,
+  "problem_sha256": "0345825d0c51d8c8b7d8f3368183cd00e75bbbae1c396ea517688f10eaadf5ed",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_collections.py::test_get_segments"
+  ],
+  "passing_checks": 66
+}
