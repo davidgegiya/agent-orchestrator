@@ -1,0 +1,22 @@
+{
+  "id": "django__django-11808",
+  "repository": "django/django",
+  "base_commit": "67e7dffe9543aff259f63c8f12d15642fe7be100",
+  "topic": "__eq__ should return NotImplemented when equality cannot be checked",
+  "upstream_created_at": "2019-09-23T15:12:09Z",
+  "dataset_row": 249,
+  "problem_sha256": "145cfc9b3bcc9c4b094f66e7e1b216a7071a1d66fd7f8a40b6b45458e7b02f4b",
+  "regression_checks": [
+    "test_eq (messages_tests.tests.MessageTests)",
+    "test_basic_equality (validators.tests.TestValidatorEquality)",
+    "test_context (template_tests.test_context.ContextTests)",
+    "test_equal (expressions.tests.SimpleExpressionTests)",
+    "test_eq (model_indexes.tests.SimpleIndexesTests)",
+    "test_eq (constraints.tests.CheckConstraintTests)",
+    "test_eq (constraints.tests.UniqueConstraintTests)",
+    "test_eq (basic.tests.ModelTest)",
+    "test_eq (filtered_relation.tests.FilteredRelationTests)",
+    "test_prefetch_eq (prefetch_related.tests.PrefetchRelatedTests)"
+  ],
+  "passing_checks": 356
+}
