@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-22711",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f670fe78795b18eb1118707721852209cd77ad51",
+  "topic": "cannot give init value for RangeSlider widget",
+  "upstream_created_at": "2022-03-27T00:34:37Z",
+  "dataset_row": 987,
+  "problem_sha256": "bbd6daddcef465ec8625635d0ea6dd7485627fd830fc2a3fa32f87152cf685e9",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_range_slider[horizontal]",
+    "lib/matplotlib/tests/test_widgets.py::test_range_slider[vertical]"
+  ],
+  "passing_checks": 91
+}
