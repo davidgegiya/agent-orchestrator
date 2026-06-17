@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-19885",
+  "repository": "sympy/sympy",
+  "base_commit": "33e01913477c9ad7c652cdce1eba6da83ee0ee37",
+  "topic": "Wrong answer when using \"linsolve\" to solve a system of linear equations",
+  "upstream_created_at": "2020-08-03T18:20:50Z",
+  "dataset_row": 2198,
+  "problem_sha256": "ac9748b6cd489b8cb307784135160d27ab6593d8089ceb367f7fa255be9df86a",
+  "regression_checks": [
+    "test_gauss_jordan_solve",
+    "test_issue_19815"
+  ],
+  "passing_checks": 13
+}
