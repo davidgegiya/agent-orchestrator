@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-7462",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "b3e26a6c851133b82b50f4b68b53692076574d13",
+  "topic": "`IndexError: pop from empty list` for empty tuple type annotation",
+  "upstream_created_at": "2020-04-12T04:10:05Z",
+  "dataset_row": 1773,
+  "problem_sha256": "e2bec789cfb9cfba7e26e3366b7ff43665eac31da6ce4c33d7e651a192d49625",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_parse_annotation",
+    "tests/test_pycode_ast.py::test_unparse[()-()]"
+  ],
+  "passing_checks": 49
+}
