@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8399",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6e7dc8bac831cd8cf7a53b08efa366bd84f0c0fe",
+  "topic": "Starting v6.2.0, unittest setUpClass fixtures are no longer \"private\"",
+  "upstream_created_at": "2021-03-04T17:52:17Z",
+  "dataset_row": 1465,
+  "problem_sha256": "29ab94acc76ce43755166ae7fe737b10033bffd641233ce95e919acd7d92a56c",
+  "regression_checks": [
+    "testing/test_unittest.py::test_fixtures_setup_setUpClass_issue8394"
+  ],
+  "passing_checks": 59
+}
