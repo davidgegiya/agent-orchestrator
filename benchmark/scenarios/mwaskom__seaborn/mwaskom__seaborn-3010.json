@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3010",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "0f5a013e2cf43562deec3b879458e59a73853813",
+  "topic": "PolyFit is not robust to missing data",
+  "upstream_created_at": "2022-09-11T19:37:32Z",
+  "dataset_row": 1140,
+  "problem_sha256": "36c251e5734c294d7bb9985789821649a55eca340178d985d9468c405c89ca0f",
+  "regression_checks": [
+    "tests/_stats/test_regression.py::TestPolyFit::test_missing_data"
+  ],
+  "passing_checks": 2
+}
