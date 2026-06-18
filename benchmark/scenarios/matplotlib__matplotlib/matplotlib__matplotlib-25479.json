@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-25479",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7fdf772201e4c9bafbc16dfac23b5472d6a53fa2",
+  "topic": "Confusing (broken?) colormap name handling",
+  "upstream_created_at": "2023-03-16T17:59:41Z",
+  "dataset_row": 1081,
+  "problem_sha256": "bdf5f427fbceec8f04955c51a098b2701d4ec1b878f160352d3235efe0c242cd",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_colormap_equals",
+    "lib/matplotlib/tests/test_colors.py::test_set_cmap_mismatched_name"
+  ],
+  "passing_checks": 263
+}
