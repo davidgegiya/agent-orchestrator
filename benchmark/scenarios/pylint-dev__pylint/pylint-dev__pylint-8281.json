@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8281",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "e0018ea04bce285f5fed31c00d6d16367a8800c1",
+  "topic": "Support globbing patterns for source-roots",
+  "upstream_created_at": "2023-02-13T15:37:32Z",
+  "dataset_row": 1365,
+  "problem_sha256": "7f863327d02d0c252d40f633f6ff571f77cb15920f1d1b7dbd7aa1793bfde8bf",
+  "regression_checks": [
+    "tests/lint/unittest_lint.py::test_source_roots_globbing"
+  ],
+  "passing_checks": 63
+}
