@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-14295",
+  "repository": "astropy/astropy",
+  "base_commit": "15cc8f20a4f94ab1910bc865f40ec69d02a7c56c",
+  "topic": "Presence of SIP keywords leads to ignored PV keywords",
+  "upstream_created_at": "2023-01-23T06:51:46Z",
+  "dataset_row": 49,
+  "problem_sha256": "b241d1b7265d1f2a30e8f5aea92d9d580f3bc491a538adbee0987b48caa95a3c",
+  "regression_checks": [
+    "astropy/wcs/tests/test_wcs.py::test_tpv_ctype_tpv",
+    "astropy/wcs/tests/test_wcs.py::test_tpv_ctype_tan",
+    "astropy/wcs/tests/test_wcs.py::test_car_sip_with_pv"
+  ],
+  "passing_checks": 73
+}
