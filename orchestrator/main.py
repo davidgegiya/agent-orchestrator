@@ -467,6 +467,11 @@ def _safe_run(
                     "error": f"{type(exc).__name__}: {exc}",
                 }
             )
+            # A new model run would replay tools against a workspace already changed
+            # by the failed attempt. Keep that attempt's evidence for inspection.
+            if context is not None and context.allow_write:
+                errors[-1]["retry_suppressed"] = "role_can_modify_files"
+                break
             if (not retryable) or attempt >= max_attempts:
                 break
 
