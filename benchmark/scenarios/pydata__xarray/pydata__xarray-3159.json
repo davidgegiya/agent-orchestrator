@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3159",
+  "repository": "pydata/xarray",
+  "base_commit": "e3b3bed2c2e27eb74adc2b7f80c365c2928cd78b",
+  "topic": "Allow passing a default value (instead of ndarray) for data argument for DataArray",
+  "upstream_created_at": "2019-07-24T06:21:50Z",
+  "dataset_row": 1212,
+  "problem_sha256": "da31cab072da693b8593f2287746ae80006c740b35a9d173b0aa376ddf598d1c",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_init_value"
+  ],
+  "passing_checks": 647
+}
