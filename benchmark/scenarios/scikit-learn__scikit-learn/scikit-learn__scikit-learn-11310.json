@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-11310",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "553b5fb8f84ba05c8397f26dd079deece2b05029",
+  "topic": "Retrieving time to refit the estimator in BaseSearchCV",
+  "upstream_created_at": "2018-06-18T12:10:19Z",
+  "dataset_row": 1534,
+  "problem_sha256": "65b413b9bbf386e72173237a42c75fa0ebbe94c26bf13dc62e1d6d57559d29d7",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_search.py::test_search_cv_timing"
+  ],
+  "passing_checks": 50
+}
