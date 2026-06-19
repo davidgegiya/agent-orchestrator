@@ -1,0 +1,16 @@
+{
+  "id": "psf__requests-863",
+  "repository": "psf/requests",
+  "base_commit": "a0df2cbb10419037d11d04352b3175405ab52941",
+  "topic": "Allow lists in the dict values of the hooks argument",
+  "upstream_created_at": "2012-09-20T15:48:00Z",
+  "dataset_row": 1205,
+  "problem_sha256": "3d1e564a727edbf136651f1b334bff976c8ce7e34370840cba092f92b3e0fbbb",
+  "regression_checks": [
+    "tests/test_requests.py::RequestsTestSuite::test_POSTBIN_GET_POST_FILES_WITH_HEADERS",
+    "tests/test_requests.py::RequestsTestSuite::test_nonurlencoded_postdata",
+    "tests/test_requests.py::RequestsTestSuite::test_prefetch_redirect_bug",
+    "tests/test_requests.py::RequestsTestSuite::test_urlencoded_post_data"
+  ],
+  "passing_checks": 60
+}
