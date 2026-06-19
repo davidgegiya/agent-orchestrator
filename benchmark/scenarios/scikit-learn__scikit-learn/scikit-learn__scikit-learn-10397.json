@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-10397",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "2eb731b375fa0b48f6902daa839ff6a8477b48fd",
+  "topic": "integers in RidgeCV alpha",
+  "upstream_created_at": "2018-01-03T18:27:12Z",
+  "dataset_row": 1498,
+  "problem_sha256": "ef493ee9c0bab2a8c22acf9feac123247d37c5fc41b19f191fde71550bc7b0d5",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_ridge.py::test_ridgecv_int_alphas",
+    "sklearn/linear_model/tests/test_ridge.py::test_ridgecv_negative_alphas"
+  ],
+  "passing_checks": 29
+}
