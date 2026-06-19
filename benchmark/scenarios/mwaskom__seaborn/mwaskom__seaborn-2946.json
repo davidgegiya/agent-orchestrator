@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-2946",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "a1ede5eb82fa09164aff65da03136b7382fd5041",
+  "topic": "Regression: `pointplot` and `barplot` raise when using a custom estimator",
+  "upstream_created_at": "2022-08-08T10:48:52Z",
+  "dataset_row": 1137,
+  "problem_sha256": "8273d08f2378398f1034331de407add01b51509825ffb24f88e4060ae38fb8fa",
+  "regression_checks": [
+    "tests/test_statistics.py::TestEstimateAggregator::test_custom_func_estimator"
+  ],
+  "passing_checks": 58
+}
