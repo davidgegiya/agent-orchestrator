@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7008",
+  "repository": "astropy/astropy",
+  "base_commit": "264d967708a3dcdb2bce0ed9f9ca3391c40f3ff3",
+  "topic": "Context manager for constant versions",
+  "upstream_created_at": "2017-12-19T20:24:08Z",
+  "dataset_row": 74,
+  "problem_sha256": "790b52f68f1fd13fe81d14cf4f9eeda640129ad8c68ed668fe73eefe942d4217",
+  "regression_checks": [
+    "astropy/constants/tests/test_prior_version.py::test_context_manager"
+  ],
+  "passing_checks": 8
+}
