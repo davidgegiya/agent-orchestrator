@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-8428",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "fe51121f39ca48c1af21733a60ae069b316b1cdb",
+  "topic": "Generate an error when a mark is applied to a fixture",
+  "upstream_created_at": "2021-03-10T14:02:46Z",
+  "dataset_row": 1467,
+  "problem_sha256": "e527c216498729f60e8124acef8fa3a1cb0b35e58fbe8886d2757fc577c4d284",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_fixture_disallow_on_marked_functions",
+    "testing/deprecated_test.py::test_fixture_disallow_marks_on_fixtures",
+    "testing/deprecated_test.py::test_fixture_disallowed_between_marks"
+  ],
+  "passing_checks": 18
+}
