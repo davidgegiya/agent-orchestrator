@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5595",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "b4bf5168621f0a4bf7cca795862e2b5c139fc8cb",
+  "topic": "The negative score is not very beginner friendly",
+  "upstream_created_at": "2021-12-23T23:10:43Z",
+  "dataset_row": 1336,
+  "problem_sha256": "77108769374187b5952bb9015b4bad4b389bbc3c571b6bf531f2de4531db8ae8",
+  "regression_checks": [
+    "tests/unittest_reporting.py::test_multi_format_output"
+  ],
+  "passing_checks": 114
+}
