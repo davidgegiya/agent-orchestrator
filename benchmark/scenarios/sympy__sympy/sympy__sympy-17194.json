@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-17194",
+  "repository": "sympy/sympy",
+  "base_commit": "fec5dc5fd0d9a04cf974f733bc375bd8db853d4c",
+  "topic": "I believe I found some mathML printing errors, and noted below what I think it should be",
+  "upstream_created_at": "2019-07-14T09:53:26Z",
+  "dataset_row": 2120,
+  "problem_sha256": "3f2f08597ae69721f855565adcc347960a533b5439748d97c2ab2bacb625a45c",
+  "regression_checks": [
+    "test_content_mathml_constants",
+    "test_content_mathml_trig",
+    "test_content_mathml_logic"
+  ],
+  "passing_checks": 98
+}
