@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11096",
+  "repository": "django/django",
+  "base_commit": "ea60b7bc7464808e34e3cb0aac04455fdd8545eb",
+  "topic": "Support the use of admin_order_field on properties in the admin",
+  "upstream_created_at": "2019-03-19T15:53:33Z",
+  "dataset_row": 140,
+  "problem_sha256": "134496b619ba3c94bc50bfe3d3e6ce29232c630a810f9d88236ccf67a2e5db61",
+  "regression_checks": [
+    "test_change_list_sorting_property (admin_views.tests.AdminViewBasicTest)"
+  ],
+  "passing_checks": 286
+}
