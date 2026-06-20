@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-26184",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9ced0c0347d270886f162746e071b2b8b60d7a67",
+  "topic": "AnnotationBbox does not return correct window_extent before first draw",
+  "upstream_created_at": "2023-06-25T11:39:21Z",
+  "dataset_row": 1111,
+  "problem_sha256": "c7a9715ec070fa6cf132cf1c7565f5e0f3e27d2ac8dd68e09e2c5cbd47bf5455",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_offsetbox.py::test_annotationbbox_extents[window_extent]",
+    "lib/matplotlib/tests/test_offsetbox.py::test_annotationbbox_extents[tightbbox]"
+  ],
+  "passing_checks": 275
+}
