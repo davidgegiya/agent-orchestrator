@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-18869",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "b7d05919865fc0c37a0164cf467d5d5513bd0ede",
+  "topic": "Add easily comparable version info to toplevel",
+  "upstream_created_at": "2020-11-01T23:18:42Z",
+  "dataset_row": 957,
+  "problem_sha256": "7dd8362fb8c82bea71e6c8f2b93b063accc07b500b5293bae113d3db190a583a",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_matplotlib.py::test_parse_to_version_info[3.5.0-version_tuple0]",
+    "lib/matplotlib/tests/test_matplotlib.py::test_parse_to_version_info[3.5.0rc2-version_tuple1]",
+    "lib/matplotlib/tests/test_matplotlib.py::test_parse_to_version_info[3.5.0.dev820+g6768ef8c4c-version_tuple2]",
+    "lib/matplotlib/tests/test_matplotlib.py::test_parse_to_version_info[3.5.0.post820+g6768ef8c4c-version_tuple3]"
+  ],
+  "passing_checks": 3
+}
