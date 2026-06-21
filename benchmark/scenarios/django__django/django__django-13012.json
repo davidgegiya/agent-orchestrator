@@ -1,0 +1,14 @@
+{
+  "id": "django__django-13012",
+  "repository": "django/django",
+  "base_commit": "22a59c01c00cf9fbefaee0e8e67fab82bbaf1fd2",
+  "topic": "Constant expressions of an ExpressionWrapper object are incorrectly placed at the GROUP BY clause",
+  "upstream_created_at": "2020-06-02T21:19:37Z",
+  "dataset_row": 391,
+  "problem_sha256": "be3b7f518dbc2bdb004329f92f9229079f60fe2d0876be7807470d82933ad443",
+  "regression_checks": [
+    "test_empty_group_by (expressions.tests.ExpressionWrapperTests)",
+    "test_non_empty_group_by (expressions.tests.ExpressionWrapperTests)"
+  ],
+  "passing_checks": 137
+}
