@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21476",
+  "repository": "sympy/sympy",
+  "base_commit": "f6b0190377be37f93f5e431951e66b562ef5dc35",
+  "topic": "diffgeom.CoordSystem.transform with indirect relation raises KeyError",
+  "upstream_created_at": "2021-05-16T07:53:41Z",
+  "dataset_row": 2234,
+  "problem_sha256": "99469e38538ac87c81ed5d7d0b2e063f23dcdd02bc7e03b4e8b36f5c1d72c548",
+  "regression_checks": [
+    "test_coordsys_transform"
+  ],
+  "passing_checks": 10
+}
