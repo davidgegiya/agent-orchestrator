@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20805",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9a7329c8c111ae8d499a9d3b6db90cc3ca979526",
+  "topic": "Key aspect of code below",
+  "upstream_created_at": "2021-08-07T05:07:07Z",
+  "dataset_row": 971,
+  "problem_sha256": "79eca8f5bd61e6031b87785e4b7a2f2a3afabdb083e213d4ea6af81a1b0166fd",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_reset_ticks[png]"
+  ],
+  "passing_checks": 673
+}
