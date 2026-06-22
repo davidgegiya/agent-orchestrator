@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9133",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7720154ca023da23581d87244a31acf5b14979f2",
+  "topic": "Add a `deselected` parameter to `assert_outcomes()`",
+  "upstream_created_at": "2021-09-29T14:28:54Z",
+  "dataset_row": 1479,
+  "problem_sha256": "0b5bdf9d8b837482f4f1858ee103210b30a297c6226a8351d787f78dec94325a",
+  "regression_checks": [
+    "testing/test_pytester.py::test_pytester_outcomes_deselected"
+  ],
+  "passing_checks": 53
+}
