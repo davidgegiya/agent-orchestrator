@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3407",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "515286e02be3e4c0ff2ef4addb34a53c4a676ee4",
+  "topic": "pairplot raises KeyError with MultiIndex DataFrame",
+  "upstream_created_at": "2023-06-27T23:17:29Z",
+  "dataset_row": 1150,
+  "problem_sha256": "cc410e7266ef96e07b57e8c84ed698d8cd7b817c7b0e702bacfe0f7938089b8a",
+  "regression_checks": [
+    "tests/test_axisgrid.py::TestPairGrid::test_pairplot_column_multiindex"
+  ],
+  "passing_checks": 120
+}
