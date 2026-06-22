@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-15086",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "21fc1d97452d4e3a6d744d0eef95ecaf7e87859c",
+  "topic": "MultiTaskLassoCV with fit_intercept=True returns wrong results",
+  "upstream_created_at": "2019-09-24T20:11:18Z",
+  "dataset_row": 1663,
+  "problem_sha256": "e6028718f63cf41024e3090f22083b30a3fc4c276adf9dab38a3e795432787f2",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_coordinate_descent.py::test_multi_task_lasso_cv_dtype"
+  ],
+  "passing_checks": 50
+}
