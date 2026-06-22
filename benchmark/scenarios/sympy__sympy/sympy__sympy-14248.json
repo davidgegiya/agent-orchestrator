@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-14248",
+  "repository": "sympy/sympy",
+  "base_commit": "9986b38181cdd556a3f3411e553864f11912244e",
+  "topic": "The difference of MatrixSymbols prints as a sum with (-1) coefficient",
+  "upstream_created_at": "2018-02-17T10:38:44Z",
+  "dataset_row": 2020,
+  "problem_sha256": "45749e88df0b35b737439379e5b6482bb0c9149a7df2b70e989c91b3013cdff1",
+  "regression_checks": [
+    "test_MatrixElement_printing",
+    "test_MatrixSymbol_printing"
+  ],
+  "passing_checks": 433
+}
