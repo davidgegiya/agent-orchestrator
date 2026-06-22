@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23332",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6e5a5415ddc513606eac5c116fde492370a3f7f6",
+  "topic": "Certain non-hashable parameters to text() give cryptic error messages",
+  "upstream_created_at": "2022-06-23T16:30:18Z",
+  "dataset_row": 1017,
+  "problem_sha256": "8df7da1e7cae20571b11330122d19ef1e43e6b2a0a5d8af3eb5165b9cbd53a60",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_text.py::test_validate_linespacing"
+  ],
+  "passing_checks": 81
+}
