@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4687",
+  "repository": "pydata/xarray",
+  "base_commit": "d3b6aa6d8b997df115a53c001d00222a0f92f63a",
+  "topic": "xr.where not preserving attributes",
+  "upstream_created_at": "2020-12-13T20:42:40Z",
+  "dataset_row": 1248,
+  "problem_sha256": "e69d4d8c214adb3555d901dcef3d0766b1a3b0856dbf9d89c2f246a2f9f222b7",
+  "regression_checks": [
+    "xarray/tests/test_computation.py::test_where_attrs"
+  ],
+  "passing_checks": 1717
+}
