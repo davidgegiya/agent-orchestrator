@@ -1,0 +1,18 @@
+{
+  "id": "psf__requests-1766",
+  "repository": "psf/requests",
+  "base_commit": "847735553aeda6e6633f2b32e14ba14ba86887a4",
+  "topic": "quote qop options in Digest Auth",
+  "upstream_created_at": "2013-11-29T08:38:09Z",
+  "dataset_row": 1173,
+  "problem_sha256": "e1bbc0363d997dc73f282d2244dfb93fd469b24db36aa4e8764f9ddeb96ad691",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_QUOTES_QOP_VALUE",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_GET_ALTERNATIVE",
+    "test_requests.py::RequestsTestCase::test_cookie_sent_on_redirect",
+    "test_requests.py::RequestsTestCase::test_custom_content_type",
+    "test_requests.py::RequestsTestCase::test_params_are_merged_case_sensitive",
+    "test_requests.py::RequestsTestCase::test_user_agent_transfers"
+  ],
+  "passing_checks": 79
+}
