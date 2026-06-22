@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13157",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "85440978f517118e78dc15f84e397d50d14c8097",
+  "topic": "Different r2_score multioutput default in r2_score and base.RegressorMixin",
+  "upstream_created_at": "2019-02-13T12:55:30Z",
+  "dataset_row": 1582,
+  "problem_sha256": "9a38dfa63d384899a69751af7fb7d26bea6c332313fe2e582dcd6169687b3c2b",
+  "regression_checks": [
+    "sklearn/tests/test_base.py::test_regressormixin_score_multioutput"
+  ],
+  "passing_checks": 286
+}
