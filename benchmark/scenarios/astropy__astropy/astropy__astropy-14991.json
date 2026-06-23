@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14991",
+  "repository": "astropy/astropy",
+  "base_commit": "edf7493ec141a9072b5ce3e33071dff66e58bf49",
+  "topic": "Error in distance calculations for w0wz Cosmologies",
+  "upstream_created_at": "2023-06-27T01:24:50Z",
+  "dataset_row": 71,
+  "problem_sha256": "506e78b7b7d8e790e91603f5f6c5c2920c7f03f569314492e29b8512a492fffc",
+  "regression_checks": [
+    "astropy/cosmology/flrw/tests/test_w0wzcdm.py::Testw0wzCDM::test_Otot_overflow"
+  ],
+  "passing_checks": 593
+}
