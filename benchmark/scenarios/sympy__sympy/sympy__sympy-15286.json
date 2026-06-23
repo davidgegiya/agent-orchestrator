@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15286",
+  "repository": "sympy/sympy",
+  "base_commit": "5997e30a33f92e6b4b4d351e835feb7379a0e31d",
+  "topic": "This requires about 2 minutes",
+  "upstream_created_at": "2018-09-24T17:34:42Z",
+  "dataset_row": 2047,
+  "problem_sha256": "d604177b350afabddb18a6469c3e04c9a34739b3201eab8957f088a181942737",
+  "regression_checks": [
+    "test_ellipse_equation_using_slope"
+  ],
+  "passing_checks": 12
+}
