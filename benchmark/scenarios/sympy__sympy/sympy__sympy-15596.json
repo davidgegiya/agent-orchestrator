@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15596",
+  "repository": "sympy/sympy",
+  "base_commit": "6e716b1948071c2aaba2acf92c3d9106b018b57e",
+  "topic": "The behavior of degree(f, x) on rational functions",
+  "upstream_created_at": "2018-12-06T02:45:43Z",
+  "dataset_row": 2060,
+  "problem_sha256": "182b770621296e30e932de045c6961d6282b95016f94622f90adf948a320f24c",
+  "regression_checks": [
+    "test_Poly_degree"
+  ],
+  "passing_checks": 140
+}
