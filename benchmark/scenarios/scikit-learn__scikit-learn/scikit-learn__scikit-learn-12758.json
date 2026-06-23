@@ -1,0 +1,20 @@
+{
+  "id": "scikit-learn__scikit-learn-12758",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3a884c5ee507f735e2df384727340c72c5219a8e",
+  "topic": "Showing micro-average in classification report is confusing",
+  "upstream_created_at": "2018-12-12T01:30:18Z",
+  "dataset_row": 1561,
+  "problem_sha256": "a7fc09dd73bb2372eb7b3e41691d42f3f2efea884d1ea38abba1523e655a91c8",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_dictionary_output",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_balanced",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_label_detection",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_digits",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_string_label",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_unicode_label",
+    "sklearn/metrics/tests/test_classification.py::test_classification_report_multiclass_with_long_string_label"
+  ],
+  "passing_checks": 67
+}
