@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24570",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8f0003ae902952372824c9917975fb372c026a42",
+  "topic": "`align` in `HPacker` is reversed",
+  "upstream_created_at": "2022-11-30T15:50:17Z",
+  "dataset_row": 1046,
+  "problem_sha256": "80681858cc72f8bf62cbff408ad3a4d6e52003ccc08faa659b84ed78ffc47813",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_offsetbox.py::test_packers[bottom]",
+    "lib/matplotlib/tests/test_offsetbox.py::test_packers[top]"
+  ],
+  "passing_checks": 267
+}
