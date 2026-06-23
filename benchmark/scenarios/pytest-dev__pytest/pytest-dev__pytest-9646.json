@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9646",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6aaa017b1e81f6eccc48ee4f6b52d25c49747554",
+  "topic": "Pytest 7 not ignoring warnings as instructed on `pytest.ini`",
+  "upstream_created_at": "2022-02-08T13:38:22Z",
+  "dataset_row": 1485,
+  "problem_sha256": "520571fd90709ea2237a6687ce7e8dff4d922ae98303b800b9d0e97084c3bb32",
+  "regression_checks": [
+    "testing/test_nodes.py::test_subclassing_both_item_and_collector_deprecated"
+  ],
+  "passing_checks": 17
+}
