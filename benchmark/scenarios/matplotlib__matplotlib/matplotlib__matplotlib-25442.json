@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25442",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "73394f2b11321e03a5df199ec0196f27a728b0b0",
+  "topic": "Attribute Error combining matplotlib 3.7.1 and mplcursor on data selection",
+  "upstream_created_at": "2023-03-12T21:58:08Z",
+  "dataset_row": 1080,
+  "problem_sha256": "443748adb755f3fdc0dd4f494e6394993601fc5b698c526e3e075938d6d95fee",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_offsetbox.py::test_remove_draggable"
+  ],
+  "passing_checks": 275
+}
