@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-16052",
+  "repository": "sympy/sympy",
+  "base_commit": "a4f40d79dda2630c9cda32debf64a8e04258f752",
+  "topic": "Fix Matrix Equality and MatrixExpr",
+  "upstream_created_at": "2019-02-23T10:06:57Z",
+  "dataset_row": 2075,
+  "problem_sha256": "bb4aeed98ddd43be5cecb656d17d77d69f32c3af000e43d4517d9c1ddbdcbd09",
+  "regression_checks": [
+    "test_issue_7842"
+  ],
+  "passing_checks": 32
+}
