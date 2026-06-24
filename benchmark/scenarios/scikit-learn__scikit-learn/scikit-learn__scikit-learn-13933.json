@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13933",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "e747376eef58ab671243fbc463e6ef8bf342636c",
+  "topic": "GBDTs should bin train and validation data separately?",
+  "upstream_created_at": "2019-05-23T14:44:19Z",
+  "dataset_row": 1623,
+  "problem_sha256": "411ce08fe5be1f2136434d0efb9ea72594200cacfed943a7568329b28050eeb3",
+  "regression_checks": [
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_gradient_boosting.py::test_binning_train_validation_are_separated"
+  ],
+  "passing_checks": 48
+}
