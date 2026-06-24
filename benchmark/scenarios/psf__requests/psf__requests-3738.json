@@ -1,0 +1,16 @@
+{
+  "id": "psf__requests-3738",
+  "repository": "psf/requests",
+  "base_commit": "ca15d4808734c86801c8f3d80c9152c35a163dc3",
+  "topic": "Requests v2.12.2 does not add parameters to URLs with schemes it does not understand",
+  "upstream_created_at": "2016-11-30T21:22:10Z",
+  "dataset_row": 1197,
+  "problem_sha256": "30dfb63071bb990d4699cd6c3d58d1a9867b8147336051a2453ee948c5843dfd",
+  "regression_checks": [
+    "tests/test_requests.py::TestPreparingURLs::test_url_mutation[http+unix://%2Fvar%2Frun%2Fsocket/path-http+unix://%2fvar%2frun%2fsocket/path0]",
+    "tests/test_requests.py::TestPreparingURLs::test_url_mutation[http+unix://%2Fvar%2Frun%2Fsocket/path-http+unix://%2fvar%2frun%2fsocket/path1]",
+    "tests/test_requests.py::TestPreparingURLs::test_parameters_for_nonstandard_schemes[http+unix://%2Fvar%2Frun%2Fsocket/path-params0-http+unix://%2fvar%2frun%2fsocket/path?key=value]",
+    "tests/test_requests.py::TestPreparingURLs::test_parameters_for_nonstandard_schemes[http+unix://%2Fvar%2Frun%2Fsocket/path-params1-http+unix://%2fvar%2frun%2fsocket/path?key=value]"
+  ],
+  "passing_checks": 109
+}
