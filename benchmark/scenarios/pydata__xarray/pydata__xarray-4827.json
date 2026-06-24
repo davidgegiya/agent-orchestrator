@@ -1,0 +1,17 @@
+{
+  "id": "pydata__xarray-4827",
+  "repository": "pydata/xarray",
+  "base_commit": "f98d6f065db2ad1f8911cb22aa04b4e0210ecee4",
+  "topic": "Option for combine_attrs with conflicting values silently dropped",
+  "upstream_created_at": "2021-01-19T22:54:10Z",
+  "dataset_row": 1256,
+  "problem_sha256": "75a13ed661f91eeda656779ded045d8af0b6898e8906c77c9d2227cb98ad201a",
+  "regression_checks": [
+    "xarray/tests/test_combine.py::TestCombineAuto::test_combine_nested_combine_attrs_drop_conflicts",
+    "xarray/tests/test_concat.py::TestConcatDataset::test_concat_combine_attrs_kwarg[drop_conflicts-var1_attrs8-var2_attrs8-expected_attrs8-False]",
+    "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[drop_conflicts-var1_attrs8-var2_attrs8-expected_attrs8-False]",
+    "xarray/tests/test_merge.py::TestMergeFunction::test_merge_arrays_attrs[drop_conflicts-var1_attrs9-var2_attrs9-expected_attrs9-False]",
+    "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_drop_conflicts"
+  ],
+  "passing_checks": 167
+}
