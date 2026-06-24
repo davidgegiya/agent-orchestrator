@@ -1,0 +1,26 @@
+{
+  "id": "scikit-learn__scikit-learn-14704",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "68044b061d7abc0c16f632890939438033306161",
+  "topic": "StratifiedKFold makes fold-sizes very unequal",
+  "upstream_created_at": "2019-08-21T08:52:44Z",
+  "dataset_row": 1647,
+  "problem_sha256": "7bcbee44cf0f948dc282c02e0e14a93240d6d341241ea865c100fc29d1eb2a00",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_no_shuffle",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[4-False]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[4-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[6-False]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[6-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[7-False]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[7-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[8-False]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[8-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[9-False]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_ratios[9-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_label_invariance[4-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_label_invariance[6-True]",
+    "sklearn/model_selection/tests/test_split.py::test_stratified_kfold_label_invariance[7-True]"
+  ],
+  "passing_checks": 213
+}
