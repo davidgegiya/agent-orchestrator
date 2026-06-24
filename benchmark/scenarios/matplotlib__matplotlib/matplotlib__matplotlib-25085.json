@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25085",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "af8a046c2cc2077cd8f2379e437d18e47941340c",
+  "topic": "Widget blitting broken when saving as PDF",
+  "upstream_created_at": "2023-01-25T21:22:06Z",
+  "dataset_row": 1063,
+  "problem_sha256": "c6d87bd970c17c64754ac38db415bc4a0367b68228bebb85bf2f9f748eae024e",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_save_blitted_widget_as_pdf"
+  ],
+  "passing_checks": 115
+}
