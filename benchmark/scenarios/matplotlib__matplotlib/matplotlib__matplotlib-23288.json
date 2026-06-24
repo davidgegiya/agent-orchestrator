@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23288",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "047254dd0c5fcf602a19b245e3b14a38d1af1614",
+  "topic": "URL-area not rotated in PDFs",
+  "upstream_created_at": "2022-06-16T09:26:53Z",
+  "dataset_row": 1014,
+  "problem_sha256": "a00f7b9d18cc0eba62638d90d08b8e4720d05aad859e9dc454272e3550647f1c",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_pdf.py::test_text_rotated_urls"
+  ],
+  "passing_checks": 20
+}
