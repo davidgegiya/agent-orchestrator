@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13974",
+  "repository": "sympy/sympy",
+  "base_commit": "84c125972ad535b2dfb245f8d311d347b45e5b8a",
+  "topic": "Evaluating powers of `TensorProduct`",
+  "upstream_created_at": "2018-01-20T18:25:59Z",
+  "dataset_row": 2007,
+  "problem_sha256": "532e0be1dde79a0b72e418946f9f33c9e1c0f96538484947441eb822840e6b25",
+  "regression_checks": [
+    "test_tensor_product_simp"
+  ],
+  "passing_checks": 4
+}
