@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7535",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7ec6401ffabf79d52938ece5b8ff566a8b9c260e",
+  "topic": "pytest 6: Traceback in pytest.raises contains repr of py.path.local",
+  "upstream_created_at": "2020-07-23T14:15:26Z",
+  "dataset_row": 1450,
+  "problem_sha256": "d3095eec7059788c95f8b7b9c8a74c51a37fbf88e509ddb680ffa319a37b7453",
+  "regression_checks": [
+    "testing/code/test_code.py::TestTracebackEntry::test_tb_entry_str"
+  ],
+  "passing_checks": 16
+}
