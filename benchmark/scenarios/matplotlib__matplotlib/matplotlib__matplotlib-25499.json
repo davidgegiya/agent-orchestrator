@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25499",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "738ead81fce08e582452ef30665ae1071d45092a",
+  "topic": "Setting bbox_inches to a Bbox in fig.savefig resizes colorbar",
+  "upstream_created_at": "2023-03-18T18:33:30Z",
+  "dataset_row": 1083,
+  "problem_sha256": "9ae0756813d643dea92efce4eeab2819760bfd7d90a9afdb7b826a213235eced",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_savefig_locate_colorbar"
+  ],
+  "passing_checks": 133
+}
