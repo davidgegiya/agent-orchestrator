@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-14207",
+  "repository": "sympy/sympy",
+  "base_commit": "9ebcce18bd0ea331b55b8538d2c45e56a3821715",
+  "topic": "Necessary parenthesis in printing of some multiplications",
+  "upstream_created_at": "2018-02-14T17:34:16Z",
+  "dataset_row": 2019,
+  "problem_sha256": "ab569e11ea706bf0d10dafced677ac2ef3e199fae6e04f04c15dc2533486c769",
+  "regression_checks": [
+    "test_ccode_Pow",
+    "test_Mul"
+  ],
+  "passing_checks": 153
+}
