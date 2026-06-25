@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-3180",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "c8badb914bb8eaf5ec2578c0ecd434edb1234375",
+  "topic": "Overlapping labels in relplot with seaborn 0.12",
+  "upstream_created_at": "2022-12-09T01:37:27Z",
+  "dataset_row": 1142,
+  "problem_sha256": "aca1a9d8c16f2aa4090222d92c9ef8a2642f7e029ee69f018b96d51200c7c969",
+  "regression_checks": [
+    "tests/test_relational.py::TestRelationalPlotter::test_relplot_unshared_axis_labels"
+  ],
+  "passing_checks": 74
+}
