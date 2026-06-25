@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15971",
+  "repository": "sympy/sympy",
+  "base_commit": "c267d554e16f0392af2b22a2922cbe0db7e8c798",
+  "topic": "Add pretty printing functionality for lerchphi fuction",
+  "upstream_created_at": "2019-02-12T19:57:43Z",
+  "dataset_row": 2072,
+  "problem_sha256": "be655075498e374e98cf271189a89f71926428c6fa86cbb79c88b45718ca30fb",
+  "regression_checks": [
+    "test_print_lerchphi"
+  ],
+  "passing_checks": 119
+}
