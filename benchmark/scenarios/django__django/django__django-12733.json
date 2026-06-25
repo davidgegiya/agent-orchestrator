@@ -1,0 +1,20 @@
+{
+  "id": "django__django-12733",
+  "repository": "django/django",
+  "base_commit": "8bcca47e8356521f52f0738d9633befd53007cae",
+  "topic": "Use PostgreSQL TRUNCATE … RESTART IDENTITY keyword to reset sequences in sql_flush()",
+  "upstream_created_at": "2020-04-16T20:41:35Z",
+  "dataset_row": 359,
+  "problem_sha256": "9d9236c2b6956439e30a8cf9f7946ac49018d3f12ba9ec1bf78052f303215ad0",
+  "regression_checks": [
+    "test_sql_flush (backends.sqlite.test_operations.SQLiteOperationsTests)",
+    "test_sql_flush_allow_cascade (backends.sqlite.test_operations.SQLiteOperationsTests)",
+    "test_sql_flush_sequences (backends.sqlite.test_operations.SQLiteOperationsTests)",
+    "test_sql_flush_sequences_allow_cascade (backends.sqlite.test_operations.SQLiteOperationsTests)",
+    "test_execute_sql_flush_statements (backends.base.test_operations.SqlFlushTests)",
+    "test_sql_flush_no_tables (backends.base.test_operations.SqlFlushTests)",
+    "test_sequence_name_length_limits_flush (backends.tests.LongNameTest)",
+    "test_sql_flush (backends.base.test_operations.SimpleDatabaseOperationTests)"
+  ],
+  "passing_checks": 65
+}
