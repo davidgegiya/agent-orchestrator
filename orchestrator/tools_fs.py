@@ -18,14 +18,20 @@ def _resolve_path(base: Path, rel_path: str) -> Path:
     candidate = Path(rel_path)
     if candidate.parts and candidate.parts[0] == base.name:
         candidate = Path(*candidate.parts[1:]) if len(candidate.parts) > 1 else Path(".")
+    if ".git" in candidate.parts or any(part == ".env" or part.startswith(".env.") and part != ".env.example"
+                                       for part in candidate.parts):
+        raise PermissionError("Git metadata and local environment files are protected")
     if candidate.is_absolute():
         raise ValueError("Absolute paths are not allowed")
     resolved = (base / candidate).resolve()
     base_resolved = base.resolve()
     try:
-        resolved.relative_to(base_resolved)
+        resolved_parts = resolved.relative_to(base_resolved).parts
     except ValueError as exc:
         raise ValueError("Path escapes the allowed base directory") from exc
+    if ".git" in resolved_parts or any(part == ".env" or part.startswith(".env.") and part != ".env.example"
+                                       for part in resolved_parts):
+        raise PermissionError("Git metadata and local environment files are protected")
     return resolved
 
 
