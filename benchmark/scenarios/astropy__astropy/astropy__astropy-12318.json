@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-12318",
+  "repository": "astropy/astropy",
+  "base_commit": "43ce7895bb5b61d4fab2f9cc7d07016cf105f18e",
+  "topic": "BlackBody bolometric flux is wrong if scale has units of dimensionless_unscaled",
+  "upstream_created_at": "2021-10-28T15:32:17Z",
+  "dataset_row": 2,
+  "problem_sha256": "b7e75b494253e26dd301304166f1f7b2bac53984326440d58d2f417e1a0d4481",
+  "regression_checks": [
+    "astropy/modeling/tests/test_physical_models.py::test_blackbody_input_units",
+    "astropy/modeling/tests/test_physical_models.py::test_blackbody_exceptions_and_warnings",
+    "astropy/modeling/tests/test_physical_models.py::test_blackbody_dimensionless"
+  ],
+  "passing_checks": 11
+}
