@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26113",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5ca694b38d861c0e24cd8743753427dda839b90b",
+  "topic": "Inconsistent behavior of hexbins mincnt parameter, depending on C parameter",
+  "upstream_created_at": "2023-06-12T18:56:33Z",
+  "dataset_row": 1108,
+  "problem_sha256": "a2e45e470e2a84c295127b97abf706d127d3b74d1ec8411a209c77d3a507e30b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_hexbin_mincnt_behavior_upon_C_parameter[png]"
+  ],
+  "passing_checks": 812
+}
