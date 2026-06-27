@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-12938",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "acb810647233e40839203ac553429e8663169702",
+  "topic": "AttributeError: 'PrettyPrinter' object has no attribute '_indent_at_name'",
+  "upstream_created_at": "2019-01-07T22:45:53Z",
+  "dataset_row": 1568,
+  "problem_sha256": "ec77fe5c178025078a3bb059566a4e111afcb470dda6ca3c643213a8a9c44d70",
+  "regression_checks": [
+    "sklearn/utils/tests/test_pprint.py::test_builtin_prettyprinter"
+  ],
+  "passing_checks": 8
+}
