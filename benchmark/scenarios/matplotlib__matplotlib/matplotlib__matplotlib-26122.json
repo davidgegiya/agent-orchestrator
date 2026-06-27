@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26122",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6391678cc16042ceebb1dec1a6e2aa224ce77366",
+  "topic": "imshow() should not modify axes aspect if transform != ax.transData",
+  "upstream_created_at": "2023-06-14T09:23:45Z",
+  "dataset_row": 1109,
+  "problem_sha256": "a176a2e81dc1bfd8b6e04ac340ee04254f897096e4267f0f4e9f168c97e60689",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_image.py::test_non_transdata_image_does_not_touch_aspect"
+  ],
+  "passing_checks": 131
+}
