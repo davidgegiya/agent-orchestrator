@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25425",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "cb2bdb1300f40ae8746a1916480af4d0d7af5f77",
+  "topic": "Add `get_shape` as alias for `get_size` in AxesImage, or make that include depth too",
+  "upstream_created_at": "2023-03-10T11:39:00Z",
+  "dataset_row": 1077,
+  "problem_sha256": "06b4bcff67c70b067ec48ee419410f53326e234007910e55c95f2c8f60144537",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_image.py::test_axesimage_get_shape"
+  ],
+  "passing_checks": 129
+}
