@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11734",
+  "repository": "django/django",
+  "base_commit": "999891bd80b3d02dd916731a7a239e1036174885",
+  "topic": "OuterRef in exclude() or ~Q() uses wrong model",
+  "upstream_created_at": "2019-09-01T18:46:50Z",
+  "dataset_row": 240,
+  "problem_sha256": "774c4ce64f17c81883edea247c185c3856d97964f0e302f56b31a404adcae05c",
+  "regression_checks": [
+    "test_subquery_exclude_outerref (queries.tests.ExcludeTests)"
+  ],
+  "passing_checks": 275
+}
