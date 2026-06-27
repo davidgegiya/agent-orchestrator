@@ -1,0 +1,17 @@
+{
+  "id": "psf__requests-1733",
+  "repository": "psf/requests",
+  "base_commit": "a123f8351dc9f7ddfb06c5fafb25fedf6d119ff1",
+  "topic": "allow Response class to be pickled",
+  "upstream_created_at": "2013-11-09T22:49:23Z",
+  "dataset_row": 1172,
+  "problem_sha256": "98cf17c057b762ac632a679c7a5dfc8342eb8966750d125c70906bf668231c4b",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_cookie_persists_via_api",
+    "test_requests.py::RequestsTestCase::test_cookie_removed_on_expire",
+    "test_requests.py::RequestsTestCase::test_mixed_case_scheme_acceptable",
+    "test_requests.py::RequestsTestCase::test_request_and_response_are_pickleable",
+    "test_requests.py::RequestsTestCase::test_unicode_method_name"
+  ],
+  "passing_checks": 77
+}
