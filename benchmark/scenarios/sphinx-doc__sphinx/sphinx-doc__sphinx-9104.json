@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9104",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "8954770f677994cfb13d93ea6d08b13db5382e31",
+  "topic": "WARNING: py:class reference target not found",
+  "upstream_created_at": "2021-04-16T17:17:19Z",
+  "dataset_row": 1862,
+  "problem_sha256": "29b1ed29c5a2b8bf71fbd0d3ee166f538ed444238faeb7060f8ba40707fcd072",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_info_field_list"
+  ],
+  "passing_checks": 40
+}
