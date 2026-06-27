@@ -1,0 +1,15 @@
+{
+  "id": "django__django-12747",
+  "repository": "django/django",
+  "base_commit": "c86201b6ed4f8256b0a0520c08aa674f623d4127",
+  "topic": "QuerySet.Delete - inconsistent result when zero objects deleted",
+  "upstream_created_at": "2020-04-18T16:41:40Z",
+  "dataset_row": 362,
+  "problem_sha256": "2b7450f3d7c53aada33afc3802cfcce7907854adc9f25bb51d8b3227868fada0",
+  "regression_checks": [
+    "test_fast_delete_empty_no_update_can_self_select (delete.tests.FastDeleteTests)",
+    "test_model_delete_returns_num_rows (delete.tests.DeletionTests)",
+    "test_queryset_delete_returns_num_rows (delete.tests.DeletionTests)"
+  ],
+  "passing_checks": 49
+}
