@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10377",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "5e26bf902621933bc8c7f3ce21c2085ee32651d3",
+  "topic": "BUG Inconsistent f1_score behavior when combining label indicator input with labels attribute",
+  "upstream_created_at": "2017-12-27T16:39:20Z",
+  "dataset_row": 1496,
+  "problem_sha256": "ff26f474e26f1c2335e432165ed7322a1a60cf27f6604b2b208f911daf879754",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_classification.py::test_precision_recall_f_extra_labels"
+  ],
+  "passing_checks": 55
+}
