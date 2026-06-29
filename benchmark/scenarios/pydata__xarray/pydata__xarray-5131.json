@@ -1,0 +1,22 @@
+{
+  "id": "pydata__xarray-5131",
+  "repository": "pydata/xarray",
+  "base_commit": "e56905889c836c736152b11a7e6117a229715975",
+  "topic": "Trailing whitespace in DatasetGroupBy text representation",
+  "upstream_created_at": "2021-04-08T09:19:30Z",
+  "dataset_row": 1265,
+  "problem_sha256": "7f693adcc1f85990b0279c24448a190288d815ac93eaa83be1ffd68532ed4bfb",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj0-x]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj0-y]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj0-z]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj0-month]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj1-x]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj1-y]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj1-z]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj1-month]",
+    "xarray/tests/test_groupby.py::test_groupby_repr_datetime[obj0]",
+    "xarray/tests/test_groupby.py::test_groupby_repr_datetime[obj1]"
+  ],
+  "passing_checks": 24
+}
