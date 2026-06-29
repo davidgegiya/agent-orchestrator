@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-11047",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "fbfd4b50050080413c8faca5368b9cb9b1ac9313",
+  "topic": "support sub-second granularity/precision in `--log-date-format` (strftime `%f`)",
+  "upstream_created_at": "2023-05-28T11:13:56Z",
+  "dataset_row": 1388,
+  "problem_sha256": "2ae77648d8c6c33b82d4dc197ebbb524fb3a99ab34027e948606d1b1a4b519c3",
+  "regression_checks": [
+    "testing/logging/test_reporting.py::test_date_format_percentf_log",
+    "testing/logging/test_reporting.py::test_date_format_percentf_tz_log"
+  ],
+  "passing_checks": 48
+}
