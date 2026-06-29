@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7336",
+  "repository": "astropy/astropy",
+  "base_commit": "732d89c2940156bdc0e200bb36dc38b5e424bcba",
+  "topic": "units.quantity_input decorator fails for constructors with type hinted return value -> None",
+  "upstream_created_at": "2018-03-28T15:31:32Z",
+  "dataset_row": 77,
+  "problem_sha256": "7748037976fe14b78d18e51713908d93acea5fa22c80247697cafb14e75d8844",
+  "regression_checks": [
+    "astropy/units/tests/test_quantity_annotations.py::test_return_annotation_none"
+  ],
+  "passing_checks": 339
+}
