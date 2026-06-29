@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5281",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "c0e53a61e65cb919bd29f62b756dfd57dfeef59a",
+  "topic": "Invalid unicode in _pytest/terminal.py with Jython",
+  "upstream_created_at": "2019-05-16T23:11:47Z",
+  "dataset_row": 1401,
+  "problem_sha256": "9a4bfc1ab362cd3b7a706a0a00677a2dafb3834264090217e2264cac1226f317",
+  "regression_checks": [
+    "testing/test_capture.py::TestFDCapture::test_capfd_sys_stdout_mode"
+  ],
+  "passing_checks": 108
+}
