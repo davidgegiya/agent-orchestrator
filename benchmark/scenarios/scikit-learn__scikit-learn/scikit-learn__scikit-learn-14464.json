@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-14464",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "5936ae356ce3385cb393384928ca9c6783f18bd8",
+  "topic": "Cloning custom transform replaces values in __init__ dictionary",
+  "upstream_created_at": "2019-07-25T00:34:02Z",
+  "dataset_row": 1641,
+  "problem_sha256": "3e1b36fca81cd21178f008befe5fe22232f2ece5621d2129cc974d6684bfe5c3",
+  "regression_checks": [
+    "sklearn/gaussian_process/tests/test_kernels.py::test_warns_on_get_params_non_attribute",
+    "sklearn/tests/test_base.py::test_warns_on_get_params_non_attribute"
+  ],
+  "passing_checks": 277
+}
