@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7973",
+  "repository": "astropy/astropy",
+  "base_commit": "4fc9f31af6c5659c3a59b66a387894c12203c946",
+  "topic": "Record data size in the WCS object",
+  "upstream_created_at": "2018-10-25T22:33:11Z",
+  "dataset_row": 84,
+  "problem_sha256": "fad8ebb731c8647711062660b035bbf614ce61db2104f6668d04768aaa0f0bb3",
+  "regression_checks": [
+    "astropy/wcs/tests/test_wcs.py::test_footprint_to_file"
+  ],
+  "passing_checks": 57
+}
