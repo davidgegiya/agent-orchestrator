@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13472",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3b35104c93cb53f67fb5f52ae2fece76ef7144da",
+  "topic": "GradientBoostingRegressor initial estimator does not play together with Pipeline",
+  "upstream_created_at": "2019-03-18T22:15:59Z",
+  "dataset_row": 1602,
+  "problem_sha256": "c662d96ea9f76d58ab19819ab66fdfb3ac24385e2c36a5cc237683eabe807df5",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_gradient_boosting.py::test_gradient_boosting_with_init_pipeline"
+  ],
+  "passing_checks": 123
+}
