@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15349",
+  "repository": "sympy/sympy",
+  "base_commit": "768da1c6f6ec907524b8ebbf6bf818c92b56101b",
+  "topic": "Incorrect result with Quaterniont.to_rotation_matrix()",
+  "upstream_created_at": "2018-10-06T19:45:27Z",
+  "dataset_row": 2053,
+  "problem_sha256": "d944319628119ee1595ebe5436641f1a359d18a525624f3d7127fd6ce03b4c6c",
+  "regression_checks": [
+    "test_quaternion_conversions"
+  ],
+  "passing_checks": 3
+}
