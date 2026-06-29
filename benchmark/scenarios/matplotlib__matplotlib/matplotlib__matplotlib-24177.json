@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24177",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "493d608e39d32a67173c23a7bbc47d6bfedcef61",
+  "topic": "ax.hist density not auto-scaled when using histtype='step'",
+  "upstream_created_at": "2022-10-15T10:52:31Z",
+  "dataset_row": 1035,
+  "problem_sha256": "5794b3f40771b45d98bd5b369a3d5638e5001dae2aff16c95725c6d9f04b3216",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_small_autoscale"
+  ],
+  "passing_checks": 768
+}
