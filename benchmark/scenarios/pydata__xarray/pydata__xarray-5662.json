@@ -1,0 +1,17 @@
+{
+  "id": "pydata__xarray-5662",
+  "repository": "pydata/xarray",
+  "base_commit": "2694046c748a51125de6d460073635f1d789958e",
+  "topic": "Limit number of displayed dimensions in repr",
+  "upstream_created_at": "2021-08-01T09:12:24Z",
+  "dataset_row": 1273,
+  "problem_sha256": "55acef59ef2078484246a394abc1785eb8a53a8d5ff71230906752e064f0b565",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test__mapping_repr[50-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[35-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[11-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[1-40-30]",
+    "xarray/tests/test_formatting.py::test__element_formatter"
+  ],
+  "passing_checks": 22
+}
