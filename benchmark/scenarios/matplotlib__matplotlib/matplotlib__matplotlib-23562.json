@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-23562",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "29a86636a9c45ab5ac4d80ac76eaee497f460dce",
+  "topic": "'Poly3DCollection' object has no attribute '_facecolors2d'",
+  "upstream_created_at": "2022-08-05T13:44:06Z",
+  "dataset_row": 1022,
+  "problem_sha256": "586cab8d977e745e80ee6c63c3658ad8d2bf0cfea4b61f486d1fd0d28f1c6a37",
+  "regression_checks": [
+    "lib/mpl_toolkits/tests/test_mplot3d.py::test_Poly3DCollection_get_facecolor",
+    "lib/mpl_toolkits/tests/test_mplot3d.py::test_Poly3DCollection_get_edgecolor"
+  ],
+  "passing_checks": 136
+}
