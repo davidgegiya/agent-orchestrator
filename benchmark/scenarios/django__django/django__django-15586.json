@@ -1,0 +1,14 @@
+{
+  "id": "django__django-15586",
+  "repository": "django/django",
+  "base_commit": "f4f2afeb457429f55d6325ed557f8e92a74ee028",
+  "topic": "Enable cached template loader in development",
+  "upstream_created_at": "2022-04-12T14:21:40Z",
+  "dataset_row": 757,
+  "problem_sha256": "c1bfffdf89464e5be29319739f911b647724c87144030a0f08c777bcc460bce2",
+  "regression_checks": [
+    "The cached template loader is always enabled by default.",
+    "test_dirs_pathlib (template_backends.test_django.DjangoTemplatesTests)"
+  ],
+  "passing_checks": 23
+}
