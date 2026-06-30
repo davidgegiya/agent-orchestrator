@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10844",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "97523985b39ecde369d83352d7c3baf403b60a22",
+  "topic": "fowlkes_mallows_score returns RuntimeWarning when variables get too big",
+  "upstream_created_at": "2018-03-21T00:16:18Z",
+  "dataset_row": 1515,
+  "problem_sha256": "1da38567eeb24637d61f0c70906dd061e336580e71f1260953f3421653a61c2b",
+  "regression_checks": [
+    "sklearn/metrics/cluster/tests/test_supervised.py::test_int_overflow_mutual_info_fowlkes_mallows_score"
+  ],
+  "passing_checks": 16
+}
