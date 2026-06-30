@@ -393,7 +393,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     base_sha = base["stdout"].strip()
     if args.workspace:
         status = _run_local_cmd(
-            ["git", "status", "--porcelain", "--untracked-files=all", "--", "."],
+            ["git", "-c", "core.fsmonitor=false", "status", "--porcelain", "--untracked-files=all", "--", "."],
             cwd=workspace, timeout_seconds=5,
         )
         if status["returncode"] != 0 or status["stdout"]:
@@ -547,7 +547,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
         before_checks, before_meta = _compute_workspace_diff(workspace, base_sha)
         if not before_meta["available"]:
-            artifacts["error"] = "Could not collect the workspace patch before checks."
+            artifacts["error"] = before_meta.get("reason", "Could not collect the workspace patch before checks.")
             artifacts["rounds"].append(round_record)
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP ({artifacts['error']})")
@@ -579,7 +579,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             "meta": diff_meta,
         }
         if not diff_meta["available"] or len(diff_text) > diff_max_chars or diff_text != before_checks:
-            round_record["error"] = "Review requires a complete patch that stays unchanged during checks."
+            round_record["error"] = diff_meta.get("reason", "Review requires a complete patch that stays unchanged during checks.")
             artifacts["rounds"].append(round_record)
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP ({round_record['error']})")

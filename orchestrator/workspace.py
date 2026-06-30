@@ -103,6 +103,11 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
         return ("- None", meta)
 
     git_cwd = workspace_top
+    if base_sha != "HEAD":
+        head = _run_local_cmd(["git", "rev-parse", "--verify", "HEAD"], cwd=git_cwd, timeout_seconds=5)
+        if head["returncode"] != 0 or head["stdout"].strip() != base_sha:
+            meta["reason"] = "Checkout HEAD no longer matches the run base commit."
+            return ("- None", meta)
     try:
         workspace_rel = os.path.relpath(workspace_dir.resolve(), workspace_top.resolve())
     except ValueError:
@@ -173,4 +178,11 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
     if not diff_parts:
         return ("- None", meta)
 
-    return (_escape_invalid_utf8("\n\n".join(diff_parts).rstrip()) + "\n", meta)
+    patch_text = "\n\n".join(diff_parts).rstrip() + "\n"
+    try:
+        patch_text.encode("utf-8")
+    except UnicodeEncodeError:
+        meta["available"] = False
+        meta["reason"] = "The patch contains text that is not valid UTF-8."
+        return ("- None", meta)
+    return (patch_text, meta)
