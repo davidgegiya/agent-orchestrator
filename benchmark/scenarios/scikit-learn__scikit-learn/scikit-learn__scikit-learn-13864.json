@@ -1,0 +1,21 @@
+{
+  "id": "scikit-learn__scikit-learn-13864",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "eb1f5f29df4bcb64fa3a96e3018aefcbe99dffab",
+  "topic": "AttributeError thrown when calling metrics.pairwise_distances with binary metrics and Y is None",
+  "upstream_created_at": "2019-05-11T13:28:11Z",
+  "dataset_row": 1619,
+  "problem_sha256": "47a621938460bc8cc8ec2f2ebe76985f4be515df9b43a717729ab5776a0c3630",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[dice]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[jaccard]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[kulsinski]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[matching]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[rogerstanimoto]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[russellrao]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[sokalmichener]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[sokalsneath]",
+    "sklearn/metrics/tests/test_pairwise.py::test_pairwise_boolean_distance[yule]"
+  ],
+  "passing_checks": 94
+}
