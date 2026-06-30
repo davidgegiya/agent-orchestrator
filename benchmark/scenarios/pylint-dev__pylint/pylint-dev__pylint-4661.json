@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-4661",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "1d1619ef913b99b06647d2030bddff4800abdf63",
+  "topic": "Make pylint XDG Base Directory Specification compliant",
+  "upstream_created_at": "2021-07-03T00:57:06Z",
+  "dataset_row": 1325,
+  "problem_sha256": "c4688008d90a0a2e8f5cecaf2ef65e96b28ccee1b9fc580ed2002b4f3c1fc417",
+  "regression_checks": [
+    "tests/lint/unittest_lint.py::test_pylint_home"
+  ],
+  "passing_checks": 0
+}
