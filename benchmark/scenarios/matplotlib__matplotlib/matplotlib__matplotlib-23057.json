@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23057",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8bfd2c43344215008a2f5597ecc0ee467fb039d3",
+  "topic": "Figures fail to redraw with IPython",
+  "upstream_created_at": "2022-05-17T21:13:07Z",
+  "dataset_row": 1004,
+  "problem_sha256": "a0942c1482d8f67e81d463e88c008e0fc96cb788fb9d02752e08a9459493f5e2",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pyplot.py::test_pylab_integration"
+  ],
+  "passing_checks": 21
+}
