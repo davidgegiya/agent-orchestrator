@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15308",
+  "repository": "sympy/sympy",
+  "base_commit": "fb59d703e6863ed803c98177b59197b5513332e9",
+  "topic": "LaTeX printing for Matrix Expression",
+  "upstream_created_at": "2018-09-28T16:42:11Z",
+  "dataset_row": 2049,
+  "problem_sha256": "8b72aa244474e0a7c0f46221eb142b06450b53bf1f27b6fac4f95571c95c72de",
+  "regression_checks": [
+    "test_trace"
+  ],
+  "passing_checks": 120
+}
