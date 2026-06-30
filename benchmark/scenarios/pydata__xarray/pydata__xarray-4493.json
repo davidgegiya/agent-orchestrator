@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4493",
+  "repository": "pydata/xarray",
+  "base_commit": "a5f53e203c52a7605d5db799864046471115d04f",
+  "topic": "DataSet.update causes chunked dask DataArray to evalute its values eagerly",
+  "upstream_created_at": "2020-10-06T22:00:41Z",
+  "dataset_row": 1243,
+  "problem_sha256": "9f18299894b39d8d0e920995cd056c024cfb8bee7f5fa92da7cd3e329b98cff2",
+  "regression_checks": [
+    "xarray/tests/test_variable.py::TestVariable::test_as_variable"
+  ],
+  "passing_checks": 1689
+}
