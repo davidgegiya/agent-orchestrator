@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-18200",
+  "repository": "sympy/sympy",
+  "base_commit": "c559a8421ac4865ebfe66024be6cd43a6103a62b",
+  "topic": "ImageSet(Lambda(n, n**2), S.Integers).intersect(S.Integers) raises AttributeError",
+  "upstream_created_at": "2020-01-01T22:13:06Z",
+  "dataset_row": 2156,
+  "problem_sha256": "68cd563dcd31d6ac14e50679aeb35739238592d2859db256ee40acc4d205394f",
+  "regression_checks": [
+    "test_imageset_intersect_diophantine",
+    "test_diophantine"
+  ],
+  "passing_checks": 86
+}
