@@ -1,0 +1,16 @@
+{
+  "id": "pytest-dev__pytest-7499",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "358150c30ee77c4b38dd63125d42d071304baf48",
+  "topic": "suggestion: improve raises confusing message when matching",
+  "upstream_created_at": "2020-07-14T18:59:56Z",
+  "dataset_row": 1447,
+  "problem_sha256": "47041b96e8f2ec5a13e2998af7417e2b0d001c6b709bbd181557b490634eb5ed",
+  "regression_checks": [
+    "testing/python/raises.py::TestRaises::test_raises_match",
+    "testing/python/raises.py::TestRaises::test_match_failure_string_quoting",
+    "testing/python/raises.py::TestRaises::test_match_failure_exact_string_message",
+    "testing/code/test_excinfo.py::test_match_raises_error"
+  ],
+  "passing_checks": 113
+}
