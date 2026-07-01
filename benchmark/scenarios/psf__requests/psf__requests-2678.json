@@ -1,0 +1,19 @@
+{
+  "id": "psf__requests-2678",
+  "repository": "psf/requests",
+  "base_commit": "276202f51ee9967969eafc1880c4785c80d63d3b",
+  "topic": "urllib3 exceptions passing through requests API",
+  "upstream_created_at": "2015-07-18T15:45:52Z",
+  "dataset_row": 1190,
+  "problem_sha256": "8fdc2ab1e33227e4bac47629432916226929f4b9602b3b534144eb56021fd9db",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_HTTP_302_ALLOW_REDIRECT_GET",
+    "test_requests.py::RequestsTestCase::test_auth_is_retained_for_redirect_on_host",
+    "test_requests.py::RequestsTestCase::test_auth_is_stripped_on_redirect_off_host",
+    "test_requests.py::RequestsTestCase::test_different_encodings_dont_break_post",
+    "test_requests.py::RequestsTestCase::test_prepared_from_session",
+    "test_requests.py::RequestsTestCase::test_user_agent_transfers",
+    "test_requests.py::test_urllib3_pool_connection_closed"
+  ],
+  "passing_checks": 149
+}
