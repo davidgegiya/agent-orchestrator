@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3905",
+  "repository": "pydata/xarray",
+  "base_commit": "fb5fe79a2881055065cc2c0ed3f49f5448afdf32",
+  "topic": "Truncate array repr based on line count",
+  "upstream_created_at": "2020-03-27T20:45:08Z",
+  "dataset_row": 1228,
+  "problem_sha256": "9aebe431da4b1ef60aee5dab875b07713825e8b7ac12b668637341a7e2fce6ef",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test_large_array_repr_length"
+  ],
+  "passing_checks": 17
+}
