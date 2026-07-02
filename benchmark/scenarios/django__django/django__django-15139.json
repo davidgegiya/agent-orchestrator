@@ -1,0 +1,20 @@
+{
+  "id": "django__django-15139",
+  "repository": "django/django",
+  "base_commit": "08d8bccbf1b0764a0de68325569ee47da256e206",
+  "topic": "Deprecate PickleSerializer and move it out of core",
+  "upstream_created_at": "2021-11-29T17:25:00Z",
+  "dataset_row": 693,
+  "problem_sha256": "8c9dc613df8570b9687071d8c65862b329b1b8c6c80a9d4d51532ce7fa46e08c",
+  "regression_checks": [
+    "test_serializer_warning (serializers.tests.PickleSerializerTests)",
+    "test_actual_expiry (sessions_tests.tests.FileSessionTests)",
+    "test_actual_expiry (sessions_tests.tests.FileSessionPathLibTests)",
+    "test_actual_expiry (sessions_tests.tests.CacheDBSessionWithTimeZoneTests)",
+    "test_actual_expiry (sessions_tests.tests.CacheDBSessionTests)",
+    "test_actual_expiry (sessions_tests.tests.DatabaseSessionWithTimeZoneTests)",
+    "test_actual_expiry (sessions_tests.tests.DatabaseSessionTests)",
+    "test_actual_expiry (sessions_tests.tests.CustomDatabaseSessionTests)"
+  ],
+  "passing_checks": 339
+}
