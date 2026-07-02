@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14182",
+  "repository": "astropy/astropy",
+  "base_commit": "a5917978be39d13cd90b517e1de4e7a539ffaa48",
+  "topic": "Please support header rows in RestructuredText output",
+  "upstream_created_at": "2022-12-16T11:13:37Z",
+  "dataset_row": 46,
+  "problem_sha256": "b4b2202e8d08d3381b1eb09934e3165997cc1488e5700ac5cd97ed344d4a95de",
+  "regression_checks": [
+    "astropy/io/ascii/tests/test_rst.py::test_rst_with_header_rows"
+  ],
+  "passing_checks": 9
+}
