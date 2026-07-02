@@ -1,0 +1,14 @@
+{
+  "id": "pylint-dev__pylint-7228",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "d597f252915ddcaaa15ccdfcb35670152cb83587",
+  "topic": "rxg include '\\p{Han}' will throw error",
+  "upstream_created_at": "2022-07-25T17:19:11Z",
+  "dataset_row": 1360,
+  "problem_sha256": "c0012333c2da4a7a26dd4085f4db4728d12cdd1b9b27aae182aa34863a44902f",
+  "regression_checks": [
+    "tests/config/test_config.py::test_regex_error",
+    "tests/config/test_config.py::test_csv_regex_error"
+  ],
+  "passing_checks": 10
+}
