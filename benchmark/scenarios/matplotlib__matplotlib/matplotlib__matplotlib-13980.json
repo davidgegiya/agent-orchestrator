@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-13980",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "4236b571cb2f0b741c40788d471d3aa553421e7b",
+  "topic": "Non-sensical negative radial scale minimum autoset in polar plot",
+  "upstream_created_at": "2019-04-18T10:09:26Z",
+  "dataset_row": 949,
+  "problem_sha256": "4bd46b0914e3dcbdbd861ae3d3b26d6914f04090d2e508ffb8c34d37a2198cca",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_streamplot.py::test_maxlength[png]"
+  ],
+  "passing_checks": 428
+}
