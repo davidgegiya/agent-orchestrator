@@ -1,0 +1,13 @@
+{
+  "id": "mwaskom__seaborn-2848",
+  "repository": "mwaskom/seaborn",
+  "base_commit": "94621cef29f80282436d73e8d2c0aa76dab81273",
+  "topic": "pairplot fails with hue_order not containing all hue values in seaborn 0.11.1",
+  "upstream_created_at": "2022-06-11T18:21:32Z",
+  "dataset_row": 1135,
+  "problem_sha256": "cd082639d3b926a1902ff2477194396f758aa4e5fd3742dbbf9c25190e22a282",
+  "regression_checks": [
+    "tests/test_relational.py::TestScatterPlotter::test_hue_order"
+  ],
+  "passing_checks": 50
+}
