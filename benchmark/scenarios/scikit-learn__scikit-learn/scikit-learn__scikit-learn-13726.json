@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13726",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "22b0eabfd04fa554768568a8b309fae8115102ce",
+  "topic": "n_components kwarg missing in SpectralClustering",
+  "upstream_created_at": "2019-04-25T19:27:07Z",
+  "dataset_row": 1615,
+  "problem_sha256": "58e19a33a91f6a72d89ebd92b1b090fe1954e968809e50e08b49bf6457ee55f8",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_spectral.py::test_n_components"
+  ],
+  "passing_checks": 13
+}
