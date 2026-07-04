@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-13306",
+  "repository": "astropy/astropy",
+  "base_commit": "b3fa7702635b260b008d391705c521fca7283761",
+  "topic": "vstack'ing structured array tables fails with casting error",
+  "upstream_created_at": "2022-06-05T15:18:24Z",
+  "dataset_row": 20,
+  "problem_sha256": "ee461e42df77f7f7f39007a9c04d0a0a36ce1b14d2464087fc5c9d35d9176568",
+  "regression_checks": [
+    "astropy/table/tests/test_operations.py::TestJoin::test_join_structured_column",
+    "astropy/table/tests/test_operations.py::TestVStack::test_vstack_structured_column",
+    "astropy/table/tests/test_operations.py::TestDStack::test_dstack_structured_column"
+  ],
+  "passing_checks": 160
+}
