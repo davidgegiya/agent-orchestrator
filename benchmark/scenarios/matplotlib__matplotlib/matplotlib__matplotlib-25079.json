@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25079",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "66f7956984cbfc3647e867c6e5fde889a89c64ef",
+  "topic": "Setting norm with existing colorbar fails with 3.6.3",
+  "upstream_created_at": "2023-01-25T15:24:44Z",
+  "dataset_row": 1062,
+  "problem_sha256": "613a706bd58bd76015420529b6b20a2ec5b2738a7752e29264fb8c88373d187b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_norm_callback"
+  ],
+  "passing_checks": 253
+}
