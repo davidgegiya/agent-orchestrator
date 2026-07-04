@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5730",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "44ad84a4332dfb89e810106fef2616a0bc7e47e4",
+  "topic": "There is a crash when using the doc_params extension",
+  "upstream_created_at": "2022-01-27T08:43:30Z",
+  "dataset_row": 1338,
+  "problem_sha256": "99a617eab9409f96bf4587a55f0b1a28cf7cdb300023d044c09a4490256c04db",
+  "regression_checks": [
+    "tests/test_self.py::TestRunTC::test_enable_all_extensions"
+  ],
+  "passing_checks": 118
+}
