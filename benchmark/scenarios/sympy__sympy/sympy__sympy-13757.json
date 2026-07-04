@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13757",
+  "repository": "sympy/sympy",
+  "base_commit": "a5e6a101869e027e7930e694f8b1cfb082603453",
+  "topic": "Multiplying an expression by a Poly does not evaluate when the expression is on the left side of",
+  "upstream_created_at": "2017-12-17T11:08:44Z",
+  "dataset_row": 1990,
+  "problem_sha256": "e34352f50acce07f78c65d8a4ef31063552de113c36a5bb25a524e81fd63e76c",
+  "regression_checks": [
+    "test_issue_13079"
+  ],
+  "passing_checks": 166
+}
