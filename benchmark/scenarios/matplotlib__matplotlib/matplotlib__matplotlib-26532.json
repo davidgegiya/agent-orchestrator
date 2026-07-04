@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26532",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "0849036fd992a2dd133a0cffc3f84f58ccf1840f",
+  "topic": "Typo in Poly3DCollection constructor",
+  "upstream_created_at": "2023-08-15T18:34:48Z",
+  "dataset_row": 1128,
+  "problem_sha256": "4085fab19e880fa27003feecacb5fdf86080b840447062de316de428d354f786",
+  "regression_checks": [
+    "lib/mpl_toolkits/mplot3d/tests/test_axes3d.py::test_Poly3DCollection_init_value_error"
+  ],
+  "passing_checks": 159
+}
