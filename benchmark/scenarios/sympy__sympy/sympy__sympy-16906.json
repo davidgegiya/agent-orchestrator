@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-16906",
+  "repository": "sympy/sympy",
+  "base_commit": "5158ecf2cb5b926f0f6421aab7b0279280305554",
+  "topic": "Added OneMatrix str, pretty, and MathML presentation printing",
+  "upstream_created_at": "2019-05-27T07:18:35Z",
+  "dataset_row": 2105,
+  "problem_sha256": "ef8cd4065a4ddf98649240e78f2d9c4ecbec815095bd77fc99fdb42941964ff7",
+  "regression_checks": [
+    "test_ZeroMatrix",
+    "test_OneMatrix",
+    "test_Identity"
+  ],
+  "passing_checks": 391
+}
