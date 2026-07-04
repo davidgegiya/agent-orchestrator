@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24431",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "90617dd125a59cc5fc4dfb3f73c9fc361c37b055",
+  "topic": "eventplot: allow a list of alpha channels as in the case with colors",
+  "upstream_created_at": "2022-11-11T23:58:56Z",
+  "dataset_row": 1044,
+  "problem_sha256": "c613e2f5a9d4a3d93569a328b8aecc85524cc0e5618b98d97c6bd97119688114",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_eventplot_alpha"
+  ],
+  "passing_checks": 772
+}
