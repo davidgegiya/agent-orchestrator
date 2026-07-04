@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-7324",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "19ad5889353c7f5f2b65cc2acd346b7a9e95dfcd",
+  "topic": "Pytest crashes the interpreter on debug build for 3.8+",
+  "upstream_created_at": "2020-06-05T13:00:07Z",
+  "dataset_row": 1439,
+  "problem_sha256": "9b624cef73a2cad10a427044f944b3515347dffe254b78c0ee037b8a8c785bf1",
+  "regression_checks": [
+    "testing/test_mark_expression.py::test_valid_idents[True]",
+    "testing/test_mark_expression.py::test_valid_idents[False]",
+    "testing/test_mark_expression.py::test_valid_idents[None]"
+  ],
+  "passing_checks": 58
+}
