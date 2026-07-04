@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-23824",
+  "repository": "sympy/sympy",
+  "base_commit": "39de9a2698ad4bb90681c0fdb70b30a78233145f",
+  "topic": "physics.hep.kahane_simplify() incorrectly reverses order of leading uncontracted gamma matrices",
+  "upstream_created_at": "2022-07-23T22:13:36Z",
+  "dataset_row": 2277,
+  "problem_sha256": "2d029c34cee83a7e697491f87a43ea2d3edd45ea12e7d564e8552531340a8a90",
+  "regression_checks": [
+    "test_kahane_simplify1"
+  ],
+  "passing_checks": 2
+}
