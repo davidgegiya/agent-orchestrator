@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-14087",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "a5743ed36fbd3fbc8e351bdab16561fbfca7dfa1",
+  "topic": "IndexError thrown with LogisticRegressionCV and refit=False",
+  "upstream_created_at": "2019-06-13T20:09:22Z",
+  "dataset_row": 1631,
+  "problem_sha256": "0c7dfdfb3342f2982eb373023b63c132dff12bf36e553db6e88f0a5d81ced904",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_logistic.py::test_LogisticRegressionCV_no_refit[ovr-l2]",
+    "sklearn/linear_model/tests/test_logistic.py::test_LogisticRegressionCV_no_refit[multinomial-l2]",
+    "sklearn/linear_model/tests/test_logistic.py::test_LogisticRegressionCV_no_refit[auto-l2]"
+  ],
+  "passing_checks": 172
+}
