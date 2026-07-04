@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-11040",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "96a02f3934952d486589dddd3f00b40d5a5ab5f2",
+  "topic": "Missing parameter validation in Neighbors estimator for float n_neighbors",
+  "upstream_created_at": "2018-04-28T07:18:33Z",
+  "dataset_row": 1524,
+  "problem_sha256": "a688e5ef164fbad41e8d9e794c9ef44bca6698040a93354e005ee080629782e0",
+  "regression_checks": [
+    "sklearn/neighbors/tests/test_neighbors.py::test_n_neighbors_datatype"
+  ],
+  "passing_checks": 44
+}
