@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-11822",
+  "repository": "sympy/sympy",
+  "base_commit": "29c6f599105a95d4c7a77049110241fda4835c47",
+  "topic": "Exception when printing Symbol('')",
+  "upstream_created_at": "2016-11-07T15:43:45Z",
+  "dataset_row": 1918,
+  "problem_sha256": "1418415a107515eb90ac531a64cdc7d870d20f47b96f298e7ebaa79be43841c4",
+  "regression_checks": [
+    "test_issue_11801",
+    "test_super_sub"
+  ],
+  "passing_checks": 84
+}
