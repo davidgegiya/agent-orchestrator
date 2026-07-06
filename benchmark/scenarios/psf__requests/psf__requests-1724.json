@@ -1,0 +1,18 @@
+{
+  "id": "psf__requests-1724",
+  "repository": "psf/requests",
+  "base_commit": "1ba83c47ce7b177efe90d5f51f7760680f72eda0",
+  "topic": "Unicode method names cause UnicodeDecodeError for some requests in Python 2.7.2",
+  "upstream_created_at": "2013-11-04T09:37:00Z",
+  "dataset_row": 1171,
+  "problem_sha256": "8b5ceb0cb786a68bb336dc0af4ad3908c925a065d81f77d33f5bc71ebcbe0428",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGEST_AUTH_RETURNS_COOKIE",
+    "test_requests.py::RequestsTestCase::test_DIGEST_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_different_encodings_dont_break_post",
+    "test_requests.py::RequestsTestCase::test_generic_cookiejar_works",
+    "test_requests.py::RequestsTestCase::test_uppercase_scheme_redirect",
+    "test_requests.py::RequestsTestCase::test_user_agent_transfers"
+  ],
+  "passing_checks": 79
+}
