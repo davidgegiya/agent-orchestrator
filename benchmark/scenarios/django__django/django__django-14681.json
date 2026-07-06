@@ -1,0 +1,13 @@
+{
+  "id": "django__django-14681",
+  "repository": "django/django",
+  "base_commit": "6b513f01374da8e8f38e231f0ff95e8c095d3239",
+  "topic": "CSRF failure incorrectly reported on upload when there is a problem with storage",
+  "upstream_created_at": "2021-07-22T08:51:12Z",
+  "dataset_row": 635,
+  "problem_sha256": "658ae0693252842923465b59520cdd40c97fd98b30595e51a890c5767e4e2baa",
+  "regression_checks": [
+    "An OSError raised while reading the POST data should not be handled by"
+  ],
+  "passing_checks": 62
+}
