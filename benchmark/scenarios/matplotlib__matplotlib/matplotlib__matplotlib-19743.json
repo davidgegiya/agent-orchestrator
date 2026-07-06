@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-19743",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5793ebb2201bf778f08ac1d4cd0b8dd674c96053",
+  "topic": "constrained_layout support for figure.legend",
+  "upstream_created_at": "2021-03-19T05:13:17Z",
+  "dataset_row": 959,
+  "problem_sha256": "a918c5ae6c28ce3e828898b495103a202174b2c845ec1a095e06b296e5c21269",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_figure_legend_outside"
+  ],
+  "passing_checks": 116
+}
