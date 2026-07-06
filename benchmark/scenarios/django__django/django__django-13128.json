@@ -1,0 +1,19 @@
+{
+  "id": "django__django-13128",
+  "repository": "django/django",
+  "base_commit": "2d67222472f80f251607ae1b720527afceba06ad",
+  "topic": "make temporal subtraction work without ExpressionWrapper",
+  "upstream_created_at": "2020-06-30T18:06:56Z",
+  "dataset_row": 409,
+  "problem_sha256": "167e25b8401f18731f817b2054181b84c0a9ebf38d2fcaa31880dc40a7934c6d",
+  "regression_checks": [
+    "test_date_case_subtraction (expressions.tests.FTimeDeltaTests)",
+    "test_date_subquery_subtraction (expressions.tests.FTimeDeltaTests)",
+    "test_date_subtraction (expressions.tests.FTimeDeltaTests)",
+    "test_datetime_subquery_subtraction (expressions.tests.FTimeDeltaTests)",
+    "test_datetime_subtraction_microseconds (expressions.tests.FTimeDeltaTests)",
+    "test_time_subquery_subtraction (expressions.tests.FTimeDeltaTests)",
+    "test_time_subtraction (expressions.tests.FTimeDeltaTests)"
+  ],
+  "passing_checks": 134
+}
