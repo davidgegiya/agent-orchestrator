@@ -1,0 +1,27 @@
+{
+  "id": "pydata__xarray-4684",
+  "repository": "pydata/xarray",
+  "base_commit": "0f1eb96c924bad60ea87edd9139325adabfefa33",
+  "topic": "Millisecond precision is lost on datetime64 during IO roundtrip",
+  "upstream_created_at": "2020-12-12T21:43:57Z",
+  "dataset_row": 1247,
+  "problem_sha256": "70672a99b72db5109180731968fc7c96acfea45e085ee9e6febfeffa243fd896",
+  "regression_checks": [
+    "xarray/tests/test_coding_times.py::test_infer_datetime_units[N-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_infer_datetime_units[U-microseconds]",
+    "xarray/tests/test_coding_times.py::test_infer_datetime_units[L-milliseconds]",
+    "xarray/tests/test_coding_times.py::test_cf_timedelta[1ns-nanoseconds-numbers5]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[N-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[U-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[L-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[S-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[T-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[H-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_cf_datetime_defaults_to_correct_dtype[D-nanoseconds]",
+    "xarray/tests/test_coding_times.py::test_encode_decode_roundtrip[N]",
+    "xarray/tests/test_coding_times.py::test_encode_decode_roundtrip[U]",
+    "xarray/tests/test_coding_times.py::test_encode_decode_roundtrip[L]",
+    "xarray/tests/test_coding_times.py::test_encode_decode_roundtrip[S]"
+  ],
+  "passing_checks": 355
+}
