@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8719",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "d5bc970dd952c2bc121918913798c151c755099a",
+  "topic": ":kbd: role with Caps Lock rendered incorrectly",
+  "upstream_created_at": "2021-01-21T15:04:38Z",
+  "dataset_row": 1851,
+  "problem_sha256": "858d655d4b8ca2b0466dfc917be77d657c16cc50d021bc2b8a0d608b6c93e878",
+  "regression_checks": [
+    "tests/test_markup.py::test_inline[verify-:kbd:`Caps"
+  ],
+  "passing_checks": 33
+}
