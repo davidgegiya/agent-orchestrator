@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-7490",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7f7a36478abe7dd1fa993b115d22606aa0e35e88",
+  "topic": "Pytest 6: Dynamically adding xfail marker in test no longer ignores failure",
+  "upstream_created_at": "2020-07-13T22:20:10Z",
+  "dataset_row": 1446,
+  "problem_sha256": "8ee1c0928433dd6a8b2a78488a5a05097d25599304f40cd8f6a102a99e6e7c97",
+  "regression_checks": [
+    "testing/test_skipping.py::TestXFail::test_dynamic_xfail_set_during_runtest_failed",
+    "testing/test_skipping.py::TestXFail::test_dynamic_xfail_set_during_runtest_passed_strict"
+  ],
+  "passing_checks": 78
+}
