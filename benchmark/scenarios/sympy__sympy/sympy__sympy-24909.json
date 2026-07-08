@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-24909",
+  "repository": "sympy/sympy",
+  "base_commit": "d3b4158dea271485e3daa11bf82e69b8dab348ce",
+  "topic": "Bug with milli prefix",
+  "upstream_created_at": "2023-03-13T14:24:25Z",
+  "dataset_row": 2293,
+  "problem_sha256": "16958bbcc4cdcb2135db771d49b31248b0a180c5f7bc6785893ff8552aff88f7",
+  "regression_checks": [
+    "test_prefix_operations"
+  ],
+  "passing_checks": 2
+}
