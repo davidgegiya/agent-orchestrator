@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-6938",
+  "repository": "astropy/astropy",
+  "base_commit": "c76af9ed6bb89bfba45b9f5bc1e635188278e2fa",
+  "topic": "Possible bug in io.fits related to D exponents",
+  "upstream_created_at": "2017-12-07T00:01:14Z",
+  "dataset_row": 73,
+  "problem_sha256": "c7c54483d0ce8bb993f70d942a627a758fe44842b332d4d4c89b6896b606beb8",
+  "regression_checks": [
+    "astropy/io/fits/tests/test_checksum.py::TestChecksumFunctions::test_ascii_table_data",
+    "astropy/io/fits/tests/test_table.py::TestTableFunctions::test_ascii_table"
+  ],
+  "passing_checks": 11
+}
