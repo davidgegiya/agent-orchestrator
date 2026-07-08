@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8365",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "4964b468c83c06971eb743fbc57cc404f760c573",
+  "topic": "tmpdir creation fails when the username contains illegal characters for directory names",
+  "upstream_created_at": "2021-02-22T20:26:35Z",
+  "dataset_row": 1464,
+  "problem_sha256": "0cac6f61736c27305980c69b9dc4da1fae282b42d90e38e311c71081be5f0abd",
+  "regression_checks": [
+    "testing/test_tmpdir.py::test_tmp_path_factory_handles_invalid_dir_characters"
+  ],
+  "passing_checks": 32
+}
