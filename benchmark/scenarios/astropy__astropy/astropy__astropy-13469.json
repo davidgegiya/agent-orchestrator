@@ -1,0 +1,18 @@
+{
+  "id": "astropy__astropy-13469",
+  "repository": "astropy/astropy",
+  "base_commit": "2b8631e7d64bfc16c70f5c51cda97964d8dd1ae0",
+  "topic": "Can't convert a list of Astropy tables to a NumPy array of tables",
+  "upstream_created_at": "2022-07-21T01:48:13Z",
+  "dataset_row": 29,
+  "problem_sha256": "7867524053d4bcb67746f8f8bab0ea6b082032ca91f8bc8f1904fca5187d4a80",
+  "regression_checks": [
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_numpy_object_array[unmasked]",
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_numpy_object_array[masked]",
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_numpy_object_array[subclass]",
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_list_numpy_object_array[unmasked]",
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_list_numpy_object_array[masked]",
+    "astropy/table/tests/test_table.py::TestConvertNumpyArray::test_convert_list_numpy_object_array[subclass]"
+  ],
+  "passing_checks": 459
+}
