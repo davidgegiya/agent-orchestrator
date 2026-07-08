@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25794",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6a323c043b77154656b28fd34ac4ca6dfb0ecf9b",
+  "topic": "Raise when both singular and plural scatter attributes are specified",
+  "upstream_created_at": "2023-05-01T00:00:35Z",
+  "dataset_row": 1099,
+  "problem_sha256": "f35acbb3760309a5e457a66866b54a2d26496a90858acfd5826c987e4d1d6ad4",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_singular_plural_arguments"
+  ],
+  "passing_checks": 810
+}
