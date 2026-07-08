@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24088",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "0517187b9c91061d2ec87e70442615cf4f47b6f3",
+  "topic": "ValueError: Unable to determine Axes to steal space for Colorbar",
+  "upstream_created_at": "2022-10-03T22:25:59Z",
+  "dataset_row": 1032,
+  "problem_sha256": "21c4a7199a0f273202b1d6b34ab66ab7e4dfa988c82f74ea9354519b783a96ab",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_parentless_mappable"
+  ],
+  "passing_checks": 60
+}
