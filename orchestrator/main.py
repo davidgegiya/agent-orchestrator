@@ -4,6 +4,7 @@ import importlib
 import os
 import re
 import subprocess
+import sys
 import time
 import traceback
 from datetime import datetime
@@ -262,18 +263,18 @@ def _run_local_cmd(args: List[str], *, cwd: Path, timeout_seconds: int) -> Dict[
             "stdout": result.stdout or "",
             "stderr": result.stderr or "",
         }
-    except FileNotFoundError:
+    except OSError as exc:
         return {
             "cmd": " ".join(args),
             "returncode": 127,
             "stdout": "",
-            "stderr": "COMMAND_NOT_FOUND",
+            "stderr": str(exc),
         }
     except subprocess.TimeoutExpired as exc:
         return {
             "cmd": " ".join(args),
             "returncode": 124,
-            "stdout": exc.stdout or "",
+            "stdout": (exc.stdout or b"").decode("utf-8", errors="replace"),
             "stderr": f"TIMEOUT after {timeout_seconds}s",
         }
 
@@ -623,7 +624,14 @@ def main() -> int:
             return 1
         report.append_implementer(round_idx, implementer_report)
 
-        tool_outputs = _format_tool_outputs(implementer_ctx.tool_events)
+        check = _run_local_cmd(
+            [sys.executable, "-m", "pytest", "-q"],
+            cwd=repo_root / "workspace",
+            timeout_seconds=120,
+        )
+        round_record["checks"] = [_cmd_meta(check, limit=4000)]
+        tool_outputs = _format_tool_outputs([*implementer_ctx.tool_events, {"tool": "run_cmd", **check}])
+
 
         red_flags_text, red_flags_meta = _scan_red_flags(repo_root / "workspace")
         red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
@@ -674,6 +682,12 @@ def main() -> int:
         report.append_reviewer(round_idx, reviewer_report)
 
         review_decision = parse_reviewer_output(reviewer_report)
+        if check["returncode"] != 0 and review_decision.verdict == "PASS":
+            review_decision = ReviewDecision(
+                "FAIL", "CONTINUE",
+                ["Fix the required pytest check before approving the patch."],
+                reviewer_report,
+            )
         round_record.update({
             "implementer_report": str(report.implementer_path),
             "reviewer_report": str(report.reviewer_path),
