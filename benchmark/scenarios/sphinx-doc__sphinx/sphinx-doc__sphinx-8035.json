@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8035",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "5e6da19f0e44a0ae83944fb6ce18f18f781e1a6e",
+  "topic": "Support defining specific `:private-members:` for autodoc",
+  "upstream_created_at": "2020-08-01T16:28:05Z",
+  "dataset_row": 1804,
+  "problem_sha256": "ae9000651cfa2a572575ae90081a237fe2efe501227bb69e759a958e1bb3cf74",
+  "regression_checks": [
+    "tests/test_ext_autodoc_private_members.py::test_private_members"
+  ],
+  "passing_checks": 2
+}
