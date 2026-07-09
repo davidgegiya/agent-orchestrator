@@ -1,0 +1,14 @@
+{
+  "id": "django__django-10939",
+  "repository": "django/django",
+  "base_commit": "1933e56eca1ad17de7dd133bfb7cbee9858a75a3",
+  "topic": "ModelAdmin with custom widgets, inlines, and filter_horizontal can merge media in broken order",
+  "upstream_created_at": "2019-02-05T14:02:21Z",
+  "dataset_row": 116,
+  "problem_sha256": "4b14fd9695a5dee884b3541c243c445aff2cad8d724e2fee08faabb85fffcf4d",
+  "regression_checks": [
+    "test_merge_css_three_way (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge_js_three_way (forms_tests.tests.test_media.FormsMediaTestCase)"
+  ],
+  "passing_checks": 15
+}
