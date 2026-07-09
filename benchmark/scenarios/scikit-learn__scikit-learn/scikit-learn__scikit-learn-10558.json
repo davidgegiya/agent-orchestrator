@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10558",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "2ccc946157d40bbb8bb17b70e98df6af49d5f40c",
+  "topic": "Deprecate Imputer with axis=1",
+  "upstream_created_at": "2018-01-31T08:28:29Z",
+  "dataset_row": 1508,
+  "problem_sha256": "febfd8087c623bbce079e2b7951301345a42b8dfcb860cda9e9e1d1dbfa0c9c3",
+  "regression_checks": [
+    "sklearn/preprocessing/tests/test_imputation.py::test_deprecated_imputer_axis"
+  ],
+  "passing_checks": 8
+}
