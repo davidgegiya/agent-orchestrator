@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-7923",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "533b4ac7d6f2a1a20f08c3a595a2580a9742d944",
+  "topic": "Bad refs in pot files, when using rst_epilog",
+  "upstream_created_at": "2020-07-06T16:23:19Z",
+  "dataset_row": 1795,
+  "problem_sha256": "8fec22c0f1f20ec4fa53ec48abe1e8c1685c34eeb5f2142fac73ee40f4a98885",
+  "regression_checks": [
+    "tests/test_parser.py::test_RSTParser_prolog_epilog",
+    "tests/test_util_rst.py::test_append_epilog"
+  ],
+  "passing_checks": 6
+}
