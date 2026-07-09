@@ -1,0 +1,24 @@
+{
+  "id": "django__django-16511",
+  "repository": "django/django",
+  "base_commit": "ecafcaf634fcef93f9da8cb12795273dd1c3a576",
+  "topic": "Support create defaults for update_or_create",
+  "upstream_created_at": "2023-01-31T02:40:31Z",
+  "dataset_row": 860,
+  "problem_sha256": "4240f8756a643811685e6f281713324e851110f207fba67ac3c59a905cc12570",
+  "regression_checks": [
+    "test_create_callable_create_defaults (get_or_create.tests.UpdateOrCreateTests.test_create_callable_create_defaults)",
+    "If you have a field named create_defaults and want to use it as an",
+    "test_create_twice (get_or_create.tests.UpdateOrCreateTests.test_create_twice)",
+    "Should be able to use update_or_create from the m2m related manager to",
+    "Should be able to use update_or_create from the related manager to",
+    "test_update_or_create_with_invalid_create_defaults (get_or_create.tests.InvalidCreateArgumentsTests.test_update_or_create_with_invalid_create_defaults)",
+    "test_aupdate_or_create (async.test_async_queryset.AsyncQuerySetTest.test_aupdate_or_create)",
+    "test_aupdate_or_create (async.test_async_related_managers.AsyncRelatedManagersOperationTest.test_aupdate_or_create)",
+    "test_generic_async_aupdate_or_create_with_create_defaults (generic_relations.tests.GenericRelationsTests.test_generic_async_aupdate_or_create_with_create_defaults)",
+    "test_generic_update_or_create_when_created_with_create_defaults (generic_relations.tests.GenericRelationsTests.test_generic_update_or_create_when_created_with_create_defaults)",
+    "test_generic_update_or_create_when_updated_with_defaults (generic_relations.tests.GenericRelationsTests.test_generic_update_or_create_when_updated_with_defaults)",
+    "test_update_or_create_defaults_with_create_defaults (generic_relations.tests.GenericRelationsTests.test_update_or_create_defaults_with_create_defaults)"
+  ],
+  "passing_checks": 128
+}
