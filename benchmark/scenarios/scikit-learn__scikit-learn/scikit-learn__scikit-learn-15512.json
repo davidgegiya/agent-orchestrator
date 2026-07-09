@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-15512",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b8a4da8baa1137f173e7035f104067c7d2ffde22",
+  "topic": "Return values of non converged affinity propagation clustering",
+  "upstream_created_at": "2019-11-02T22:28:57Z",
+  "dataset_row": 1672,
+  "problem_sha256": "485783a9d0a32bbeafbdce7d095cdb33feda57374014a63c632653e3c113444b",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_affinity_propagation.py::test_affinity_propagation_non_convergence_regressiontest"
+  ],
+  "passing_checks": 9
+}
