@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21617",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f93c0a3dcb82feed0262d758626c90d4002685f3",
+  "topic": "Text sometimes is missing when figure saved to EPS",
+  "upstream_created_at": "2021-11-12T23:45:40Z",
+  "dataset_row": 986,
+  "problem_sha256": "5f9f2a11347ef453f9d0eb183d5bdde529c84241a516e906cec9a43209968586",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_ps.py::test_no_duplicate_definition"
+  ],
+  "passing_checks": 13
+}
