@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-2931",
+  "repository": "psf/requests",
+  "base_commit": "5f7a3a74aab1625c2bb65f643197ee885e3da576",
+  "topic": "Request with binary payload fails due to calling to_native_string",
+  "upstream_created_at": "2015-12-16T14:57:00Z",
+  "dataset_row": 1194,
+  "problem_sha256": "da6e30655f38f394d08232f61878d82605a4c54d2b41d39da5a8283daa27ecea",
+  "regression_checks": [
+    "test_requests.py::TestRequests::test_binary_put"
+  ],
+  "passing_checks": 84
+}
