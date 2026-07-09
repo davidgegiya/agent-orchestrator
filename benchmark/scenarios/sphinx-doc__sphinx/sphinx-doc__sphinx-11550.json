@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-11550",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "4dee1629901f5e5c2aefc274da42483e16770e50",
+  "topic": "autodoc preserve defaults leads to exception on multiline lambda",
+  "upstream_created_at": "2023-08-03T08:56:59Z",
+  "dataset_row": 1761,
+  "problem_sha256": "605bac434cf1960b7a4b82f055d2f0ad27d89989bb8829bb5246cfce4ce20c4d",
+  "regression_checks": [
+    "tests/test_ext_autodoc_preserve_defaults.py::test_preserve_defaults",
+    "tests/test_ext_autodoc_preserve_defaults.py::test_preserve_defaults_special_constructs"
+  ],
+  "passing_checks": 0
+}
