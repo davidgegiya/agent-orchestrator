@@ -1,0 +1,18 @@
+{
+  "id": "matplotlib__matplotlib-20679",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "27ab013fe72967e9a9e1f7566a0aa6910aed4c9c",
+  "topic": "Interactive SpanSelector no longer notifies when the selector is removed by an \"empty\" click",
+  "upstream_created_at": "2021-07-19T13:55:49Z",
+  "dataset_row": 967,
+  "problem_sha256": "a251afecf0b0c376271913a4958a270dae31ca4732188897a202c064561f4001",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_rectangle_selector_ignore_outside[True]",
+    "lib/matplotlib/tests/test_widgets.py::test_rectangle_selector_ignore_outside[False]",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_onselect[True]",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_onselect[False]",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_ignore_outside[True]",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_ignore_outside[False]"
+  ],
+  "passing_checks": 36
+}
