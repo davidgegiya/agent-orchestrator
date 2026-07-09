@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-14976",
+  "repository": "sympy/sympy",
+  "base_commit": "9cbea134220b0b951587e11b63e2c832c7246cbc",
+  "topic": "lambdify(modules='mpmath') doesn't wrap rationals",
+  "upstream_created_at": "2018-07-25T17:38:07Z",
+  "dataset_row": 2035,
+  "problem_sha256": "8345986fce1e30d6b24f2ca157986cda273b56c3d4f3c7270e23dc5eb6e7a617",
+  "regression_checks": [
+    "test_MpmathPrinter"
+  ],
+  "passing_checks": 13
+}
