@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7150",
+  "repository": "pydata/xarray",
+  "base_commit": "f93b467db5e35ca94fefa518c32ee9bf93232475",
+  "topic": "xarray.open_dataset has issues if the dataset returned by the backend contains a multiindex",
+  "upstream_created_at": "2022-10-10T13:03:26Z",
+  "dataset_row": 1306,
+  "problem_sha256": "800f86256f19b51d08f0d3266c9b56c197f27d29a22d137a997ab43076532b4d",
+  "regression_checks": [
+    "xarray/tests/test_backends_api.py::test_multiindex"
+  ],
+  "passing_checks": 23
+}
