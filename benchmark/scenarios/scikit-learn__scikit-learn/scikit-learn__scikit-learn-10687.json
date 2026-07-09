@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10687",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "69e9111b437084f99011dde6ab8ccc848c8c3783",
+  "topic": "Shape of `coef_` wrong for linear_model.Lasso when using `fit_intercept=False`",
+  "upstream_created_at": "2018-02-24T16:37:13Z",
+  "dataset_row": 1511,
+  "problem_sha256": "4c06a4be7228e0875a8bab44c690bef2aca79558b1652e9e71f63500796f356d",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_coordinate_descent.py::test_coef_shape_not_zero"
+  ],
+  "passing_checks": 38
+}
