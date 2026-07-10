@@ -6,7 +6,6 @@ from agents import Agent
 
 from .policies import model_for_role
 from .tools_fs import fs_list, fs_read, fs_write
-from .tools_shell import run_cmd
 from .utils import is_effectively_empty, read_text
 
 
@@ -29,9 +28,7 @@ IMPLEMENTER_INSTRUCTIONS = """You are Implementer.
 You can ONLY modify files under workspace/ using the provided tools.
 Do not modify project/ or orchestrator/.
 You must use run_cmd to attempt: python -m pytest -q (even if it fails).
-Note: run_cmd already executes with cwd=workspace/. Do not `cd` to absolute paths; use relative commands.
-Do NOT attempt dependency installation; install commands are blocked.
-If TASK/PLAN/ACCEPTANCE require real infra (Postgres/RabbitMQ/MinIO/Compose), do NOT replace with InMemory/Mock/Fake in prod code (tests only).
+The orchestrator runs required checks after your turn. Describe how your changes satisfy the criteria.
 Use fs_read/fs_list to inspect workspace as needed.
 Include evidence for each PLAN/ACCEPTANCE item (commands or tests).
 Report strictly in this format:
@@ -106,7 +103,7 @@ def build_implementer_agent() -> Agent:
         name="Implementer",
         model=model_for_role("implementer"),
         instructions=_instructions_from_file("implementer.md", IMPLEMENTER_INSTRUCTIONS),
-        tools=[fs_read, fs_write, fs_list, run_cmd],
+        tools=[fs_read, fs_write, fs_list],
     )
 
 
