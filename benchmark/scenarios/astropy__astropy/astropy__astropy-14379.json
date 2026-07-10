@@ -1,0 +1,19 @@
+{
+  "id": "astropy__astropy-14379",
+  "repository": "astropy/astropy",
+  "base_commit": "01c96c8cf1289c25172d538e1309f89cac88d41c",
+  "topic": "Space between value and unit",
+  "upstream_created_at": "2023-02-13T20:28:24Z",
+  "dataset_row": 54,
+  "problem_sha256": "3a9e1de740fe44cc60d3c47aa45a731fa8cee177a5b8736ad2c76205108ee8a7",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_angles.py::test_angle_formatting",
+    "astropy/coordinates/tests/test_angles.py::test_angle_string",
+    "astropy/coordinates/tests/test_angles.py::test_str_repr_angles_nan[input9-[nan",
+    "astropy/coordinates/tests/test_angles.py::test_str_repr_angles_nan[input10-[1.5",
+    "astropy/coordinates/tests/test_formatting.py::test_to_string_formats",
+    "astropy/coordinates/tests/test_formatting.py::test_to_string_decimal_formats",
+    "astropy/coordinates/tests/test_formatting.py::test_to_string_radian_with_precision"
+  ],
+  "passing_checks": 75
+}
