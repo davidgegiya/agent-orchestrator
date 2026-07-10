@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-20438",
+  "repository": "sympy/sympy",
+  "base_commit": "33b47e4bd60e2302e42616141e76285038b724d6",
+  "topic": "`is_subset` gives wrong results",
+  "upstream_created_at": "2020-11-17T08:24:33Z",
+  "dataset_row": 2211,
+  "problem_sha256": "795e3e1220a3f7058089392d515717cd9adc50f4cacb3cc47c1cf193c87ddee1",
+  "regression_checks": [
+    "test_Eq",
+    "test_issue_19378"
+  ],
+  "passing_checks": 93
+}
