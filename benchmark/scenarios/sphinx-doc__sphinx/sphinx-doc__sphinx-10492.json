@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-10492",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "873d9f6fdababb96f0763f538e85921f7d332b70",
+  "topic": "Typo in new language warning",
+  "upstream_created_at": "2022-05-30T11:32:56Z",
+  "dataset_row": 1741,
+  "problem_sha256": "874fc85c39f2a8ffa1a59935202f71afd77a6052e6c0f8b093781e3493c10dd0",
+  "regression_checks": [
+    "tests/test_config.py::test_conf_py_language_none_warning"
+  ],
+  "passing_checks": 35
+}
