@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21612",
+  "repository": "sympy/sympy",
+  "base_commit": "b4777fdcef467b7132c055f8ac2c9a5059e6a145",
+  "topic": "Latex parsing of fractions yields wrong expression due to missing brackets",
+  "upstream_created_at": "2021-06-14T04:31:24Z",
+  "dataset_row": 2239,
+  "problem_sha256": "7f0cb60c9a93a122f4a661439363788fee19eb0147bcbed2b07cb796158307d4",
+  "regression_checks": [
+    "test_Mul"
+  ],
+  "passing_checks": 98
+}
