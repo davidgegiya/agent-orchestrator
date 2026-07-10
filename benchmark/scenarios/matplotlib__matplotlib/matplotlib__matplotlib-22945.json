@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22945",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "89b21b517df0b2a9c378913bae8e1f184988b554",
+  "topic": "Regression in animation from #22175",
+  "upstream_created_at": "2022-04-30T03:59:59Z",
+  "dataset_row": 999,
+  "problem_sha256": "de2beb3da7fe6d58bc6d13f589c18426e76383369db69a15099a763c86582968",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_collections.py::test_no_offsets_datalim"
+  ],
+  "passing_checks": 71
+}
