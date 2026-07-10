@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15651",
+  "repository": "django/django",
+  "base_commit": "c6cec3c2d287b5d2bd36d9c3002712ae89b5ab17",
+  "topic": "Implement RenameIndex in a backwards compatible way",
+  "upstream_created_at": "2022-05-02T15:23:46Z",
+  "dataset_row": 765,
+  "problem_sha256": "d3f516a963f526696055557717b198b43427dbfb1cd69e08a475b1c0ec257504",
+  "regression_checks": [
+    "test_rename_index_together_to_index (migrations.test_autodetector.AutodetectorTests)"
+  ],
+  "passing_checks": 139
+}
