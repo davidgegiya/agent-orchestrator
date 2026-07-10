@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20826",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a0d2e399729d36499a1924e5ca5bc067c8396810",
+  "topic": "ax.clear() adds extra ticks, un-hides shared-axis tick labels",
+  "upstream_created_at": "2021-08-11T06:23:50Z",
+  "dataset_row": 973,
+  "problem_sha256": "ea2cb5ccda25efe96ec806f18681b977e9a0e2dfdf9f4f82f7e3e85d2860a1e8",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_shared_axes_clear[png]"
+  ],
+  "passing_checks": 673
+}
