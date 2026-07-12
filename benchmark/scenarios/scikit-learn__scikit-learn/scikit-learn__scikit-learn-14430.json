@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-14430",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "7e022a7e8ba0f95b65d9acade559da95115ad9e5",
+  "topic": "Pickling Tokenizers fails due to use of lambdas",
+  "upstream_created_at": "2019-07-21T02:47:05Z",
+  "dataset_row": 1638,
+  "problem_sha256": "240abb3d629f848c3ac9202a9a0bf5d950828086be56aba9d96c066767bd34bb",
+  "regression_checks": [
+    "sklearn/feature_extraction/tests/test_text.py::test_pickling_built_processors[build_analyzer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_pickling_built_processors[build_preprocessor]",
+    "sklearn/feature_extraction/tests/test_text.py::test_pickling_built_processors[build_tokenizer]"
+  ],
+  "passing_checks": 84
+}
