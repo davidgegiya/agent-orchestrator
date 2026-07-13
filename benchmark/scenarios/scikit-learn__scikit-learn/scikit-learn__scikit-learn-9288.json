@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-9288",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3eacf948e0f95ef957862568d87ce082f378e186",
+  "topic": "KMeans gives slightly different result for n_jobs=1 vs. n_jobs > 1",
+  "upstream_created_at": "2017-07-06T11:03:14Z",
+  "dataset_row": 1717,
+  "problem_sha256": "a98ee2ca9c22ce4d3f5d984df61712485e1ab2d917a3eb653495ae0edc34ab23",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_k_means.py::test_result_of_kmeans_equal_in_diff_n_jobs"
+  ],
+  "passing_checks": 123
+}
