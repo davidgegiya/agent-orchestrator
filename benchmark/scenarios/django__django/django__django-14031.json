@@ -1,0 +1,17 @@
+{
+  "id": "django__django-14031",
+  "repository": "django/django",
+  "base_commit": "ceb4b9ee68dffc6ab0398886f1758f15f037c472",
+  "topic": "Ticket #29138 breaks autocomplete for inherited models",
+  "upstream_created_at": "2021-02-22T11:58:03Z",
+  "dataset_row": 549,
+  "problem_sha256": "a87e0842336990c3b03b61f179e65449f8f03ed8d2429696a2616c5fe08fee80",
+  "regression_checks": [
+    "test_render_options_fk_as_pk (admin_widgets.test_autocomplete_widget.AutocompleteMixinTests)",
+    "Empty option isn't present if the field isn't required.",
+    "Empty option is present if the field isn't required.",
+    "test_to_field_resolution_with_fk_pk (admin_views.test_autocomplete_view.AutocompleteJsonViewTests)",
+    "to_field resolution should correctly resolve for target models using"
+  ],
+  "passing_checks": 82
+}
