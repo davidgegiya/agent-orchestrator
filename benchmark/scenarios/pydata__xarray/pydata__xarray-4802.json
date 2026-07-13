@@ -1,0 +1,15 @@
+{
+  "id": "pydata__xarray-4802",
+  "repository": "pydata/xarray",
+  "base_commit": "84df75d366edaaa0af172047145a3409cac9bb3a",
+  "topic": "Decode_cf fails when scale_factor is a length-1 list",
+  "upstream_created_at": "2021-01-12T22:50:26Z",
+  "dataset_row": 1254,
+  "problem_sha256": "8037f1fa004900cdc84bab0695783c8ec586d51bc7be1176e1b97b035c8f1fd2",
+  "regression_checks": [
+    "xarray/tests/test_coding.py::test_scaling_offset_as_list[0.1-scale_factor1]",
+    "xarray/tests/test_coding.py::test_scaling_offset_as_list[add_offset1-10]",
+    "xarray/tests/test_coding.py::test_scaling_offset_as_list[add_offset1-scale_factor1]"
+  ],
+  "passing_checks": 14
+}
