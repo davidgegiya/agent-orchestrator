@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-23913",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5c4595267ccd3daf78f5fd05693b7ecbcd575c1e",
+  "topic": "legend draggable as keyword",
+  "upstream_created_at": "2022-09-16T21:51:24Z",
+  "dataset_row": 1027,
+  "problem_sha256": "a55c5c0e7e6c6aa895cad108ea73d9c5c37741f4d635e3a39ede2a9a5df7824e",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_legend_draggable[True]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_draggable[False]"
+  ],
+  "passing_checks": 101
+}
