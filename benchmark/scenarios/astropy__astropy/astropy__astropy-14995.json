@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14995",
+  "repository": "astropy/astropy",
+  "base_commit": "b16c7d12ccbc7b2d20364b89fb44285bcbfede54",
+  "topic": "In v5.3, NDDataRef mask propagation fails when one of the operand does not have a mask",
+  "upstream_created_at": "2023-06-27T19:48:18Z",
+  "dataset_row": 72,
+  "problem_sha256": "f25049b1b6cccc0aaff0d8497550f353683da10273d63d5013a7aa52fac1d87b",
+  "regression_checks": [
+    "astropy/nddata/mixins/tests/test_ndarithmetic.py::test_nddata_bitmask_arithmetic"
+  ],
+  "passing_checks": 179
+}
