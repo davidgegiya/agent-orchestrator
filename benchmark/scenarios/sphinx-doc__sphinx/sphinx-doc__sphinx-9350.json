@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9350",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "f14561da80c263b867b51e27a75c4f9cdacfeb29",
+  "topic": "Man page using :samp: with braces - font doesn't reset",
+  "upstream_created_at": "2021-06-16T07:23:24Z",
+  "dataset_row": 1881,
+  "problem_sha256": "4a4aad129689902ec3a63f8ba0b36ca53244c13d3ff56528815477517984e14d",
+  "regression_checks": [
+    "tests/test_build_manpage.py::test_all"
+  ],
+  "passing_checks": 4
+}
