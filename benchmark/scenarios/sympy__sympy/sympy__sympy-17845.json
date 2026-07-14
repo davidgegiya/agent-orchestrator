@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17845",
+  "repository": "sympy/sympy",
+  "base_commit": "dd53633d0f28ed8656480e25a49615258121cb5d",
+  "topic": "Interval and FiniteSet printing",
+  "upstream_created_at": "2019-11-02T22:51:16Z",
+  "dataset_row": 2141,
+  "problem_sha256": "5d16bb499ed7e818fbac4dcbb8ea1414c67d7299a14f05cd6ecfbe2d22e3d697",
+  "regression_checks": [
+    "test_FiniteSet"
+  ],
+  "passing_checks": 82
+}
