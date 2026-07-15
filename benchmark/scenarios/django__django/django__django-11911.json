@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11911",
+  "repository": "django/django",
+  "base_commit": "2839659b42ef80038152768b6cedae1016c59d90",
+  "topic": "\"migrate --plan\" outputs \"IRREVERSIBLE\" on RunPython operations without docstrings",
+  "upstream_created_at": "2019-10-14T08:52:04Z",
+  "dataset_row": 265,
+  "problem_sha256": "3dc17fa11c9eb3e15b5c283a7fe44185a762005188b410aa783663c2278392e9",
+  "regression_checks": [
+    "Tests migrate --plan output."
+  ],
+  "passing_checks": 89
+}
