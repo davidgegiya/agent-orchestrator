@@ -1,0 +1,20 @@
+{
+  "id": "scikit-learn__scikit-learn-15535",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "70b0ddea992c01df1a41588fa9e2d130fb6b13f8",
+  "topic": "regression in input validation of clustering metrics",
+  "upstream_created_at": "2019-11-05T02:09:55Z",
+  "dataset_row": 1674,
+  "problem_sha256": "fd1b18bf2619a2feb6bee3b53b6ffdc9fbeab774fd69d76bda194392e40e747b",
+  "regression_checks": [
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[adjusted_mutual_info_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[adjusted_rand_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[completeness_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[homogeneity_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[mutual_info_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[normalized_mutual_info_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[v_measure_score]",
+    "sklearn/metrics/cluster/tests/test_common.py::test_format_invariance[fowlkes_mallows_score]"
+  ],
+  "passing_checks": 52
+}
