@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4695",
+  "repository": "pydata/xarray",
+  "base_commit": "51ef2a66c4e0896eab7d2b03e3dfb3963e338e3c",
+  "topic": "Naming a dimension \"method\" throws error when calling \".loc\"",
+  "upstream_created_at": "2020-12-15T00:30:04Z",
+  "dataset_row": 1249,
+  "problem_sha256": "5f1f5e56c9ce7d478f725641af615df0ed38df79cb307ad733b9560f3db5c70c",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_loc_dim_name_collision_with_sel_params"
+  ],
+  "passing_checks": 875
+}
