@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21550",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "460073b2d9122e276d42c2775bad858e337a51f1",
+  "topic": "this example shows ok on matplotlib-3.4.3, but not in matplotlib-3.5.0 master of october 30th",
+  "upstream_created_at": "2021-11-05T23:41:59Z",
+  "dataset_row": 982,
+  "problem_sha256": "fd562458db9701e874357cfa4a7a5dc5b46aa5cd7855a05b5a6ffe6fdeb1f802",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_collections.py::test_set_offset_transform"
+  ],
+  "passing_checks": 68
+}
