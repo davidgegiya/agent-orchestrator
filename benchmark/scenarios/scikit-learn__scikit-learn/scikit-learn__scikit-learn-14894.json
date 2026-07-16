@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14894",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "fdbaa58acbead5a254f2e6d597dc1ab3b947f4c6",
+  "topic": "ZeroDivisionError in _sparse_fit for SVM with empty support_vectors_",
+  "upstream_created_at": "2019-09-05T17:41:11Z",
+  "dataset_row": 1656,
+  "problem_sha256": "246c51516110ce0a400f6a3a0e727b39dec470f3de801c01d0af61f7e598a934",
+  "regression_checks": [
+    "sklearn/svm/tests/test_svm.py::test_sparse_fit_support_vectors_empty"
+  ],
+  "passing_checks": 85
+}
