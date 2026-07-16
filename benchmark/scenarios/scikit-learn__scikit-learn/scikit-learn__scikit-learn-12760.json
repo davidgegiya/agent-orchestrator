@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-12760",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "e73acef80de4159722b11e3cd6c20920382b9728",
+  "topic": "Davies Bouldin measure: division by zero",
+  "upstream_created_at": "2018-12-12T15:03:09Z",
+  "dataset_row": 1562,
+  "problem_sha256": "85f2a3cf3b0d1695aaeede52ee1f85c31a32e8b927b8e5906d530049c1920485",
+  "regression_checks": [
+    "sklearn/metrics/cluster/tests/test_unsupervised.py::test_davies_bouldin_score"
+  ],
+  "passing_checks": 8
+}
