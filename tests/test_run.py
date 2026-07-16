@@ -9,6 +9,7 @@ from agents import Runner
 import pytest
 
 from orchestrator import main
+from orchestrator.policies import ReviewerOutput
 
 
 def git(cwd, *args):
@@ -44,7 +45,7 @@ def run(workspace, monkeypatch, check_code, *, change_while_reviewing=False):
             assert "+accepted" in kwargs["input"]
             if change_while_reviewing:
                 (product / "implementation.txt").write_text("untested\n")
-            return SimpleNamespace(final_output="VERDICT: PASS\nACTION: CONTINUE\nFIXES:\n- None")
+            return SimpleNamespace(final_output=ReviewerOutput(verdict="PASS", action="CONTINUE", fixes=[]))
         return SimpleNamespace(final_output="Implement the change.")
 
     monkeypatch.setattr(Runner, "run_sync", fake_run)

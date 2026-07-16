@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from typing import List
+from typing import List, Literal
+
+from pydantic import BaseModel, ValidationError
 
 MAX_ROUNDS = 8
 
@@ -116,25 +118,23 @@ def normalize_review(text: str) -> str:
     return "\n".join(line.strip() for line in text.strip().splitlines() if line.strip())
 
 
+class ReviewerOutput(BaseModel):
+    verdict: Literal["PASS", "FAIL"]
+    action: Literal["CONTINUE", "SKIP"]
+    fixes: list[str]
+
+
 def parse_reviewer_output(text: str) -> ReviewDecision:
-    verdict = "FAIL"
-    action = ""
-    fixes: List[str] = []
-    for line in text.splitlines():
-        line = line.strip()
-        if not line:
-            continue
-        if line.upper().startswith("VERDICT:"):
-            verdict = line.split(":", 1)[1].strip().upper()
-        elif line.upper().startswith("ACTION:"):
-            action = line.split(":", 1)[1].strip().upper()
-        elif line.startswith("-"):
-            fixes.append(line.lstrip("- ").strip())
-    if verdict not in {"PASS", "FAIL"} or action not in {"CONTINUE", "SKIP"}:
+    try:
+        output = ReviewerOutput.model_validate_json(text)
+    except ValidationError:
         return ReviewDecision("FAIL", "CONTINUE", ["Reviewer returned an invalid decision."], text)
-    if verdict == "PASS" and (action != "CONTINUE" or fixes != ["None"]):
+    fixes = [fix.strip() for fix in output.fixes if fix.strip()]
+    if output.verdict == "PASS" and (output.action != "CONTINUE" or fixes):
         return ReviewDecision("FAIL", "CONTINUE", ["Reviewer returned an inconsistent PASS."], text)
-    return ReviewDecision(verdict=verdict, action=action, fixes=fixes, raw=text)
+    if output.verdict == "FAIL" and not fixes:
+        return ReviewDecision("FAIL", "CONTINUE", ["Reviewer must provide an actionable correction."], text)
+    return ReviewDecision(output.verdict, output.action, fixes, text)
 
 
 def is_stuck(prev_review: str, current_review: str) -> bool:

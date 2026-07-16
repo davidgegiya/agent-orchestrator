@@ -25,6 +25,7 @@ from .workspace import _cmd_meta, _compute_workspace_diff, _run_local_cmd
 from .policies import (
     MAX_ROUNDS,
     ReviewDecision,
+    ReviewerOutput,
     is_stuck,
     max_turns_for_role,
     model_for_role,
@@ -323,7 +324,10 @@ def _safe_run(
                 "max_delay_seconds": max_delay,
                 "errors": errors,
             }
-            return (result.final_output or "", None, meta)
+            output = result.final_output
+            if isinstance(output, ReviewerOutput):
+                output = output.model_dump_json()
+            return (output or "", None, meta)
         except Exception as exc:  # noqa: BLE001
             retryable = is_retryable(exc)
             last_error = f"{type(exc).__name__}: {exc}\n{traceback.format_exc()}"
