@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-22383",
+  "repository": "sympy/sympy",
+  "base_commit": "07c3ad3d2ca9f52ccb132df23b9b736d65a90ad6",
+  "topic": "maint(ci): drop testing for Python 3.6",
+  "upstream_created_at": "2021-10-29T21:08:21Z",
+  "dataset_row": 2255,
+  "problem_sha256": "26b9aec8677aaf7870282694463e95ade2e6917fee6e4ade825f29491bbaee7e",
+  "regression_checks": [
+    "test_Float"
+  ],
+  "passing_checks": 125
+}
