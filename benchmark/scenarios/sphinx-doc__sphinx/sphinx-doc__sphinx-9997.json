@@ -1,0 +1,25 @@
+{
+  "id": "sphinx-doc__sphinx-9997",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "31ed71dfb335f46c97ba227cbfc34172eeb71f1f",
+  "topic": "autodoc typehints do not create link for parametrized types",
+  "upstream_created_at": "2021-12-20T16:29:37Z",
+  "dataset_row": 1906,
+  "problem_sha256": "ea46fddf56f30638887cc5433a8770ccf0442e6b0d0f5aa5011f88ba14e8effe",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_parse_annotation",
+    "tests/test_domain_py.py::test_parse_annotation_suppress",
+    "tests/test_domain_py.py::test_parse_annotation_Literal",
+    "tests/test_ext_autodoc_autofunction.py::test_wrapped_function_contextmanager",
+    "tests/test_ext_autodoc_automodule.py::test_subclass_of_mocked_object",
+    "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_signature",
+    "tests/test_ext_autodoc_preserve_defaults.py::test_preserve_defaults",
+    "tests/test_util_inspect.py::test_signature_annotations",
+    "tests/test_util_typing.py::test_stringify",
+    "tests/test_util_typing.py::test_stringify_type_hints_containers",
+    "tests/test_util_typing.py::test_stringify_type_hints_Callable",
+    "tests/test_util_typing.py::test_stringify_type_hints_Union",
+    "tests/test_util_typing.py::test_stringify_type_Literal"
+  ],
+  "passing_checks": 146
+}
