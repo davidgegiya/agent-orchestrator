@@ -1,0 +1,18 @@
+{
+  "id": "django__django-11772",
+  "repository": "django/django",
+  "base_commit": "6c9778a58e4f680db180d4cc9dc5639d2ec1b40c",
+  "topic": "Template Cache \"make_template_fragment_key\" function speed up + simplify (also discussing switch to alternate hashes)",
+  "upstream_created_at": "2019-09-11T21:55:19Z",
+  "dataset_row": 246,
+  "problem_sha256": "8af6db25d51bbfe9ea2f06c8295762d487c7f166890b57cc1ee0475e10135a7e",
+  "regression_checks": [
+    "test_long_vary_on (cache.tests.TestMakeTemplateFragmentKey)",
+    "test_proper_escaping (cache.tests.TestMakeTemplateFragmentKey)",
+    "test_with_ints_vary_on (cache.tests.TestMakeTemplateFragmentKey)",
+    "test_with_many_vary_on (cache.tests.TestMakeTemplateFragmentKey)",
+    "test_with_one_vary_on (cache.tests.TestMakeTemplateFragmentKey)",
+    "test_with_unicode_vary_on (cache.tests.TestMakeTemplateFragmentKey)"
+  ],
+  "passing_checks": 284
+}
