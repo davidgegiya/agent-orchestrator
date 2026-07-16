@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13146",
+  "repository": "sympy/sympy",
+  "base_commit": "b678d8103e48fdb1af335dbf0080b3d5366f2d17",
+  "topic": "Exponent doesn't fully simplify",
+  "upstream_created_at": "2017-08-18T05:51:45Z",
+  "dataset_row": 1957,
+  "problem_sha256": "bb818d41a6c3e3fcc68369209f7bf628472120067acc9ac85ce40c97db19871c",
+  "regression_checks": [
+    "test_evalf_bugs"
+  ],
+  "passing_checks": 34
+}
