@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22835",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "c33557d120eefe3148ebfcf2e758ff2357966000",
+  "topic": "scalar mappable format_cursor_data crashes on BoundarNorm",
+  "upstream_created_at": "2022-04-12T23:13:58Z",
+  "dataset_row": 992,
+  "problem_sha256": "61cebd740f2e51d80980394c423a578a1b4f36ec2661828ca31664288de39db0",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_artist.py::test_format_cursor_data_BoundaryNorm"
+  ],
+  "passing_checks": 24
+}
