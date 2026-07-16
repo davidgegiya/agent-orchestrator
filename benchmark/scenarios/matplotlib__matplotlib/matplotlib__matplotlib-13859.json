@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-13859",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "acad890afb1da7d071049d44ec655e0ae5b79e53",
+  "topic": "Zero-width figure crashes libpng",
+  "upstream_created_at": "2019-04-03T06:40:32Z",
+  "dataset_row": 945,
+  "problem_sha256": "22e3a13e31e821fecc078fa3211771d5758a1cb91ea27442cbf831406535a43c",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_invalid_figure_size[0-1]",
+    "lib/matplotlib/tests/test_figure.py::test_invalid_figure_size[-1-1]"
+  ],
+  "passing_checks": 30
+}
