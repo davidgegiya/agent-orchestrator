@@ -1,0 +1,17 @@
+{
+  "id": "sympy__sympy-18168",
+  "repository": "sympy/sympy",
+  "base_commit": "80a00842e7164f7865d0933306a94d33ad7ca602",
+  "topic": "Are `is_closed, is_open` of `S.Rationals`'s properties valid?",
+  "upstream_created_at": "2019-12-29T16:55:35Z",
+  "dataset_row": 2151,
+  "problem_sha256": "7b94c7abc5ebc4591a5c8568a0f5fdacd90d17e78d1ca8c78831277f0bb8cced",
+  "regression_checks": [
+    "test_naturals",
+    "test_integers",
+    "test_Rationals",
+    "test_NZQRC_unions",
+    "test_is_open"
+  ],
+  "passing_checks": 122
+}
