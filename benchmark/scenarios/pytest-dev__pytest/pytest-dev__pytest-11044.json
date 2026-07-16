@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-11044",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "4f3f36c396b52f8398bc4734ff0c00c57cf1fed1",
+  "topic": "Issue warning/error if 'testpaths' does not match any files/folders",
+  "upstream_created_at": "2023-05-27T23:26:11Z",
+  "dataset_row": 1387,
+  "problem_sha256": "aa27b10fcebb2839e81e6ceb5a7c7c3818c37f0e47b6350d3def4f34f3129bfd",
+  "regression_checks": [
+    "testing/test_warnings.py::test_warning_on_testpaths_not_found"
+  ],
+  "passing_checks": 38
+}
