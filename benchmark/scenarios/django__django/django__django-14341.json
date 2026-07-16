@@ -1,0 +1,13 @@
+{
+  "id": "django__django-14341",
+  "repository": "django/django",
+  "base_commit": "136ff592ad8aa8b7fa1e61435e5501cc98ce8573",
+  "topic": "Database cache.delete uses cursor after it is closed",
+  "upstream_created_at": "2021-05-03T18:15:38Z",
+  "dataset_row": 585,
+  "problem_sha256": "5f226908e80f36e2b138bd762fbd2b6111229ac7cbc1401e87e268894b543020",
+  "regression_checks": [
+    "The rowcount attribute should not be checked on a closed cursor."
+  ],
+  "passing_checks": 340
+}
