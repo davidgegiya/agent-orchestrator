@@ -1,0 +1,28 @@
+{
+  "id": "sphinx-doc__sphinx-9931",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "17dfa811078205bd415700361e97e945112b89eb",
+  "topic": "autodoc add_module_names equivalent for arguments",
+  "upstream_created_at": "2021-12-02T17:47:00Z",
+  "dataset_row": 1903,
+  "problem_sha256": "a2d03568829097a17c86907b335e300d725419172176dd8c2cb26ff75f6e8e2d",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_parse_annotation_suppress",
+    "tests/test_ext_autodoc_configs.py::test_autodoc_unqualified_typehints",
+    "tests/test_util_inspect.py::test_signature_annotations",
+    "tests/test_util_typing.py::test_stringify",
+    "tests/test_util_typing.py::test_stringify_type_hints_containers",
+    "tests/test_util_typing.py::test_stringify_type_hints_pep_585",
+    "tests/test_util_typing.py::test_stringify_Annotated",
+    "tests/test_util_typing.py::test_stringify_type_hints_string",
+    "tests/test_util_typing.py::test_stringify_type_hints_Callable",
+    "tests/test_util_typing.py::test_stringify_type_hints_Union",
+    "tests/test_util_typing.py::test_stringify_type_hints_typevars",
+    "tests/test_util_typing.py::test_stringify_type_hints_custom_class",
+    "tests/test_util_typing.py::test_stringify_type_hints_alias",
+    "tests/test_util_typing.py::test_stringify_type_Literal",
+    "tests/test_util_typing.py::test_stringify_broken_type_hints",
+    "tests/test_util_typing.py::test_stringify_mock"
+  ],
+  "passing_checks": 124
+}
