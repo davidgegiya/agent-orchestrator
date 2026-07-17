@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-4703",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "3a6f08e4a1155e5098c3bec2d779cb3e654a1b11",
+  "topic": "Imports within TYPE_CHECKING can induce \"cyclic-import\"",
+  "upstream_created_at": "2021-07-11T21:49:04Z",
+  "dataset_row": 1327,
+  "problem_sha256": "2c774a9ab545c8a1e1ca777a8b106b56b2a1df34ab20d1a52d9dfef66c039b8c",
+  "regression_checks": [
+    "tests/test_func.py::test_functionality[func_noerror_cycle]"
+  ],
+  "passing_checks": 11
+}
