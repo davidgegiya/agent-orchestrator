@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-19763",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "28289122be81e0bc0a6ee0c4c5b7343a46ce2e4e",
+  "topic": "Multicursor disappears when not moving on nbagg with useblit=False + burns CPU",
+  "upstream_created_at": "2021-03-24T07:55:54Z",
+  "dataset_row": 960,
+  "problem_sha256": "ede319f03298e7548fc78463f743bc2b1b64d55ca3123ea73fb41d6414506087",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[False-False]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[False-True]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-False]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-True]"
+  ],
+  "passing_checks": 104
+}
