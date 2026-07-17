@@ -1,0 +1,15 @@
+{
+  "id": "django__django-14722",
+  "repository": "django/django",
+  "base_commit": "c1e4111c74ee9d9f48cbee5a5b7c40289203c93d",
+  "topic": "Moving a unique constraint from unique_together to Field.unique generate an invalid migration",
+  "upstream_created_at": "2021-07-31T17:43:56Z",
+  "dataset_row": 637,
+  "problem_sha256": "55ece8135b95e797a616f1152fd93c7f520833b42fdad78699856c74e7b50674",
+  "regression_checks": [
+    "Fields are altered after deleting some index/unique_together.",
+    "index/unique_together also triggers on ordering changes.",
+    "Removed fields will be removed after updating index/unique_together."
+  ],
+  "passing_checks": 126
+}
