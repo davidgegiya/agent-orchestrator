@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-22456",
+  "repository": "sympy/sympy",
+  "base_commit": "a3475b3f9ac662cd425157dd3bdb93ad7111c090",
+  "topic": "Argument invariance of codegen.ast String",
+  "upstream_created_at": "2021-11-10T12:24:42Z",
+  "dataset_row": 2257,
+  "problem_sha256": "3fc5525708bce57a0ed2b27e785392670bd29f0f8adc2442662cf48f83435e15",
+  "regression_checks": [
+    "test_String"
+  ],
+  "passing_checks": 29
+}
