@@ -1,0 +1,16 @@
+{
+  "id": "pydata__xarray-4966",
+  "repository": "pydata/xarray",
+  "base_commit": "37522e991a32ee3c0ad1a5ff8afe8e3eb1885550",
+  "topic": "Handling of signed bytes from OPeNDAP via pydap",
+  "upstream_created_at": "2021-02-26T12:05:51Z",
+  "dataset_row": 1261,
+  "problem_sha256": "2c84369fa9f4ccffb39ad0e4f7f879f4808690d16d15ab1183ab780030514fb3",
+  "regression_checks": [
+    "xarray/tests/test_coding.py::test_decode_signed_from_unsigned[1]",
+    "xarray/tests/test_coding.py::test_decode_signed_from_unsigned[2]",
+    "xarray/tests/test_coding.py::test_decode_signed_from_unsigned[4]",
+    "xarray/tests/test_coding.py::test_decode_signed_from_unsigned[8]"
+  ],
+  "passing_checks": 21
+}
