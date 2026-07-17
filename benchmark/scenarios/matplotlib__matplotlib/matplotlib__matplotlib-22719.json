@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22719",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a2a1b0a11b993fe5f8fab64b6161e99243a6393c",
+  "topic": "Confusing deprecation warning when empty data passed to axis with category units",
+  "upstream_created_at": "2022-03-28T14:42:28Z",
+  "dataset_row": 988,
+  "problem_sha256": "683c3429535912c257c19bbeea16ba957043d4a790cf44b1d36d4d93084c8fb1",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_category.py::test_no_deprecation_on_empty_data"
+  ],
+  "passing_checks": 68
+}
