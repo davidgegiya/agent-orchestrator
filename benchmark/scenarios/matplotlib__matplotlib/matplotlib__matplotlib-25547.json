@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-25547",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e8101f17d8a7d2d7eccff7452162c02a27980800",
+  "topic": "UserWarning thrown when all values are \"bad\", but not when only some are",
+  "upstream_created_at": "2023-03-25T15:54:49Z",
+  "dataset_row": 1085,
+  "problem_sha256": "6fed6bd3e0b51927a847ccac38804b4ebc7f540d6055f83541f44c13fd699894",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_cbook.py::test__safe_first_finite_all_nan",
+    "lib/matplotlib/tests/test_cbook.py::test__safe_first_finite_all_inf"
+  ],
+  "passing_checks": 71
+}
