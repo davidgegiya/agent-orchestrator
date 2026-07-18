@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13551",
+  "repository": "sympy/sympy",
+  "base_commit": "9476425b9e34363c2d9ac38e9f04aa75ae54a775",
+  "topic": "Product(n + 1 / 2**k, [k, 0, n-1]) is incorrect",
+  "upstream_created_at": "2017-10-29T20:51:01Z",
+  "dataset_row": 1980,
+  "problem_sha256": "0f511ce27162bca7a6f4784ce51fb67b099e8b5f6f389d4c9ab29d918110075f",
+  "regression_checks": [
+    "test_issue_13546"
+  ],
+  "passing_checks": 17
+}
