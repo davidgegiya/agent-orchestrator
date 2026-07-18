@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-14471",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "ddb891751d797517e28b9f74d1fffc98716f8c7d",
+  "topic": "Existing FigureCanvasQT objects destroyed by call to plt.figure",
+  "upstream_created_at": "2019-06-06T22:15:33Z",
+  "dataset_row": 954,
+  "problem_sha256": "8960bdc94be0ea53ec781e8efce05d1a13ef3aa8ea3e3fde0f8ff142238256e5",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pyplot.py::test_switch_backend_no_close"
+  ],
+  "passing_checks": 23
+}
