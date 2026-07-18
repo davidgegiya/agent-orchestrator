@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7218",
+  "repository": "astropy/astropy",
+  "base_commit": "9626265d77b8a21c113615c08bc6782deb52eaed",
+  "topic": "HDUList.copy() returns a list",
+  "upstream_created_at": "2018-02-20T11:36:56Z",
+  "dataset_row": 76,
+  "problem_sha256": "f1fc464f0ff3fa4c21587983fdd5f9b97e9309df2923bebda93008082084c116",
+  "regression_checks": [
+    "astropy/io/fits/tests/test_hdulist.py::TestHDUListFunctions::test_shallow_copy"
+  ],
+  "passing_checks": 20
+}
