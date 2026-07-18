@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-20212",
+  "repository": "sympy/sympy",
+  "base_commit": "a106f4782a9dbe7f8fd16030f15401d977e03ae9",
+  "topic": "0**-oo produces 0, the documentation says it should produce zoo",
+  "upstream_created_at": "2020-10-06T11:34:13Z",
+  "dataset_row": 2207,
+  "problem_sha256": "72ae5c3fba960963fd20456c899b1065aad671cd4d9755b960fc9eb24e2f620c",
+  "regression_checks": [
+    "test_zero"
+  ],
+  "passing_checks": 32
+}
