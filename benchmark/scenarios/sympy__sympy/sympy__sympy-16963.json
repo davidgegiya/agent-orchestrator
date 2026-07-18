@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-16963",
+  "repository": "sympy/sympy",
+  "base_commit": "14abc988525f344d1974c043f83b1e6b1247aea6",
+  "topic": "sympify does not convert dict to Dict",
+  "upstream_created_at": "2019-06-04T17:28:48Z",
+  "dataset_row": 2107,
+  "problem_sha256": "e305b365d1583c9e61b14004639a906e36f971d427b4b5ba9837ddbb01a4381a",
+  "regression_checks": [
+    "test_issue_16859",
+    "test_factorint",
+    "test_IndexedBase_subs"
+  ],
+  "passing_checks": 137
+}
