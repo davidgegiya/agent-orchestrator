@@ -1,0 +1,14 @@
+{
+  "id": "pylint-dev__pylint-8312",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "7893fd205809380fcfdcaf4f82ec81968528875a",
+  "topic": "Support globbing pattern for input specification",
+  "upstream_created_at": "2023-02-17T18:44:32Z",
+  "dataset_row": 1366,
+  "problem_sha256": "549d8ad1c057b22d770e26c2bb47223a9d520aa06597255f5e3b0a4b51cc9286",
+  "regression_checks": [
+    "tests/lint/unittest_lint.py::test_globbing",
+    "tests/test_self.py::TestRunTC::test_recursive_globbing"
+  ],
+  "passing_checks": 197
+}
