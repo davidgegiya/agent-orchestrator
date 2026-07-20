@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25311",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "430fb1db88843300fb4baae3edc499bbfe073b0c",
+  "topic": "Unable to pickle figure with draggable legend",
+  "upstream_created_at": "2023-02-23T21:04:12Z",
+  "dataset_row": 1070,
+  "problem_sha256": "292c8fc4650c6bc9c53dac4b943bd93117ca7adbf37d1c181b0e7ff4c88c25b3",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pickle.py::test_complete[png]"
+  ],
+  "passing_checks": 181
+}
