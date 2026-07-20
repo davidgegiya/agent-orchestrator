@@ -1,0 +1,19 @@
+{
+  "id": "pydata__xarray-3637",
+  "repository": "pydata/xarray",
+  "base_commit": "6295bc6bca1559680544ea86051f35fa2d367fe1",
+  "topic": "Confusing error message when attribute not equal during concat",
+  "upstream_created_at": "2019-12-17T16:20:22Z",
+  "dataset_row": 1223,
+  "problem_sha256": "f539fb728bcc2081640074967fd7afdb9938249da65119cf4f82b9674d20625c",
+  "regression_checks": [
+    "xarray/tests/test_concat.py::test_concat_attrs_first_variable[attr20-attr10]",
+    "xarray/tests/test_concat.py::test_concat_attrs_first_variable[attr21-attr10]",
+    "xarray/tests/test_concat.py::test_concat_attrs_first_variable[attr21-attr11]",
+    "xarray/tests/test_variable.py::TestVariable::test_concat",
+    "xarray/tests/test_variable.py::TestVariable::test_concat_attrs",
+    "xarray/tests/test_variable.py::TestIndexVariable::test_concat",
+    "xarray/tests/test_variable.py::TestIndexVariable::test_concat_attrs"
+  ],
+  "passing_checks": 314
+}
