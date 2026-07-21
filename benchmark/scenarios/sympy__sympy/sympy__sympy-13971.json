@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13971",
+  "repository": "sympy/sympy",
+  "base_commit": "84c125972ad535b2dfb245f8d311d347b45e5b8a",
+  "topic": "import sympy as sp",
+  "upstream_created_at": "2018-01-20T10:03:44Z",
+  "dataset_row": 2006,
+  "problem_sha256": "a70794e303698920d641fa34c0165f59f3d862c689db71b069a9573a3a911ae3",
+  "regression_checks": [
+    "test_latex_sequences"
+  ],
+  "passing_checks": 102
+}
