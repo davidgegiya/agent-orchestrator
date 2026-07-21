@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-15524",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "0aab6213948926f8e5990f8e878d57f2a899e876",
+  "topic": "Nested Cross Validation for precomputed KNN",
+  "upstream_created_at": "2019-11-03T00:40:19Z",
+  "dataset_row": 1673,
+  "problem_sha256": "d86a9cfd8086de882537bd83e6d6c67a30fd2308f3ae9c3cc5bccb36d75169ea",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_search.py::test_search_cv__pairwise_property_delegated_to_base_estimator"
+  ],
+  "passing_checks": 67
+}
