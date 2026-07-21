@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-11217",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "bf451d47a1b3be80a7f89b3076e4816c47390037",
+  "topic": "fixtures: show test as skip location if skipped from an xunit setup function",
+  "upstream_created_at": "2023-07-16T20:28:12Z",
+  "dataset_row": 1394,
+  "problem_sha256": "f2f2ee81bbade5f69a31e24db26f307f23c2cef16ef12e5bc79a74759cc369f7",
+  "regression_checks": [
+    "testing/test_skipping.py::test_skipped_reasons_functional"
+  ],
+  "passing_checks": 91
+}
