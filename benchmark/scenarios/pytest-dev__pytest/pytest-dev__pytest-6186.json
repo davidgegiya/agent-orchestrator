@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-6186",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "f91bf48a40da5ee7f7c2a3c71ee56d854d35e983",
+  "topic": "Show deprecation warning if junit_family is not set",
+  "upstream_created_at": "2019-11-13T21:24:32Z",
+  "dataset_row": 1418,
+  "problem_sha256": "f3b8d897809ad254934935e7320bbf5687388984d5735da24c52f2c4d4422cec",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_warn_about_imminent_junit_family_default_change[None]"
+  ],
+  "passing_checks": 7
+}
