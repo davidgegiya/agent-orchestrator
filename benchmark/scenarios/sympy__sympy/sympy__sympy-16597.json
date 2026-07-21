@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-16597",
+  "repository": "sympy/sympy",
+  "base_commit": "6fd65310fa3167b9626c38a5487e171ca407d988",
+  "topic": "a.is_even does not imply a.is_finite",
+  "upstream_created_at": "2019-04-08T12:49:10Z",
+  "dataset_row": 2092,
+  "problem_sha256": "bcab413f2649cc7847a569a4417bf135b3b2b874d63caf4808aff7d15e3ccaf2",
+  "regression_checks": [
+    "test_infinity",
+    "test_neg_infinity",
+    "test_other_symbol"
+  ],
+  "passing_checks": 74
+}
