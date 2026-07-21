@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4683",
+  "repository": "pydata/xarray",
+  "base_commit": "19ebec52ef93ab8a640d04eb0edb7264823f6ba8",
+  "topic": "astype method lost its order parameter",
+  "upstream_created_at": "2020-12-12T01:27:35Z",
+  "dataset_row": 1246,
+  "problem_sha256": "4b5cb26425f55b51d66daa8b09add6bfbc96a1566bf937ea1229fa217bca97ff",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_astype_order"
+  ],
+  "passing_checks": 876
+}
