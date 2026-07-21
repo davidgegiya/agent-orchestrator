@@ -1,0 +1,14 @@
+{
+  "id": "django__django-14792",
+  "repository": "django/django",
+  "base_commit": "d89f976bddb49fb168334960acc8979c3de991fa",
+  "topic": "Reverse time zone conversion in Trunc()/Extract() database functions",
+  "upstream_created_at": "2021-08-24T09:25:15Z",
+  "dataset_row": 650,
+  "problem_sha256": "a87429718b41b385a256183df2d15a11c54e90e68d7ac6e600cc7052e357c787",
+  "regression_checks": [
+    "The _get_timezone_name() helper must return the offset for fixed offset",
+    "test_is_aware (utils_tests.test_timezone.TimezoneTests)"
+  ],
+  "passing_checks": 23
+}
