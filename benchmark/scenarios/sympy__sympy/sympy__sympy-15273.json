@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-15273",
+  "repository": "sympy/sympy",
+  "base_commit": "3d0e2ec4dcb7653f7fac039cc585ae81dc7251c2",
+  "topic": "Create a geometry object from an equation",
+  "upstream_created_at": "2018-09-21T10:40:57Z",
+  "dataset_row": 2046,
+  "problem_sha256": "8ee7a1f4663f3808703c4c010af1c6b37eff3d4e155a7f0d255c38a181c1ec9b",
+  "regression_checks": [
+    "test_object_from_equation",
+    "test_ellipse_geom"
+  ],
+  "passing_checks": 37
+}
