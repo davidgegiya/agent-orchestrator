@@ -1,0 +1,17 @@
+{
+  "id": "pytest-dev__pytest-11041",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "fbfd4b50050080413c8faca5368b9cb9b1ac9313",
+  "topic": "UnboundLocalError: cannot access local variable 'x' where it is not associated with a value",
+  "upstream_created_at": "2023-05-27T09:33:16Z",
+  "dataset_row": 1386,
+  "problem_sha256": "55577bf6fd79f036a3521750c9168e734e7b1758a793adf7122aeda49f302959",
+  "regression_checks": [
+    "testing/test_assertrewrite.py::TestIssue11028::test_assertion_walrus_operator_in_operand_json_dumps",
+    "testing/test_assertrewrite.py::TestIssue11028::test_assertion_walrus_operator_equals_operand_function",
+    "testing/test_assertrewrite.py::TestIssue11028::test_assertion_walrus_operator_equals_operand_function_keyword_arg",
+    "testing/test_assertrewrite.py::TestIssue11028::test_assertion_walrus_operator_equals_operand_function_arg_as_function",
+    "testing/test_assertrewrite.py::TestIssue11028::test_assertion_walrus_operator_gt_operand_function"
+  ],
+  "passing_checks": 109
+}
