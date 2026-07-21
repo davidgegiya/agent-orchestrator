@@ -1,0 +1,20 @@
+{
+  "id": "matplotlib__matplotlib-25027",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0f133943d3e4f1e2e665291fe1c8f658a84cc09",
+  "topic": "support RGB(A) in pcolor",
+  "upstream_created_at": "2023-01-19T02:43:47Z",
+  "dataset_row": 1060,
+  "problem_sha256": "dad2fc14eeae90c6022c607c18c60091a8245c2ff99700fea61764c96aa1bb36",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_collections.py::test_quadmesh_set_array_validation[pcolor]",
+    "lib/matplotlib/tests/test_collections.py::test_polyquadmesh_masked_vertices_array",
+    "lib/matplotlib/tests/test_collections.py::test_quadmesh_get_coordinates[pcolor]",
+    "lib/matplotlib/tests/test_collections.py::test_quadmesh_vmin_vmax[pcolormesh]",
+    "lib/matplotlib/tests/test_collections.py::test_quadmesh_alpha_array[pcolormesh]",
+    "lib/matplotlib/tests/test_collections.py::test_color_logic[pcolormesh]",
+    "lib/matplotlib/tests/test_collections.py::test_color_logic[pcolor]",
+    "lib/matplotlib/tests/test_collections.py::test_array_dimensions[pcolor]"
+  ],
+  "passing_checks": 76
+}
