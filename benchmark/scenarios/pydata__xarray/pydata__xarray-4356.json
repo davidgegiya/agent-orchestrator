@@ -1,0 +1,20 @@
+{
+  "id": "pydata__xarray-4356",
+  "repository": "pydata/xarray",
+  "base_commit": "e05fddea852d08fc0845f954b79deb9e9f9ff883",
+  "topic": "sum: min_count is not available for reduction with more than one dimensions",
+  "upstream_created_at": "2020-08-19T23:48:49Z",
+  "dataset_row": 1239,
+  "problem_sha256": "e8d9c6f6b15daa4a966d4237a8d03b4f0ed2e2fd17c78269a2603044ea8b0713",
+  "regression_checks": [
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[sum-False-float]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[sum-False-int]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[sum-False-float32]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[sum-False-bool_]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[prod-False-float]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[prod-False-int]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[prod-False-float32]",
+    "xarray/tests/test_duck_array_ops.py::test_min_count_nd[prod-False-bool_]"
+  ],
+  "passing_checks": 604
+}
