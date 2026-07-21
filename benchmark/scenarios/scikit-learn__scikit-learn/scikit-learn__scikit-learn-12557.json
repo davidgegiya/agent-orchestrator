@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-12557",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "4de404d46d24805ff48ad255ec3169a5155986f0",
+  "topic": "SVC.decision_function disagrees with predict",
+  "upstream_created_at": "2018-11-10T15:45:52Z",
+  "dataset_row": 1552,
+  "problem_sha256": "975e86afa68e75d1a5e179a262c4b2526c3e11979709fdc32159114b9cbfd703",
+  "regression_checks": [
+    "sklearn/svm/tests/test_svm.py::test_svc_invalid_break_ties_param[SVC]",
+    "sklearn/svm/tests/test_svm.py::test_svc_invalid_break_ties_param[NuSVC]",
+    "sklearn/svm/tests/test_svm.py::test_svc_ovr_tie_breaking[SVC]",
+    "sklearn/svm/tests/test_svm.py::test_svc_ovr_tie_breaking[NuSVC]"
+  ],
+  "passing_checks": 47
+}
