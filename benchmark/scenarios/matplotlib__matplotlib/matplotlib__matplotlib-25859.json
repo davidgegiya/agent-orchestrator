@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25859",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8faa835c81d9cf12342992521ddb95e9a645bc36",
+  "topic": "Do not accept arbitrary positional parameters in Figure.add_axes()",
+  "upstream_created_at": "2023-05-11T08:17:56Z",
+  "dataset_row": 1100,
+  "problem_sha256": "c613605313b99f489e705580b226715cbe48e5e20befd4ec95f6a512b26cc47f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_invalid_figure_add_axes"
+  ],
+  "passing_checks": 135
+}
