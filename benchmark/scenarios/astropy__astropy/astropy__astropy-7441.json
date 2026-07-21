@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-7441",
+  "repository": "astropy/astropy",
+  "base_commit": "5e5764ed27a8ee1a162a09e3398fcfb7481389af",
+  "topic": "astropy.time.TimeDelta should support conversion to `datetime.timedelta`",
+  "upstream_created_at": "2018-05-08T10:23:12Z",
+  "dataset_row": 78,
+  "problem_sha256": "fcc72660c692fdeb6c9ff2addc321b0466b3d8f4dc2b831d5b44f146b140db89",
+  "regression_checks": [
+    "astropy/time/tests/test_delta.py::test_python_timedelta_scalar",
+    "astropy/time/tests/test_delta.py::test_python_timedelta_vector",
+    "astropy/time/tests/test_delta.py::test_timedelta_to_datetime"
+  ],
+  "passing_checks": 50
+}
