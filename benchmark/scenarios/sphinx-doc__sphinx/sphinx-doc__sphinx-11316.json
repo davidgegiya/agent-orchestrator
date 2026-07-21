@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-11316",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "db739afaeb6129676504e964ce287fe6becb3471",
+  "topic": "Napoleon causes warning about missing end-string when encountering a reference on the first line of a docstring in",
+  "upstream_created_at": "2023-04-11T14:20:08Z",
+  "dataset_row": 1754,
+  "problem_sha256": "868836531fc120ff697de44c6845d9cc443ef7663c75b8064807aa9207d526c8",
+  "regression_checks": [
+    "tests/test_ext_napoleon_docstring.py::TestInlineAttribute::test_class_data_member_inline_no_type"
+  ],
+  "passing_checks": 50
+}
