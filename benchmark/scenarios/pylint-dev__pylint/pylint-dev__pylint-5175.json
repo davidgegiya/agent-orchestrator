@@ -1,0 +1,23 @@
+{
+  "id": "pylint-dev__pylint-5175",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "1daee40d6f1cf3d379396dc272c123d987ad4cdd",
+  "topic": "def function(file, *args, sep=\";\")",
+  "upstream_created_at": "2021-10-17T20:08:34Z",
+  "dataset_row": 1332,
+  "problem_sha256": "2a360469711b02b7ba02bf05bdaa6618ffcce947c5c73c4f5b833ee954f50c0b",
+  "regression_checks": [
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_args_sphinx",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_kwargs_sphinx",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_args_google",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_kwargs_google",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_args_numpy",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_warns_missing_kwargs_numpy",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_args_without_type_sphinx",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_kwargs_without_type_sphinx",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_args_without_type_numpy",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_args_with_xref_type_numpy",
+    "tests/extensions/test_check_docs.py::TestParamDocChecker::test_finds_kwargs_without_type_numpy"
+  ],
+  "passing_checks": 112
+}
