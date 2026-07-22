@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22734",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a395083238625500dd3fa879e4976617d5353342",
+  "topic": "from pylab import *",
+  "upstream_created_at": "2022-03-30T21:01:05Z",
+  "dataset_row": 989,
+  "problem_sha256": "1ee846c719405c52d0468cbc9d6ac87b3b290999b79e66e43e887710b737c1ad",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_triangulation.py::test_tripcolor_clim"
+  ],
+  "passing_checks": 46
+}
