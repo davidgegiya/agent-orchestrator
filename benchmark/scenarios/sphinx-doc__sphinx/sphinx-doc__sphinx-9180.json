@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9180",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "f47bf1471d10d4ac938066bc84df879f1060ba7f",
+  "topic": "Special member is not documented with automodule",
+  "upstream_created_at": "2021-05-08T08:36:06Z",
+  "dataset_row": 1866,
+  "problem_sha256": "c0b64f2c2fb88241c4939534807809b7c51aedb4b4b63e0a9b17bb3c76fa0303",
+  "regression_checks": [
+    "tests/test_ext_autodoc_automodule.py::test_automodule_special_members"
+  ],
+  "passing_checks": 4
+}
