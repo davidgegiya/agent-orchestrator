@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-8033",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "66311ff702d98450f29a448a47c0cd5fd0c51081",
+  "topic": "Class cleanups in Python 3.8+ are not called",
+  "upstream_created_at": "2020-11-13T10:29:33Z",
+  "dataset_row": 1460,
+  "problem_sha256": "e9e455a8694677895d1feef73a2f9db2d43f5623d6001e9c542751e0279597ba",
+  "regression_checks": [
+    "testing/test_unittest.py::test_do_class_cleanups_on_success",
+    "testing/test_unittest.py::test_do_class_cleanups_on_setupclass_failure",
+    "testing/test_unittest.py::test_do_class_cleanups_on_teardownclass_failure"
+  ],
+  "passing_checks": 56
+}
