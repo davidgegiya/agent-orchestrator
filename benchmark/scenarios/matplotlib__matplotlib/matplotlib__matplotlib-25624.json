@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25624",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8ca75e445d136764bbc28d8db7346c261e8c6c41",
+  "topic": "tight layout kwargs have no effect if rc autolayout setting is set (MPL 1.5.3)",
+  "upstream_created_at": "2023-04-05T13:35:00Z",
+  "dataset_row": 1088,
+  "problem_sha256": "3cca08384b11fdda94bdb3930930df9a152fd06d1e493a22aa6dc343a9465690",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_tightlayout_autolayout_deconflict[png]"
+  ],
+  "passing_checks": 134
+}
