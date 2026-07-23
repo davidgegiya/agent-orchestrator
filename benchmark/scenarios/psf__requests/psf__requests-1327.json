@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-1327",
+  "repository": "psf/requests",
+  "base_commit": "e7786ec14fdf20e8c373eddc9ac0f67d211cb1b9",
+  "topic": "Transport adapters don't work as advertised",
+  "upstream_created_at": "2013-04-25T10:01:49Z",
+  "dataset_row": 1163,
+  "problem_sha256": "549e59c595b5dad79f6221bc2fbf6f70de48c0d0ad51f5485b4a6d6b56cdb688",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_transport_adapter_ordering"
+  ],
+  "passing_checks": 31
+}
