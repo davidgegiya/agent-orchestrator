@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4098",
+  "repository": "pydata/xarray",
+  "base_commit": "e5cc19cd8f8a69e0743f230f5bf51b7778a0ff96",
+  "topic": "groupby should work with name=None",
+  "upstream_created_at": "2020-05-27T05:50:39Z",
+  "dataset_row": 1234,
+  "problem_sha256": "606e07cbc1aff59864081f87443f4391d2ce2109d6d4c1f5c084c37a54c43dc1",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_groupby_none_group_name"
+  ],
+  "passing_checks": 24
+}
