@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-26242",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b747bacfa1d706bf3c52680566590bfaf0d74363",
+  "topic": "AdaBoost: deprecation of \"base_estimator\" does not handle \"base_estimator=None\" setting properly",
+  "upstream_created_at": "2023-04-21T12:20:43Z",
+  "dataset_row": 1706,
+  "problem_sha256": "b03867b252d30de99db7a17b0d1edb05a01be4c468cce8c8625215a72eedae61",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_weight_boosting.py::test_base_estimator_argument_deprecated_none[AdaBoostClassifier]",
+    "sklearn/ensemble/tests/test_weight_boosting.py::test_base_estimator_argument_deprecated_none[AdaBoostRegressor]"
+  ],
+  "passing_checks": 34
+}
