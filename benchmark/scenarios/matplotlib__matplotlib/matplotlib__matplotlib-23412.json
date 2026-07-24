@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23412",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f06c2c3abdaf4b90285ce5ca7fedbb8ace715911",
+  "topic": "offset dash linestyle has no effect in patch objects",
+  "upstream_created_at": "2022-07-11T01:41:11Z",
+  "dataset_row": 1019,
+  "problem_sha256": "85dc200a0ae82a5030753033062719dd1a3d8851509113da9871f118cfc55d91",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_patches.py::test_dash_offset_patch_draw[png]"
+  ],
+  "passing_checks": 46
+}
