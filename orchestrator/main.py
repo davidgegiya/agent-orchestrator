@@ -348,7 +348,6 @@ def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, 
     meta["git_toplevel"] = str(workspace_top)
     meta["workspace_pathspec"] = workspace_rel
 
-    meta["available"] = True
     diff_parts: List[str] = []
 
     status = _run_local_cmd(["git", "status", "--porcelain", "--", *pathspec], cwd=git_cwd, timeout_seconds=10)
@@ -357,32 +356,38 @@ def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, 
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "HEAD", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "--no-textconv", "HEAD", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
     meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     tracked_out = (tracked.get("stdout") or "").rstrip()
     if tracked_out:
         diff_parts.append("# GIT DIFF (workspace)\n" + tracked_out)
 
     untracked = _run_local_cmd(
-        ["git", "ls-files", "--others", "--exclude-standard", "--", *pathspec],
+        ["git", "ls-files", "-z", "--others", "--exclude-standard", "--", *pathspec],
         cwd=git_cwd,
         timeout_seconds=10,
     )
     meta["commands"].append({**_cmd_meta(untracked), "tool": "local_cmd", "cwd": str(git_cwd)})
-    untracked_files = sorted([line.strip() for line in (untracked.get("stdout") or "").splitlines() if line.strip()])
+    untracked_files = sorted(filter(None, untracked["stdout"].split("\0")))
+
+    if any(command["returncode"] != 0 for command in (status, tracked, untracked)):
+        return ("- None", meta)
 
     null_path = "/dev/null" if Path("/dev/null").exists() else "NUL"
     for rel_path in untracked_files:
         patch = _run_local_cmd(
-            ["git", "diff", "--no-color", "--no-index", "--", null_path, rel_path],
+            ["git", "diff", "--no-color", "--no-index", "--no-ext-diff", "--no-textconv", "--", null_path, rel_path],
             cwd=git_cwd,
             timeout_seconds=30,
         )
         meta["commands"].append({**_cmd_meta(patch), "tool": "local_cmd", "cwd": str(git_cwd)})
+        if patch["returncode"] not in (0, 1):
+            return ("- None", meta)
         patch_out = (patch.get("stdout") or "").rstrip()
         if patch_out:
             diff_parts.append("# NEW FILE (untracked)\n" + patch_out)
 
+    meta["available"] = True
     if not diff_parts:
         return ("- None", meta)
 
@@ -648,6 +653,12 @@ def main() -> int:
             "included": reviewer_diff.strip() != "- None",
             "meta": diff_meta,
         }
+        if not diff_meta["available"] or len(diff_text) > diff_max_chars:
+            round_record["error"] = "Review requires an available diff within the reviewer limit."
+            artifacts["rounds"].append(round_record)
+            report.write_artifacts(artifacts)
+            print(f"Round {round_idx}: FAIL SKIP ({round_record['error']})")
+            return 1
         round_record["red_flags"] = {
             "max_chars": red_flags_max_chars,
             "included": reviewer_red_flags.strip() != "- None",
