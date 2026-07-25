@@ -1,0 +1,16 @@
+{
+  "id": "django__django-11638",
+  "repository": "django/django",
+  "base_commit": "c1b26c77a94c13b350d80e9a2f8d0393dee737cd",
+  "topic": "Improve Exception Message In Test Client and urlencode() when None is passed as data",
+  "upstream_created_at": "2019-08-09T08:41:19Z",
+  "dataset_row": 228,
+  "problem_sha256": "6282cc208b9e2c4e55b0fa2ca231c40e10a5f58bcd583e12d1c2881895d6b28f",
+  "regression_checks": [
+    "test_none (utils_tests.test_http.URLEncodeTests)",
+    "test_none_in_generator (utils_tests.test_http.URLEncodeTests)",
+    "test_none_in_sequence (utils_tests.test_http.URLEncodeTests)",
+    "test_get_data_none (test_client.tests.ClientTest)"
+  ],
+  "passing_checks": 122
+}
