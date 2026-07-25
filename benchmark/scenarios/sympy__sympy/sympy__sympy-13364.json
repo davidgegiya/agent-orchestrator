@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13364",
+  "repository": "sympy/sympy",
+  "base_commit": "d11087e1faa1296c8cdac5dfff0e28879534ffcc",
+  "topic": "In [1]: pow(S(2), S(3), S(5))",
+  "upstream_created_at": "2017-09-28T14:14:40Z",
+  "dataset_row": 1972,
+  "problem_sha256": "36021666dea80ee77081cc77eab8534e46738382b2cd0a217030b032d084c3c8",
+  "regression_checks": [
+    "test_mod_pow"
+  ],
+  "passing_checks": 74
+}
