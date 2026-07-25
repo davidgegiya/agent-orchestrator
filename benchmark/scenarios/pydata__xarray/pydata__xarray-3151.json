@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3151",
+  "repository": "pydata/xarray",
+  "base_commit": "118f4d996e7711c9aced916e6049af9f28d5ec66",
+  "topic": "xr.combine_by_coords raises ValueError if identical coordinates are non-monotonic",
+  "upstream_created_at": "2019-07-20T12:31:14Z",
+  "dataset_row": 1210,
+  "problem_sha256": "f69fc0b7976fc798ad44ce0690a1d67f4ea2c1dce89560777cc938d6c3471d2e",
+  "regression_checks": [
+    "xarray/tests/test_combine.py::TestCombineAuto::test_combine_leaving_bystander_dimensions"
+  ],
+  "passing_checks": 66
+}
