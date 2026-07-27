@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-20639",
+  "repository": "sympy/sympy",
+  "base_commit": "eb926a1d0c1158bf43f01eaf673dc84416b5ebb1",
+  "topic": "inaccurate rendering of pi**(1/E)",
+  "upstream_created_at": "2020-12-21T07:42:53Z",
+  "dataset_row": 2216,
+  "problem_sha256": "6c5335658f0d79b8eb7c2c88ba6c357078cd917dbb14a2d7cb41dd0a2625506e",
+  "regression_checks": [
+    "test_issue_6285",
+    "test_issue_17616"
+  ],
+  "passing_checks": 139
+}
