@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7590",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "2e506c5ab457cba743bb47eb5b8c8eb9dd51d23d",
+  "topic": "C++ User Defined Literals not supported",
+  "upstream_created_at": "2020-05-01T18:29:11Z",
+  "dataset_row": 1777,
+  "problem_sha256": "2a50263e2256bf8be79a34d0a67860d37c7c3ab98df8660f9cfe711b4d660587",
+  "regression_checks": [
+    "tests/test_domain_cpp.py::test_expressions"
+  ],
+  "passing_checks": 24
+}
