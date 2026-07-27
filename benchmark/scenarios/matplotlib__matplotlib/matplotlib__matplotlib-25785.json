@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25785",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "950d0db55ac04e663d523144882af0ec2d172420",
+  "topic": "automatic papersize selection by ps backend is almost certainly broken",
+  "upstream_created_at": "2023-04-28T02:15:05Z",
+  "dataset_row": 1098,
+  "problem_sha256": "af99290a5872164b6b86b3d85aecad13eb70adb4576e4dc364526295ac242f48",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_ps.py::test_auto_papersize_deprecation"
+  ],
+  "passing_checks": 23
+}
