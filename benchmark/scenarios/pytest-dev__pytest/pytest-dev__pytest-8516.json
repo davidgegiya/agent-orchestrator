@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-8516",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "9c151a65c86b4e780cc6b50ec2174b9b23af96de",
+  "topic": "Minor temporary directory security issue in pytest versions before 6.2.3",
+  "upstream_created_at": "2021-04-03T21:15:38Z",
+  "dataset_row": 1470,
+  "problem_sha256": "26d0298ba62c489a643a386b7839fc98e23cce725b13bb8bdd04bd93db8f9075",
+  "regression_checks": [
+    "testing/test_tmpdir.py::test_tmp_path_factory_create_directory_with_safe_permissions",
+    "testing/test_tmpdir.py::test_tmp_path_factory_fixes_up_world_readable_permissions"
+  ],
+  "passing_checks": 33
+}
