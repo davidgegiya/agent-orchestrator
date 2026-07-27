@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-25640",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "61ed3f40057a48821ccad758fd5f04f0df1b8aab",
+  "topic": "PGF output: Contour labels extend beyond figure boundary",
+  "upstream_created_at": "2023-04-07T06:09:01Z",
+  "dataset_row": 1090,
+  "problem_sha256": "a8e5c3d37a941e9e71edca3196d948d413cf6fcefe10614e72f8929ae82d0f8c",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_pgf.py::test_xelatex[pdf]",
+    "lib/matplotlib/tests/test_backend_pgf.py::test_pdflatex[pdf]"
+  ],
+  "passing_checks": 18
+}
