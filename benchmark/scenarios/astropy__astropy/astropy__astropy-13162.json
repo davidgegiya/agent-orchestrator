@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-13162",
+  "repository": "astropy/astropy",
+  "base_commit": "78c4ac119a182eee14cb3761e0dc9ea0e59b291f",
+  "topic": "Angle bug for (d, m, s) tuple input (deprecate dms_to_degrees)",
+  "upstream_created_at": "2022-04-22T18:22:32Z",
+  "dataset_row": 17,
+  "problem_sha256": "74cbddf54a97580c43d8bc658ca8afd4d07ecc47c34d3deda975e6f6c10f3b7f",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_angles.py::test_create_angles",
+    "astropy/coordinates/tests/test_angles.py::test_radec",
+    "astropy/coordinates/tests/test_angles.py::test_create_tuple",
+    "astropy/coordinates/tests/test_arrays.py::test_hms"
+  ],
+  "passing_checks": 63
+}
