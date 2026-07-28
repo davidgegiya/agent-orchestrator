@@ -1,0 +1,13 @@
+{
+  "id": "django__django-14059",
+  "repository": "django/django",
+  "base_commit": "712fe12466cfe4b7e31c61418c85ce36a211261a",
+  "topic": "Can create model instance with conflicting args and kwargs value for the same field",
+  "upstream_created_at": "2021-02-28T00:17:54Z",
+  "dataset_row": 554,
+  "problem_sha256": "31c3619a5a3104f72b36f297db2647c82193d2387abb041df05b1a3ea3da2e5f",
+  "regression_checks": [
+    "test_positional_and_keyword_args_for_the_same_field (basic.tests.ModelInstanceCreationTests)"
+  ],
+  "passing_checks": 56
+}
