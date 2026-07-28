@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6889",
+  "repository": "pydata/xarray",
+  "base_commit": "790a444b11c244fd2d33e2d2484a590f8fc000ff",
+  "topic": "Alignment of dataset with MultiIndex fails after applying xr.concat",
+  "upstream_created_at": "2022-08-08T13:12:45Z",
+  "dataset_row": 1292,
+  "problem_sha256": "0e19f28d9fb65596f9bd5136953830b2dde1d1b3adc8ca23fd44fa7a9dbcb40c",
+  "regression_checks": [
+    "xarray/tests/test_concat.py::TestConcatDataset::test_concat_along_new_dim_multiindex"
+  ],
+  "passing_checks": 80
+}
