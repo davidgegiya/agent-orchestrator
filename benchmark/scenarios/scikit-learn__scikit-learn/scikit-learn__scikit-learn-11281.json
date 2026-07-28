@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-11281",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "4143356c3c51831300789e4fdf795d83716dbab6",
+  "topic": "Should mixture models have a clusterer-compatible interface",
+  "upstream_created_at": "2018-06-15T17:15:25Z",
+  "dataset_row": 1533,
+  "problem_sha256": "872a126e41a70cba049a6fc3c62509a11f524c93dcb481f71c9f816b1fe342bc",
+  "regression_checks": [
+    "sklearn/mixture/tests/test_bayesian_mixture.py::test_bayesian_mixture_fit_predict",
+    "sklearn/mixture/tests/test_gaussian_mixture.py::test_gaussian_mixture_fit_predict"
+  ],
+  "passing_checks": 43
+}
