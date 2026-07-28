@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8799",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "b9ed113e31c9c938eb5dfb378e8c5b9dea2ff31b",
+  "topic": "Short circuit if all checks disabled",
+  "upstream_created_at": "2023-06-26T13:57:28Z",
+  "dataset_row": 1369,
+  "problem_sha256": "bca9894c2f967871342014a0308c74eeb08251614eeaa8d557bfc680e11c6e08",
+  "regression_checks": [
+    "tests/test_self.py::TestRunTC::test_disable_all"
+  ],
+  "passing_checks": 136
+}
