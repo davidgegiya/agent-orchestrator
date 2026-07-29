@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15346",
+  "repository": "sympy/sympy",
+  "base_commit": "9ef28fba5b4d6d0168237c9c005a550e6dc27d81",
+  "topic": "can't simplify sin/cos with Rational?",
+  "upstream_created_at": "2018-10-05T17:25:21Z",
+  "dataset_row": 2052,
+  "problem_sha256": "0ba87c92ed87b2516e126d6a6781e32b31c7ee6db29024257669bc07fce3fbe4",
+  "regression_checks": [
+    "test_issue_15129_trigsimp_methods"
+  ],
+  "passing_checks": 22
+}
