@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7557",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "1f5dab6446ebe7b70d1210689026a649b74a280d",
+  "topic": "Decorated inherited method has no documentation",
+  "upstream_created_at": "2020-04-26T02:25:03Z",
+  "dataset_row": 1775,
+  "problem_sha256": "9382d369fd714dcab012a93c63a7f1639535decee021fb5e8cb999975aa9e146",
+  "regression_checks": [
+    "tests/test_util_inspect.py::test_getdoc_inherited_decorated_method"
+  ],
+  "passing_checks": 32
+}
