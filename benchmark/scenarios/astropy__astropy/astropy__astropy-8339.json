@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-8339",
+  "repository": "astropy/astropy",
+  "base_commit": "69e2fabd847db3e0964ce0825c89741fb922fccb",
+  "topic": "ncp_prior referenced before assignment in Bayesian Blocks",
+  "upstream_created_at": "2019-01-10T02:47:47Z",
+  "dataset_row": 89,
+  "problem_sha256": "9615852318ccd9d4b25ec996f8f1e3db53e1de2e8fa8900b0d4703ffc46625f4",
+  "regression_checks": [
+    "astropy/stats/tests/test_bayesian_blocks.py::test_fitness_function_results"
+  ],
+  "passing_checks": 6
+}
