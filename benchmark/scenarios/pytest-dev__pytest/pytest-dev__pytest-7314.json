@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-7314",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "d5843f89d3c008ddcb431adbc335b080a79e617e",
+  "topic": "pytest~=4.6: `UnboundLocalError: local variable 'letter' referenced before assignment`",
+  "upstream_created_at": "2020-06-03T15:00:51Z",
+  "dataset_row": 1438,
+  "problem_sha256": "5f8c360d263c58e982a55d5e5cd1aed55ceccc1727306ef4ef16d07df4f592a9",
+  "regression_checks": [
+    "testing/test_terminal.py::TestTerminalFunctional::test_summary_f_alias",
+    "testing/test_terminal.py::TestTerminalFunctional::test_summary_s_alias"
+  ],
+  "passing_checks": 110
+}
