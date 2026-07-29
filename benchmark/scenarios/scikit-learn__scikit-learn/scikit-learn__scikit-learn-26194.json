@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-26194",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "e886ce4e1444c61b865e7839c9cff5464ee20ace",
+  "topic": "Thresholds can exceed 1 in `roc_curve` while providing probability estimate",
+  "upstream_created_at": "2023-04-17T16:33:08Z",
+  "dataset_row": 1705,
+  "problem_sha256": "1896a990a056aeb01e8a759b093243cc78a1d87f9b984a647ed751be13671baf",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_ranking.py::test_roc_curve_drop_intermediate",
+    "sklearn/metrics/tests/test_ranking.py::test_roc_curve_with_probablity_estimates[42]"
+  ],
+  "passing_checks": 186
+}
