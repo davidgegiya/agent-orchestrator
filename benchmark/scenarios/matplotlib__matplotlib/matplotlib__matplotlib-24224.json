@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24224",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "aaa5129a9fb472a239bb7421635c31f20a523c5f",
+  "topic": "document `julian2num` and `num2julian`?",
+  "upstream_created_at": "2022-10-20T08:47:45Z",
+  "dataset_row": 1037,
+  "problem_sha256": "7bce900a1c8a8d66cf0048253ca05e42abadeed55cfd916874f3ddf0f83fff44",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_dates.py::test_julian2num"
+  ],
+  "passing_checks": 93
+}
