@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11620",
+  "repository": "django/django",
+  "base_commit": "514efa3129792ec2abb2444f3e7aeb3f21a38386",
+  "topic": "When DEBUG is True, raising Http404 in a path converter's to_python method does not result in a technical",
+  "upstream_created_at": "2019-08-02T13:56:08Z",
+  "dataset_row": 225,
+  "problem_sha256": "b83b965a498ec65c4bea06d7e2a1d96739448f9111269d1a05879cb8cd5f5bcc",
+  "regression_checks": [
+    "test_technical_404_converter_raise_404 (view_tests.tests.test_debug.DebugViewTests)"
+  ],
+  "passing_checks": 66
+}
