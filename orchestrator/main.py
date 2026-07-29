@@ -13,6 +13,8 @@ from hashlib import sha256
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
+from filelock import FileLock, Timeout
+
 try:
     from dotenv import load_dotenv
 except ImportError:  # pragma: no cover - optional for local dev
@@ -391,6 +393,28 @@ def main(argv: Optional[List[str]] = None) -> int:
         parser.error(f"workspace is not a directory: {workspace}")
     if args.workspace and not args.task:
         parser.error("--workspace requires --task")
+    git_dir = _run_local_cmd(["git", "rev-parse", "--absolute-git-dir"], cwd=workspace, timeout_seconds=5)
+    if git_dir["returncode"] != 0:
+        parser.error("workspace must be in a Git checkout")
+    lock_path = Path(git_dir["stdout"].strip()) / "agent-orchestrator.lock"
+    lock = FileLock(lock_path, timeout=0)
+    try:
+        lock.acquire()
+    except Timeout:
+        parser.error("another orchestrator run is using this checkout")
+    try:
+        return _run_workflow(parser, args, checks, repo_root, workspace)
+    finally:
+        lock.release()
+
+
+def _run_workflow(
+    parser: argparse.ArgumentParser,
+    args: argparse.Namespace,
+    checks: list[list[str]],
+    repo_root: Path,
+    workspace: Path,
+) -> int:
     base = _run_local_cmd(["git", "rev-parse", "--verify", "HEAD"], cwd=workspace, timeout_seconds=5)
     if base["returncode"] != 0:
         parser.error("workspace must be in a Git checkout with a base commit")
