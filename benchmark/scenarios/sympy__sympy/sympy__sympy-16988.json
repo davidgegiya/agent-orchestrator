@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-16988",
+  "repository": "sympy/sympy",
+  "base_commit": "e727339af6dc22321b00f52d971cda39e4ce89fb",
+  "topic": "Intersection should remove duplicates",
+  "upstream_created_at": "2019-06-07T12:00:00Z",
+  "dataset_row": 2108,
+  "problem_sha256": "09a893facf742db23722ac6878ed65a08736560b0633b1837f7cf3233cbe8e2e",
+  "regression_checks": [
+    "test_imageset",
+    "test_intersection"
+  ],
+  "passing_checks": 72
+}
