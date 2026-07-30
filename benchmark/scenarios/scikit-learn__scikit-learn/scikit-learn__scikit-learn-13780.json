@@ -1,0 +1,17 @@
+{
+  "id": "scikit-learn__scikit-learn-13780",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "8d3b4ff3eec890396a3d7a806bbe944f55a89cb4",
+  "topic": "Handle 'drop' together with None to drop estimator in VotingClassifier/VotingRegressor",
+  "upstream_created_at": "2019-05-03T14:25:22Z",
+  "dataset_row": 1617,
+  "problem_sha256": "aecfb45415ce5226741fb031a6af7603e23e84ceb3580bbd7ff66fccad3bd194",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_voting.py::test_sample_weight",
+    "sklearn/ensemble/tests/test_voting.py::test_set_estimator_none[None]",
+    "sklearn/ensemble/tests/test_voting.py::test_set_estimator_none[drop]",
+    "sklearn/ensemble/tests/test_voting.py::test_none_estimator_with_weights[drop-X0-y0-voter0]",
+    "sklearn/ensemble/tests/test_voting.py::test_none_estimator_with_weights[drop-X1-y1-voter1]"
+  ],
+  "passing_checks": 18
+}
