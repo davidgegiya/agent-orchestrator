@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-5495",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "1aefb24b37c30fba8fd79a744829ca16e252f340",
+  "topic": "Confusing assertion rewriting message with byte strings",
+  "upstream_created_at": "2019-06-25T23:41:16Z",
+  "dataset_row": 1406,
+  "problem_sha256": "e150aabb4920b873641ac7e20cb278b5b39e7b287d48e057e9e67ca26743491b",
+  "regression_checks": [
+    "testing/test_assertion.py::TestAssert_reprcompare::test_bytes_diff_normal",
+    "testing/test_assertion.py::TestAssert_reprcompare::test_bytes_diff_verbose"
+  ],
+  "passing_checks": 86
+}
