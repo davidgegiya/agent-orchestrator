@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-3527",
+  "repository": "pydata/xarray",
+  "base_commit": "c0ef2f616e87e9f924425bcd373ac265f14203cb",
+  "topic": "DatasetGroupBy does not implement quantile",
+  "upstream_created_at": "2019-11-13T23:03:07Z",
+  "dataset_row": 1220,
+  "problem_sha256": "dea377c44338d9d059ac2865ef8a2d607b912d11b600d444f87b52269634668a",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_da_groupby_quantile",
+    "xarray/tests/test_groupby.py::test_ds_groupby_quantile"
+  ],
+  "passing_checks": 17
+}
