@@ -8,6 +8,7 @@ import subprocess
 
 from .catalog import load_catalog
 from .checkout import prepare_checkout
+from .results import compare_outcomes, read_outcomes, record_outcome
 from .source import DATASET_URL, read_source_rows
 
 
@@ -29,6 +30,14 @@ def main(argv: list[str] | None = None) -> int:
     prompt.add_argument("output", type=Path)
     verify = commands.add_parser("verify", help="Validate all catalog records against the dataset")
     verify.add_argument("dataset", type=Path)
+    record = commands.add_parser("record", help="Emit one workflow outcome as JSON")
+    record.add_argument("case_id")
+    record.add_argument("variant")
+    record.add_argument("run_dir", type=Path)
+    compare = commands.add_parser("compare", help="Compare paired results from a JSONL file")
+    compare.add_argument("results", type=Path)
+    compare.add_argument("left")
+    compare.add_argument("right")
     commands.add_parser("source", help="Print the pinned dataset URL")
     args = parser.parse_args(argv)
 
@@ -36,6 +45,9 @@ def main(argv: list[str] | None = None) -> int:
         print(DATASET_URL)
         return 0
     try:
+        if args.action == "compare":
+            print(json.dumps(compare_outcomes(read_outcomes(args.results), args.left, args.right), indent=2))
+            return 0
         cases = load_catalog(args.catalog)
         if args.action == "list":
             selected = [case for case in cases.values() if not args.repo or case.repository == args.repo]
@@ -56,6 +68,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(json.dumps({**case.model_dump(mode="json"), "pull_request": case.pull_request_url}, indent=2))
             elif args.action == "checkout":
                 print(prepare_checkout(case, args.destination))
+            elif args.action == "record":
+                print(record_outcome(case, args.variant, args.run_dir).model_dump_json())
             elif args.action == "prompt":
                 problems = read_source_rows(args.dataset, [case])
                 with args.output.open("x", encoding="utf-8") as handle:
