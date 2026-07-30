@@ -1,0 +1,15 @@
+{
+  "id": "matplotlib__matplotlib-23188",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "fd4cce73e9d4e7aa5d8a14012d6579861c320cd2",
+  "topic": "The default date limits are 2000-01-01 to 2010-01-01. This leads to problems as a default if folks add",
+  "upstream_created_at": "2022-06-02T07:54:57Z",
+  "dataset_row": 1009,
+  "problem_sha256": "a7e30807518da1231fce51b3db9db1857a388476bcd28f2dbfaa5597d54c4b86",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_dates.py::test_date_empty",
+    "lib/matplotlib/tests/test_dates.py::test_DateLocator",
+    "lib/matplotlib/tests/test_dates.py::test_datetime_masked"
+  ],
+  "passing_checks": 827
+}
