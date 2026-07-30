@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-13984",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "76db50151a65927c19c83a8c3c195c87dbcc0556",
+  "topic": "Tick mark color cannot be set on Axes3D",
+  "upstream_created_at": "2019-04-18T11:21:30Z",
+  "dataset_row": 951,
+  "problem_sha256": "c8496a0cdc2157e632f3aed684bfea85e1ae7bf82620887ab5f3271bf9521f59",
+  "regression_checks": [
+    "lib/mpl_toolkits/tests/test_mplot3d.py::test_ax3d_tickcolour"
+  ],
+  "passing_checks": 59
+}
