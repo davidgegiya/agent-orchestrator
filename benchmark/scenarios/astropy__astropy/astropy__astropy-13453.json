@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13453",
+  "repository": "astropy/astropy",
+  "base_commit": "19cc80471739bcb67b7e8099246b391c355023ee",
+  "topic": "ASCII table output to HTML does not support supplied \"formats\"",
+  "upstream_created_at": "2022-07-14T10:04:40Z",
+  "dataset_row": 26,
+  "problem_sha256": "d2955a7eadb49a95b2388547ae3444d7a70c1670ae06243e370feb91b4116462",
+  "regression_checks": [
+    "astropy/io/ascii/tests/test_html.py::test_write_table_formatted_columns"
+  ],
+  "passing_checks": 9
+}
