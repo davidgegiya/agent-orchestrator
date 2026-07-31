@@ -1,0 +1,17 @@
+{
+  "id": "psf__requests-1944",
+  "repository": "psf/requests",
+  "base_commit": "5893cfcd90249a16d70bb829c23a78b690033c74",
+  "topic": "Why decode the response body of a redirect?",
+  "upstream_created_at": "2014-03-10T07:24:49Z",
+  "dataset_row": 1178,
+  "problem_sha256": "592c013554115780dad0420de7a9d9ba50598d749128f69002c7a1248d853899",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_BASICAUTH_TUPLE_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_auth_is_retained_for_redirect_on_host",
+    "test_requests.py::RequestsTestCase::test_redirect_with_wrong_gzipped_header",
+    "test_requests.py::RequestsTestCase::test_session_pickling"
+  ],
+  "passing_checks": 120
+}
