@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4419",
+  "repository": "pydata/xarray",
+  "base_commit": "2ed6d57fa5e14e87e83c8194e619538f6edcd90a",
+  "topic": "concat changes variable order",
+  "upstream_created_at": "2020-09-14T07:13:33Z",
+  "dataset_row": 1240,
+  "problem_sha256": "9f410d15f207875430c86d0729de5fb745991468490b7073b22ecad090bf2459",
+  "regression_checks": [
+    "xarray/tests/test_concat.py::test_concat_preserve_coordinate_order"
+  ],
+  "passing_checks": 46
+}
