@@ -1,0 +1,17 @@
+{
+  "id": "scikit-learn__scikit-learn-14544",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "7e7b5092991cf7a7cf6bd95d56b08deef5eb9847",
+  "topic": "RFC ColumnTransformer input validation and requirements",
+  "upstream_created_at": "2019-08-01T16:37:40Z",
+  "dataset_row": 1644,
+  "problem_sha256": "057d66f35222480aec273e6073bc9fa6d453d9d2602d2615339cafd080a28f37",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_invalid_columns[drop]",
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_invalid_columns[passthrough]",
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_reordered_column_names_remainder[first]",
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_reordered_column_names_remainder[second]",
+    "sklearn/compose/tests/test_column_transformer.py::test_feature_name_validation"
+  ],
+  "passing_checks": 67
+}
