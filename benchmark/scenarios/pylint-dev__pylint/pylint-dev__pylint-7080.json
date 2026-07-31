@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-7080",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "3c5eca2ded3dd2b59ebaf23eb289453b5d2930f0",
+  "topic": "When running recursively, it seems `ignore-paths` in my settings in pyproject.toml is completely ignored",
+  "upstream_created_at": "2022-06-28T17:24:43Z",
+  "dataset_row": 1357,
+  "problem_sha256": "78d10b561da2463c10f23b9e834a8cd315cc1ed538744cca5e7f8a6d257fe713",
+  "regression_checks": [
+    "tests/test_self.py::TestRunTC::test_ignore_path_recursive_current_dir"
+  ],
+  "passing_checks": 120
+}
