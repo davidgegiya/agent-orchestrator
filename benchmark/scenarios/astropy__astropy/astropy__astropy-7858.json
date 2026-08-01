@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7858",
+  "repository": "astropy/astropy",
+  "base_commit": "848c8fa21332abd66b44efe3cb48b72377fb32cc",
+  "topic": "Issue when transforming a single scalar coordinate with a 1D WCS",
+  "upstream_created_at": "2018-10-02T10:43:08Z",
+  "dataset_row": 83,
+  "problem_sha256": "4feeb4d4f287b744f8751e8a7a7ed1524548bb690d7c4429cca76775cf62e0e8",
+  "regression_checks": [
+    "astropy/wcs/tests/test_wcs.py::test_scalar_inputs"
+  ],
+  "passing_checks": 57
+}
