@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-14038",
+  "repository": "sympy/sympy",
+  "base_commit": "5fcbde2ed7385df250510bd5207f270cba990265",
+  "topic": "product(1 - a**2 / (n*pi)**2, [n, 1, oo]) should not evaluate to 0",
+  "upstream_created_at": "2018-01-30T03:49:58Z",
+  "dataset_row": 2012,
+  "problem_sha256": "be93f6022ea66d1c24f98ca7b9f237246c72f78ab1b682cd717d401af6769cfd",
+  "regression_checks": [
+    "test_issue_14036"
+  ],
+  "passing_checks": 18
+}
