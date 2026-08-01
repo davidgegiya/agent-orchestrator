@@ -1,0 +1,20 @@
+{
+  "id": "matplotlib__matplotlib-23266",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "dab648ac5eff66a39742f718a356ebe250e01880",
+  "topic": "contour kwarg for negative_linestyle",
+  "upstream_created_at": "2022-06-14T04:56:38Z",
+  "dataset_row": 1012,
+  "problem_sha256": "6f6a6c63bc38d39c8631c7b30da2b793229682df177c4b7be693558ff5c4795d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_linestyles[solid]",
+    "lib/matplotlib/tests/test_contour.py::test_linestyles[dashed]",
+    "lib/matplotlib/tests/test_contour.py::test_linestyles[dashdot]",
+    "lib/matplotlib/tests/test_contour.py::test_linestyles[dotted]",
+    "lib/matplotlib/tests/test_contour.py::test_negative_linestyles[solid]",
+    "lib/matplotlib/tests/test_contour.py::test_negative_linestyles[dashed]",
+    "lib/matplotlib/tests/test_contour.py::test_negative_linestyles[dashdot]",
+    "lib/matplotlib/tests/test_contour.py::test_negative_linestyles[dotted]"
+  ],
+  "passing_checks": 55
+}
