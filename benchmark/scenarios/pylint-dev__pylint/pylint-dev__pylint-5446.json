@@ -1,0 +1,16 @@
+{
+  "id": "pylint-dev__pylint-5446",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "a1df7685a4e6a05b519ea011f16a2f0d49d08032",
+  "topic": "The duplicate-code (R0801) can't be disabled",
+  "upstream_created_at": "2021-11-30T16:56:42Z",
+  "dataset_row": 1335,
+  "problem_sha256": "92ea7296665c00cf89e8679739284f5892ccec706abdb5c3e56964b720232464",
+  "regression_checks": [
+    "tests/test_similar.py::TestSimilarCodeChecker::test_duplicate_code_raw_strings_disable_file_double",
+    "tests/test_similar.py::TestSimilarCodeChecker::test_duplicate_code_raw_strings_disable_line_disable_all",
+    "tests/test_similar.py::TestSimilarCodeChecker::test_duplicate_code_raw_strings_disable_line_midle",
+    "tests/test_similar.py::TestSimilarCodeChecker::test_duplicate_code_raw_strings_disable_scope_double"
+  ],
+  "passing_checks": 115
+}
