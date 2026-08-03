@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-13960",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "4a6264db68b28a2e65efdecc459233911c9aee95",
+  "topic": "IncrementalPCA should accept sparse input",
+  "upstream_created_at": "2019-05-27T23:17:57Z",
+  "dataset_row": 1624,
+  "problem_sha256": "4c87b036befbf7b9033cfb8673c02c201b9b6beaecc7ea3d646a6e3cad13f106",
+  "regression_checks": [
+    "sklearn/decomposition/tests/test_incremental_pca.py::test_incremental_pca_sparse[csc_matrix]",
+    "sklearn/decomposition/tests/test_incremental_pca.py::test_incremental_pca_sparse[csr_matrix]",
+    "sklearn/decomposition/tests/test_incremental_pca.py::test_incremental_pca_sparse[lil_matrix]"
+  ],
+  "passing_checks": 17
+}
