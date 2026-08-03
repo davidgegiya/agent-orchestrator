@@ -1,0 +1,14 @@
+{
+  "id": "django__django-13109",
+  "repository": "django/django",
+  "base_commit": "fbe82f82555bc25dccb476c749ca062f0b522be3",
+  "topic": "ForeignKey.validate() should validate using the base manager",
+  "upstream_created_at": "2020-06-25T08:36:45Z",
+  "dataset_row": 403,
+  "problem_sha256": "cbe01715a9021d03809605a1998fe952a1680f92054915ad8a51fd50a851e5f4",
+  "regression_checks": [
+    "test_FK_validates_using_base_manager (validation.tests.BaseModelValidationTests)",
+    "test_validate_foreign_key_to_model_with_overridden_manager (model_forms.tests.ModelFormBasicTests)"
+  ],
+  "passing_checks": 170
+}
