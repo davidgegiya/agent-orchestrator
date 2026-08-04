@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-7521",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "41d211c24a6781843b174379d6d6538f5c17adb9",
+  "topic": "pytest 6.0.0rc1: capfd.readouterr() converts \\r to \\n",
+  "upstream_created_at": "2020-07-20T15:55:11Z",
+  "dataset_row": 1449,
+  "problem_sha256": "2242b1a282bcfeec9e76415d858735246de4dc8fb949e5f6d6e721ad9eabe6b1",
+  "regression_checks": [
+    "testing/test_capture.py::TestCaptureFixture::test_cafd_preserves_newlines[\\r\\n]",
+    "testing/test_capture.py::TestCaptureFixture::test_cafd_preserves_newlines[\\r]"
+  ],
+  "passing_checks": 125
+}
