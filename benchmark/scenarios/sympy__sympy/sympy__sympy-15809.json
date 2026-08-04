@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-15809",
+  "repository": "sympy/sympy",
+  "base_commit": "28d913d3cead6c5646307ffa6540b21d65059dfd",
+  "topic": "Zero-argument Min() and Max()",
+  "upstream_created_at": "2019-01-20T06:08:26Z",
+  "dataset_row": 2067,
+  "problem_sha256": "3e93b921086989770a126ea39607e01c72d0a0697060c7c8e0222be0b07ad122",
+  "regression_checks": [
+    "test_Min",
+    "test_Max"
+  ],
+  "passing_checks": 10
+}
