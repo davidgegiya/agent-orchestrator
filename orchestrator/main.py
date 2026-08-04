@@ -1,8 +1,10 @@
 from __future__ import annotations
 
+import argparse
 import importlib
 import os
 import re
+import shlex
 import subprocess
 import sys
 import time
@@ -496,8 +498,27 @@ def _safe_run(
     return ("", last_error, meta)
 
 
-def main() -> int:
+def main(argv: Optional[List[str]] = None) -> int:
+    parser = argparse.ArgumentParser(description="Implement and review a repository task")
+    parser.add_argument("--workspace", type=Path, help="Product Git checkout to edit")
+    parser.add_argument("--task", type=Path, help="Markdown task to run")
+    parser.add_argument("--check", action="append", help="Required check command (repeatable; no shell)")
+    args = parser.parse_args(argv)
+    try:
+        checks = [shlex.split(command) for command in args.check] if args.check else [
+            [sys.executable, "-m", "pytest", "-q"]
+        ]
+        if not all(checks):
+            raise ValueError("check command cannot be empty")
+    except ValueError as exc:
+        parser.error(str(exc))
+
     repo_root = Path(__file__).resolve().parents[1]
+    workspace = (args.workspace or (repo_root / "workspace")).resolve()
+    if not workspace.is_dir():
+        parser.error(f"workspace is not a directory: {workspace}")
+    if args.workspace and not args.task:
+        parser.error("--workspace requires --task")
     load_dotenv(repo_root / ".env")
 
     run_dir = create_run_dir(repo_root / "project" / "reports")
@@ -549,10 +570,15 @@ def main() -> int:
         build_tech_writer_agent,
     )
 
-    task_path = repo_root / "project" / "tasks" / "current.md"
-    task_text = read_text(task_path, required=True)
-    task_source = "current.md"
+    task_path = args.task or (repo_root / "project" / "tasks" / "current.md")
+    try:
+        task_text = read_text(task_path, required=True)
+    except (OSError, UnicodeError) as exc:
+        parser.error(str(exc))
+    task_source = str(task_path)
     if is_effectively_empty(task_text):
+        if args.task:
+            parser.error("--task must contain a task")
         task_text = DEMO_TASK
         task_source = "demo"
     artifacts["task_source"] = task_source
@@ -596,9 +622,9 @@ def main() -> int:
         implementer_ctx = RunContext(
             role="implementer",
             repo_root=repo_root,
-            fs_base=repo_root / "workspace",
+            fs_base=workspace,
             allow_write=True,
-            shell_cwd=repo_root / "workspace",
+            shell_cwd=workspace,
         )
         implementer_input = _build_implementer_input(
             task_text,
@@ -629,20 +655,18 @@ def main() -> int:
             return 1
         report.append_implementer(round_idx, implementer_report)
 
-        check = _run_local_cmd(
-            [sys.executable, "-m", "pytest", "-q"],
-            cwd=repo_root / "workspace",
-            timeout_seconds=120,
-        )
-        round_record["checks"] = [_cmd_meta(check, limit=4000)]
-        tool_outputs = _format_tool_outputs([*implementer_ctx.tool_events, {"tool": "run_cmd", **check}])
+        check_results = [_run_local_cmd(command, cwd=workspace, timeout_seconds=120) for command in checks]
+        round_record["checks"] = [_cmd_meta(check, limit=4000) for check in check_results]
+        tool_outputs = _format_tool_outputs([
+            *implementer_ctx.tool_events, *({"tool": "run_cmd", **check} for check in check_results),
+        ])
 
 
-        red_flags_text, red_flags_meta = _scan_red_flags(repo_root / "workspace")
+        red_flags_text, red_flags_meta = _scan_red_flags(workspace)
         red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
         reviewer_red_flags = _truncate(red_flags_text, red_flags_max_chars) if red_flags_text.strip() != "- None" else "- None"
 
-        diff_text, diff_meta = _compute_workspace_diff(repo_root, repo_root / "workspace")
+        diff_text, diff_meta = _compute_workspace_diff(repo_root, workspace)
         diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
         reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
         diff_path = run_dir / f"diff_round_{round_idx}.patch"
@@ -693,10 +717,10 @@ def main() -> int:
         report.append_reviewer(round_idx, reviewer_report)
 
         review_decision = parse_reviewer_output(reviewer_report)
-        if check["returncode"] != 0 and review_decision.verdict == "PASS":
+        if review_decision.verdict == "PASS" and any(check["returncode"] != 0 for check in check_results):
             review_decision = ReviewDecision(
                 "FAIL", "CONTINUE",
-                ["Fix the required pytest check before approving the patch."],
+                ["Fix the required checks before approving the patch."],
                 reviewer_report,
             )
         round_record.update({
@@ -754,7 +778,7 @@ def main() -> int:
             repo_root=repo_root,
             fs_base=repo_root / "project",
             allow_write=True,
-            shell_cwd=repo_root / "workspace",
+            shell_cwd=workspace,
         )
         tech_input = _build_tech_writer_input(vision, architecture, conventions, task_text, plan_text, review_decision)
         tech_report, tech_error, tech_meta = _safe_run(

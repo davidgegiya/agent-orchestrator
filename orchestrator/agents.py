@@ -27,7 +27,6 @@ ACCEPTANCE:
 IMPLEMENTER_INSTRUCTIONS = """You are Implementer.
 You can ONLY modify files under workspace/ using the provided tools.
 Do not modify project/ or orchestrator/.
-You must use run_cmd to attempt: python -m pytest -q (even if it fails).
 The orchestrator runs required checks after your turn. Describe how your changes satisfy the criteria.
 Use fs_read/fs_list to inspect workspace as needed.
 Include evidence for each PLAN/ACCEPTANCE item (commands or tests).
