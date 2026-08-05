@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7671",
+  "repository": "astropy/astropy",
+  "base_commit": "a7141cd90019b62688d507ae056298507678c058",
+  "topic": "The change in PR #7647 causes `minversion` to fail in certain cases, e.g",
+  "upstream_created_at": "2018-07-20T19:37:49Z",
+  "dataset_row": 80,
+  "problem_sha256": "9e9f9dfe225a2515c97871f0b144ac741bf231cab45b3d09fe0191c99d906f4f",
+  "regression_checks": [
+    "astropy/utils/tests/test_introspection.py::test_minversion"
+  ],
+  "passing_checks": 3
+}
