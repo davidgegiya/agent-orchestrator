@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10870",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b0e91e4110942e5b3c4333b1c6b6dfefbd1a6124",
+  "topic": "In Gaussian mixtures, when n_init > 1, the lower_bound_ is not always the max",
+  "upstream_created_at": "2018-03-25T14:06:57Z",
+  "dataset_row": 1516,
+  "problem_sha256": "006781e101455e7ed432d1014f4fa88060a2938fc192b353fdfa062ff21f7516",
+  "regression_checks": [
+    "sklearn/mixture/tests/test_gaussian_mixture.py::test_init"
+  ],
+  "passing_checks": 30
+}
