@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-5455",
+  "repository": "pydata/xarray",
+  "base_commit": "e87d65b77711bbf289e14dfa0581fb842247f1c2",
+  "topic": "Suggesting specific IO backends to install when open_dataset() fails",
+  "upstream_created_at": "2021-06-09T15:22:24Z",
+  "dataset_row": 1271,
+  "problem_sha256": "f05d38eecf08fbe16238491eafc33921b5a9a163bfcf335836bfa0ef06164423",
+  "regression_checks": [
+    "xarray/tests/test_plugins.py::test_no_matching_engine_found",
+    "xarray/tests/test_plugins.py::test_engines_not_installed"
+  ],
+  "passing_checks": 8
+}
