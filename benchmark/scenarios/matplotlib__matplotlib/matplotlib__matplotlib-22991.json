@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-22991",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "953790680ac667adb869e1f1cba2f2b534cc6f0b",
+  "topic": "Can't use `plt.sca()` on axes created using subfigures",
+  "upstream_created_at": "2022-05-06T12:35:45Z",
+  "dataset_row": 1000,
+  "problem_sha256": "30d9729cf7764dca02713da761c9415d9d9d677181454b11ce3c50c94ba74ecf",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pyplot.py::test_set_current_figure_via_subfigure",
+    "lib/matplotlib/tests/test_pyplot.py::test_set_current_axes_on_subfigure"
+  ],
+  "passing_checks": 19
+}
