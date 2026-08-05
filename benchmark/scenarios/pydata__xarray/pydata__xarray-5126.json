@@ -1,0 +1,19 @@
+{
+  "id": "pydata__xarray-5126",
+  "repository": "pydata/xarray",
+  "base_commit": "6bfbaede69eb73810cb63672a8161bd1fc147594",
+  "topic": "FR: Provide option for collapsing the HTML display in notebooks",
+  "upstream_created_at": "2021-04-07T10:51:03Z",
+  "dataset_row": 1264,
+  "problem_sha256": "20bdaa024d39651200f5299fd1420ddd5d78ed3f5313119b08b25512e72d036f",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::TestFormatting::test_array_repr",
+    "xarray/tests/test_formatting.py::test__mapping_repr[50-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[35-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[11-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[1-40-30]",
+    "xarray/tests/test_formatting_html.py::test_repr_of_dataarray",
+    "xarray/tests/test_formatting_html.py::test_repr_of_dataset"
+  ],
+  "passing_checks": 30
+}
