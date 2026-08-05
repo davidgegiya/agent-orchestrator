@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16072",
+  "repository": "django/django",
+  "base_commit": "9b0c9821ed4dd9920cc7c5e7b657720d91a89bdc",
+  "topic": "update_or_create should utilize update_fields on update",
+  "upstream_created_at": "2022-09-18T19:26:52Z",
+  "dataset_row": 816,
+  "problem_sha256": "b2e61a7fc0c3a9d1df00603d1566599d79bceebba60bbc53fd9cd8712f7816bb",
+  "regression_checks": [
+    "test_update_only_defaults_and_pre_save_fields_when_local_fields (get_or_create.tests.UpdateOrCreateTests)"
+  ],
+  "passing_checks": 36
+}
