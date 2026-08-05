@@ -1,0 +1,20 @@
+{
+  "id": "astropy__astropy-8715",
+  "repository": "astropy/astropy",
+  "base_commit": "b2b0717108c8b5381f12bc4ab1c759e3705fb8a8",
+  "topic": "Silence warnings by default when reading in VO Tables",
+  "upstream_created_at": "2019-05-16T09:22:35Z",
+  "dataset_row": 92,
+  "problem_sha256": "c93bfbd52a698f2d99d122f2553cc055c5491e8b278f1d24c39e341d094f2e1f",
+  "regression_checks": [
+    "astropy/io/votable/tests/converter_test.py::test_integer_overflow",
+    "astropy/io/votable/tests/table_test.py::TestVerifyOptions::test_default",
+    "astropy/io/votable/tests/table_test.py::TestVerifyOptions::test_verify_ignore",
+    "astropy/io/votable/tests/table_test.py::TestVerifyOptions::test_verify_warn",
+    "astropy/io/votable/tests/table_test.py::TestVerifyOptions::test_conf_verify_ignore",
+    "astropy/io/votable/tests/table_test.py::TestVerifyOptions::test_conf_verify_warn",
+    "astropy/io/votable/tests/tree_test.py::test_check_astroyear_fail",
+    "astropy/io/votable/tests/tree_test.py::test_string_fail"
+  ],
+  "passing_checks": 22
+}
