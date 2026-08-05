@@ -1,0 +1,17 @@
+{
+  "id": "pytest-dev__pytest-5404",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "40c5a9d9f2a37631812395ecf356f5c957f092b9",
+  "topic": "KeyError: '__wrapped__' with from xxx import yyy",
+  "upstream_created_at": "2019-06-05T08:10:48Z",
+  "dataset_row": 1403,
+  "problem_sha256": "8bedc60f594d684b3da8b1daa2760edfc1338328767cb498cfd54e1d1a845f61",
+  "regression_checks": [
+    "testing/test_doctest.py::test_warning_on_unwrap_of_broken_object[None]",
+    "testing/test_doctest.py::test_warning_on_unwrap_of_broken_object[_is_mocked]",
+    "testing/test_doctest.py::test_warning_on_unwrap_of_broken_object[<lambda>0]",
+    "testing/test_doctest.py::test_warning_on_unwrap_of_broken_object[<lambda>1]",
+    "testing/test_doctest.py::test_warning_on_unwrap_of_broken_object[<lambda>2]"
+  ],
+  "passing_checks": 100
+}
