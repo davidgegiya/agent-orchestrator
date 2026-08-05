@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-7277",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "684a1d6aa0a6791e20078bc524f97c8906332390",
+  "topic": "`pylint` removes first item from `sys.path` when running from `runpy`",
+  "upstream_created_at": "2022-08-08T23:07:49Z",
+  "dataset_row": 1361,
+  "problem_sha256": "36965d8edaece500373b4b785c28c3c2e75c49a3616fd8249828fdedfbb89e70",
+  "regression_checks": [
+    "tests/test_self.py::TestRunTC::test_modify_sys_path"
+  ],
+  "passing_checks": 122
+}
