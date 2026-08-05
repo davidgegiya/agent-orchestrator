@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26466",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3dd06a46750d174f821df5377996f493f1af4ebb",
+  "topic": "Updating an array passed as the xy parameter to annotate updates the anottation",
+  "upstream_created_at": "2023-08-07T19:30:22Z",
+  "dataset_row": 1124,
+  "problem_sha256": "ea03366377252156471e43fed75ed55722254115fd829b9882cadfc6f31057db",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_text.py::test_annotate_and_offsetfrom_copy_input[png]"
+  ],
+  "passing_checks": 100
+}
