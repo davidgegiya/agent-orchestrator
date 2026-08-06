@@ -1,0 +1,23 @@
+{
+  "id": "psf__requests-2821",
+  "repository": "psf/requests",
+  "base_commit": "978a89d5a32f6e91acf0812f7f2b29c9f97d6a0c",
+  "topic": "TypeError after 2.7.0 -> 2.8.0 upgrade (cannot make memory view...)",
+  "upstream_created_at": "2015-10-12T09:49:35Z",
+  "dataset_row": 1192,
+  "problem_sha256": "268ad8475f71237d663af64ed68718c0088dd34ff88723ba54081d6420ec64df",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_DIGESTAUTH_WRONG_HTTP_401_GET",
+    "test_requests.py::RequestsTestCase::test_DIGEST_HTTP_200_OK_GET",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_GET_WITH_MIXED_PARAMS",
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_PUT",
+    "test_requests.py::RequestsTestCase::test_cookie_persists_via_api",
+    "test_requests.py::RequestsTestCase::test_custom_content_type",
+    "test_requests.py::RequestsTestCase::test_json_param_post_content_type_works",
+    "test_requests.py::RequestsTestCase::test_unicode_method_name_with_request_object",
+    "test_requests.py::RequestsTestCase::test_unicode_multipart_post",
+    "test_requests.py::RequestsTestCase::test_uppercase_scheme_redirect",
+    "test_requests.py::RequestsTestCase::test_urlencoded_get_query_multivalued_param"
+  ],
+  "passing_checks": 149
+}
