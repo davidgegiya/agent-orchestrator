@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-20565",
+  "repository": "sympy/sympy",
+  "base_commit": "7813fc7f409838fe4c317321fd11c285a98b4ceb",
+  "topic": "Rationals does not contain floats",
+  "upstream_created_at": "2020-12-09T19:42:40Z",
+  "dataset_row": 2214,
+  "problem_sha256": "806557f06339d0a2e0d2ce9a027a7191623bdd116f1ec68839f6f154aca6498c",
+  "regression_checks": [
+    "test_Rationals"
+  ],
+  "passing_checks": 46
+}
