@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26285",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a861b8af82cc4618e0a631e5eac5b4030b3f04a1",
+  "topic": "set_ticks provides mysterious error message",
+  "upstream_created_at": "2023-07-10T21:12:45Z",
+  "dataset_row": 1117,
+  "problem_sha256": "924e4e15fff9fb14b387e7e63798017c22ae7117166f0aca76267a6b4f50c9e9",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_set_ticks_kwargs_raise_error_without_labels"
+  ],
+  "passing_checks": 816
+}
