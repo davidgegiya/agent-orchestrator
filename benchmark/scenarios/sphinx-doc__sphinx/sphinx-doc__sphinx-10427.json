@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-10427",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "f58771c093a1d5c692eecd6fdeddf60959b174bd",
+  "topic": "`autodoc_preserve_defaults` doesn't work on class methods",
+  "upstream_created_at": "2022-05-07T10:54:05Z",
+  "dataset_row": 1734,
+  "problem_sha256": "bd544a3e090b8c3fac2b0940f5f3a95a2384ed4a37b3c843928b7696d57f2822",
+  "regression_checks": [
+    "tests/test_ext_autodoc_preserve_defaults.py::test_preserve_defaults"
+  ],
+  "passing_checks": 0
+}
