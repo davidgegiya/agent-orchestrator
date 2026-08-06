@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9258",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "06107f838c28ab6ca6bfc2cc208e15997fcb2146",
+  "topic": "Please add a support for specifying multiple types acceptable for a parameter/attribute/variable",
+  "upstream_created_at": "2021-05-21T16:56:41Z",
+  "dataset_row": 1874,
+  "problem_sha256": "5ae490ee1a4f0b5b6285b4f7c49715f1dbc86478b6bfb2a0c6d7441514cd4704",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_info_field_list_piped_type"
+  ],
+  "passing_checks": 45
+}
