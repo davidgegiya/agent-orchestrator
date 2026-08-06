@@ -72,3 +72,14 @@ def test_list_can_search_regression_selectors(tmp_path, case, capsys):
     assert capsys.readouterr().out.split("\t", 1)[0] == case.id
     assert benchmark_cli([*args, "--match", "something unrelated"]) == 0
     assert capsys.readouterr().out == ""
+
+
+def test_list_json_can_be_used_by_a_batch_runner(tmp_path, case, capsys):
+    folder = tmp_path / "owner__repo"
+    folder.mkdir()
+    (folder / f"{case.id}.json").write_text(case.model_dump_json())
+    assert benchmark_cli(["--catalog", str(tmp_path), "list", "--json", "--limit", "1"]) == 0
+    rows = json.loads(capsys.readouterr().out)
+    assert len(rows) == 1
+    assert rows[0]["id"] == case.id
+    assert rows[0]["base_commit"] == case.base_commit

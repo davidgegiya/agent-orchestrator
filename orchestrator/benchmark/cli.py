@@ -20,7 +20,9 @@ def main(argv: list[str] | None = None) -> int:
     listing.add_argument("--repo", help="Filter by owner/repository")
     listing.add_argument("--match", help="Search scenario IDs, topics and regression selectors")
     listing.add_argument("--limit", type=int, help="Limit the displayed results")
-    listing.add_argument("--summary", action="store_true", help="Print counts by repository")
+    display = listing.add_mutually_exclusive_group()
+    display.add_argument("--summary", action="store_true", help="Print counts by repository")
+    display.add_argument("--json", action="store_true", help="Emit matching scenarios as a JSON array")
     show = commands.add_parser("show", help="Show scenario provenance and grading metadata")
     show.add_argument("case_id")
     checkout = commands.add_parser("checkout", help="Fetch a scenario's detached Git checkout")
@@ -63,7 +65,9 @@ def main(argv: list[str] | None = None) -> int:
                 ]
             if args.limit is not None:
                 selected = selected[:args.limit]
-            if args.summary:
+            if args.json:
+                print(json.dumps([case.model_dump(mode="json") for case in selected]))
+            elif args.summary:
                 for repository, count in sorted(Counter(case.repository for case in selected).items()):
                     print(f"{repository}\t{count}")
             else:
