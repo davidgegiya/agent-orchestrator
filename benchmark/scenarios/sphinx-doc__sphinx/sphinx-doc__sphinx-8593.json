@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-8593",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "07983a5a8704ad91ae855218ecbda1c8598200ca",
+  "topic": "autodoc: `:meta public:` does not effect to variables",
+  "upstream_created_at": "2020-12-27T02:41:20Z",
+  "dataset_row": 1835,
+  "problem_sha256": "2e9ec4df74449ef22375360a293f8c1a55b7d6770ee2becc0d94d1120546d6f1",
+  "regression_checks": [
+    "tests/test_ext_autodoc_private_members.py::test_private_field",
+    "tests/test_ext_autodoc_private_members.py::test_private_members"
+  ],
+  "passing_checks": 1
+}
