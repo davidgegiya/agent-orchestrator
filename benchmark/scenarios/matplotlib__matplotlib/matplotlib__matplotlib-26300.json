@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26300",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e8bfdcb3c153806ffd5391239c1640d5238bcbe2",
+  "topic": "calling fig.tight_layout multiple times",
+  "upstream_created_at": "2023-07-12T21:58:28Z",
+  "dataset_row": 1119,
+  "problem_sha256": "6ab586b5fae66299746079486a87c95b34ee7e0d92f72a20adb9992548618e38",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_repeated_tightlayout"
+  ],
+  "passing_checks": 138
+}
