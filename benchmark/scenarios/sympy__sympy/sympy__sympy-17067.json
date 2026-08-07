@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17067",
+  "repository": "sympy/sympy",
+  "base_commit": "f20a763da7df4910c77be57a6efa76d3f7b6b7b7",
+  "topic": "Simplify returns incorrect result with trig functions",
+  "upstream_created_at": "2019-06-21T14:39:40Z",
+  "dataset_row": 2112,
+  "problem_sha256": "cd57f900aa7a02262b68aa1a390ce072c2247c960901e132f262535b9dc5031f",
+  "regression_checks": [
+    "test_TRmorrie"
+  ],
+  "passing_checks": 25
+}
