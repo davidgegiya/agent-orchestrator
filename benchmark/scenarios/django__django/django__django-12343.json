@@ -1,0 +1,14 @@
+{
+  "id": "django__django-12343",
+  "repository": "django/django",
+  "base_commit": "855fc06236630464055b4f9ea422c68a07c6d02a",
+  "topic": "Admin: Render foreign key models as links for readonly users",
+  "upstream_created_at": "2020-01-19T19:13:18Z",
+  "dataset_row": 314,
+  "problem_sha256": "a0f8987ad25ef6e4a4b2ed9e7d685e2c2808e899b8e40f8e4e409b6c43beae1a",
+  "regression_checks": [
+    "test_readonly_foreignkey_links (admin_views.tests.ReadonlyTest)",
+    "test_readonly_onetoone_backwards_ref (admin_views.tests.ReadonlyTest)"
+  ],
+  "passing_checks": 296
+}
