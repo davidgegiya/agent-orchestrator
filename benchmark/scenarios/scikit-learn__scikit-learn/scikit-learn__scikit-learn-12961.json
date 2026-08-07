@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-12961",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "d300f406aeeac439b4212558f208ce5a9613a1d5",
+  "topic": "model_selection._search._format_results ValueError not enough values to unpack (expected 5, got 0)",
+  "upstream_created_at": "2019-01-12T01:12:23Z",
+  "dataset_row": 1569,
+  "problem_sha256": "26bb54765514a1545b9134b037ac975e1d0a38e1876788940ff0adbe26c192f4",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_search.py::test_empty_cv_iterator_error",
+    "sklearn/model_selection/tests/test_search.py::test_random_search_bad_cv"
+  ],
+  "passing_checks": 57
+}
