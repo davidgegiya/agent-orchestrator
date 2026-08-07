@@ -1,0 +1,21 @@
+{
+  "id": "matplotlib__matplotlib-23198",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3407cbc42f0e70595813e2b1816d432591558921",
+  "topic": "Inconsistency in keyword-arguments ncol/ncols, nrow/nrows",
+  "upstream_created_at": "2022-06-03T22:30:50Z",
+  "dataset_row": 1010,
+  "problem_sha256": "e16d226195336ae7f7ba5d59788306da56d28a40487f1d9986b31ff1ee11478d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_hist_stacked_bar[png]",
+    "lib/matplotlib/tests/test_axes.py::test_hist_stacked_bar[pdf]",
+    "lib/matplotlib/tests/test_legend.py::test_fancy[png]",
+    "lib/matplotlib/tests/test_legend.py::test_fancy[pdf]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_expand[png]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_expand[pdf]",
+    "lib/matplotlib/tests/test_legend.py::test_ncol_ncols[png]",
+    "lib/matplotlib/tests/test_legend.py::test_ncol_ncols[pdf]",
+    "lib/matplotlib/tests/test_offsetbox.py::test_expand_with_tight_layout"
+  ],
+  "passing_checks": 1091
+}
