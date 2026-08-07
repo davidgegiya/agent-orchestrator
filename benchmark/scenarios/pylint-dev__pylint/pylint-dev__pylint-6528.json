@@ -1,0 +1,16 @@
+{
+  "id": "pylint-dev__pylint-6528",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "273a8b25620467c1e5686aa8d2a1dbb8c02c78d0",
+  "topic": "Pylint does not respect ignores in `--recursive=y` mode",
+  "upstream_created_at": "2022-05-06T21:03:37Z",
+  "dataset_row": 1352,
+  "problem_sha256": "7d86e3c0ff65d2d63884bb5380820ebd72c47224d35eb06ad2b7eb8aa719e64b",
+  "regression_checks": [
+    "tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-ignored_subdirectory]",
+    "tests/lint/unittest_lint.py::test_recursive_ignore[--ignore-patterns-ignored_*]",
+    "tests/test_self.py::TestRunTC::test_ignore_recursive",
+    "tests/test_self.py::TestRunTC::test_ignore_pattern_recursive"
+  ],
+  "passing_checks": 171
+}
