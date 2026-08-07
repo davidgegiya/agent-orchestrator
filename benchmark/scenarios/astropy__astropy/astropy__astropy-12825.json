@@ -1,0 +1,17 @@
+{
+  "id": "astropy__astropy-12825",
+  "repository": "astropy/astropy",
+  "base_commit": "43ee5806e9c6f7d58c12c1cb9287b3c61abe489d",
+  "topic": "SkyCoord in Table breaks aggregate on group_by",
+  "upstream_created_at": "2022-02-05T12:13:44Z",
+  "dataset_row": 4,
+  "problem_sha256": "e660ca99e0bab42ad56108ff64d0c8eda9572117e3ea4b955a373dc669055788",
+  "regression_checks": [
+    "astropy/table/tests/test_groups.py::test_table_aggregate[False]",
+    "astropy/table/tests/test_groups.py::test_table_aggregate[True]",
+    "astropy/table/tests/test_groups.py::test_group_mixins_unsupported[col0]",
+    "astropy/table/tests/test_groups.py::test_group_mixins_unsupported[col1]",
+    "astropy/table/tests/test_groups.py::test_group_mixins_unsupported[col2]"
+  ],
+  "passing_checks": 36
+}
