@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11034",
+  "repository": "django/django",
+  "base_commit": "25e724a5d6e331d2d73050d6dcdf2e8593c3aebf",
+  "topic": "Disabled field in admin use hard coded label_suffix",
+  "upstream_created_at": "2019-02-27T17:02:10Z",
+  "dataset_row": 127,
+  "problem_sha256": "7c0538e762748055c27384b3aaf83b0c3f8c0ffb275e9a62760e56f4fc97334c",
+  "regression_checks": [
+    "test_label_suffix_translated (admin_views.tests.ReadonlyTest)"
+  ],
+  "passing_checks": 285
+}
