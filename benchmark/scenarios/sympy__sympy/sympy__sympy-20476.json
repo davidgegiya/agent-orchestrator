@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-20476",
+  "repository": "sympy/sympy",
+  "base_commit": "dbd720ac7d0070f005e66002314b5edce77b6bba",
+  "topic": "simplify() returns wrong result when applied to a certain trigonometric expression",
+  "upstream_created_at": "2020-11-23T06:24:43Z",
+  "dataset_row": 2213,
+  "problem_sha256": "31df2651fc76baac79227c4f803861b161ca0bc8037a2571d971a1ca2ea68f22",
+  "regression_checks": [
+    "test_TRmorrie"
+  ],
+  "passing_checks": 26
+}
