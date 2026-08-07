@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13647",
+  "repository": "sympy/sympy",
+  "base_commit": "67e3c956083d0128a621f65ee86a7dacd4f9f19f",
+  "topic": "Matrix.col_insert() no longer seems to work correctly",
+  "upstream_created_at": "2017-11-28T21:22:51Z",
+  "dataset_row": 1986,
+  "problem_sha256": "a7fc5e7d2f1edf018ce363831bccca7ddc3876d3cea95b12e8658dc2c8b428fc",
+  "regression_checks": [
+    "test_col_insert"
+  ],
+  "passing_checks": 76
+}
