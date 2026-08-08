@@ -1,0 +1,17 @@
+{
+  "id": "django__django-16759",
+  "repository": "django/django",
+  "base_commit": "57f2b935b34d148c3c0d906fc8256765004b7b77",
+  "topic": "lookup_allowed fails to consider dynamic list_filter",
+  "upstream_created_at": "2023-04-13T09:48:56Z",
+  "dataset_row": 895,
+  "problem_sha256": "90314060032c12e04b653fe3829c4b894c09a990579247cd0cbef82489571fd2",
+  "regression_checks": [
+    "A lookup_allowed allows a parameter whose field lookup doesn't exist.",
+    "test_lookup_allowed_considers_dynamic_list_filter (modeladmin.tests.ModelAdminTests.test_lookup_allowed_considers_dynamic_list_filter)",
+    "test_lookup_allowed_foreign_primary (modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary)",
+    "test_lookup_allowed_onetoone (modeladmin.tests.ModelAdminTests.test_lookup_allowed_onetoone)",
+    "test_lookup_allowed_without_request_deprecation (modeladmin.tests.ModelAdminTests.test_lookup_allowed_without_request_deprecation)"
+  ],
+  "passing_checks": 34
+}
