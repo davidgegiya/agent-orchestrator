@@ -1,0 +1,19 @@
+{
+  "id": "sympy__sympy-11862",
+  "repository": "sympy/sympy",
+  "base_commit": "0410a6aaf4fdd346b12305cca6a7b0c1aa6556fa",
+  "topic": "lambdify precision loss with module=mpmath from high-precision Floats",
+  "upstream_created_at": "2016-11-16T20:49:37Z",
+  "dataset_row": 1920,
+  "problem_sha256": "f5be184d509a4483fe94652bd3c17cd6719d28a03d9277d4b42910d7fabeeed9",
+  "regression_checks": [
+    "test_Float",
+    "test_float_mpf",
+    "test_sympy_lambda",
+    "test_math_lambda",
+    "test_mpmath_lambda",
+    "test_number_precision",
+    "test_mpmath_precision"
+  ],
+  "passing_checks": 103
+}
