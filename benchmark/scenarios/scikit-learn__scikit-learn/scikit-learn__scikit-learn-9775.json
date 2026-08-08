@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-9775",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "5815bd58667da900814d8780d2a5ebfb976c08b1",
+  "topic": "sklearn.manifold.t_sne.trustworthiness should allow custom metric",
+  "upstream_created_at": "2017-09-15T08:31:41Z",
+  "dataset_row": 1719,
+  "problem_sha256": "050b973170c357b22d7a3c55b806747d58e9a6ddfc1734ea7e0c45118e5bdde5",
+  "regression_checks": [
+    "sklearn/manifold/tests/test_t_sne.py::test_preserve_trustworthiness_approximately_with_precomputed_distances",
+    "sklearn/manifold/tests/test_t_sne.py::test_trustworthiness_precomputed_deprecation",
+    "sklearn/manifold/tests/test_t_sne.py::test_trustworthiness_not_euclidean_metric"
+  ],
+  "passing_checks": 39
+}
