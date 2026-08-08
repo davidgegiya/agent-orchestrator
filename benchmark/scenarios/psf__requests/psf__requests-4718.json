@@ -1,0 +1,16 @@
+{
+  "id": "psf__requests-4718",
+  "repository": "psf/requests",
+  "base_commit": "dd754d13de250a6af8a68a6a83a8b4419fd429c6",
+  "topic": "Should Authorization header be cleared in https -> http redirect?",
+  "upstream_created_at": "2018-06-28T14:48:34Z",
+  "dataset_row": 1200,
+  "problem_sha256": "ae2c654666267f41ff45f00a6fe0800b9da899441c33c60b779e8d3ea0aa3795",
+  "regression_checks": [
+    "tests/test_requests.py::TestRequests::test_should_strip_auth_host_change",
+    "tests/test_requests.py::TestRequests::test_should_strip_auth_http_downgrade",
+    "tests/test_requests.py::TestRequests::test_should_strip_auth_https_upgrade",
+    "tests/test_requests.py::TestRequests::test_should_strip_auth_port_change"
+  ],
+  "passing_checks": 121
+}
