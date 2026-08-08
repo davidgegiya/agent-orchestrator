@@ -1,0 +1,14 @@
+{
+  "id": "django__django-16910",
+  "repository": "django/django",
+  "base_commit": "4142739af1cda53581af4169dbe16d6cd5e26948",
+  "topic": "QuerySet.only() doesn't work with select_related() on a reverse OneToOneField relation",
+  "upstream_created_at": "2023-05-31T22:28:10Z",
+  "dataset_row": 916,
+  "problem_sha256": "af0c8123517259e1baf5c3d6bda7c556e4b71dec20b54f0c7f16400ec516aed6",
+  "regression_checks": [
+    "test_inheritance_deferred2 (select_related_onetoone.tests.ReverseSelectRelatedTestCase.test_inheritance_deferred2)",
+    "test_reverse_one_to_one_relations (defer_regress.tests.DeferRegressionTest.test_reverse_one_to_one_relations)"
+  ],
+  "passing_checks": 36
+}
