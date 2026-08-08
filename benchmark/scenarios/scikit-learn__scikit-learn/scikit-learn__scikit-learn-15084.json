@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-15084",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "5e4b2757d61563889672e395d9e92d9372d357f6",
+  "topic": "VotingClassifier and roc_auc TypeError: Cannot cast array data from dtype('float64') to dtype('int64') according to the rule 'safe' and",
+  "upstream_created_at": "2019-09-24T17:25:41Z",
+  "dataset_row": 1662,
+  "problem_sha256": "e43f99cd4e71e280810773643a006c19c471216e67a8a03a7cfdfee5cf6b77c9",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_voting.py::test_estimator_init",
+    "sklearn/ensemble/tests/test_voting.py::test_set_estimator_none[None]",
+    "sklearn/ensemble/tests/test_voting.py::test_set_estimator_none[drop]"
+  ],
+  "passing_checks": 22
+}
