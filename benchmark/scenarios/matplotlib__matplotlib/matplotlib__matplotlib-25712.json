@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25712",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "690884facc1e80b40640649f2a64ceab67afb42e",
+  "topic": "fill_between{x} does not respect Axes transform",
+  "upstream_created_at": "2023-04-18T01:04:17Z",
+  "dataset_row": 1093,
+  "problem_sha256": "ac797919048fcabd946d15a236131f4196fb73efad861bcd7292c2e9e77ed8a5",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_fill_between_axes_limits"
+  ],
+  "passing_checks": 802
+}
