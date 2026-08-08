@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-25281",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5aee26d0a52c237c5b4fafcb843e392907ab45b3",
+  "topic": "Validation not performed for `loc` argument to `legend`",
+  "upstream_created_at": "2023-02-22T05:06:30Z",
+  "dataset_row": 1068,
+  "problem_sha256": "75c3a4bcdf8e1d6dacd374b93aa41c2e8732ccda58981206f1dbdf57c411b171",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_loc_invalid_tuple_exception",
+    "lib/matplotlib/tests/test_legend.py::test_loc_invalid_list_exception",
+    "lib/matplotlib/tests/test_legend.py::test_loc_invalid_type",
+    "lib/matplotlib/tests/test_legend.py::test_loc_validation_numeric_value"
+  ],
+  "passing_checks": 120
+}
