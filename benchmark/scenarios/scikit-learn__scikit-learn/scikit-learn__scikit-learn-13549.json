@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-13549",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "66cc1c7342f7f0cc0dc57fb6d56053fc46c8e5f0",
+  "topic": "I have some data `X` and `y` that I want to subsample (i.e. only keep a subset of",
+  "upstream_created_at": "2019-03-31T16:22:16Z",
+  "dataset_row": 1607,
+  "problem_sha256": "a787abf3b88312533b9358eb229d298e518e04e50b70b5c051b3d09da7c86779",
+  "regression_checks": [
+    "sklearn/utils/tests/test_utils.py::test_resample_stratified",
+    "sklearn/utils/tests/test_utils.py::test_resample_stratified_replace",
+    "sklearn/utils/tests/test_utils.py::test_resample_stratify_2dy",
+    "sklearn/utils/tests/test_utils.py::test_resample_stratify_sparse_error"
+  ],
+  "passing_checks": 46
+}
