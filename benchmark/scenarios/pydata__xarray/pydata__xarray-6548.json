@@ -1,0 +1,22 @@
+{
+  "id": "pydata__xarray-6548",
+  "repository": "pydata/xarray",
+  "base_commit": "126051f2bf2ddb7926a7da11b047b852d5ca6b87",
+  "topic": "xr.polyval first arg requires name attribute",
+  "upstream_created_at": "2022-04-30T14:50:53Z",
+  "dataset_row": 1281,
+  "problem_sha256": "3d89e36d3e0bb43651fcef93f9279ea7870956d363cedaf240a28b1faa9491a8",
+  "regression_checks": [
+    "xarray/tests/test_computation.py::test_polyval[simple-False]",
+    "xarray/tests/test_computation.py::test_polyval[broadcast-x-False]",
+    "xarray/tests/test_computation.py::test_polyval[shared-dim-False]",
+    "xarray/tests/test_computation.py::test_polyval[reordered-index-False]",
+    "xarray/tests/test_computation.py::test_polyval[sparse-index-False]",
+    "xarray/tests/test_computation.py::test_polyval[array-dataset-False]",
+    "xarray/tests/test_computation.py::test_polyval[dataset-array-False]",
+    "xarray/tests/test_computation.py::test_polyval[dataset-dataset-False]",
+    "xarray/tests/test_computation.py::test_polyval[datetime-False]",
+    "xarray/tests/test_computation.py::test_polyval_degree_dim_checks"
+  ],
+  "passing_checks": 253
+}
