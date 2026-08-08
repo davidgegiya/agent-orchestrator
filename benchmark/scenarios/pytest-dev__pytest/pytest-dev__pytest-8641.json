@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8641",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "634312b14a45db8d60d72016e01294284e3a18d4",
+  "topic": "No color output when specifying log format string with precision-formatted levelname",
+  "upstream_created_at": "2021-05-06T19:22:55Z",
+  "dataset_row": 1471,
+  "problem_sha256": "5c037e73707ee8e43514c392a1596e8ef3a7e12a6f35d7b0f8eb066261ebfb45",
+  "regression_checks": [
+    "testing/logging/test_formatter.py::test_coloredlogformatter_with_width_precision"
+  ],
+  "passing_checks": 3
+}
