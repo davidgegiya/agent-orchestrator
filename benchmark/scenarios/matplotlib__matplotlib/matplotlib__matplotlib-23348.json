@@ -1,0 +1,15 @@
+{
+  "id": "matplotlib__matplotlib-23348",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5f53d997187e883f7fd7b6e0378e900e2384bbf1",
+  "topic": "MultiCursor should be able to bind to axes in more than one figure",
+  "upstream_created_at": "2022-06-25T22:45:58Z",
+  "dataset_row": 1018,
+  "problem_sha256": "e9d707dc61e63acdef46ab3b095b81118268e6b6a1633a664e0f3fa43ec2c5a4",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-True]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-False]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[False-True]"
+  ],
+  "passing_checks": 95
+}
