@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20816",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "586fcffaae03e40f851c5bc854de290b89bae18e",
+  "topic": "Add ability to disable callbacks temporarily",
+  "upstream_created_at": "2021-08-10T03:57:25Z",
+  "dataset_row": 972,
+  "problem_sha256": "a7fe40fb988ccd1a2787694cb7a6d0013d98a3c5f13312c832bf1c5a4820f10d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_cbook.py::test_callbackregistry_blocking"
+  ],
+  "passing_checks": 38
+}
