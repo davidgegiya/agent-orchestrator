@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-6903",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "ca80f03a43bc39e4cc2c67dc99817b3c9f13b8a6",
+  "topic": "Running pylint in Kubernetes Pod with --jobs=0 fails",
+  "upstream_created_at": "2022-06-09T19:43:36Z",
+  "dataset_row": 1355,
+  "problem_sha256": "e1f1430c571aa167241f96d8c61e860328769941e1c94ea022b7992646d76ef6",
+  "regression_checks": [
+    "tests/test_pylint_runners.py::test_pylint_run_jobs_equal_zero_dont_crash_with_cpu_fraction"
+  ],
+  "passing_checks": 8
+}
