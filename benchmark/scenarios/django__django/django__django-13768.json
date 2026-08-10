@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13768",
+  "repository": "django/django",
+  "base_commit": "965d2d95c630939b53eb60d9c169f5dfc77ee0c6",
+  "topic": "Log exceptions handled in Signal.send_robust()",
+  "upstream_created_at": "2020-12-12T07:34:48Z",
+  "dataset_row": 512,
+  "problem_sha256": "8e4aaeafbe5f20be8668b99cf53f8e280d2da5151ade20d48d180766a93cca59",
+  "regression_checks": [
+    "test_send_robust_fail (dispatch.tests.DispatcherTests)"
+  ],
+  "passing_checks": 18
+}
