@@ -1,0 +1,15 @@
+{
+  "id": "psf__requests-2393",
+  "repository": "psf/requests",
+  "base_commit": "d2d576b6b1101e2871c82f63adf2c2b534c2dabc",
+  "topic": "Requests unable to follow/retrieve links with percent in url",
+  "upstream_created_at": "2014-12-27T02:06:03Z",
+  "dataset_row": 1185,
+  "problem_sha256": "d6517dca4380d4bb327f4e8d67a6b4a0192a639b3dae1f065bbb96bb66de84cf",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_cookie_removed_on_expire",
+    "test_requests.py::RequestsTestCase::test_mixed_case_scheme_acceptable",
+    "test_requests.py::UtilsTestCase::test_requote_uri_with_unquoted_percents"
+  ],
+  "passing_checks": 131
+}
