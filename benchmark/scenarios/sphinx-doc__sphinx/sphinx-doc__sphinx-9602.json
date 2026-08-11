@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9602",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "6c38f68dae221e8cfc70c137974b8b88bd3baaab",
+  "topic": "Nitpick flags Literal annotation values as missing py:class",
+  "upstream_created_at": "2021-09-01T17:26:58Z",
+  "dataset_row": 1890,
+  "problem_sha256": "595b46d8b591c13e4d9b1a5b5feb789d0ecf5544659aea69c0570b1103d464af",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_parse_annotation_Literal"
+  ],
+  "passing_checks": 45
+}
