@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-12626",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "ac327c5ad66fa3d4eb607d007e3684dec872d49a",
+  "topic": "make_column_transformer has different order of arguments than ColumnTransformer",
+  "upstream_created_at": "2018-11-20T16:19:19Z",
+  "dataset_row": 1556,
+  "problem_sha256": "252a6e0f64d628c6b64aed54c8724e487e78ec4c2a2b9493bc38d9e2d390f96e",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_mixed_cols_sparse",
+    "sklearn/compose/tests/test_column_transformer.py::test_make_column_transformer"
+  ],
+  "passing_checks": 49
+}
