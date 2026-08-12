@@ -7,6 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict
 
+from .checkpoint import ReviewCheckpoint
 from .policies import ARTIFACTS_FILENAME, IMPLEMENTER_FILENAME, PLAN_FILENAME, REVIEWER_FILENAME, TECH_WRITER_FILENAME
 from .utils import ensure_dir
 
@@ -48,17 +49,30 @@ class RunReport:
         self.tech_writer_path.write_text(content.strip() + "\n", encoding="utf-8")
 
     def write_artifacts(self, data: Dict[str, Any]) -> None:
-        temp_path = None
-        try:
-            with NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.run_dir, delete=False) as handle:
-                temp_path = Path(handle.name)
-                json.dump(data, handle, indent=2, sort_keys=True)
-                handle.write("\n")
-            temp_path.replace(self.artifacts_path)
-        finally:
-            if temp_path is not None:
-                temp_path.unlink(missing_ok=True)
+        _write_json(self.artifacts_path, data)
 
+    @property
+    def checkpoint_path(self) -> Path:
+        return self.run_dir / "review-checkpoint.json"
+
+    def write_checkpoint(self, checkpoint: ReviewCheckpoint) -> None:
+        _write_json(self.checkpoint_path, checkpoint.model_dump(mode="json"))
+
+    def read_checkpoint(self) -> ReviewCheckpoint:
+        return ReviewCheckpoint.model_validate_json(self.checkpoint_path.read_bytes())
+
+
+def _write_json(path: Path, data: Dict[str, Any]) -> None:
+    temp_path = None
+    try:
+        with NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent, delete=False) as handle:
+            temp_path = Path(handle.name)
+            json.dump(data, handle, indent=2, sort_keys=True)
+            handle.write("\n")
+        temp_path.replace(path)
+    finally:
+        if temp_path is not None:
+            temp_path.unlink(missing_ok=True)
 
 def create_run_dir(reports_root: Path) -> Path:
     ensure_dir(reports_root)

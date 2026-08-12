@@ -9,7 +9,6 @@ import sys
 import time
 import traceback
 from datetime import datetime
-from hashlib import sha256
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -21,6 +20,7 @@ except ImportError:  # pragma: no cover - optional for local dev
     def load_dotenv(*_args, **_kwargs) -> bool:
         return False
 
+from .checkpoint import ReviewCheckpoint, digest_text, run_inputs_digest
 from .codex_runner import run_codex
 from .models import RunContext
 from .workspace import _cmd_meta, _compute_workspace_diff, _run_local_cmd
@@ -504,6 +504,7 @@ def _run_workflow(
 
     planner = build_planner_agent()
     planner_input = _build_planner_input(task_text, backlog, vision, architecture, conventions)
+    inputs_sha256 = run_inputs_digest(planner_input, checks, args.implementer)
     plan_text, plan_error, plan_meta = _safe_run(
         planner,
         planner_input,
@@ -580,6 +581,11 @@ def _run_workflow(
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP ({artifacts['error']})")
             return 1
+        report.write_checkpoint(ReviewCheckpoint(
+            workspace=workspace, base_sha=base_sha, patch_sha256=digest_text(before_checks),
+            inputs_sha256=inputs_sha256, round_number=round_idx,
+            plan=plan_text, implementer_report=implementer_report,
+        ))
         check_env = {key: value for key, value in os.environ.items() if key != "OPENAI_API_KEY"}
         check_results = [
             _run_local_cmd(command, cwd=workspace, timeout_seconds=args.check_timeout, env=check_env)
@@ -601,7 +607,7 @@ def _run_workflow(
         diff_path.write_text(diff_text, encoding="utf-8")
         round_record["diff"] = {
             "path": str(diff_path),
-            "sha256": sha256(diff_text.encode("utf-8")).hexdigest(),
+            "sha256": digest_text(diff_text),
             "max_chars": diff_max_chars,
             "included": reviewer_diff.strip() != "- None",
             "meta": diff_meta,
