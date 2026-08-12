@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21271",
+  "repository": "sympy/sympy",
+  "base_commit": "72fa16acc88deae0f7c7a8c2e263eb7b912b97e0",
+  "topic": "Doctest failure in sympy/physics/vector/frame.py",
+  "upstream_created_at": "2021-04-09T07:15:12Z",
+  "dataset_row": 2227,
+  "problem_sha256": "4e124c034fd819e8403f9be2e4a792a47c446ddbc8b2e1203998554cae303143",
+  "regression_checks": [
+    "test_frame_dict"
+  ],
+  "passing_checks": 22
+}
