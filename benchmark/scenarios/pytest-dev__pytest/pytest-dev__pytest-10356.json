@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-10356",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "3c1534944cbd34e8a41bc9e76818018fadefc9a1",
+  "topic": "Consider MRO when obtaining marks for classes",
+  "upstream_created_at": "2022-10-08T06:20:42Z",
+  "dataset_row": 1377,
+  "problem_sha256": "c294ca3f3eb448da1e4fb4f59f279df060b72f26c3f96fe77175d903d4e7e1d8",
+  "regression_checks": [
+    "testing/test_mark.py::test_mark_mro"
+  ],
+  "passing_checks": 79
+}
