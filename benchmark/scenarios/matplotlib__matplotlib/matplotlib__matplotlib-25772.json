@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25772",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "558f111d6f112fde91431be9f222e9359d4291ae",
+  "topic": "VSCode matplotlib interactive mode cannot import Qt bindings",
+  "upstream_created_at": "2023-04-26T16:12:12Z",
+  "dataset_row": 1095,
+  "problem_sha256": "4359d5c087c861f1a9855591b2c162fe9510dd90621a61c34ba56e4495cc7b10",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backends_interactive.py::test_qt_missing"
+  ],
+  "passing_checks": 1
+}
