@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-15094",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "871b25162339c60557e5bf1754ea553ec33adf52",
+  "topic": "MaxAbsScaler Upcasts Pandas to float64",
+  "upstream_created_at": "2019-09-25T22:03:47Z",
+  "dataset_row": 1664,
+  "problem_sha256": "d3b07f0f2f0b75530092aa8fe4d395c30a97208ac61e7063d5a06928e252f09a",
+  "regression_checks": [
+    "sklearn/utils/tests/test_validation.py::test_check_array_pandas_dtype_casting"
+  ],
+  "passing_checks": 84
+}
