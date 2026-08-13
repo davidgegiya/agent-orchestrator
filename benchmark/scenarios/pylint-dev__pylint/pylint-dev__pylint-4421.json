@@ -1,0 +1,23 @@
+{
+  "id": "pylint-dev__pylint-4421",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "24b5159e00b8a380c1776dab6ce096df7bad79b1",
+  "topic": "Pylint 2.8.2 broke pylint-quotes",
+  "upstream_created_at": "2021-04-28T20:10:47Z",
+  "dataset_row": 1320,
+  "problem_sha256": "9fd2e939b954cdc77eb942e8d426a581eae90facd128d04f5ba501fb630a44f8",
+  "regression_checks": [
+    "tests/test_numversion.py::test_numversion[2.8.1-expected_numversion0]",
+    "tests/test_numversion.py::test_numversion[2.8.2+-expected_numversion1]",
+    "tests/test_numversion.py::test_numversion[3.0.0a0-expected_numversion2]",
+    "tests/test_numversion.py::test_numversion[3..0-expected_numversion3]",
+    "tests/test_numversion.py::test_numversion[1.a-expected_numversion4]",
+    "tests/test_numversion.py::test_numversion[-expected_numversion5]",
+    "tests/test_numversion.py::test_numversion[3.0.0b1-expected_numversion6]",
+    "tests/test_numversion.py::test_numversion[3.0.0rc1-expected_numversion7]",
+    "tests/test_numversion.py::test_numversion[3.0.0dev-234324234234f23abc4-expected_numversion8]",
+    "tests/test_numversion.py::test_numversion[pylint-2.4.7-expected_numversion9]",
+    "tests/test_numversion.py::test_numversion[2.8.3.dev3+g28c093c2.d20210428-expected_numversion10]"
+  ],
+  "passing_checks": 0
+}
