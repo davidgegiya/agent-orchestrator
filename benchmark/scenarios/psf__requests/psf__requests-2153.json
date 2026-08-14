@@ -1,0 +1,20 @@
+{
+  "id": "psf__requests-2153",
+  "repository": "psf/requests",
+  "base_commit": "3eb69be879063de4803f7f0152b83738a1c95ca4",
+  "topic": "Uncaught socket.timeout during post",
+  "upstream_created_at": "2014-07-30T03:32:34Z",
+  "dataset_row": 1182,
+  "problem_sha256": "30acdd228a146c66f9b849b5a6481f48dfef95c4750e0d3f2c289ca3c67a3440",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_HTTP_200_OK_HEAD",
+    "test_requests.py::RequestsTestCase::test_cookie_sent_on_redirect",
+    "test_requests.py::RequestsTestCase::test_different_encodings_dont_break_post",
+    "test_requests.py::RequestsTestCase::test_manual_redirect_with_partial_body_read",
+    "test_requests.py::RequestsTestCase::test_prepared_from_session",
+    "test_requests.py::RequestsTestCase::test_request_cookie_overrides_session_cookie",
+    "test_requests.py::RequestsTestCase::test_set_cookie_on_301",
+    "test_requests.py::RequestsTestCase::test_unicode_multipart_post"
+  ],
+  "passing_checks": 117
+}
