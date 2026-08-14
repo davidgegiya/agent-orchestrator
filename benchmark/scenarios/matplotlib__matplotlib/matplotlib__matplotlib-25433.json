@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25433",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7eafdd8af3c523c1c77b027d378fb337dd489f18",
+  "topic": "using clf and pyplot.draw in range slider on_changed callback blocks input to widgets",
+  "upstream_created_at": "2023-03-11T08:36:32Z",
+  "dataset_row": 1079,
+  "problem_sha256": "24436ac63cb7d17f518f974a13e8bc6d25f001322d10455e0a52d73952ed5b87",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_bases.py::test_grab_clear"
+  ],
+  "passing_checks": 55
+}
