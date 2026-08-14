@@ -1,0 +1,20 @@
+{
+  "id": "astropy__astropy-13404",
+  "repository": "astropy/astropy",
+  "base_commit": "16743c6faf5cb8433bf9f7702ae70d002a96caaf",
+  "topic": "Masked ``_array2string`` doesn't work on some structured arrays",
+  "upstream_created_at": "2022-06-27T21:58:57Z",
+  "dataset_row": 23,
+  "problem_sha256": "a3fab46ab4f1e3c46fe6c7feaa89cccf8b525121798c4e192b9216bf1438e9b7",
+  "regression_checks": [
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedArrayRepr::test_array_str",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedArrayRepr::test_scalar_str",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedArrayRepr::test_array_repr",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedArrayRepr::test_scalar_repr",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedQuantityRepr::test_array_str",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedQuantityRepr::test_scalar_str",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedQuantityRepr::test_array_repr",
+    "astropy/utils/masked/tests/test_masked.py::TestMaskedQuantityRepr::test_scalar_repr"
+  ],
+  "passing_checks": 558
+}
