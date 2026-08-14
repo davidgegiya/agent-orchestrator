@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-7760",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "074a5216f8e35288045455ccda37f87a19d4cbde",
+  "topic": "Stronger common tests for setting init params? / check_estimator",
+  "upstream_created_at": "2016-10-26T16:03:36Z",
+  "dataset_row": 1714,
+  "problem_sha256": "25ba44b46301867d3d2ea02852e707038bdd39a9f1608b379a049dcfe40a89b0",
+  "regression_checks": [
+    "sklearn/utils/tests/test_estimator_checks.py::test_check_estimator"
+  ],
+  "passing_checks": 6
+}
