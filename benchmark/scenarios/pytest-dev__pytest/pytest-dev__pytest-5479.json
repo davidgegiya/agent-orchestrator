@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5479",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "2301fa61dee4e3724efdfd8cbf3a93af143aef4c",
+  "topic": "cannot make unicode match assertions with pytest.raises python2 pytest",
+  "upstream_created_at": "2019-06-24T10:23:23Z",
+  "dataset_row": 1405,
+  "problem_sha256": "3f8f4c436f97936de7b19b1a32a8188b96423ea4586d9ed90487cd7f54c68fdc",
+  "regression_checks": [
+    "testing/python/raises.py::TestRaises::test_raises_match"
+  ],
+  "passing_checks": 23
+}
