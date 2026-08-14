@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17176",
+  "repository": "sympy/sympy",
+  "base_commit": "2c18fec3897f9f66cd4b232318f21d3c4e9ed6f6",
+  "topic": "xor3 bool_map equivalent to xnr3",
+  "upstream_created_at": "2019-07-12T13:27:35Z",
+  "dataset_row": 2118,
+  "problem_sha256": "bc7c31a74381a747c7318ca9f3970d14c24c7b26ff23e30888912d887a62b300",
+  "regression_checks": [
+    "test_bool_map"
+  ],
+  "passing_checks": 55
+}
