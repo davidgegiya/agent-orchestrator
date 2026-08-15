@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21481",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d448de31b7deaec8310caaf8bba787e097bf9211",
+  "topic": "Subfigure breaks for some `Gridspec` slices when using `constrained_layout`",
+  "upstream_created_at": "2021-10-28T08:05:46Z",
+  "dataset_row": 979,
+  "problem_sha256": "5979b2512d16c24bb1480382a67600543bbee6e72c3fe94201f1fafcebf41c54",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_subfigure_spanning"
+  ],
+  "passing_checks": 130
+}
