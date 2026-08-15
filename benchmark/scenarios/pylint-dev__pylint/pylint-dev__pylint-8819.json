@@ -1,0 +1,15 @@
+{
+  "id": "pylint-dev__pylint-8819",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "dc1f5f6cbb1e649feab8ae53ed8be88845afeaf1",
+  "topic": "enable/disable options in rcfile should not depend on the order with which they are specified",
+  "upstream_created_at": "2023-07-04T00:34:21Z",
+  "dataset_row": 1370,
+  "problem_sha256": "53062d0592ee18fbe49f5e1d7e91d249881486d1404c4806d34d625b1f727481",
+  "regression_checks": [
+    "tests/config/test_config.py::test_enable_all_disable_all_mutually_exclusive",
+    "tests/config/test_config.py::test_disable_before_enable_all_takes_effect",
+    "tests/config/test_config.py::test_enable_before_disable_all_takes_effect"
+  ],
+  "passing_checks": 179
+}
