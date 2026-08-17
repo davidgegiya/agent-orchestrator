@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24924",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5a87d37835693ccc6579938d4948cf91a974a23b",
+  "topic": "As of #20426 calling `Figure.set_tight_layout(False)` does not disable the tight layout algorithm",
+  "upstream_created_at": "2023-01-10T07:28:52Z",
+  "dataset_row": 1057,
+  "problem_sha256": "1707f290771f7262048e1a76cfe9f16daa9149f8ef893a6b72065b8a902d8a8f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_constrainedlayout.py::test_constrained_toggle",
+    "lib/matplotlib/tests/test_tightlayout.py::test_tight_toggle"
+  ],
+  "passing_checks": 77
+}
