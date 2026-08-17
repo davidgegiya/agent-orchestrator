@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25973",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "10dbc142bd17ccf7bd38eec2ac04b52ce0d1009e",
+  "topic": "Unable to pass splits to SequentialFeatureSelector",
+  "upstream_created_at": "2023-03-25T13:27:07Z",
+  "dataset_row": 1704,
+  "problem_sha256": "89473ed3983166bb40109fd3fb8da166040264a2062239b0410f48f1b30ba8d2",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_sequential.py::test_cv_generator_support"
+  ],
+  "passing_checks": 72
+}
