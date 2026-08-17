@@ -1,0 +1,13 @@
+{
+  "id": "psf__requests-1635",
+  "repository": "psf/requests",
+  "base_commit": "9968a10fcfad7268b552808c4f8946eecafc956a",
+  "topic": "Cookies not persisted when set via functional API",
+  "upstream_created_at": "2013-09-28T14:50:12Z",
+  "dataset_row": 1167,
+  "problem_sha256": "807cbda936edb3c7584f468a3dac59838f97357ada9d4f9b50b38a5de1fd88c9",
+  "regression_checks": [
+    "test_requests.py::RequestsTestCase::test_cookie_persists_via_api"
+  ],
+  "passing_checks": 81
+}
