@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-15222",
+  "repository": "sympy/sympy",
+  "base_commit": "678217d5cc4973e2471c20e4396bf39e52d93eb1",
+  "topic": "Subs(x + y, (a,), (4,)) <---|",
+  "upstream_created_at": "2018-09-12T15:15:56Z",
+  "dataset_row": 2041,
+  "problem_sha256": "8221408e31805108cbd25494bf4f1cbd99f98c715be239af0fc03c18c12c72b6",
+  "regression_checks": [
+    "test_Subs",
+    "test_recurse_Application_args"
+  ],
+  "passing_checks": 118
+}
