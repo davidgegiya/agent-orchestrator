@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7268",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "a73617c51b9e29d7f059a2794f4574bb80cfcf57",
+  "topic": "autodoc: Load sphinx.ext.autodoc.typehints automatically",
+  "upstream_created_at": "2020-03-07T04:21:04Z",
+  "dataset_row": 1763,
+  "problem_sha256": "1fe3ad712d3c237c519e1018e80575605a0b372117769ee29d279ace149750bf",
+  "regression_checks": [
+    "tests/test_ext_autodoc_configs.py::test_autodoc_typehints_description"
+  ],
+  "passing_checks": 13
+}
