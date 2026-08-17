@@ -1,0 +1,17 @@
+{
+  "id": "pytest-dev__pytest-7186",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "de556f895febd89d14db0a0828e5c8555c75f44e",
+  "topic": "_pytest.doctest._is_setup_py raises with LC_ALL=C and UTF-8 chars in setup.py",
+  "upstream_created_at": "2020-05-07T20:18:57Z",
+  "dataset_row": 1432,
+  "problem_sha256": "cc1ac591c4e947937ad1d59722f11926a669128651da1f3272f5fa2ec3bdbbbf",
+  "regression_checks": [
+    "testing/test_doctest.py::test_is_setup_py_not_named_setup_py",
+    "testing/test_doctest.py::test_is_setup_py_is_a_setup_py[setuptools]",
+    "testing/test_doctest.py::test_is_setup_py_is_a_setup_py[distutils.core]",
+    "testing/test_doctest.py::test_is_setup_py_different_encoding[setuptools]",
+    "testing/test_doctest.py::test_is_setup_py_different_encoding[distutils.core]"
+  ],
+  "passing_checks": 121
+}
