@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13915",
+  "repository": "sympy/sympy",
+  "base_commit": "5c1644ff85e15752f9f8721bc142bfbf975e7805",
+  "topic": "Issue with a substitution that leads to an undefined expression",
+  "upstream_created_at": "2018-01-13T20:41:07Z",
+  "dataset_row": 2004,
+  "problem_sha256": "fb1271360e0868ed92838642c40ce62e19da9c8c8b05088474cfb717322befab",
+  "regression_checks": [
+    "test_Mul_does_not_cancel_infinities"
+  ],
+  "passing_checks": 62
+}
