@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-13734",
+  "repository": "astropy/astropy",
+  "base_commit": "9fd247339e51441460b43368d415fced327c97a2",
+  "topic": "Add option to input/output column units for fixed width tables",
+  "upstream_created_at": "2022-09-22T09:27:55Z",
+  "dataset_row": 36,
+  "problem_sha256": "49a092bf8cb9a7c9f719eed68c1aaa14e8234c5474344faf4df9978352763d74",
+  "regression_checks": [
+    "astropy/io/ascii/tests/test_fixedwidth.py::test_fixed_width_header_rows",
+    "astropy/io/ascii/tests/test_fixedwidth.py::test_fixed_width_two_line_header_rows"
+  ],
+  "passing_checks": 33
+}
