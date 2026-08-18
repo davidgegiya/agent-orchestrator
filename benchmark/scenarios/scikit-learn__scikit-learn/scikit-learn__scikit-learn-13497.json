@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13497",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "26f690961a52946dd2f53bf0fdd4264b2ae5be90",
+  "topic": "Comparing string to array in _estimate_mi",
+  "upstream_created_at": "2019-03-23T14:28:08Z",
+  "dataset_row": 1605,
+  "problem_sha256": "761918320f3442a55efc51e5fcb599499cc143c8388afe5505823f27fb285a0d",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_mutual_info.py::test_mutual_info_options"
+  ],
+  "passing_checks": 7
+}
