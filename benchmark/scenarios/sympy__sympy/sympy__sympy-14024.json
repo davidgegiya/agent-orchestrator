@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-14024",
+  "repository": "sympy/sympy",
+  "base_commit": "b17abcb09cbcee80a90f6750e0f9b53f0247656c",
+  "topic": "Inconsistency when simplifying (-a)**x * a**(-x), a a positive integer",
+  "upstream_created_at": "2018-01-27T05:55:11Z",
+  "dataset_row": 2010,
+  "problem_sha256": "e0c559e21ece38f4aa45251ac62cc59f2db240aa168f0609de2da883ad4ee184",
+  "regression_checks": [
+    "test_powers_Integer",
+    "test_powers_Rational"
+  ],
+  "passing_checks": 83
+}
