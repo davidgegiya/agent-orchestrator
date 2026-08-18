@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8757",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "2acca90eab93569f9482b1c7595c30207afcbe7c",
+  "topic": "Different output with --jobs=1 and --jobs=2",
+  "upstream_created_at": "2023-06-10T12:42:13Z",
+  "dataset_row": 1368,
+  "problem_sha256": "4c745dae4cf567125ec5cc88e78264386e87927d1640c3372aef2915b78170a6",
+  "regression_checks": [
+    "tests/test_similar.py::TestSimilarCodeChecker::test_duplicate_code_parallel"
+  ],
+  "passing_checks": 147
+}
