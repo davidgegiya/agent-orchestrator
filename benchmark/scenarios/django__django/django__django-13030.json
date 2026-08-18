@@ -1,0 +1,15 @@
+{
+  "id": "django__django-13030",
+  "repository": "django/django",
+  "base_commit": "36db4dd937ae11c5b687c5d2e5fa3c27e4140001",
+  "topic": "Avoid passing NULL to the IN lookup",
+  "upstream_created_at": "2020-06-05T22:49:57Z",
+  "dataset_row": 395,
+  "problem_sha256": "2b2440f949637dbb55b898b2449ae0cdc7fe3160c0def06eddbfb99dd239a4e0",
+  "regression_checks": [
+    "test_in_ignore_none (lookup.tests.LookupTests)",
+    "test_in_ignore_none_with_unhashable_items (lookup.tests.LookupTests)",
+    "test_in_ignore_solo_none (lookup.tests.LookupTests)"
+  ],
+  "passing_checks": 43
+}
