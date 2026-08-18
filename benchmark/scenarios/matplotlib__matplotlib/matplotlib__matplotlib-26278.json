@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26278",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "02d2e137251ebcbd698b6f1ff8c455a1e52082af",
+  "topic": "Cleaning up kwargs in ContourSet",
+  "upstream_created_at": "2023-07-09T10:54:03Z",
+  "dataset_row": 1116,
+  "problem_sha256": "1b83b1f628f257f3d157500265b57f97acb85581407732fe0f0950dee5a7c200",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_contour_clip_path"
+  ],
+  "passing_checks": 79
+}
