@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24870",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6091437be9776139d3672cde28a19cbe6c09dcd5",
+  "topic": "Auto-detect bool arrays passed to contour()?",
+  "upstream_created_at": "2023-01-02T20:37:49Z",
+  "dataset_row": 1055,
+  "problem_sha256": "83d640baab6db63a3b7ded2ac39276cd546b4348ed9930957be43870a517febf",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_bool_autolevel"
+  ],
+  "passing_checks": 65
+}
