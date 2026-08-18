@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-16281",
+  "repository": "sympy/sympy",
+  "base_commit": "41490b75f3621408e0468b0e7b6dc409601fc6ff",
+  "topic": "Product pretty print could be improved",
+  "upstream_created_at": "2019-03-16T19:37:33Z",
+  "dataset_row": 2081,
+  "problem_sha256": "646a585793fd2db0e00a18380c9c7e430ff9c687774fa6b8229a4f340ec02719",
+  "regression_checks": [
+    "test_pretty_product",
+    "test_issue_6359"
+  ],
+  "passing_checks": 120
+}
