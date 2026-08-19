@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-17288",
+  "repository": "sympy/sympy",
+  "base_commit": "2c5dbb45e2cd8832b09f1c3318b70e972e16b71d",
+  "topic": "Latex printing issue on derivatives with superscripted symbols",
+  "upstream_created_at": "2019-07-28T10:52:19Z",
+  "dataset_row": 2126,
+  "problem_sha256": "aca31c39fdad4cbb9aab0a931e3aa192c651df902fdf2bac830f584d0ff20f72",
+  "regression_checks": [
+    "test_latex_basic",
+    "test_issue_17092"
+  ],
+  "passing_checks": 136
+}
