@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-10097",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "ce6803a18679f7085561b66ec1945ed4005e2d1d",
+  "topic": "Latex: long option name overflows in Index",
+  "upstream_created_at": "2022-01-13T17:27:25Z",
+  "dataset_row": 1724,
+  "problem_sha256": "1a6d846e9b56bef71369c389b7a9f8df9fc82f4774777931e7cf39068fb426fd",
+  "regression_checks": [
+    "tests/test_domain_std.py::test_cmd_option_with_optional_value",
+    "tests/test_domain_std.py::test_multiple_cmdoptions"
+  ],
+  "passing_checks": 18
+}
