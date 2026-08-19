@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10949",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3b5abf76597ce6aff76192869f92647c1b5259e7",
+  "topic": "``warn_on_dtype`` has no effect when input is a pandas ``DataFrame``",
+  "upstream_created_at": "2018-04-10T15:30:56Z",
+  "dataset_row": 1521,
+  "problem_sha256": "551231195ab09803989578907644b5659c3c8d186bac3b6fa7e4fa6b56c97528",
+  "regression_checks": [
+    "sklearn/utils/tests/test_validation.py::test_check_dataframe_warns_on_dtype"
+  ],
+  "passing_checks": 42
+}
