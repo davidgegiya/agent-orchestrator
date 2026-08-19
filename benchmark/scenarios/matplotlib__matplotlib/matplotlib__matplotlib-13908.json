@@ -1,0 +1,15 @@
+{
+  "id": "matplotlib__matplotlib-13908",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "dd18211687623c5fa57658990277440814d422f0",
+  "topic": "Minor ticklabels are missing at positions of major ticks",
+  "upstream_created_at": "2019-04-09T02:29:24Z",
+  "dataset_row": 946,
+  "problem_sha256": "23784feaeecf830e16f80b5a63b0c1f26520c316c27fc60cea21e88aaee03136",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_ticker.py::test_remove_overlap[True-6]",
+    "lib/matplotlib/tests/test_ticker.py::test_remove_overlap[None-6]",
+    "lib/matplotlib/tests/test_ticker.py::test_remove_overlap[False-9]"
+  ],
+  "passing_checks": 300
+}
