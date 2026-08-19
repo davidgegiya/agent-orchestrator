@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8022",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "e986d84466dfa98dbbc55cc1bf5fcb99075f4ac3",
+  "topic": "Doctest collection only returns single test for __init__.py",
+  "upstream_created_at": "2020-11-10T20:57:51Z",
+  "dataset_row": 1459,
+  "problem_sha256": "375cdab5daa6f638dd3f560ce0cee5ab86b49a93e605f316ee4e9167dab71c08",
+  "regression_checks": [
+    "testing/test_doctest.py::TestDoctests::test_collect_module_two_doctest_no_modulelevel[__init__]"
+  ],
+  "passing_checks": 126
+}
