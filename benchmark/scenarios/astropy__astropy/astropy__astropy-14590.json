@@ -1,0 +1,24 @@
+{
+  "id": "astropy__astropy-14590",
+  "repository": "astropy/astropy",
+  "base_commit": "5f74eacbcc7fff707a44d8eb58adaa514cb7dcb5",
+  "topic": "TST: np.fix check fails with numpy-dev (TypeError: cannot write to unmasked output)",
+  "upstream_created_at": "2023-03-27T23:57:35Z",
+  "dataset_row": 63,
+  "problem_sha256": "7cf3b5bcb89d5e009d83fe65d449bb5cac7f55ab05cb56b97a882bb0521e109a",
+  "regression_checks": [
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedArrayUfuncs::test_ufunc_inplace_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedArrayUfuncs::test_ufunc_inplace_where[False]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedArrayUfuncs::test_ufunc_inplace_masked_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedArrayUfuncs::test_ufunc_inplace_masked_where[False]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedQuantityUfuncs::test_ufunc_inplace_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedQuantityUfuncs::test_ufunc_inplace_where[False]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedQuantityUfuncs::test_ufunc_inplace_masked_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedQuantityUfuncs::test_ufunc_inplace_masked_where[False]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedLongitudeUfuncs::test_ufunc_inplace_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedLongitudeUfuncs::test_ufunc_inplace_where[False]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedLongitudeUfuncs::test_ufunc_inplace_masked_where[True]",
+    "astropy/utils/masked/tests/test_functions.py::TestMaskedLongitudeUfuncs::test_ufunc_inplace_masked_where[False]"
+  ],
+  "passing_checks": 135
+}
