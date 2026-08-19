@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10986",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "ca436e7017ae069a29de19caf71689e9b9b9c452",
+  "topic": "Warm start bug when fitting a LogisticRegression model on binary outcomes with `multi_class='multinomial'`",
+  "upstream_created_at": "2018-04-16T17:53:06Z",
+  "dataset_row": 1523,
+  "problem_sha256": "e22d71e64ca1aab711fa933d738d0358bb0fe4802075b908a4ab7c209cd95742",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_logistic.py::test_warm_start_converge_LR"
+  ],
+  "passing_checks": 44
+}
