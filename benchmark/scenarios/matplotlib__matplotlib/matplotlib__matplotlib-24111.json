@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24111",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "239386650a2c3a537d36de9cd85d09bd0f6796cf",
+  "topic": "Default `matplotlib.colormaps[None]` to call `matplotlib.colormaps[matplotlib.rcParams['image.cmap']]`?",
+  "upstream_created_at": "2022-10-06T22:09:31Z",
+  "dataset_row": 1033,
+  "problem_sha256": "28cef4507bc1c4b66534830eb407a3fc4793a6c486069233e2b251fa55533e83",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_colormaps_get_cmap"
+  ],
+  "passing_checks": 249
+}
