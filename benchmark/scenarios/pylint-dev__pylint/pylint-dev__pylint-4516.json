@@ -1,0 +1,16 @@
+{
+  "id": "pylint-dev__pylint-4516",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "0b5a44359d8255c136af27c0ef5f5b196a526430",
+  "topic": "Ignore clause not ignoring directories",
+  "upstream_created_at": "2021-05-26T15:15:27Z",
+  "dataset_row": 1322,
+  "problem_sha256": "897f27c21949bb07b9ef8e96e0a3bc44a1f1392f0db32e93a96f74c570b2451d",
+  "regression_checks": [
+    "tests/lint/unittest_expand_modules.py::test__is_in_ignore_list_re_match",
+    "tests/lint/unittest_expand_modules.py::test__is_in_ignore_list_re_nomatch",
+    "tests/lint/unittest_expand_modules.py::test_expand_modules[files_or_modules0-expected0]",
+    "tests/lint/unittest_expand_modules.py::test_expand_modules[files_or_modules1-expected1]"
+  ],
+  "passing_checks": 0
+}
