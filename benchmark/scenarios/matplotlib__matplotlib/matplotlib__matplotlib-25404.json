@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25404",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "b51a227058e16cdbc56890f49e3a0888ea02b9d2",
+  "topic": "AttributeError: 'LassoSelector' object has no attribute '_props'",
+  "upstream_created_at": "2023-03-07T09:33:22Z",
+  "dataset_row": 1075,
+  "problem_sha256": "f8d56bdc9ed94fbdd676db29a7a5d04b6c05cce1513fb54c86f0574ec677c37f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_lasso_selector_set_props"
+  ],
+  "passing_checks": 116
+}
