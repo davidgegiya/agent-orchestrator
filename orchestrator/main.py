@@ -19,6 +19,7 @@ except ImportError:  # pragma: no cover - optional for local dev
     def load_dotenv(*_args, **_kwargs) -> bool:
         return False
 
+from .codex_runner import run_codex
 from .models import RunContext
 from .policies import (
     MAX_ROUNDS,
@@ -502,8 +503,14 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Implement and review a repository task")
     parser.add_argument("--workspace", type=Path, help="Product Git checkout to edit")
     parser.add_argument("--task", type=Path, help="Markdown task to run")
+    parser.add_argument("--implementer", choices=("sdk", "codex"), default="sdk")
+    parser.add_argument("--codex-timeout", type=int, default=900)
     parser.add_argument("--check", action="append", help="Required check command (repeatable; no shell)")
     args = parser.parse_args(argv)
+    if args.codex_timeout < 1:
+        parser.error("--codex-timeout must be positive")
+    if args.implementer == "codex" and not args.workspace:
+        parser.error("--implementer codex requires an explicit --workspace checkout")
     try:
         checks = [shlex.split(command) for command in args.check] if args.check else [
             [sys.executable, "-m", "pytest", "-q"]
@@ -610,7 +617,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     report.write_plan(plan_text)
     artifacts["plan_path"] = str(report.plan_path)
 
-    implementer = build_implementer_agent()
+    implementer = build_implementer_agent() if args.implementer == "sdk" else None
     reviewer = build_reviewer_agent()
     tech_writer = build_tech_writer_agent()
 
@@ -633,13 +640,20 @@ def main(argv: Optional[List[str]] = None) -> int:
             architecture,
             conventions,
         )
-        implementer_report, impl_error, implementer_meta = _safe_run(
-            implementer,
-            implementer_input,
-            artifacts["max_turns"]["implementer"],
-            context=implementer_ctx,
-            role="implementer",
-        )
+        if args.implementer == "codex":
+            implementer_report, impl_error = run_codex(
+                "Implement the task in this checkout. Leave changes for review and do not commit.\n\n"
+                + implementer_input, workspace, args.codex_timeout,
+            )
+            implementer_meta = {"backend": "codex", "timeout_seconds": args.codex_timeout}
+        else:
+            implementer_report, impl_error, implementer_meta = _safe_run(
+                implementer,
+                implementer_input,
+                artifacts["max_turns"]["implementer"],
+                context=implementer_ctx,
+                role="implementer",
+            )
         round_record: Dict[str, Any] = {
             "round": round_idx,
             "implementer_run": implementer_meta,
