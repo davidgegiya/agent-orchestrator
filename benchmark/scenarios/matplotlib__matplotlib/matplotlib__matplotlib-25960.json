@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25960",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "1d0d255b79e84dfc9f2123c5eb85a842d342f72b",
+  "topic": "wspace and hspace in subfigures not working",
+  "upstream_created_at": "2023-05-23T21:58:53Z",
+  "dataset_row": 1101,
+  "problem_sha256": "5d28259c775b1bb44a2fe092588b72fcc1f313b37c38c507b0773ce82cb7b195",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_subfigures_wspace_hspace"
+  ],
+  "passing_checks": 137
+}
