@@ -1,0 +1,14 @@
+{
+  "id": "django__django-16517",
+  "repository": "django/django",
+  "base_commit": "c626173833784c86920b448793ac45005af4c058",
+  "topic": "Mixed-case views/templates names causes 404 on :view:/:template: directive",
+  "upstream_created_at": "2023-02-01T10:26:17Z",
+  "dataset_row": 862,
+  "problem_sha256": "e4327a0d177b0233a33463a3e3e7ce03f2c021616035f64d06f65af864a2cf4f",
+  "regression_checks": [
+    "test_parse_rst_template_case_sensitive (admin_docs.test_utils.TestUtils.test_parse_rst_template_case_sensitive)",
+    "test_parse_rst_view_case_sensitive (admin_docs.test_utils.TestUtils.test_parse_rst_view_case_sensitive)"
+  ],
+  "passing_checks": 7
+}
