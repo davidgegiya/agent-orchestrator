@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-15393",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "37ac3fd1252e4d333bf7bc7dad2010def6d6d0b0",
+  "topic": "imputation_order \"ascending\" and \"descending\" are inverted in IterativeImputer",
+  "upstream_created_at": "2019-10-29T13:49:11Z",
+  "dataset_row": 1670,
+  "problem_sha256": "3f19b5d8d14c1d4254d5c77eee54f59194d8cff1d8b6dbf94d9a10e514c0b398",
+  "regression_checks": [
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_transform_recovery[5]",
+    "sklearn/impute/tests/test_impute.py::test_imputation_order[ascending-idx_order0]",
+    "sklearn/impute/tests/test_impute.py::test_imputation_order[descending-idx_order1]"
+  ],
+  "passing_checks": 155
+}
