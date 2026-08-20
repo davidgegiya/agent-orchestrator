@@ -1,0 +1,19 @@
+{
+  "id": "matplotlib__matplotlib-25430",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7eafdd8af3c523c1c77b027d378fb337dd489f18",
+  "topic": "savefig + jpg + metadata fails with inscrutable error message",
+  "upstream_created_at": "2023-03-11T02:40:44Z",
+  "dataset_row": 1078,
+  "problem_sha256": "b52a65573200d0e8b63862093ab5ce8b62b8c4bf6a4b4469ccf615d62b594236",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[jpeg]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[jpg]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[tif]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[tiff]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[webp]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[raw]",
+    "lib/matplotlib/tests/test_figure.py::test_savefig_metadata_error[rgba]"
+  ],
+  "passing_checks": 126
+}
