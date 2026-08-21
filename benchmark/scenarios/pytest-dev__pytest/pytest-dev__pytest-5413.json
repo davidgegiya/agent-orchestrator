@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5413",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "450d2646233c670654744d3d24330b69895bb9d2",
+  "topic": "str() on the pytest.raises context variable doesn't behave same as normal exception catch",
+  "upstream_created_at": "2019-06-06T15:21:20Z",
+  "dataset_row": 1404,
+  "problem_sha256": "1c47b18ebb056425aa801f35d59e30d37dfba1ec195447ea986f991e455e19e7",
+  "regression_checks": [
+    "testing/code/test_excinfo.py::test_excinfo_repr_str"
+  ],
+  "passing_checks": 92
+}
