@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3649",
+  "repository": "pydata/xarray",
+  "base_commit": "3cbc459caa010f9b5042d3fa312b66c9b2b6c403",
+  "topic": "combine_by_coords should allow for missing panels in hypercube",
+  "upstream_created_at": "2019-12-19T22:08:11Z",
+  "dataset_row": 1224,
+  "problem_sha256": "a7a29432dde5abe5ba77566d86cd5f149c2bc12ce2a24e87f90eca0bf02647d8",
+  "regression_checks": [
+    "xarray/tests/test_combine.py::TestCombineAuto::test_combine_by_coords_incomplete_hypercube"
+  ],
+  "passing_checks": 76
+}
