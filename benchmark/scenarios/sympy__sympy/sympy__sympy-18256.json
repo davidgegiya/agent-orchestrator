@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-18256",
+  "repository": "sympy/sympy",
+  "base_commit": "8501526ca26a80ac1b7866a4c1678fcf0045e971",
+  "topic": "Let's think of these superscripted symbols, x^{i}, x^{\\*}",
+  "upstream_created_at": "2020-01-07T06:00:59Z",
+  "dataset_row": 2158,
+  "problem_sha256": "e3478ce744b8a5f2aaf26a4f4aa2f75f9c4edcb0f5210cd6f2546cb5f19244e7",
+  "regression_checks": [
+    "test_latex_basic"
+  ],
+  "passing_checks": 141
+}
