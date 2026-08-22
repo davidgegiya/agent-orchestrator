@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24334",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "332937997d03e0c173be6d9fc1841e9186e857df",
+  "topic": "Axes.set_xticks/Axis.set_ticks only validates kwargs if ticklabels are set, but they should",
+  "upstream_created_at": "2022-11-01T18:11:43Z",
+  "dataset_row": 1041,
+  "problem_sha256": "35c73432ac4eddd7c2e843ffafec5118e7c3f043642fc2d6454c8d872d078551",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_set_ticks_kwargs_raise_error_without_labels"
+  ],
+  "passing_checks": 770
+}
