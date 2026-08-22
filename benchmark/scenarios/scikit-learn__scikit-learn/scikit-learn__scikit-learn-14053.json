@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14053",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "6ab8c86c383dd847a1be7103ad115f174fe23ffd",
+  "topic": "IndexError: list index out of range in export_text when the tree only has one feature",
+  "upstream_created_at": "2019-06-09T15:36:55Z",
+  "dataset_row": 1629,
+  "problem_sha256": "39905f1b6339795a783aea1b0e8a5e6446d0d02630b0d62bcfdf5169f9d4584f",
+  "regression_checks": [
+    "sklearn/tree/tests/test_export.py::test_export_text"
+  ],
+  "passing_checks": 5
+}
