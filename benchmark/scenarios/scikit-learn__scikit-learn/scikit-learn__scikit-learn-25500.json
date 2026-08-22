@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25500",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "4db04923a754b6a2defa1b172f55d492b85d165e",
+  "topic": "CalibratedClassifierCV doesn't work with `set_config(transform_output=\"pandas\")`",
+  "upstream_created_at": "2023-01-27T19:49:28Z",
+  "dataset_row": 1688,
+  "problem_sha256": "4a5d08a6d0f735e9b2cb11af2108eec8e101834591a180e370bbac5c9c5a63bc",
+  "regression_checks": [
+    "sklearn/tests/test_isotonic.py::test_isotonic_regression_output_predict"
+  ],
+  "passing_checks": 45
+}
