@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-10481",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "004012b6df0fcec67312373f8d89327f5b09a7e6",
+  "topic": "If a project defines \"language = None\" in conf.py, treat it like \"en\"",
+  "upstream_created_at": "2022-05-27T22:54:01Z",
+  "dataset_row": 1740,
+  "problem_sha256": "9bb639b4cb26c00f491d97f4fae4cf5613c7e369f51de4f35e8fbdabba99661c",
+  "regression_checks": [
+    "tests/test_config.py::test_conf_py_language_none",
+    "tests/test_config.py::test_conf_py_language_none_warning"
+  ],
+  "passing_checks": 34
+}
