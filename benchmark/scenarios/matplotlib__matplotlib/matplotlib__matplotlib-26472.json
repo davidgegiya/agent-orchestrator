@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-26472",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e4905bf8ae7d2f58025442018606f59641daa226",
+  "topic": "Switching to inline backend closes GUI windows",
+  "upstream_created_at": "2023-08-08T20:53:05Z",
+  "dataset_row": 1126,
+  "problem_sha256": "a060964d4423d1b78dea24a988f1ee78850e7abb31ef1ab1dd4ed1dd734cb576",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_bases.py::test_non_gui_warning",
+    "lib/matplotlib/tests/test_pyplot.py::test_switch_backend_no_close"
+  ],
+  "passing_checks": 83
+}
