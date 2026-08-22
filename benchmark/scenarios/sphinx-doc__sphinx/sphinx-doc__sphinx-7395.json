@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7395",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "7887615374656da0556966b8cd37d2af8dac2654",
+  "topic": "The index directive with \"builtin\" type generates different index entry than the function directive",
+  "upstream_created_at": "2020-03-28T16:33:05Z",
+  "dataset_row": 1770,
+  "problem_sha256": "f4c284f3b86cbc89cd977ff333236f1f6f97c88ea5a2a10fa6340cccf4973434",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_pyfunction"
+  ],
+  "passing_checks": 27
+}
