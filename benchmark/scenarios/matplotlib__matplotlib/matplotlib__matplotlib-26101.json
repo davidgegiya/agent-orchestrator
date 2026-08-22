@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26101",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7ad3bc2d06fb8d000716e5be027d893d5bc06486",
+  "topic": "Star marker (using mathtext) is not center-aligned",
+  "upstream_created_at": "2023-06-10T02:46:30Z",
+  "dataset_row": 1107,
+  "problem_sha256": "452c639585feb3192410024742e5e5106e3c7553db9955bdfa5d1a7c8a1088fe",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_marker.py::test_text_marker[png]"
+  ],
+  "passing_checks": 47
+}
