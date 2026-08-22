@@ -1,0 +1,22 @@
+{
+  "id": "pylint-dev__pylint-4551",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "99589b08de8c5a2c6cc61e13a37420a868c80599",
+  "topic": "Use Python type hints for UML generation",
+  "upstream_created_at": "2021-06-07T15:14:31Z",
+  "dataset_row": 1323,
+  "problem_sha256": "ba97d6fd105828e1adbe4ed46e5ea27fc6ae7addc007b69d881b55ddb76db8c4",
+  "regression_checks": [
+    "tests/unittest_pyreverse_writer.py::test_dot_files[packages_No_Name.dot]",
+    "tests/unittest_pyreverse_writer.py::test_dot_files[classes_No_Name.dot]",
+    "tests/unittest_pyreverse_writer.py::test_get_visibility[names0-special]",
+    "tests/unittest_pyreverse_writer.py::test_get_visibility[names1-private]",
+    "tests/unittest_pyreverse_writer.py::test_get_visibility[names2-public]",
+    "tests/unittest_pyreverse_writer.py::test_get_visibility[names3-protected]",
+    "tests/unittest_pyreverse_writer.py::test_get_annotation_annassign[a:",
+    "tests/unittest_pyreverse_writer.py::test_get_annotation_assignattr[def",
+    "tests/unittest_pyreverse_writer.py::test_infer_node_1",
+    "tests/unittest_pyreverse_writer.py::test_infer_node_2"
+  ],
+  "passing_checks": 0
+}
