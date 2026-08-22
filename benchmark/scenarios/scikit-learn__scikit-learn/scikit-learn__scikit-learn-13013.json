@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-13013",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "28728f5c793f73f92d6c56c83b06fb001395d400",
+  "topic": "Make use of check_is_fitted instead of manual checks",
+  "upstream_created_at": "2019-01-18T10:56:58Z",
+  "dataset_row": 1574,
+  "problem_sha256": "1c3a22b0bc590ef61d06c6fde5746ded20384db2650723bc776078d8de6b74aa",
+  "regression_checks": [
+    "sklearn/decomposition/tests/test_online_lda.py::test_lda_no_component_error",
+    "sklearn/utils/tests/test_estimator_checks.py::test_check_estimators_unfitted"
+  ],
+  "passing_checks": 210
+}
