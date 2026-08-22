@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12153",
+  "repository": "django/django",
+  "base_commit": "86a0231e0a087d4b909f76223cc55d5bbb673930",
+  "topic": "0011_update_proxy_permissions crashes in multi database environment",
+  "upstream_created_at": "2019-11-28T10:53:17Z",
+  "dataset_row": 287,
+  "problem_sha256": "083cdafa6a21638fd99ad51ee8e7ee94dd802b75954282769428731b518bc305",
+  "regression_checks": [
+    "test_migrate_other_database (auth_tests.test_migrations.MultiDBProxyModelAppLabelTests)"
+  ],
+  "passing_checks": 9
+}
