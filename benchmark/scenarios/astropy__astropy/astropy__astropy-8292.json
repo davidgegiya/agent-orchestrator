@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-8292",
+  "repository": "astropy/astropy",
+  "base_commit": "52d1c242e8b41c7b8279f1cc851bb48347dc8eeb",
+  "topic": "Problem with the `littleh` part of unit equivalencies?",
+  "upstream_created_at": "2018-12-15T03:47:56Z",
+  "dataset_row": 88,
+  "problem_sha256": "1e8bebecb6e5e32635fadd38c6a4e7fae0c13a3ae952b4347faffb49209ff328",
+  "regression_checks": [
+    "astropy/units/tests/test_equivalencies.py::test_littleh"
+  ],
+  "passing_checks": 61
+}
