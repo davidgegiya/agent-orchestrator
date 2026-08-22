@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24189",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "deb7b1145b71c9f60b87d4eaf32e848b1ea5ebe6",
+  "topic": "Error using width_ratios with nested mosaic in subplot_mosaic()",
+  "upstream_created_at": "2022-10-16T15:17:40Z",
+  "dataset_row": 1036,
+  "problem_sha256": "126951e5e976313f0c0ad7732e839fccbca43fc2d7d997006e152943bcb9be93",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::TestSubplotMosaic::test_nested_width_ratios",
+    "lib/matplotlib/tests/test_figure.py::TestSubplotMosaic::test_nested_height_ratios"
+  ],
+  "passing_checks": 106
+}
