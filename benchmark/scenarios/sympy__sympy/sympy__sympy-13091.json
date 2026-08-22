@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-13091",
+  "repository": "sympy/sympy",
+  "base_commit": "d1320814eda6549996190618a21eaf212cfd4d1e",
+  "topic": "Return NotImplemented, not False, upon rich comparison with unknown type",
+  "upstream_created_at": "2017-08-05T08:04:32Z",
+  "dataset_row": 1956,
+  "problem_sha256": "f64e18d43ebcc55368b24fbce6c446df11a6a3eb22c2c66e9ecc2d9ec23607a3",
+  "regression_checks": [
+    "test_equality",
+    "test_comparisons_with_unknown_type"
+  ],
+  "passing_checks": 89
+}
