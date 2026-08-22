@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-11870",
+  "repository": "sympy/sympy",
+  "base_commit": "5c2e1f96a7ff562d4a778f4ca9ffc9c81557197e",
+  "topic": "simplifying exponential -> trig identities",
+  "upstream_created_at": "2016-11-17T21:36:03Z",
+  "dataset_row": 1921,
+  "problem_sha256": "e414c6122ebd3d56c9c0dc64a97c02219135a218f34a9c93ec2dab2470840cc5",
+  "regression_checks": [
+    "test_sinc"
+  ],
+  "passing_checks": 58
+}
