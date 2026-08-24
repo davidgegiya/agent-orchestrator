@@ -1,0 +1,25 @@
+{
+  "id": "scikit-learn__scikit-learn-12908",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "314686a65d543bd3b36d2af4b34ed23711991a57",
+  "topic": "OneHotEncoder - add option for 1 of k-1 encoding",
+  "upstream_created_at": "2019-01-03T04:21:02Z",
+  "dataset_row": 1567,
+  "problem_sha256": "7ae0404cbea84a5ac2624284d41c0cd81ccde19f9efecb56b21aae6d14cad98a",
+  "regression_checks": [
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_sparse",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_inverse[None-False]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_inverse[None-True]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_inverse[first-False]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_inverse[first-True]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_drop_manual",
+    "sklearn/preprocessing/tests/test_encoders.py::test_one_hot_encoder_invalid_params",
+    "sklearn/preprocessing/tests/test_encoders.py::test_invalid_drop_length[drop0]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_invalid_drop_length[drop1]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_categories[first-sparse]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_categories[first-dense]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_categories[manual-sparse]",
+    "sklearn/preprocessing/tests/test_encoders.py::test_categories[manual-dense]"
+  ],
+  "passing_checks": 53
+}
