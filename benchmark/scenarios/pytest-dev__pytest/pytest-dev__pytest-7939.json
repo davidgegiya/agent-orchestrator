@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7939",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "65e6e39b76c236999fc53823892c26367a85a8f8",
+  "topic": "def pytest_addoption(parser: Parser) -> None",
+  "upstream_created_at": "2020-10-25T11:04:34Z",
+  "dataset_row": 1456,
+  "problem_sha256": "ec90ebaef61c04aa369c45d802fe83cf28d30ae8a25d6dd278728e9617057b4a",
+  "regression_checks": [
+    "testing/test_stepwise.py::test_run_with_skip_option[--sw-skip]"
+  ],
+  "passing_checks": 9
+}
