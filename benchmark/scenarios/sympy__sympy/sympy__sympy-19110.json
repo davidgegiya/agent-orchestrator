@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-19110",
+  "repository": "sympy/sympy",
+  "base_commit": "542a1758e517c3b5e95e480dcd49b9b24a01f191",
+  "topic": "ZeroMatrix should not be falsey",
+  "upstream_created_at": "2020-04-13T02:35:06Z",
+  "dataset_row": 2187,
+  "problem_sha256": "3731eea72d30f46fb5084043430fe050cad02e45460fe7f089fd0c619361b229",
+  "regression_checks": [
+    "test_ZeroMatrix"
+  ],
+  "passing_checks": 44
+}
