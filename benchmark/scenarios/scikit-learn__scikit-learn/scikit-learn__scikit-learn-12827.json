@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-12827",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "4a7075aa8841789eab30578f56bc48d8e6dc6042",
+  "topic": "DOC: add details to QuantileTransformer documentation",
+  "upstream_created_at": "2018-12-19T09:17:59Z",
+  "dataset_row": 1564,
+  "problem_sha256": "3f88eee5601dc1fb6815ff359e730c1859946d6a823ed9c1b3440cda260337b5",
+  "regression_checks": [
+    "sklearn/preprocessing/tests/test_data.py::test_quantile_transform_and_inverse"
+  ],
+  "passing_checks": 185
+}
