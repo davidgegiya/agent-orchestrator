@@ -1,0 +1,14 @@
+{
+  "id": "django__django-14802",
+  "repository": "django/django",
+  "base_commit": "3921b1c6d24c9d5a60e5f5f83c9a394104089c21",
+  "topic": "Add a helper function to make and validate cache keys",
+  "upstream_created_at": "2021-08-26T13:11:26Z",
+  "dataset_row": 651,
+  "problem_sha256": "b4ca6e67112f504e1aae2d92f5d5f412645cb15312285476ef0813041494d878",
+  "regression_checks": [
+    "test_invalid_with_version_key_length (cache.tests.DBCacheTests)",
+    "test_invalid_with_version_key_length (cache.tests.DBCacheWithTimeZoneTests)"
+  ],
+  "passing_checks": 348
+}
