@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-21932",
+  "repository": "sympy/sympy",
+  "base_commit": "b4c1da60fa4e8201b2b929083df2610da7a5b52f",
+  "topic": "imageset over Range does not work",
+  "upstream_created_at": "2021-08-23T11:05:42Z",
+  "dataset_row": 2249,
+  "problem_sha256": "35c8389d4820e91b164ce9a6942581c60fc2ce3a1f72123bb7e45a1ec9f77d1c",
+  "regression_checks": [
+    "test_symbolic_Range",
+    "test_issue_18400"
+  ],
+  "passing_checks": 47
+}
