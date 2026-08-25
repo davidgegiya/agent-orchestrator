@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25651",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "bff46815c9b6b2300add1ed25f18b3d788b816de",
+  "topic": "numdecs parameter in `LogLocator`",
+  "upstream_created_at": "2023-04-09T12:42:22Z",
+  "dataset_row": 1091,
+  "problem_sha256": "4e74aec8623792325fc35d3ec858285e4d6926f7fee56ecd7e60f135e866672d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_ticker.py::TestLogLocator::test_set_params"
+  ],
+  "passing_checks": 466
+}
