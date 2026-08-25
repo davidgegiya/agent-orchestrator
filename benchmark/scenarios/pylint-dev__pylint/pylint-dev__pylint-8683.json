@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8683",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "aed3c080388a8dc1d44c1a14a5ed243233f77c1c",
+  "topic": "fail/warn on using parallel execution with custom plugins",
+  "upstream_created_at": "2023-05-13T21:02:16Z",
+  "dataset_row": 1367,
+  "problem_sha256": "9da1aba42d3c737f3505ac423d31023a1eefd0f47734e9a8792d0e845718075e",
+  "regression_checks": [
+    "tests/test_check_parallel.py::TestCheckParallelFramework::test_worker_initialize_reregisters_custom_plugins"
+  ],
+  "passing_checks": 37
+}
