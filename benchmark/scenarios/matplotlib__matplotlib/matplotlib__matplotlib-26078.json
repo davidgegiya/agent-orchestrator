@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26078",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "fc350ea5343cf96e231656d97d4b7ac2f32c97d8",
+  "topic": "parasite_axes does not properly handle units",
+  "upstream_created_at": "2023-06-05T17:05:05Z",
+  "dataset_row": 1105,
+  "problem_sha256": "a59d4aad6c28cf213b91eece42b93f637fccf4446d932b532a4dedc851a2c206",
+  "regression_checks": [
+    "lib/mpl_toolkits/axes_grid1/tests/test_axes_grid1.py::test_twin_axes_both_with_units"
+  ],
+  "passing_checks": 49
+}
