@@ -1,0 +1,20 @@
+{
+  "id": "sympy__sympy-16056",
+  "repository": "sympy/sympy",
+  "base_commit": "93a65b9bb8a615906e73d5885ff03076bcabc555",
+  "topic": "LaTeX priniting: \\mathrm vs. \\text",
+  "upstream_created_at": "2019-02-23T19:47:42Z",
+  "dataset_row": 2076,
+  "problem_sha256": "4e4f9b91e1666c80c270ef47e45bf3681d4435e6bae55fb190269f054afcc7d8",
+  "regression_checks": [
+    "test_latex_builtins",
+    "test_latex_functions",
+    "test_latex_RandomDomain",
+    "test_Tr",
+    "test_WedgeProduct_printing",
+    "test_trace",
+    "test_MatrixSymbol_bold",
+    "test_text_re_im"
+  ],
+  "passing_checks": 214
+}
