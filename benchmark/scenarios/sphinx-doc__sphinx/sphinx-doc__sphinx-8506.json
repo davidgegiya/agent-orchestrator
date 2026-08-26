@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8506",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "e4bd3bd3ddd42c6642ff779a4f7381f219655c2c",
+  "topic": "Sphinx 3.2 complains about option:: syntax that earlier versions accepted",
+  "upstream_created_at": "2020-11-28T17:28:05Z",
+  "dataset_row": 1828,
+  "problem_sha256": "4d2dddfdebdc05c7c38e294b503a78802b3459585f8ad3e30729d9d8261b9873",
+  "regression_checks": [
+    "tests/test_domain_std.py::test_cmd_option_starting_with_bracket"
+  ],
+  "passing_checks": 14
+}
