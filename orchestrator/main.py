@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import importlib
+import json
 import os
 import re
 import shlex
@@ -367,6 +368,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Implement and review a repository task")
     parser.add_argument("--workspace", type=Path, help="Product Git checkout to edit")
     parser.add_argument("--task", type=Path, help="Markdown task to run")
+    parser.add_argument("--resume", type=Path, help="Verify the saved patch from an interrupted run")
     parser.add_argument("--implementer", choices=("sdk", "codex"), default="sdk")
     parser.add_argument("--codex-timeout", type=int, default=900)
     parser.add_argument("--write-project-notes", action="store_true",
@@ -391,6 +393,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     workspace = (args.workspace or (repo_root / "workspace")).resolve()
     if not workspace.is_dir():
         parser.error(f"workspace is not a directory: {workspace}")
+    if args.resume and not args.workspace:
+        parser.error("--resume requires an explicit --workspace checkout")
     if args.workspace and not args.task:
         parser.error("--workspace requires --task")
     git_dir = _run_local_cmd(["git", "rev-parse", "--absolute-git-dir"], cwd=workspace, timeout_seconds=5)
@@ -419,7 +423,7 @@ def _run_workflow(
     if base["returncode"] != 0:
         parser.error("workspace must be in a Git checkout with a base commit")
     base_sha = base["stdout"].strip()
-    if args.workspace:
+    if args.workspace and not args.resume:
         status = _run_local_cmd(
             ["git", "-c", "core.fsmonitor=false", "status", "--porcelain", "--untracked-files=all", "--", "."],
             cwd=workspace, timeout_seconds=5,
@@ -502,22 +506,42 @@ def _run_workflow(
     artifacts["backlog_included"] = bool(backlog.strip())
     artifacts["backlog_max_chars"] = backlog_max_chars
 
-    planner = build_planner_agent()
     planner_input = _build_planner_input(task_text, backlog, vision, architecture, conventions)
     inputs_sha256 = run_inputs_digest(planner_input, checks, args.implementer)
-    plan_text, plan_error, plan_meta = _safe_run(
-        planner,
-        planner_input,
-        artifacts["max_turns"]["planner"],
-        role="planner",
-    )
-    artifacts["planner_run"] = plan_meta
-    if plan_error:
-        artifacts["error"] = f"Planner failed: {plan_error}"
-        report.write_artifacts(artifacts)
-        print("Verdict: FAIL")
-        print("Action: SKIP")
-        return 1
+    checkpoint = None
+    if args.resume:
+        source_report = RunReport(args.resume.resolve())
+        try:
+            checkpoint = source_report.read_checkpoint()
+            if source_report.artifacts_path.exists():
+                previous_run = json.loads(source_report.artifacts_path.read_text(encoding="utf-8"))
+                if previous_run.get("final_verdict") == "PASS" and previous_run.get("ended_at"):
+                    parser.error("the source run has already passed")
+        except (OSError, ValueError) as exc:
+            parser.error(f"could not load review checkpoint: {exc}")
+        if checkpoint.workspace != workspace or checkpoint.base_sha != base_sha:
+            parser.error("workspace or base commit differs from the checkpoint")
+        if checkpoint.inputs_sha256 != inputs_sha256:
+            parser.error("task context, check commands or implementer differs from the checkpoint")
+        if checkpoint.round_number > MAX_ROUNDS:
+            parser.error("checkpoint exceeds the configured round limit")
+        patch_text, patch_meta = _compute_workspace_diff(workspace, base_sha)
+        if not patch_meta["available"] or digest_text(patch_text) != checkpoint.patch_sha256:
+            parser.error("workspace changes differ from the checkpoint")
+        plan_text = checkpoint.plan
+        artifacts["resumed_from"] = str(source_report.run_dir)
+    else:
+        planner = build_planner_agent()
+        plan_text, plan_error, plan_meta = _safe_run(
+            planner, planner_input, artifacts["max_turns"]["planner"], role="planner",
+        )
+        artifacts["planner_run"] = plan_meta
+        if plan_error or not plan_text.strip():
+            artifacts["error"] = f"Planner failed: {plan_error or 'empty plan'}"
+            report.write_artifacts(artifacts)
+            print("Verdict: FAIL")
+            print("Action: SKIP")
+            return 1
     report.write_plan(plan_text)
     artifacts["plan_path"] = str(report.plan_path)
     report.write_artifacts(artifacts)
@@ -530,7 +554,8 @@ def _run_workflow(
     review_decision: Optional[ReviewDecision] = None
 
     loop_exhausted = True
-    for round_idx in range(1, MAX_ROUNDS + 1):
+    start_round = checkpoint.round_number if checkpoint is not None else 1
+    for round_idx in range(start_round, MAX_ROUNDS + 1):
         implementer_ctx = RunContext(
             role="implementer",
             repo_root=repo_root,
@@ -545,7 +570,10 @@ def _run_workflow(
             architecture,
             conventions,
         )
-        if args.implementer == "codex":
+        if checkpoint is not None and round_idx == start_round:
+            implementer_report, impl_error = checkpoint.implementer_report, None
+            implementer_meta = {"backend": args.implementer, "resumed": True}
+        elif args.implementer == "codex":
             implementer_report, impl_error = run_codex(
                 "Implement the task in this checkout. Leave changes for review and do not commit.\n\n"
                 + implementer_input, workspace, args.codex_timeout,
@@ -575,6 +603,8 @@ def _run_workflow(
         report.append_implementer(round_idx, implementer_report)
 
         before_checks, before_meta = _compute_workspace_diff(workspace, base_sha)
+        if checkpoint is not None and round_idx == start_round and digest_text(before_checks) != checkpoint.patch_sha256:
+            parser.error("workspace changes differ from the checkpoint")
         if not before_meta["available"]:
             artifacts["error"] = before_meta.get("reason", "Could not collect the workspace patch before checks.")
             artifacts["rounds"].append(round_record)
