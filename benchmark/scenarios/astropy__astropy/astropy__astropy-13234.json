@@ -1,0 +1,24 @@
+{
+  "id": "astropy__astropy-13234",
+  "repository": "astropy/astropy",
+  "base_commit": "11b3214f18b74aea5e3f8349e50ae1b09c39d30e",
+  "topic": "Structured column serialization round-trip fails with field name of \"name\"",
+  "upstream_created_at": "2022-05-07T22:16:47Z",
+  "dataset_row": 18,
+  "problem_sha256": "89432b53b5b167455fef64cd81c91713fee68c0b4365460f1beff17d0ffc5f8f",
+  "regression_checks": [
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[1-Table-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[1-Table-name_col25]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[1-QTable-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[1-QTable-name_col25]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[2-Table-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[2-Table-name_col25]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[2-QTable-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[2-QTable-name_col25]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[3-Table-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[3-Table-name_col25]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[3-QTable-name_col24]",
+    "astropy/io/ascii/tests/test_ecsv.py::test_ecsv_mixins_per_column[3-QTable-name_col25]"
+  ],
+  "passing_checks": 309
+}
