@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17813",
+  "repository": "sympy/sympy",
+  "base_commit": "21183076095704d7844a832d2e7f387555934f0c",
+  "topic": "Intersection of ImageSet gives incorrect answer",
+  "upstream_created_at": "2019-10-28T01:18:58Z",
+  "dataset_row": 2139,
+  "problem_sha256": "71825d7f53a8cf1fdf5d3927d0e63d2739638e82d95ea2bbf880895d7041ef31",
+  "regression_checks": [
+    "test_infinitely_indexed_set_1"
+  ],
+  "passing_checks": 40
+}
