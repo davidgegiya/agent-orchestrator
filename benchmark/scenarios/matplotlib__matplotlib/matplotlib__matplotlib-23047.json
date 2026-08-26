@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23047",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3699ff34d6e2d6d649ee0ced5dc3c74936449d67",
+  "topic": "Gaps and overlapping areas between bins when using float16",
+  "upstream_created_at": "2022-05-14T13:18:08Z",
+  "dataset_row": 1002,
+  "problem_sha256": "693dcfa26f11a803d281334f3fde8bb59d936f8255dbcb36ed53ab9416f9e7f9",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_hist_float16"
+  ],
+  "passing_checks": 733
+}
