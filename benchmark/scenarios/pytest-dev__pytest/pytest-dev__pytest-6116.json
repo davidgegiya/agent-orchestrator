@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-6116",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "e670ff76cbad80108bde9bab616b66771b8653cf",
+  "topic": "pytest --collect-only needs a one char shortcut command",
+  "upstream_created_at": "2019-11-01T20:05:53Z",
+  "dataset_row": 1417,
+  "problem_sha256": "e79b16da9fcc3c4dd479cbc89ab2778b799bb7df381675773ff31fbef7d7137b",
+  "regression_checks": [
+    "testing/test_collection.py::TestCustomConftests::test_pytest_fs_collect_hooks_are_seen",
+    "testing/test_collection.py::TestCustomConftests::test_pytest_collect_file_from_sister_dir"
+  ],
+  "passing_checks": 69
+}
