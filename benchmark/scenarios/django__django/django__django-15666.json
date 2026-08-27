@@ -1,0 +1,14 @@
+{
+  "id": "django__django-15666",
+  "repository": "django/django",
+  "base_commit": "34e2148fc725e7200050f74130d7523e3cd8507a",
+  "topic": "Query Expression in ordering of a related object fails",
+  "upstream_created_at": "2022-05-05T16:42:02Z",
+  "dataset_row": 766,
+  "problem_sha256": "340cbdf03378170e16e23b62c42e90d6c6af95b707c0f9251f856955eafee1a1",
+  "regression_checks": [
+    "test_order_by_grandparent_fk_with_expression_in_default_ordering (ordering.tests.OrderingTests)",
+    "test_order_by_parent_fk_with_expression_in_default_ordering (ordering.tests.OrderingTests)"
+  ],
+  "passing_checks": 27
+}
