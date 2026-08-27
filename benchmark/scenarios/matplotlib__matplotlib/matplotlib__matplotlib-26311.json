@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26311",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3044bded1b23ae8dc73c1611b124e88db98308ac",
+  "topic": "labels can't be placed at start of contours",
+  "upstream_created_at": "2023-07-14T20:39:31Z",
+  "dataset_row": 1120,
+  "problem_sha256": "5eabd9f15d663f2c2ef39aa134d1aedeaec85de1a0929deb1462eb426d2d7b4d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_label_contour_start"
+  ],
+  "passing_checks": 79
+}
