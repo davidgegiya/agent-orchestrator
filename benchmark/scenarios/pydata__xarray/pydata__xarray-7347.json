@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7347",
+  "repository": "pydata/xarray",
+  "base_commit": "92e7cb5b21a6dee7f7333c66e41233205c543bc1",
+  "topic": "assign_coords reset all dimension coords to default (pandas) index",
+  "upstream_created_at": "2022-12-02T08:19:01Z",
+  "dataset_row": 1311,
+  "problem_sha256": "fbaad0ad340a755706e7a7c96eabc84b9a17ca3854748298ccd2c302d90dc1a0",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::TestDataset::test_assign_coords_custom_index_side_effect"
+  ],
+  "passing_checks": 385
+}
