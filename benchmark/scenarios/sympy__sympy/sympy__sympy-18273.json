@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-18273",
+  "repository": "sympy/sympy",
+  "base_commit": "4bdfba0d9fc5e3e69ced9d6e56f2efb28e9f9668",
+  "topic": "IndexError using cse with RootOf",
+  "upstream_created_at": "2020-01-09T09:53:53Z",
+  "dataset_row": 2159,
+  "problem_sha256": "e04fa3cc56e44bd6df5918616927bac625ba1a41199af401908f50a233f57749",
+  "regression_checks": [
+    "test_issue_18203"
+  ],
+  "passing_checks": 36
+}
