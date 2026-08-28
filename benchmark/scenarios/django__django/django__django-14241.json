@@ -1,0 +1,13 @@
+{
+  "id": "django__django-14241",
+  "repository": "django/django",
+  "base_commit": "823a9e6bac38d38f7b0347497b833eec732bd384",
+  "topic": "QuerySet.values()/values_list() crash on combined querysets ordered by unannotated columns",
+  "upstream_created_at": "2021-04-09T08:42:35Z",
+  "dataset_row": 572,
+  "problem_sha256": "292216906bce1110a194535701a04d6023df67f653734df1ed6a9cf2b19b9db0",
+  "regression_checks": [
+    "test_union_multiple_models_with_values_list_and_order (queries.test_qs_combinators.QuerySetSetOperationTests)"
+  ],
+  "passing_checks": 41
+}
