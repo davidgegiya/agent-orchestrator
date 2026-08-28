@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-15495",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b13b02c311c18c2041782bcdaadd08b8fd3f216b",
+  "topic": "Use _check_sample_weight to consistently validate sample_weight",
+  "upstream_created_at": "2019-11-02T20:17:27Z",
+  "dataset_row": 1671,
+  "problem_sha256": "4e963cfb1702cbad4a1ba537a402b40f5be446d22cd750b040f7d0742984352f",
+  "regression_checks": [
+    "sklearn/tree/tests/test_tree.py::test_sample_weight_invalid"
+  ],
+  "passing_checks": 265
+}
