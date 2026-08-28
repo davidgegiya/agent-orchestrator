@@ -1,0 +1,17 @@
+{
+  "id": "pytest-dev__pytest-10442",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "646a46e5f4b1f1ae5a06dcbc91fcdebfc235a28a",
+  "topic": "Keep temporary directory for failing tests only",
+  "upstream_created_at": "2022-10-27T13:16:54Z",
+  "dataset_row": 1379,
+  "problem_sha256": "72f170c815673d3d89991093014d8054da5af734cddf3b322b8655908887a551",
+  "regression_checks": [
+    "testing/test_tmpdir.py::TestNumberedDir::test_cleanup_keep_0",
+    "testing/test_tmpdir.py::test_tmp_path_factory_create_directory_with_safe_permissions",
+    "testing/test_tmpdir.py::test_tmp_path_factory_fixes_up_world_readable_permissions",
+    "testing/test_tmpdir.py::TestConfigTmpPath::test_policy_failed_removes_only_passed_dir",
+    "testing/test_tmpdir.py::TestConfigTmpPath::test_policy_failed_removes_basedir_when_all_passed"
+  ],
+  "passing_checks": 31
+}
