@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23964",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "269c0b94b4fcf8b1135011c1556eac29dc09de15",
+  "topic": "Text label with empty line causes a \"TypeError: cannot unpack non-iterable NoneType object\" in PostScript backend",
+  "upstream_created_at": "2022-09-20T13:49:19Z",
+  "dataset_row": 1028,
+  "problem_sha256": "ae9a9add02062cdf37c8c815b0d74c224a7b56d7613f43b05bd985d870a53d66",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_ps.py::test_empty_line"
+  ],
+  "passing_checks": 16
+}
