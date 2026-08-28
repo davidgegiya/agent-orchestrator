@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21171",
+  "repository": "sympy/sympy",
+  "base_commit": "aa22709cb7df2d7503803d4b2c0baa7aa21440b6",
+  "topic": "_print_SingularityFunction() got an unexpected keyword argument 'exp'",
+  "upstream_created_at": "2021-03-26T07:48:35Z",
+  "dataset_row": 2223,
+  "problem_sha256": "095c65050deb94af2ed2cf3d1a6fdd9f839f2d116a6ac880c548ce4683ad39de",
+  "regression_checks": [
+    "test_latex_SingularityFunction"
+  ],
+  "passing_checks": 152
+}
