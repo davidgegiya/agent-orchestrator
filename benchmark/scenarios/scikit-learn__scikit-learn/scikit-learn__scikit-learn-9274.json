@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-9274",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "faa940608befaeca99db501609c6db796739f30f",
+  "topic": "Training MLP using l-bfgs limited to default l-bfgs maxiter value",
+  "upstream_created_at": "2017-07-03T22:39:22Z",
+  "dataset_row": 1716,
+  "problem_sha256": "521dfc0458c4940b9bfad0844269a9e4a742c60f9896925d9b32fc1c145a465e",
+  "regression_checks": [
+    "sklearn/neural_network/tests/test_mlp.py::test_lbfgs_classification_maxfun[X0-y0]",
+    "sklearn/neural_network/tests/test_mlp.py::test_lbfgs_classification_maxfun[X1-y1]",
+    "sklearn/neural_network/tests/test_mlp.py::test_lbfgs_regression_maxfun[X0-y0]"
+  ],
+  "passing_checks": 28
+}
