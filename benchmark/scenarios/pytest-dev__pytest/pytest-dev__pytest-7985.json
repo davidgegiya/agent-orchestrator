@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7985",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "4cd0fde277f657560bf5c4453d3b645094d2c747",
+  "topic": "I don't see the point in removing it in a release just to reintroduce it again, that just",
+  "upstream_created_at": "2020-10-31T13:21:10Z",
+  "dataset_row": 1458,
+  "problem_sha256": "801fe3c77aa078ec54434060b79faa7e85c79b0ae335b85780877f53f5710d77",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_strict_option_is_deprecated"
+  ],
+  "passing_checks": 17
+}
