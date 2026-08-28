@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-25287",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f8ffce6d44127d4ea7d6491262ab30046b03294b",
+  "topic": "offsetText is colored based on tick.color instead of tick.labelcolor",
+  "upstream_created_at": "2023-02-22T18:19:27Z",
+  "dataset_row": 1069,
+  "problem_sha256": "a0ff83a4bc9b126c31fe6256911aad4a3f35782584afcda19fb5308a3234f6ad",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_xaxis_offsetText_color",
+    "lib/matplotlib/tests/test_axes.py::test_yaxis_offsetText_color"
+  ],
+  "passing_checks": 786
+}
