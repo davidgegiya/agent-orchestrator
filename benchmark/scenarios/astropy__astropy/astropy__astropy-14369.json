@@ -1,0 +1,15 @@
+{
+  "id": "astropy__astropy-14369",
+  "repository": "astropy/astropy",
+  "base_commit": "fa4e8d1cd279acf9b24560813c8652494ccd5922",
+  "topic": "Incorrect units read from MRT (CDS format) files with astropy.table",
+  "upstream_created_at": "2023-02-06T21:56:51Z",
+  "dataset_row": 52,
+  "problem_sha256": "821697459d7687a713ae4256743fcceaff9c22329178db38464df55a9918b15f",
+  "regression_checks": [
+    "astropy/units/tests/test_format.py::test_cds_grammar[strings4-unit4]",
+    "astropy/units/tests/test_format.py::test_cds_grammar[strings6-unit6]",
+    "astropy/units/tests/test_format.py::test_cds_grammar_fail[km/s.Mpc-1]"
+  ],
+  "passing_checks": 732
+}
