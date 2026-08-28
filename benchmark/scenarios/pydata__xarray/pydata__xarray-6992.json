@@ -1,0 +1,24 @@
+{
+  "id": "pydata__xarray-6992",
+  "repository": "pydata/xarray",
+  "base_commit": "45c0a114e2b7b27b83c9618bc05b36afac82183c",
+  "topic": "index refactor: more `_coord_names` than `_variables` on Dataset",
+  "upstream_created_at": "2022-09-05T15:07:43Z",
+  "dataset_row": 1295,
+  "problem_sha256": "2a398e78412131a30bd58048e4abb4f535725a875e6eb16d706c302934743ec0",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_reset_index",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_dims",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[foo-False-dropped0-converted0-renamed0]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[foo-True-dropped1-converted1-renamed1]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[x-False-dropped2-converted2-renamed2]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[x-True-dropped3-converted3-renamed3]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[arg4-False-dropped4-converted4-renamed4]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[arg5-True-dropped5-converted5-renamed5]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[arg6-False-dropped6-converted6-renamed6]",
+    "xarray/tests/test_dataset.py::TestDataset::test_reset_index_drop_convert[arg7-True-dropped7-converted7-renamed7]",
+    "xarray/tests/test_groupby.py::test_groupby_drops_nans"
+  ],
+  "passing_checks": 945
+}
