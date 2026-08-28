@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-9064",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "014fa61e0db9f9ebdedf57e1ab8f30df30c7c469",
+  "topic": "`--stepwise-skip` has no effect without `--stepwise`",
+  "upstream_created_at": "2021-08-30T17:54:14Z",
+  "dataset_row": 1477,
+  "problem_sha256": "219836423be74c3e38e71759cd17d85af3abd351529ffa6ca85ff97898b59582",
+  "regression_checks": [
+    "testing/test_stepwise.py::test_stepwise_skip_is_independent",
+    "testing/test_stepwise.py::test_sw_skip_help"
+  ],
+  "passing_checks": 10
+}
