@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-12258",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "a7a834bdb7a51ec260ff005715d50ab6ed01a16b",
+  "topic": "silhouette_samples gives incorrect result from precomputed distance matrix with diagonal entries",
+  "upstream_created_at": "2018-10-03T12:36:54Z",
+  "dataset_row": 1546,
+  "problem_sha256": "78b7e733ef1fcb528be527c8be38e54cc103ed2f1599cc2b05bce668715c9661",
+  "regression_checks": [
+    "sklearn/metrics/cluster/tests/test_unsupervised.py::test_silhouette_nonzero_diag"
+  ],
+  "passing_checks": 9
+}
