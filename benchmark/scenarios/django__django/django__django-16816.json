@@ -1,0 +1,14 @@
+{
+  "id": "django__django-16816",
+  "repository": "django/django",
+  "base_commit": "191f6a9a4586b5e5f79f4f42f190e7ad4bbacc84",
+  "topic": "Error E108 does not cover some cases",
+  "upstream_created_at": "2023-04-30T15:37:43Z",
+  "dataset_row": 900,
+  "problem_sha256": "a7e12142ce332ea02eb606b60f5b3f6859d19faba3b433534f122b006331887f",
+  "regression_checks": [
+    "test_invalid_m2m_related_name (modeladmin.test_checks.ListDisplayTests.test_invalid_m2m_related_name)",
+    "test_invalid_related_field (modeladmin.test_checks.ListDisplayTests.test_invalid_related_field)"
+  ],
+  "passing_checks": 123
+}
