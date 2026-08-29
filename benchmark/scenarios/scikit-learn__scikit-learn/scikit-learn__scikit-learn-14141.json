@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14141",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3d997697fdd166eff428ea9fd35734b6a8ba113e",
+  "topic": "Add joblib in show_versions",
+  "upstream_created_at": "2019-06-21T20:53:37Z",
+  "dataset_row": 1635,
+  "problem_sha256": "ea71cc485ffc95a215aeef3f4d06898bb91e0933916e2ace0601332d3c4405a6",
+  "regression_checks": [
+    "sklearn/utils/tests/test_show_versions.py::test_get_deps_info"
+  ],
+  "passing_checks": 2
+}
