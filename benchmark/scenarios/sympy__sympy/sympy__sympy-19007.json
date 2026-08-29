@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-19007",
+  "repository": "sympy/sympy",
+  "base_commit": "f9e030b57623bebdc2efa7f297c1b5ede08fcebf",
+  "topic": "Wrong matrix element fetched from BlockMatrix",
+  "upstream_created_at": "2020-03-29T13:47:11Z",
+  "dataset_row": 2182,
+  "problem_sha256": "406ca03bf0d71fe7cd8c4437caed1fcb7bd499061bd75d3a90f0ff0981752ebe",
+  "regression_checks": [
+    "test_block_index_symbolic",
+    "test_block_index_symbolic_nonzero",
+    "test_block_index_large"
+  ],
+  "passing_checks": 26
+}
