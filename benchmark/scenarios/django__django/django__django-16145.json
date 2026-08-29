@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16145",
+  "repository": "django/django",
+  "base_commit": "93d4c9ea1de24eb391cb2b3561b6703fd46374df",
+  "topic": "`runserver 0`'s \"Starting development server at <address>\" doesn't work",
+  "upstream_created_at": "2022-10-03T05:09:14Z",
+  "dataset_row": 829,
+  "problem_sha256": "49f81ed396a128cebc0cc37a0987e0eb3e99ec1eb44ff4baf48c9f51d487b7a3",
+  "regression_checks": [
+    "test_zero_ip_addr (admin_scripts.tests.ManageRunserver)"
+  ],
+  "passing_checks": 174
+}
