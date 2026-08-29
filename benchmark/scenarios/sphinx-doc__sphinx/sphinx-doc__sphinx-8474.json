@@ -1,0 +1,16 @@
+{
+  "id": "sphinx-doc__sphinx-8474",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "3ea1ec84cc610f7a9f4f6b354e264565254923ff",
+  "topic": "v3.3 upgrade started generating \"WARNING: no number is assigned for table\" warnings",
+  "upstream_created_at": "2020-11-22T16:24:25Z",
+  "dataset_row": 1825,
+  "problem_sha256": "4f49c822068075b80d8a3c114c52f28355ac2bb42d3a5640a0c00d9c2fb996b7",
+  "regression_checks": [
+    "tests/test_build_html.py::test_numfig_without_numbered_toctree_warn",
+    "tests/test_build_html.py::test_numfig_with_numbered_toctree_warn",
+    "tests/test_build_html.py::test_numfig_with_prefix_warn",
+    "tests/test_build_html.py::test_numfig_with_secnum_depth_warn"
+  ],
+  "passing_checks": 436
+}
