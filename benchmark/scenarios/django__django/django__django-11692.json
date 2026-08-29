@@ -1,0 +1,14 @@
+{
+  "id": "django__django-11692",
+  "repository": "django/django",
+  "base_commit": "f37face331f21cb8af70fc4ec101ec7b6be1f63e",
+  "topic": "Can't use OuterRef in union Subquery",
+  "upstream_created_at": "2019-08-21T08:09:45Z",
+  "dataset_row": 234,
+  "problem_sha256": "7050329f7a6edf4af6e31767856b6a1a838ddc70fc04097c66c21e3d5b6d32ea",
+  "regression_checks": [
+    "test_union_in_subquery (queries.test_qs_combinators.QuerySetSetOperationTests)",
+    "test_union_in_subquery_related_outerref (queries.test_qs_combinators.QuerySetSetOperationTests)"
+  ],
+  "passing_checks": 43
+}
