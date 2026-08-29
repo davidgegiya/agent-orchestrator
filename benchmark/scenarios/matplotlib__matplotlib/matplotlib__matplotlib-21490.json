@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-21490",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "b09aad279b5dcfc49dcf43e0b064eee664ddaf68",
+  "topic": "Line2D should copy its inputs",
+  "upstream_created_at": "2021-10-28T22:36:00Z",
+  "dataset_row": 980,
+  "problem_sha256": "be51047b55a43c639d7fada1a4e66ad186a1bc20f241cf988820a3f7b20dce33",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_lines.py::test_input_copy[png]",
+    "lib/matplotlib/tests/test_lines.py::test_input_copy[pdf]"
+  ],
+  "passing_checks": 42
+}
