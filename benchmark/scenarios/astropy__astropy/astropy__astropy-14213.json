@@ -1,0 +1,21 @@
+{
+  "id": "astropy__astropy-14213",
+  "repository": "astropy/astropy",
+  "base_commit": "a5ccc9522ca139df7a7cf4e2e506ffd288e55620",
+  "topic": "The `range` argument to `numpy.histogram`-like functions does not accept instances of `astropy.units.Quantity`",
+  "upstream_created_at": "2022-12-22T16:37:17Z",
+  "dataset_row": 47,
+  "problem_sha256": "7786c7cb6beadfcb2fd82eecb669609e2d230fd26eb8ea2c8a1f9215586a2529",
+  "regression_checks": [
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram_range[range0]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram_range[range1]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram_bin_edges_range[range0]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram2d_range[range0]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram2d_range[range1]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogram2d_range[range2]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogramdd_range[range0]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogramdd_range[range1]",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestHistogramFunctions::test_histogramdd_range[range2]"
+  ],
+  "passing_checks": 265
+}
