@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24637",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a9ba9d5d3fe9d5ac15fbdb06127f97d381148dd0",
+  "topic": "AnnotationBbox gid not passed to renderer",
+  "upstream_created_at": "2022-12-06T03:42:05Z",
+  "dataset_row": 1050,
+  "problem_sha256": "e25287dab5ad66ba465d823af5aaaf464015e6bc27e91b51888be5f30525ebef",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_svg.py::test_annotationbbox_gid"
+  ],
+  "passing_checks": 29
+}
