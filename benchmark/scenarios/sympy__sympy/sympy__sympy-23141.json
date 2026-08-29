@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-23141",
+  "repository": "sympy/sympy",
+  "base_commit": "0bc2587aef09ab150bd408b7cd9e08baf7b5fd9c",
+  "topic": "polygon = Polygon(Point(0, 0), Point(0, 1), Point(1, 1), Point(1, 0))",
+  "upstream_created_at": "2022-02-21T18:16:17Z",
+  "dataset_row": 2268,
+  "problem_sha256": "a9923a2405e62981796fa365d4ef681a09f657ce8ece2c748bf81ce38abf75a2",
+  "regression_checks": [
+    "test_max_degree"
+  ],
+  "passing_checks": 12
+}
