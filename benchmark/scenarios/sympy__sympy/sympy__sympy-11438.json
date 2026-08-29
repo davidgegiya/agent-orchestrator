@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-11438",
+  "repository": "sympy/sympy",
+  "base_commit": "46e3e96e5a6a16f340320585299ed577e1bf882d",
+  "topic": "([x, y, z], {1: -21, y**2: 1, x**2: 1, z**4: 1}, 'general_sum_of_even_powers')",
+  "upstream_created_at": "2016-07-28T03:14:09Z",
+  "dataset_row": 1911,
+  "problem_sha256": "059bb046158e6838df183d8088e56d9095587c8b82f06e3f43325081f326ce3a",
+  "regression_checks": [
+    "test_classify_diop"
+  ],
+  "passing_checks": 23
+}
