@@ -1,0 +1,28 @@
+{
+  "id": "django__django-11019",
+  "repository": "django/django",
+  "base_commit": "93e892bb645b16ebaf287beb5fe7f3ffe8d10408",
+  "topic": "Merging 3 or more media objects can throw unnecessary MediaOrderConflictWarnings",
+  "upstream_created_at": "2019-02-23T15:51:14Z",
+  "dataset_row": 125,
+  "problem_sha256": "31b69f95133ac171cd97af3ca0687d9a758a23b4cb7dec8aa8378a86ce619d49",
+  "regression_checks": [
+    "test_combine_media (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_construction (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_form_media (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_media_deduplication (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_media_inheritance (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_media_inheritance_extends (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_media_property_parent_references (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge_css_three_way (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge_js_three_way (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge_js_three_way2 (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_merge_warning (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_multi_widget (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_media (admin_widgets.test_autocomplete_widget.AutocompleteMixinTests)",
+    "test_render_options (admin_widgets.test_autocomplete_widget.AutocompleteMixinTests)",
+    "test_inline_media_only_inline (admin_inlines.tests.TestInlineMedia)"
+  ],
+  "passing_checks": 58
+}
