@@ -1,0 +1,18 @@
+{
+  "id": "matplotlib__matplotlib-23140",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "54bbf200ff88b7855db4e34153ba728b472b3727",
+  "topic": "Legend Title Left Alignment",
+  "upstream_created_at": "2022-05-26T05:04:24Z",
+  "dataset_row": 1007,
+  "problem_sha256": "369abec26937784f81db492348158e2cd584a60e6eff1d44442088b5cd47ce10",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_legend_alignment[center]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_alignment[left]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_alignment[right]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_set_alignment[center]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_set_alignment[left]",
+    "lib/matplotlib/tests/test_legend.py::test_legend_set_alignment[right]"
+  ],
+  "passing_checks": 95
+}
