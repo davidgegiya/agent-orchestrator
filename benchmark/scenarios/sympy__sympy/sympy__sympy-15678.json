@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15678",
+  "repository": "sympy/sympy",
+  "base_commit": "31c68eef3ffef39e2e792b0ec92cd92b7010eb2a",
+  "topic": "Some issues with idiff",
+  "upstream_created_at": "2018-12-20T18:11:56Z",
+  "dataset_row": 2065,
+  "problem_sha256": "ad4e5da474f0631bbb7326b94019810b8c5138c9def984cff46c22f229fc64dd",
+  "regression_checks": [
+    "test_idiff"
+  ],
+  "passing_checks": 3
+}
