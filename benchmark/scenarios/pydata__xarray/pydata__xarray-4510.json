@@ -1,0 +1,22 @@
+{
+  "id": "pydata__xarray-4510",
+  "repository": "pydata/xarray",
+  "base_commit": "7ce0110f727b37a776d509174365cf0905163234",
+  "topic": "ds.rolling() drops attributes and name",
+  "upstream_created_at": "2020-10-14T23:12:16Z",
+  "dataset_row": 1244,
+  "problem_sha256": "c663abf5b5f3230e0a395dabf0df2372f945f8f6bf291822bb9322940c320c00",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::test_rolling_keep_attrs[reduce-argument0]",
+    "xarray/tests/test_dataarray.py::test_rolling_keep_attrs[mean-argument1]",
+    "xarray/tests/test_dataarray.py::test_rolling_keep_attrs[construct-argument2]",
+    "xarray/tests/test_dataarray.py::test_rolling_keep_attrs[count-argument3]",
+    "xarray/tests/test_dataarray.py::test_rolling_keep_attrs_deprecated",
+    "xarray/tests/test_dataset.py::test_rolling_keep_attrs[reduce-argument0]",
+    "xarray/tests/test_dataset.py::test_rolling_keep_attrs[mean-argument1]",
+    "xarray/tests/test_dataset.py::test_rolling_keep_attrs[construct-argument2]",
+    "xarray/tests/test_dataset.py::test_rolling_keep_attrs[count-argument3]",
+    "xarray/tests/test_dataset.py::test_rolling_keep_attrs_deprecated"
+  ],
+  "passing_checks": 1771
+}
