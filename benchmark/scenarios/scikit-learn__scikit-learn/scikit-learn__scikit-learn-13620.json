@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13620",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "f9af18b4e5b9d4b379867d32381296062782dc15",
+  "topic": "Bug in Gradient Boosting: Feature Importances do not sum to 1",
+  "upstream_created_at": "2019-04-11T16:46:24Z",
+  "dataset_row": 1611,
+  "problem_sha256": "1f5e98ea53891d334093a3da57439242ef3c26587c5039c57966bf1fbb8b314b",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_gradient_boosting.py::test_gbr_degenerate_feature_importances"
+  ],
+  "passing_checks": 125
+}
