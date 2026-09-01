@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7746",
+  "repository": "astropy/astropy",
+  "base_commit": "d5bd3f68bb6d5ce3a61bdce9883ee750d1afade5",
+  "topic": "Issue when passing empty lists/arrays to WCS transformations",
+  "upstream_created_at": "2018-08-20T14:07:20Z",
+  "dataset_row": 82,
+  "problem_sha256": "78487741107e13cd2654626db9ff74fd568c186af73ecb3c7a00452ce104eda0",
+  "regression_checks": [
+    "astropy/wcs/tests/test_wcs.py::test_zero_size_input"
+  ],
+  "passing_checks": 56
+}
