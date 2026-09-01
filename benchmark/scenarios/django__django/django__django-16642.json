@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16642",
+  "repository": "django/django",
+  "base_commit": "fbe850106b2e4b85f838219cb9e1df95fba6c164",
+  "topic": "Improper guessing of Mime Type for \"br\" and \"Z\" file types",
+  "upstream_created_at": "2023-03-11T07:38:47Z",
+  "dataset_row": 879,
+  "problem_sha256": "e146cd71c3d87eec9167fd570660745bc088e6bf9491fde0382adf66e97c623b",
+  "regression_checks": [
+    "If compressed responses are served with the uncompressed Content-Type"
+  ],
+  "passing_checks": 21
+}
