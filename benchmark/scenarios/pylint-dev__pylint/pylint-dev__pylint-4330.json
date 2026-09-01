@@ -1,0 +1,21 @@
+{
+  "id": "pylint-dev__pylint-4330",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "5e1928b325bc798f5be1ab94031bf6816d058d9f",
+  "topic": "Have spellchecker ignore code in docstring or comments (i.e. things flanked with double backticks)",
+  "upstream_created_at": "2021-04-09T14:43:27Z",
+  "dataset_row": 1317,
+  "problem_sha256": "596ffd8bf98b555bf99316f00829573fdc496e95aa44b7438f6c68da64f3fa69",
+  "regression_checks": [
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[fmt-:",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[noqa--pycharm",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[noqa-:-flake8",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[nosec--bandit",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[isort-:skip-isort",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_tool_directives_at_beginning_of_comments_but_still_raise_error_if_directive_appears_later_in_comment[mypy-:-mypy",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_code_flanked_in_double_backticks",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_code_flanked_in_single_backticks",
+    "tests/checkers/unittest_spelling.py::TestSpellingChecker::test_skip_directives_specified_in_pylintrc"
+  ],
+  "passing_checks": 23
+}
