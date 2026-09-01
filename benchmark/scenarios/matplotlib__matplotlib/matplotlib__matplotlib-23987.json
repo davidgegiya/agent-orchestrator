@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23987",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e98d8d085e8f53ec0467422b326f7738a2dd695e",
+  "topic": "Constrained layout UserWarning even when False",
+  "upstream_created_at": "2022-09-22T21:39:02Z",
+  "dataset_row": 1029,
+  "problem_sha256": "cf3090a3d2a979adba8ed6eee75e41b34a5b2cf375c688e9d671ca589fc4c861",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_constrainedlayout.py::test_set_constrained_layout[False-False]"
+  ],
+  "passing_checks": 43
+}
