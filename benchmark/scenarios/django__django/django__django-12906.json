@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12906",
+  "repository": "django/django",
+  "base_commit": "42c08ee46539ef44f8658ebb1cbefb408e0d03fe",
+  "topic": "Document admin's requirement on django.template.context_processors.request context processor",
+  "upstream_created_at": "2020-05-13T02:44:41Z",
+  "dataset_row": 376,
+  "problem_sha256": "1322c4ea478552433064ab3d25f0a28074974164632b4a08e9da66abe9e0b95e",
+  "regression_checks": [
+    "test_context_processor_dependencies (admin_checks.tests.SystemChecksTestCase)"
+  ],
+  "passing_checks": 533
+}
