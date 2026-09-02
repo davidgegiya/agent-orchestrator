@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15151",
+  "repository": "sympy/sympy",
+  "base_commit": "e53e809176de9aa0fb62e85689f8cdb669d4cacb",
+  "topic": "not pretty printing indexed(x1, i)",
+  "upstream_created_at": "2018-08-26T17:19:04Z",
+  "dataset_row": 2039,
+  "problem_sha256": "55666d77ed757148b85ee73fd2d424b85d9bb6aa58b66afa88541accce96fc26",
+  "regression_checks": [
+    "test_latex_indexed"
+  ],
+  "passing_checks": 117
+}
