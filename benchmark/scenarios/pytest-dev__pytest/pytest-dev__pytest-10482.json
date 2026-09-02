@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-10482",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "54d5a63d1485110015665ece1065982407394517",
+  "topic": "Short test summary doesn't show the test name when skipping from a fixture",
+  "upstream_created_at": "2022-11-08T12:07:04Z",
+  "dataset_row": 1380,
+  "problem_sha256": "6e35d70216cb7064eab5822c1c9924a9874a178c5bdca98ab3d65a88e0349be9",
+  "regression_checks": [
+    "testing/test_skipping.py::test_skip_from_fixture"
+  ],
+  "passing_checks": 91
+}
