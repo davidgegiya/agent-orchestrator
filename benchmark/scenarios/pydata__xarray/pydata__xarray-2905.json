@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-2905",
+  "repository": "pydata/xarray",
+  "base_commit": "7c4e2ac83f7b4306296ff9b7b51aaf016e5ad614",
+  "topic": "Variable.__setitem__ coercing types on objects with a values property",
+  "upstream_created_at": "2019-04-17T21:52:37Z",
+  "dataset_row": 1206,
+  "problem_sha256": "2896397463d2a30a72f2010065d4c0d86676f4260336ca4e39525e47d06e32fc",
+  "regression_checks": [
+    "xarray/tests/test_variable.py::TestAsCompatibleData::test_unsupported_type"
+  ],
+  "passing_checks": 364
+}
