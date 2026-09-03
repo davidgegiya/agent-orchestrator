@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25667",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7d7f6da20ef11afb8eed37bce32286ad4ec43431",
+  "topic": "bar/barh don't trigger datetime units",
+  "upstream_created_at": "2023-04-12T04:03:44Z",
+  "dataset_row": 1092,
+  "problem_sha256": "ea489bd8094a7bc332ba5a24494bebfc3a2ada673d71622f8fbcc89ac0a53efd",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_bar_datetime_start"
+  ],
+  "passing_checks": 810
+}
