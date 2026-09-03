@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9987",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "5adc109b72ce42f6938191c7ad027a4913eaba1d",
+  "topic": "Using position-only parameter syntax in `__init__` prevents docstrings for attributes from being parsed",
+  "upstream_created_at": "2021-12-18T06:25:48Z",
+  "dataset_row": 1905,
+  "problem_sha256": "db041e07479081325b47eefbe4ac7a9b77b09fce603fa5990d107691115ef929",
+  "regression_checks": [
+    "tests/test_pycode.py::test_ModuleAnalyzer_find_attr_docs_for_posonlyargs_method"
+  ],
+  "passing_checks": 8
+}
