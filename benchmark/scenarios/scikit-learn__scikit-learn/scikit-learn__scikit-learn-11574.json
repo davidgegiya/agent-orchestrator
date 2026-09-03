@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-11574",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "dd69361a0d9c6ccde0d2353b00b86e0e7541a3e3",
+  "topic": "IsolationForest contamination deprecation in __init__ not in fit",
+  "upstream_created_at": "2018-07-16T22:39:16Z",
+  "dataset_row": 1541,
+  "problem_sha256": "32c4e983f1c8517f9e213b39105379540a99c11a782527d4aaea644145e1ecd2",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_iforest.py::test_deprecation"
+  ],
+  "passing_checks": 28
+}
