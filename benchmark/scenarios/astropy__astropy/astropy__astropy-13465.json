@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13465",
+  "repository": "astropy/astropy",
+  "base_commit": "0f3e4a6549bc8bb3276184a021ecdd3482eb5d13",
+  "topic": "rtol for FITSDiff not working as expected",
+  "upstream_created_at": "2022-07-19T08:36:06Z",
+  "dataset_row": 28,
+  "problem_sha256": "20df5b9d4d616e701b59b09ca53732a06f8485f9683c9a697f10e340c2b08d4c",
+  "regression_checks": [
+    "astropy/io/fits/tests/test_diff.py::test_rawdatadiff_diff_with_rtol"
+  ],
+  "passing_checks": 3
+}
