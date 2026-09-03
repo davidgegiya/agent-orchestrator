@@ -1,0 +1,16 @@
+{
+  "id": "pydata__xarray-4750",
+  "repository": "pydata/xarray",
+  "base_commit": "0f1eb96c924bad60ea87edd9139325adabfefa33",
+  "topic": "Limit number of data variables shown in repr",
+  "upstream_created_at": "2021-01-02T21:14:50Z",
+  "dataset_row": 1250,
+  "problem_sha256": "991359132eae75cf2ab543f3b631702a53561080354d839ce74fcb4e040c4293",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test__mapping_repr[50-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[35-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[11-40-30]",
+    "xarray/tests/test_formatting.py::test__mapping_repr[1-40-30]"
+  ],
+  "passing_checks": 19
+}
