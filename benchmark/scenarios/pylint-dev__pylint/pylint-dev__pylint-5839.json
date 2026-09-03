@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-5839",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "15040ee7c42958606ae27aa32ccbe54371b83049",
+  "topic": "Pylint needs to forbid to re-use the msgid or symbol of old deleted msgid/symbol",
+  "upstream_created_at": "2022-02-25T21:03:32Z",
+  "dataset_row": 1340,
+  "problem_sha256": "521539f8a052a173ae3ca7983013bf1ba05b63712cafbbf3cdfda718a9f65ef0",
+  "regression_checks": [
+    "tests/message/test_no_removed_msgid_or_symbol_used.py::test_no_removed_msgid_or_symbol_used"
+  ],
+  "passing_checks": 0
+}
