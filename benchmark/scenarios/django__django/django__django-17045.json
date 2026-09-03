@@ -1,0 +1,13 @@
+{
+  "id": "django__django-17045",
+  "repository": "django/django",
+  "base_commit": "2ddfa3e2b63d7a77270711dbe63aafb86abf4ddd",
+  "topic": "Add a system check for unmatched URL paths' < / >",
+  "upstream_created_at": "2023-07-04T13:41:24Z",
+  "dataset_row": 924,
+  "problem_sha256": "9687df80856ce4ff9c52fa102a4f9dc88ec15bab5b404fb1a7d464e6049aef54",
+  "regression_checks": [
+    "test_warning_unmatched_angle_brackets (check_framework.test_urls.CheckUrlConfigTests.test_warning_unmatched_angle_brackets)"
+  ],
+  "passing_checks": 30
+}
