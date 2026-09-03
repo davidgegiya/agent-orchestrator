@@ -1,0 +1,17 @@
+{
+  "id": "sympy__sympy-18587",
+  "repository": "sympy/sympy",
+  "base_commit": "afbffa714654e4c8e8e853b7689d324e7146e40f",
+  "topic": "combinatorics.Permutation - exception not raised if wrong size is passed to constructor",
+  "upstream_created_at": "2020-02-06T14:14:58Z",
+  "dataset_row": 2164,
+  "problem_sha256": "c3a21e7f05ce70fc7f22952b60498f00d45b4abd6d9a506190dabc7f1188e634",
+  "regression_checks": [
+    "test_Permutation",
+    "test_Permutation_subclassing",
+    "test_from_sequence",
+    "test_resize",
+    "test_deprecated_print_cyclic"
+  ],
+  "passing_checks": 10
+}
