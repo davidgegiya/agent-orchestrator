@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-5362",
+  "repository": "pydata/xarray",
+  "base_commit": "bc41eb20ba96c4d6a4b5bf12f1749523f34fa321",
+  "topic": "Should weighted operations raise an error when dimensions don't exist?",
+  "upstream_created_at": "2021-05-22T16:51:54Z",
+  "dataset_row": 1269,
+  "problem_sha256": "fa0c846ba023b68de38193b44e3db885bf5bc49757afc700f98521ac48009910",
+  "regression_checks": [
+    "xarray/tests/test_weighted.py::test_weighted_bad_dim[True]",
+    "xarray/tests/test_weighted.py::test_weighted_bad_dim[False]"
+  ],
+  "passing_checks": 193
+}
