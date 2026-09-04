@@ -10,6 +10,7 @@ import sys
 import time
 import traceback
 from datetime import datetime
+from hashlib import sha256
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -306,7 +307,7 @@ def _cmd_meta(result: Dict[str, Any], *, limit: int = 800) -> Dict[str, Any]:
     }
 
 
-def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, Dict[str, Any]]:
+def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tuple[str, Dict[str, Any]]:
     """
     Produces a patch-like diff for workspace/ using git.
 
@@ -331,8 +332,6 @@ def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, 
     # - workspace/ is its own git repo (product repo lives inside workspace/)
     # - repo_root is the git repo and workspace/ is a subdirectory
     workspace_top = _git_toplevel(workspace_dir, label="workspace")
-    if workspace_top is None:
-        workspace_top = _git_toplevel(repo_root, label="repo_root")
     if workspace_top is None:
         return ("- None", meta)
 
@@ -359,7 +358,7 @@ def _compute_workspace_diff(repo_root: Path, workspace_dir: Path) -> Tuple[str, 
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "--no-textconv", "HEAD", "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "--no-textconv", base_sha, "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
     meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     tracked_out = (tracked.get("stdout") or "").rstrip()
     if tracked_out:
@@ -526,6 +525,17 @@ def main(argv: Optional[List[str]] = None) -> int:
         parser.error(f"workspace is not a directory: {workspace}")
     if args.workspace and not args.task:
         parser.error("--workspace requires --task")
+    base = _run_local_cmd(["git", "rev-parse", "--verify", "HEAD"], cwd=workspace, timeout_seconds=5)
+    if base["returncode"] != 0:
+        parser.error("workspace must be in a Git checkout with a base commit")
+    base_sha = base["stdout"].strip()
+    if args.workspace:
+        status = _run_local_cmd(
+            ["git", "status", "--porcelain", "--untracked-files=all", "--", "."],
+            cwd=workspace, timeout_seconds=5,
+        )
+        if status["returncode"] != 0 or status["stdout"]:
+            parser.error("--workspace must be clean before starting; use a separate Git worktree")
     load_dotenv(repo_root / ".env")
 
     run_dir = create_run_dir(repo_root / "project" / "reports")
@@ -535,6 +545,9 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     artifacts: Dict[str, Any] = {
         "run_dir": str(run_dir),
+        "workspace": str(workspace),
+        "base_sha": base_sha,
+        "implementer_backend": args.implementer,
         "started_at": datetime.now().isoformat(timespec="seconds"),
         "rounds": [],
         "final_verdict": "FAIL",
@@ -669,6 +682,13 @@ def main(argv: Optional[List[str]] = None) -> int:
             return 1
         report.append_implementer(round_idx, implementer_report)
 
+        before_checks, before_meta = _compute_workspace_diff(workspace, base_sha)
+        if not before_meta["available"]:
+            artifacts["error"] = "Could not collect the workspace patch before checks."
+            artifacts["rounds"].append(round_record)
+            report.write_artifacts(artifacts)
+            print(f"Round {round_idx}: FAIL SKIP ({artifacts['error']})")
+            return 1
         check_results = [_run_local_cmd(command, cwd=workspace, timeout_seconds=120) for command in checks]
         round_record["checks"] = [_cmd_meta(check, limit=4000) for check in check_results]
         tool_outputs = _format_tool_outputs([
@@ -680,19 +700,20 @@ def main(argv: Optional[List[str]] = None) -> int:
         red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
         reviewer_red_flags = _truncate(red_flags_text, red_flags_max_chars) if red_flags_text.strip() != "- None" else "- None"
 
-        diff_text, diff_meta = _compute_workspace_diff(repo_root, workspace)
+        diff_text, diff_meta = _compute_workspace_diff(workspace, base_sha)
         diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
         reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
         diff_path = run_dir / f"diff_round_{round_idx}.patch"
         diff_path.write_text(diff_text, encoding="utf-8")
         round_record["diff"] = {
             "path": str(diff_path),
+            "sha256": sha256(diff_text.encode("utf-8")).hexdigest(),
             "max_chars": diff_max_chars,
             "included": reviewer_diff.strip() != "- None",
             "meta": diff_meta,
         }
-        if not diff_meta["available"] or len(diff_text) > diff_max_chars:
-            round_record["error"] = "Review requires an available diff within the reviewer limit."
+        if not diff_meta["available"] or len(diff_text) > diff_max_chars or diff_text != before_checks:
+            round_record["error"] = "Review requires a complete patch that stays unchanged during checks."
             artifacts["rounds"].append(round_record)
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP ({round_record['error']})")
@@ -765,6 +786,12 @@ def main(argv: Optional[List[str]] = None) -> int:
         previous_reviewer_text = reviewer_report
 
         if review_decision.verdict == "PASS":
+            current_patch, current_meta = _compute_workspace_diff(workspace, base_sha)
+            if not current_meta["available"] or current_patch != diff_text:
+                artifacts["error"] = "Workspace changed during review; rerun the checks and review."
+                report.write_artifacts(artifacts)
+                print(f"Round {round_idx}: FAIL SKIP ({artifacts['error']})")
+                return 1
             print(f"Round {round_idx}: PASS")
             artifacts["final_verdict"] = "PASS"
             artifacts["final_action"] = "PASS"
