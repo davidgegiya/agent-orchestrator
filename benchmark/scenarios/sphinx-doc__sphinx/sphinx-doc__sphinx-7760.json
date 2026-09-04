@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-7760",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "34f35793302571811dc0a38b4b648dff28bc31f6",
+  "topic": "coverage ext - config to print missing coverage as warning",
+  "upstream_created_at": "2020-05-31T10:59:11Z",
+  "dataset_row": 1786,
+  "problem_sha256": "5feb7e85007dd033f89997769b2efcde8a8cb8389cd224b3fc0d3c3c95a258f5",
+  "regression_checks": [
+    "tests/test_ext_coverage.py::test_show_missing_items",
+    "tests/test_ext_coverage.py::test_show_missing_items_quiet"
+  ],
+  "passing_checks": 2
+}
