@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-23267",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "9dbcbe291e3bea11fc56c12ba3256a9d4cb4cf2f",
+  "topic": "Colorbar should support location kwarg that sets both orientation and ticklocation",
+  "upstream_created_at": "2022-06-14T09:11:23Z",
+  "dataset_row": 1013,
+  "problem_sha256": "d1e53027034188b7c58ffbe0c1734e16626abaf5479fdfc518d9bea853b81d4f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_passing_location[png]",
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_errors[kwargs1-TypeError-location"
+  ],
+  "passing_checks": 66
+}
