@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-11148",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "2f7415cfbc4b6ca62f9013f1abd27136f46b9653",
+  "topic": "Module imported twice under import-mode=importlib",
+  "upstream_created_at": "2023-06-29T00:04:33Z",
+  "dataset_row": 1391,
+  "problem_sha256": "fd30d74f0937212ce0671f1465cab068db88792ffa16850dc366b86b24288a91",
+  "regression_checks": [
+    "testing/test_pathlib.py::TestImportPath::test_remembers_previous_imports",
+    "testing/acceptance_test.py::test_doctest_and_normal_imports_with_importlib"
+  ],
+  "passing_checks": 129
+}
