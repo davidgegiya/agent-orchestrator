@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13978",
+  "repository": "sympy/sympy",
+  "base_commit": "84c125972ad535b2dfb245f8d311d347b45e5b8a",
+  "topic": "Generation of wrong octave code for imaginary number representation",
+  "upstream_created_at": "2018-01-21T01:42:12Z",
+  "dataset_row": 2008,
+  "problem_sha256": "566e86ffd7cb5dd8899d3ed43026a3487fcec72c250bee90700e36a40de74088",
+  "regression_checks": [
+    "test_imag"
+  ],
+  "passing_checks": 29
+}
