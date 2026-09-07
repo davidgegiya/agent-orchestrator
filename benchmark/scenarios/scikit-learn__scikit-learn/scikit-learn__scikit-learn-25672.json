@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25672",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "49a937e974190b4ab20c7506052ce8a67c129da1",
+  "topic": "NDCG score doesn't work with binary relevance and a list of 1 element",
+  "upstream_created_at": "2023-02-23T19:32:21Z",
+  "dataset_row": 1693,
+  "problem_sha256": "bee2b282d33ee2f03ebe48376c1b6154d07db39c85bc01ba916a68ab2107eae5",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_ranking.py::test_ndcg_error_single_document"
+  ],
+  "passing_checks": 184
+}
