@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16491",
+  "repository": "django/django",
+  "base_commit": "7eb5391b71f473dd13abdaaef143a5509160487f",
+  "topic": "Exists annotations can return non-boolean results (i.e. None) if used with an empty QuerySet",
+  "upstream_created_at": "2023-01-19T21:48:09Z",
+  "dataset_row": 856,
+  "problem_sha256": "1f2f9dbdd910ba20959f634f41ccd872c564bf5799311d69d95c75941bab4e0d",
+  "regression_checks": [
+    "test_annotation_exists_none_query (annotations.tests.NonAggregateAnnotationTestCase.test_annotation_exists_none_query)"
+  ],
+  "passing_checks": 80
+}
