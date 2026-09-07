@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8898",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "1f8c4d9eb185c16a2c1d881c054f015e1c2eb334",
+  "topic": "bad-names-rgxs mangles regular expressions with commas",
+  "upstream_created_at": "2023-07-29T21:53:59Z",
+  "dataset_row": 1371,
+  "problem_sha256": "7f4c396d465a294e10fd92394d010ddbe83e52b891837185851fe240ad7fd929",
+  "regression_checks": [
+    "tests/config/test_config.py::test_csv_regex_error"
+  ],
+  "passing_checks": 18
+}
