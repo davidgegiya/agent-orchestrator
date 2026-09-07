@@ -1,0 +1,21 @@
+{
+  "id": "pydata__xarray-6971",
+  "repository": "pydata/xarray",
+  "base_commit": "a042ae69c0444912f94bb4f29c93fa05046893ed",
+  "topic": "Public API for setting new indexes: add a set_xindex method?",
+  "upstream_created_at": "2022-08-31T12:54:35Z",
+  "dataset_row": 1294,
+  "problem_sha256": "426d04b5e391d4ec4295839820a89dd722b4b39aea39532584281e7748991639",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_set_xindex",
+    "xarray/tests/test_dataarray.py::TestDataArray::test_drop_indexes",
+    "xarray/tests/test_dataset.py::TestDataset::test_drop_indexes",
+    "xarray/tests/test_dataset.py::TestDataset::test_set_xindex",
+    "xarray/tests/test_dataset.py::TestDataset::test_set_xindex_options",
+    "xarray/tests/test_indexes.py::TestIndex::test_from_variables",
+    "xarray/tests/test_indexes.py::TestPandasIndex::test_from_variables",
+    "xarray/tests/test_indexes.py::TestPandasIndex::test_from_variables_index_adapter",
+    "xarray/tests/test_indexes.py::TestPandasMultiIndex::test_from_variables"
+  ],
+  "passing_checks": 885
+}
