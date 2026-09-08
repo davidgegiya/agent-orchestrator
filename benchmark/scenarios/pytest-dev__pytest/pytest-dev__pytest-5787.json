@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-5787",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "955e54221008aba577ecbaefa15679f6777d3bf8",
+  "topic": "exception serialization should include chained exceptions",
+  "upstream_created_at": "2019-08-26T16:43:31Z",
+  "dataset_row": 1412,
+  "problem_sha256": "be7e0a03ece39b87e738152d642ea080cd87312334f5a325538227d8c59dbaf9",
+  "regression_checks": [
+    "testing/test_reports.py::TestReportSerialization::test_chained_exceptions[TestReport]",
+    "testing/test_reports.py::TestReportSerialization::test_chained_exceptions[CollectReport]"
+  ],
+  "passing_checks": 123
+}
