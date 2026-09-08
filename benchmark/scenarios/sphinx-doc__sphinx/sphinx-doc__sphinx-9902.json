@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9902",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "a7462d57b414c6f75b1a456c1367cf90caa56df1",
+  "topic": ".. py:data:: :type: option does not correctly link to type supplied",
+  "upstream_created_at": "2021-11-28T05:47:37Z",
+  "dataset_row": 1902,
+  "problem_sha256": "6986c5039a46c743eb3eeaa5ba06447fcf889c19497a9f3a7fd9266297db2c52",
+  "regression_checks": [
+    "tests/test_domain_py.py::test_type_field"
+  ],
+  "passing_checks": 47
+}
