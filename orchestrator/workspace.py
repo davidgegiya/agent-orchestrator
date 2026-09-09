@@ -186,3 +186,16 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
         meta["reason"] = "The patch contains text that is not valid UTF-8."
         return ("- None", meta)
     return (patch_text, meta)
+
+
+def create_detached_worktree(source: Path, destination: Path) -> None:
+    """Materialize the source HEAD without bringing along its local changes."""
+    if destination.exists() or destination.is_relative_to(source):
+        raise ValueError("worktree destination must be a new path outside the source checkout")
+    result = _run_local_cmd(
+        ["git", "-c", f"core.hooksPath={os.devnull}", "-c", "core.fsmonitor=false",
+         "worktree", "add", "--detach", "--", str(destination), "HEAD"],
+        cwd=source, timeout_seconds=120,
+    )
+    if result["returncode"] != 0:
+        raise ValueError(_escape_invalid_utf8(result["stderr"]).strip() or "Could not create the Git worktree.")

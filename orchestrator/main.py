@@ -24,7 +24,7 @@ except ImportError:  # pragma: no cover - optional for local dev
 from .checkpoint import ReviewCheckpoint, digest_text, run_inputs_digest
 from .codex_runner import run_codex
 from .models import RunContext
-from .workspace import _cmd_meta, _compute_workspace_diff, _run_local_cmd
+from .workspace import _cmd_meta, _compute_workspace_diff, _run_local_cmd, create_detached_worktree
 from .policies import (
     MAX_ROUNDS,
     ReviewDecision,
@@ -367,6 +367,7 @@ def _safe_run(
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Implement and review a repository task")
     parser.add_argument("--workspace", type=Path, help="Product Git checkout to edit")
+    parser.add_argument("--worktree", type=Path, help="Create a detached checkout from --workspace HEAD")
     parser.add_argument("--task", type=Path, help="Markdown task to run")
     parser.add_argument("--resume", type=Path, help="Verify the saved patch from an interrupted run")
     parser.add_argument("--implementer", choices=("sdk", "codex"), default="sdk")
@@ -397,6 +398,15 @@ def main(argv: Optional[List[str]] = None) -> int:
         parser.error("--resume requires an explicit --workspace checkout")
     if args.workspace and not args.task:
         parser.error("--workspace requires --task")
+    if args.worktree:
+        if not args.workspace or args.resume:
+            parser.error("--worktree requires --workspace and a new run")
+        try:
+            destination = args.worktree.resolve()
+            create_detached_worktree(workspace, destination)
+        except (OSError, ValueError) as exc:
+            parser.error(str(exc))
+        workspace = destination
     git_dir = _run_local_cmd(["git", "rev-parse", "--absolute-git-dir"], cwd=workspace, timeout_seconds=5)
     if git_dir["returncode"] != 0:
         parser.error("workspace must be in a Git checkout")
