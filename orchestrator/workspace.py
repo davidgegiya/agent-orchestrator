@@ -190,7 +190,11 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
 
 def create_detached_worktree(source: Path, destination: Path) -> None:
     """Materialize the source HEAD without bringing along its local changes."""
-    if destination.exists() or destination.is_relative_to(source):
+    toplevel = _run_local_cmd(["git", "rev-parse", "--show-toplevel"], cwd=source, timeout_seconds=5)
+    if toplevel["returncode"] != 0:
+        raise ValueError("worktree source must be a Git checkout")
+    source_root = Path(toplevel["stdout"].strip()).resolve()
+    if destination.exists() or destination.is_relative_to(source_root):
         raise ValueError("worktree destination must be a new path outside the source checkout")
     result = _run_local_cmd(
         ["git", "-c", f"core.hooksPath={os.devnull}", "-c", "core.fsmonitor=false",

@@ -1,4 +1,3 @@
-from pathlib import Path
 import subprocess
 
 import pytest
@@ -52,3 +51,10 @@ def test_detached_worktree_uses_committed_state(repo):
     assert git(destination, "rev-parse", "--abbrev-ref", "HEAD") == "HEAD"
     with pytest.raises(ValueError, match="new path outside"):
         create_detached_worktree(repo, repo / "nested")
+
+
+def test_cannot_create_worktree_inside_source_from_a_subdirectory(repo):
+    subdir = repo / "nested-source"
+    subdir.mkdir()
+    with pytest.raises(ValueError, match="new path outside"):
+        create_detached_worktree(subdir, repo / "nested-destination")
