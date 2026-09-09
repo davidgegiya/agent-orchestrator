@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-20693",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "54b105b27dea498e702cfddfb27b7f82abe65e56",
+  "topic": "BUG: Lost functionality of interactive selector update",
+  "upstream_created_at": "2021-07-20T14:10:36Z",
+  "dataset_row": 968,
+  "problem_sha256": "1eab8481226e1c8c6d08e5246ed31eacaf0357c558c0ae4d7e10c77c42a198c8",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_rectangle_selector_set_props_handle_props",
+    "lib/matplotlib/tests/test_widgets.py::test_rectangle_handles",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_set_props_handle_props",
+    "lib/matplotlib/tests/test_widgets.py::test_polygon_selector_set_props_handle_props"
+  ],
+  "passing_checks": 41
+}
