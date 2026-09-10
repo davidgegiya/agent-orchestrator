@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6882",
+  "repository": "pydata/xarray",
+  "base_commit": "3c8ce0f4f6fd287bcd1bc3783d51d4ce5a6bc55d",
+  "topic": "Cannot open NetCDF file if dimension with time coordinate has length 0 (`ValueError` when decoding CF datetime)",
+  "upstream_created_at": "2022-08-05T21:00:13Z",
+  "dataset_row": 1291,
+  "problem_sha256": "f4778bdac6c44676937b15e269f790042f2651e7336148700165636b36552508",
+  "regression_checks": [
+    "xarray/tests/test_coding_times.py::test_decode_0size_datetime[False]"
+  ],
+  "passing_checks": 432
+}
