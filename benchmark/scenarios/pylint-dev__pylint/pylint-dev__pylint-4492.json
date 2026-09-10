@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-4492",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "5ebbc30afbaa1a3c1e04fc86c3525edf9f579640",
+  "topic": "Allow parseable output in parallel of human-readable output",
+  "upstream_created_at": "2021-05-23T15:13:26Z",
+  "dataset_row": 1321,
+  "problem_sha256": "658041c1640fece95d89f6f181c92fdfee3f47da494e6d61ff591ee32a207e01",
+  "regression_checks": [
+    "tests/unittest_reporting.py::test_multi_format_output"
+  ],
+  "passing_checks": 4
+}
