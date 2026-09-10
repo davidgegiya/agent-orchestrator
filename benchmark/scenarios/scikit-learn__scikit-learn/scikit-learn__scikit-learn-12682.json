@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-12682",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "d360ffa7c5896a91ae498b3fb9cf464464ce8f34",
+  "topic": "`SparseCoder` doesn't expose `max_iter` for `Lasso`",
+  "upstream_created_at": "2018-11-27T08:30:51Z",
+  "dataset_row": 1558,
+  "problem_sha256": "6c83a5780eca2c8aea4c62864830b2a2542ee267064c9db35ac8677dd21fad94",
+  "regression_checks": [
+    "sklearn/decomposition/tests/test_dict_learning.py::test_max_iter"
+  ],
+  "passing_checks": 66
+}
