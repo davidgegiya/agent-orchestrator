@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-14623",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d65c9ca20ddf81ef91199e6d819f9d3506ef477c",
+  "topic": "Inverting an axis using its limits does not work for log scale",
+  "upstream_created_at": "2019-06-25T14:01:17Z",
+  "dataset_row": 955,
+  "problem_sha256": "82111ec73211b90b1e5f46eb13637c776fb065a9e41536f0a09a4b2bf6faa3d2",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_inverted_limits"
+  ],
+  "passing_checks": 400
+}
