@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-13913",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "dd18211687623c5fa57658990277440814d422f0",
+  "topic": "`is_color_like` returning erroneous value on strings of integers",
+  "upstream_created_at": "2019-04-09T23:26:28Z",
+  "dataset_row": 947,
+  "problem_sha256": "a828e41bee88b81457aca14da2f8c595691f4a48114ab550fbb33c44c671651a",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_failed_conversions"
+  ],
+  "passing_checks": 204
+}
