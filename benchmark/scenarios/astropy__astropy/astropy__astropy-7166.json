@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-7166",
+  "repository": "astropy/astropy",
+  "base_commit": "26d147868f8a891a6009a25cd6a8576d2e1bd747",
+  "topic": "InheritDocstrings metaclass doesn't work for properties",
+  "upstream_created_at": "2018-02-07T15:05:31Z",
+  "dataset_row": 75,
+  "problem_sha256": "0848fd663aecf63b2f90ffb97034dae0aaf9b3a32fca0a72ac33619cc581269a",
+  "regression_checks": [
+    "astropy/utils/tests/test_misc.py::test_inherit_docstrings"
+  ],
+  "passing_checks": 6
+}
