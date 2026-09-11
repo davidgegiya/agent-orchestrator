@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-24213",
+  "repository": "sympy/sympy",
+  "base_commit": "e8c22f6eac7314be8d92590bfff92ced79ee03e2",
+  "topic": "collect_factor_and_dimension does not detect equivalent dimensions in addition",
+  "upstream_created_at": "2022-11-03T14:00:09Z",
+  "dataset_row": 2282,
+  "problem_sha256": "7a3542745f3b9628ee1fced601a218003d1063e24e5c1bcfd673468b93d06034",
+  "regression_checks": [
+    "test_issue_24211"
+  ],
+  "passing_checks": 31
+}
