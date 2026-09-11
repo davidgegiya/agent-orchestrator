@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5262",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "58e6a09db49f34886ff13f3b7520dd0bcd7063cd",
+  "topic": "_pytest.capture.EncodedFile mode should not include `b` (binary)",
+  "upstream_created_at": "2019-05-14T21:54:55Z",
+  "dataset_row": 1400,
+  "problem_sha256": "f266b9fca25bbb61ff8e2c86a5e91a5c072528e520769d0ab01667843dd8ecba",
+  "regression_checks": [
+    "testing/test_capture.py::TestFDCapture::test_capfd_sys_stdout_mode"
+  ],
+  "passing_checks": 108
+}
