@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13368",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "afd432137fd840adc182f0bad87f405cb80efac7",
+  "topic": "cross_val_predict returns bad prediction when evaluated on a dataset with very few samples",
+  "upstream_created_at": "2019-03-01T17:46:46Z",
+  "dataset_row": 1595,
+  "problem_sha256": "e3790e9f85703f8f58a5f271bb470b126f03d2ece6d48e4e568f74e8f7c4f908",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_validation.py::test_cross_val_predict_unbalanced"
+  ],
+  "passing_checks": 52
+}
