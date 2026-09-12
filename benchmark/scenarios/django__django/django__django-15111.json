@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15111",
+  "repository": "django/django",
+  "base_commit": "e361621dbc77b5d926ec4deff5e7c792a61db71e",
+  "topic": "django-admin start[project|app] doesn't send proper user agent header when HTTP(S) url is sent",
+  "upstream_created_at": "2021-11-22T13:09:39Z",
+  "dataset_row": 688,
+  "problem_sha256": "03cac573bc923572f306622eabc1f05fd7acd06b5f96aa8f388c763a50ad668e",
+  "regression_checks": [
+    "test_custom_project_template_from_tarball_by_url_django_user_agent (admin_scripts.tests.StartProject)"
+  ],
+  "passing_checks": 197
+}
