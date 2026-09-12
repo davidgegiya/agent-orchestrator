@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26341",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "2aee6ccd7c7e1f8d282c1e7579f4ee546b838542",
+  "topic": "Make cyclers indexable and rely on indexing them rather than itertools.cycle",
+  "upstream_created_at": "2023-07-18T09:13:18Z",
+  "dataset_row": 1121,
+  "problem_sha256": "889b6c1e978664274975e4828aa110fc1c38fd94ab9ae96ca20b7852cec81704",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pickle.py::test_cycler"
+  ],
+  "passing_checks": 197
+}
