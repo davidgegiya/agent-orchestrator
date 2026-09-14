@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21318",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a1eef38f6f5a8acccc49f3b54ac429b04d8af15c",
+  "topic": "RuntimeError: adjustable='datalim' is not allowed when both axes are shared",
+  "upstream_created_at": "2021-10-08T15:04:46Z",
+  "dataset_row": 977,
+  "problem_sha256": "bc4ab73603f27f6f9fd1e1de248bde6ffed9700045780170bb8212bce5b0165b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_shared_aspect_error"
+  ],
+  "passing_checks": 680
+}
