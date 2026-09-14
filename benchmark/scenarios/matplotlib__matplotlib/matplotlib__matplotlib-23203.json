@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23203",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "028f07c869c4c0084c134a8b613aad4f5d111c7f",
+  "topic": "colorbar ignores keyword panchor=False",
+  "upstream_created_at": "2022-06-04T19:19:07Z",
+  "dataset_row": 1011,
+  "problem_sha256": "bbb95ccfb2e4960f48485256c869564649023ed1dc948d3ef3ef38c0be170feb",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_single_ax_panchor_false"
+  ],
+  "passing_checks": 57
+}
