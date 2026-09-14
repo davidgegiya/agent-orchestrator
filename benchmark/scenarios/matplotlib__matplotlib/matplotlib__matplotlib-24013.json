@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24013",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "394748d584d1cd5c361a6a4c7b70d7b8a8cd3ef0",
+  "topic": "function shadowing their own definition modules",
+  "upstream_created_at": "2022-09-26T18:56:52Z",
+  "dataset_row": 1030,
+  "problem_sha256": "8a75b8a05efe406eb8342fe25e3a4a234d40529367012df81c185dfdf3f2f7ac",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_triangulation.py::test_triinterpcubic_cg_solver",
+    "lib/matplotlib/tests/test_triangulation.py::test_triinterpcubic_geom_weights"
+  ],
+  "passing_checks": 46
+}
