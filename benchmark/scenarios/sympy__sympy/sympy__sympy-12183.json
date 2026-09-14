@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-12183",
+  "repository": "sympy/sympy",
+  "base_commit": "8b8138048ca5ed1e1fbbc49fbb55ce80a333ed31",
+  "topic": "Empty intersection should be UniversalSet",
+  "upstream_created_at": "2017-02-16T13:26:49Z",
+  "dataset_row": 1930,
+  "problem_sha256": "67537f6388228951a6d0d437caa795ea0c63431fd9ac81e025c60e171b033f96",
+  "regression_checks": [
+    "test_intersection"
+  ],
+  "passing_checks": 63
+}
