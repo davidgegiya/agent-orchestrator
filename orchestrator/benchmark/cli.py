@@ -18,6 +18,8 @@ def main(argv: list[str] | None = None) -> int:
     commands = parser.add_subparsers(dest="action", required=True)
     listing = commands.add_parser("list", help="List available scenarios")
     listing.add_argument("--repo", help="Filter by owner/repository")
+    listing.add_argument("--match", help="Search scenario IDs, topics and regression selectors")
+    listing.add_argument("--limit", type=int, help="Limit the displayed results")
     listing.add_argument("--summary", action="store_true", help="Print counts by repository")
     show = commands.add_parser("show", help="Show scenario provenance and grading metadata")
     show.add_argument("case_id")
@@ -40,6 +42,8 @@ def main(argv: list[str] | None = None) -> int:
     compare.add_argument("right")
     commands.add_parser("source", help="Print the pinned dataset URL")
     args = parser.parse_args(argv)
+    if args.action == "list" and args.limit is not None and args.limit < 1:
+        parser.error("--limit must be positive")
 
     if args.action == "source":
         print(DATASET_URL)
@@ -51,6 +55,14 @@ def main(argv: list[str] | None = None) -> int:
         cases = load_catalog(args.catalog)
         if args.action == "list":
             selected = [case for case in cases.values() if not args.repo or case.repository == args.repo]
+            if args.match:
+                query = args.match.casefold()
+                selected = [
+                    case for case in selected
+                    if any(query in value.casefold() for value in (case.id, case.topic, *case.regression_checks))
+                ]
+            if args.limit is not None:
+                selected = selected[:args.limit]
             if args.summary:
                 for repository, count in sorted(Counter(case.repository for case in selected).items()):
                     print(f"{repository}\t{count}")

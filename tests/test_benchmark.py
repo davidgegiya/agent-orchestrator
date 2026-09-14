@@ -4,6 +4,7 @@ import json
 import pytest
 
 from orchestrator.benchmark.catalog import Scenario, load_catalog
+from orchestrator.benchmark.cli import main as benchmark_cli
 from orchestrator.benchmark.results import Outcome, compare_outcomes, record_outcome
 from orchestrator.benchmark.source import verify_source_row
 
@@ -60,3 +61,14 @@ def test_comparison_excludes_unpaired_cases(case):
     summary = compare_outcomes(values, "a", "b")
     assert summary["paired_cases"] == 1 and summary["right_only"] == 2
     assert summary["transitions"] == {"rejected -> accepted": 1}
+
+
+def test_list_can_search_regression_selectors(tmp_path, case, capsys):
+    folder = tmp_path / "owner__repo"
+    folder.mkdir()
+    (folder / f"{case.id}.json").write_text(case.model_dump_json())
+    args = ["--catalog", str(tmp_path), "list", "--repo", case.repository]
+    assert benchmark_cli([*args, "--match", "BAD_INPUT", "--limit", "1"]) == 0
+    assert capsys.readouterr().out.split("\t", 1)[0] == case.id
+    assert benchmark_cli([*args, "--match", "something unrelated"]) == 0
+    assert capsys.readouterr().out == ""
