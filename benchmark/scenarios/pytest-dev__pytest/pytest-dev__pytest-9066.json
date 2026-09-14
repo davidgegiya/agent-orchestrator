@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9066",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "20863c3a0c92501e7f55d747a33797f23e56c818",
+  "topic": "Show full qualified name on direct Node construction warning",
+  "upstream_created_at": "2021-09-01T19:16:29Z",
+  "dataset_row": 1478,
+  "problem_sha256": "123cca132d179b255e301772e651dee3124574a485b313ffc5148d7a5e1b65a8",
+  "regression_checks": [
+    "testing/test_nodes.py::test_node_direct_construction_deprecated"
+  ],
+  "passing_checks": 17
+}
