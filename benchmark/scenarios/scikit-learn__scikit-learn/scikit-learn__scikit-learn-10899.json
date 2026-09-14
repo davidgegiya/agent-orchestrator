@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-10899",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "12cdb8323c1a4018fcc97dc5a0014a0ba7b44593",
+  "topic": "Setting idf_ is impossible",
+  "upstream_created_at": "2018-04-01T02:58:12Z",
+  "dataset_row": 1518,
+  "problem_sha256": "4552e37e4a7e4e4140a454cfbefcc19de57f8598c19eab122245f3fd52cb389c",
+  "regression_checks": [
+    "sklearn/feature_extraction/tests/test_text.py::test_transformer_idf_setter",
+    "sklearn/feature_extraction/tests/test_text.py::test_tfidf_vectorizer_setter",
+    "sklearn/feature_extraction/tests/test_text.py::test_tfidfvectorizer_invalid_idf_attr"
+  ],
+  "passing_checks": 48
+}
