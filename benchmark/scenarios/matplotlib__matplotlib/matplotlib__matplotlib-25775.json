@@ -1,0 +1,19 @@
+{
+  "id": "matplotlib__matplotlib-25775",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "26224d96066b5c60882296c551f54ca7732c0af0",
+  "topic": "Add get/set_antialiased to Text objects",
+  "upstream_created_at": "2023-04-26T21:26:46Z",
+  "dataset_row": 1096,
+  "problem_sha256": "948780380041669fc87faaf75f6577c0575637e521b4dcd3ac6d7d9be6392014",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_text.py::test_set_antialiased",
+    "lib/matplotlib/tests/test_text.py::test_get_antialiased",
+    "lib/matplotlib/tests/test_text.py::test_annotation_antialiased",
+    "lib/matplotlib/tests/test_text.py::test_text_antialiased_off_default_vs_manual[png]",
+    "lib/matplotlib/tests/test_text.py::test_text_antialiased_off_default_vs_manual[pdf]",
+    "lib/matplotlib/tests/test_text.py::test_text_antialiased_on_default_vs_manual[png]",
+    "lib/matplotlib/tests/test_text.py::test_text_antialiased_on_default_vs_manual[pdf]"
+  ],
+  "passing_checks": 89
+}
