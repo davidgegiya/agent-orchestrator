@@ -1,0 +1,24 @@
+{
+  "id": "pytest-dev__pytest-7637",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "d69abff2c7de8bc65b7f1ef867dec5b5b9c564bd",
+  "topic": "Reintroduce warnings postponed in 6.0",
+  "upstream_created_at": "2020-08-12T12:21:36Z",
+  "dataset_row": 1452,
+  "problem_sha256": "43a2d0fcfecfaad562caf732e457f401450db143d8678ae4966701550cd1f876",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Collector]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Module]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Function]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Instance]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Session]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Item]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[Class]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[File]",
+    "testing/deprecated_test.py::test_pytest_collect_module_deprecated[_fillfuncargs]",
+    "testing/deprecated_test.py::test_fillfuncargs_is_deprecated",
+    "testing/deprecated_test.py::test_minus_k_dash_is_deprecated",
+    "testing/deprecated_test.py::test_minus_k_colon_is_deprecated"
+  ],
+  "passing_checks": 4
+}
