@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3095",
+  "repository": "pydata/xarray",
+  "base_commit": "1757dffac2fa493d7b9a074b84cf8c830a706688",
+  "topic": "REGRESSION: copy(deep=True) casts unicode indices to object",
+  "upstream_created_at": "2019-07-11T13:16:16Z",
+  "dataset_row": 1208,
+  "problem_sha256": "126516a29d033aede6e2538c8478df7c29ac20b0960961426685b55baec4f37f",
+  "regression_checks": [
+    "xarray/tests/test_variable.py::TestIndexVariable::test_copy[str-True]"
+  ],
+  "passing_checks": 253
+}
