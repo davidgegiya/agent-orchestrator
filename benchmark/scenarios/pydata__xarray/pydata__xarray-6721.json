@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6721",
+  "repository": "pydata/xarray",
+  "base_commit": "cc183652bf6e1273e985e1c4b3cba79c896c1193",
+  "topic": "Accessing chunks on zarr backed xarray seems to load entire array into memory",
+  "upstream_created_at": "2022-06-24T18:45:45Z",
+  "dataset_row": 1285,
+  "problem_sha256": "3136bc035331a9141f4f287b1d6b280e68c97611d62ec307e324a98306cbc079",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::TestDataset::test_chunks_does_not_load_data"
+  ],
+  "passing_checks": 1405
+}
