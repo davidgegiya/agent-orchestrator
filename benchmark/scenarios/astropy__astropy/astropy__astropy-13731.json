@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13731",
+  "repository": "astropy/astropy",
+  "base_commit": "a30301e5535be2f558cb948da6b3475df4e36a98",
+  "topic": "`Time` parses fractional days in year-month-day format incorrectly",
+  "upstream_created_at": "2022-09-21T16:19:30Z",
+  "dataset_row": 35,
+  "problem_sha256": "22538db7150dded809b808633120b4616227dd8a8ed34ebb22138d31445e9d12",
+  "regression_checks": [
+    "astropy/time/tests/test_basic.py::test_format_fractional_string_parsing[False]"
+  ],
+  "passing_checks": 244
+}
