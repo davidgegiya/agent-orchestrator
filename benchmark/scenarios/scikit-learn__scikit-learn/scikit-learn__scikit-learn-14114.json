@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14114",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "7b8cbc875b862ebb81a9b3415bdee235cca99ca6",
+  "topic": "AdaBoost's \"SAMME\" algorithm uses 'predict' while fitting and 'predict_proba' while predicting probas",
+  "upstream_created_at": "2019-06-18T13:20:20Z",
+  "dataset_row": 1633,
+  "problem_sha256": "4eed35d6934a350bd4bc664dc91706e878fbf2301ad93bad172c7c19aa285aa9",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_weight_boosting.py::test_adaboost_consistent_predict[SAMME]"
+  ],
+  "passing_checks": 20
+}
