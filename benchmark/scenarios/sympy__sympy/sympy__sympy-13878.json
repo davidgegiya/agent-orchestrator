@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13878",
+  "repository": "sympy/sympy",
+  "base_commit": "7b127bdf71a36d85216315f80c1b54d22b060818",
+  "topic": "Precompute the CDF of several distributions where integration doesn't work well",
+  "upstream_created_at": "2018-01-10T07:00:58Z",
+  "dataset_row": 2001,
+  "problem_sha256": "4281591c8645f017fd2b4aa292a193ab49776e314d6ec527f346a0e84b765590",
+  "regression_checks": [
+    "test_arcsin"
+  ],
+  "passing_checks": 19
+}
