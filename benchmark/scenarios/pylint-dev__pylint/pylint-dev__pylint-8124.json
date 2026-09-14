@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-8124",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "eb950615d77a6b979af6e0d9954fdb4197f4a722",
+  "topic": "false positive 'useless-import-alias' error for mypy-compatible explicit re-exports",
+  "upstream_created_at": "2023-01-27T23:46:57Z",
+  "dataset_row": 1363,
+  "problem_sha256": "13c16c2b2bb06c0577cec7c4e4340f9283802d049994278c933e648a8fc6838b",
+  "regression_checks": [
+    "tests/checkers/unittest_imports.py::TestImportsChecker::test_allow_reexport_package"
+  ],
+  "passing_checks": 7
+}
