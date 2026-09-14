@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-13903",
+  "repository": "sympy/sympy",
+  "base_commit": "99fdff6c86b73018148f9c22f680d6874b0f4f2c",
+  "topic": "i found most language cannot be converted into max & min like octave,Fortran and others",
+  "upstream_created_at": "2018-01-12T11:27:34Z",
+  "dataset_row": 2003,
+  "problem_sha256": "edd976137aa745dba8bdc5aa1cd45e9b5e5cf34d906364889afd20617edd8597",
+  "regression_checks": [
+    "test_fcode_functions",
+    "test_Function"
+  ],
+  "passing_checks": 58
+}
