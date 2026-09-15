@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-5840",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "73c5b7f4b11a81e971f7d1bb18072e06a87060f4",
+  "topic": "5.1.2 ImportError while loading conftest (windows import folder casing issues)",
+  "upstream_created_at": "2019-09-12T01:09:28Z",
+  "dataset_row": 1415,
+  "problem_sha256": "0a2b59c3d0b0066818858d3c4b8e6eb6373c7b6ecb6f947186472fb82b9edcbe",
+  "regression_checks": [
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[test]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[tests]"
+  ],
+  "passing_checks": 51
+}
