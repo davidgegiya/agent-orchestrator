@@ -1,0 +1,15 @@
+{
+  "id": "pydata__xarray-6744",
+  "repository": "pydata/xarray",
+  "base_commit": "7cc6cc991e586a6158bb656b8001234ccda25407",
+  "topic": "\"center\" kwarg ignored when manually iterating over DataArrayRolling",
+  "upstream_created_at": "2022-07-02T16:36:00Z",
+  "dataset_row": 1286,
+  "problem_sha256": "aca7880666312e1a1d9cfbb71be851e0f1613f027636264c4acdb1a0674d126b",
+  "regression_checks": [
+    "xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-3-True-1]",
+    "xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-3-True-2]",
+    "xarray/tests/test_rolling.py::TestDataArrayRolling::test_rolling_iter[numpy-7-True-1]"
+  ],
+  "passing_checks": 1815
+}
