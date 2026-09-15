@@ -1,0 +1,18 @@
+{
+  "id": "scikit-learn__scikit-learn-25697",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "097c3683a73c5805a84e6eada71e4928cb35496e",
+  "topic": "Deprecate `n_iter` in favor of `max_iter` for consistency",
+  "upstream_created_at": "2023-02-24T21:43:48Z",
+  "dataset_row": 1695,
+  "problem_sha256": "94a1c45405039a9d581551e173c4a847f3175dd87886b7e1474502ce86c99840",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_ridge_score_values",
+    "sklearn/linear_model/tests/test_bayes.py::test_update_of_sigma_in_ard",
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_ridge_ard_n_iter_deprecated[BayesianRidge]",
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_ridge_ard_n_iter_deprecated[ARDRegression]",
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_ridge_ard_max_iter_and_n_iter_both_set[BayesianRidge]",
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_ridge_ard_max_iter_and_n_iter_both_set[ARDRegression]"
+  ],
+  "passing_checks": 18
+}
