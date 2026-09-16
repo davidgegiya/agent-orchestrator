@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-17810",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d29056c492dbf8067f2a60b0d920e18c4a892116",
+  "topic": "animation.save and fig.savefig interfere with each other and raise StopIteration",
+  "upstream_created_at": "2020-07-01T02:07:46Z",
+  "dataset_row": 956,
+  "problem_sha256": "50799f4bd0e4b62f2ddb1ad8601fd5b62805b09733017664052646e4cc4a88b3",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_animation.py::test_exhausted_animation",
+    "lib/matplotlib/tests/test_animation.py::test_no_frame_warning"
+  ],
+  "passing_checks": 21
+}
