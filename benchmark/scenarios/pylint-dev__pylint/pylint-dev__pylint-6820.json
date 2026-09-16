@@ -1,0 +1,13 @@
+{
+  "id": "pylint-dev__pylint-6820",
+  "repository": "pylint-dev/pylint",
+  "base_commit": "b3523ae86eb68467dca536122bc4034639887a63",
+  "topic": "Using ``--load-plugin`` instead of ``--load-plugins`` in CLI silently fail to load the plugin",
+  "upstream_created_at": "2022-06-03T07:58:00Z",
+  "dataset_row": 1354,
+  "problem_sha256": "aec1695480f3d925a72f24b88905d9cb180c1314f83a3a199c8ea0839e7d6a90",
+  "regression_checks": [
+    "tests/config/test_find_default_config_files.py::test_verbose_abbreviation"
+  ],
+  "passing_checks": 12
+}
