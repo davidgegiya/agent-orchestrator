@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-19487",
+  "repository": "sympy/sympy",
+  "base_commit": "25fbcce5b1a4c7e3956e6062930f4a44ce95a632",
+  "topic": "Rewrite sign as abs",
+  "upstream_created_at": "2020-06-04T09:25:34Z",
+  "dataset_row": 2192,
+  "problem_sha256": "b0dbb165a66af31f83e78dbebe606e9df4fbb1e524068ab211bc193cb7105b1a",
+  "regression_checks": [
+    "test_sign"
+  ],
+  "passing_checks": 90
+}
