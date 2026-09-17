@@ -366,6 +366,7 @@ def _safe_run(
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Implement and review a repository task")
+    parser.add_argument("--project-dir", type=Path, help="Directory containing project context and reports")
     parser.add_argument("--workspace", type=Path, help="Product Git checkout to edit")
     parser.add_argument("--worktree", type=Path, help="Create a detached checkout from --workspace HEAD")
     parser.add_argument("--task", type=Path, help="Markdown task to run")
@@ -390,7 +391,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     except ValueError as exc:
         parser.error(str(exc))
 
-    repo_root = Path(__file__).resolve().parents[1]
+    package_root = Path(__file__).resolve().parents[1]
+    default_root = package_root if (package_root / "project" / "tasks").is_dir() else Path.cwd()
+    repo_root = (args.project_dir or default_root).resolve()
+    if not repo_root.is_dir():
+        parser.error(f"project directory does not exist: {repo_root}")
     workspace = (args.workspace or (repo_root / "workspace")).resolve()
     if not workspace.is_dir():
         parser.error(f"workspace is not a directory: {workspace}")

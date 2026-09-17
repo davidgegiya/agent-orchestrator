@@ -16,6 +16,9 @@ dependencies = [
   "python-dotenv>=1.0.0",
 ]
 
+[project.scripts]
+agent-orchestrator = "orchestrator.main:main"
+
 [project.optional-dependencies]
 dev = ["pytest>=8,<10"]
 
