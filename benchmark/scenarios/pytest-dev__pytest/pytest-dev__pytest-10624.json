@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-10624",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7421f3bb94df80ff2d131e932223b190f9b6d7b6",
+  "topic": "`assert a == approx(b)` when `b` is dict containing zero value results in ZeroDivisionError",
+  "upstream_created_at": "2023-01-01T10:54:40Z",
+  "dataset_row": 1382,
+  "problem_sha256": "b98769afa1905f25aa9df216a7359f86bfc02259bd74d0d906316c495538cb0b",
+  "regression_checks": [
+    "testing/python/approx.py::TestApprox::test_dict_for_div_by_zero"
+  ],
+  "passing_checks": 65
+}
