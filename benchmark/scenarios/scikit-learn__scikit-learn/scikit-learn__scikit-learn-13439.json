@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13439",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "a62775e99f2a5ea3d51db7160fad783f6cd8a4c5",
+  "topic": "Pipeline should implement __len__",
+  "upstream_created_at": "2019-03-12T20:32:50Z",
+  "dataset_row": 1598,
+  "problem_sha256": "4f7cdd9aa1d50ab7cd724ef9feb58048c758cf2a68b41f23f116f273e330d9aa",
+  "regression_checks": [
+    "sklearn/tests/test_pipeline.py::test_make_pipeline_memory"
+  ],
+  "passing_checks": 40
+}
