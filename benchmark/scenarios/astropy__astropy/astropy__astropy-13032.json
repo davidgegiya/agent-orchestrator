@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-13032",
+  "repository": "astropy/astropy",
+  "base_commit": "d707b792d3ca45518a53b4a395c81ee86bd7b451",
+  "topic": "Incorrect ignored usage in `ModelBoundingBox`",
+  "upstream_created_at": "2022-03-31T16:32:46Z",
+  "dataset_row": 10,
+  "problem_sha256": "5676e2b20ea113252b600449c46e9b258685b24ee8c8da59008f932cdc62acbf",
+  "regression_checks": [
+    "astropy/modeling/tests/test_bounding_box.py::TestModelBoundingBox::test_bounding_box_ignore",
+    "astropy/modeling/tests/test_bounding_box.py::TestCompoundBoundingBox::test___repr__"
+  ],
+  "passing_checks": 73
+}
