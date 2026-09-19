@@ -1,0 +1,19 @@
+{
+  "id": "matplotlib__matplotlib-23573",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "39c997ee9dc772838ec8e671e9820fb0a070e060",
+  "topic": "The axes module structure",
+  "upstream_created_at": "2022-08-06T22:02:35Z",
+  "dataset_row": 1024,
+  "problem_sha256": "be94c960641f29e31ab61241c90dcf23683178b0a831b16fc872173f0986c659",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_repr",
+    "lib/matplotlib/tests/test_axes.py::test_as_mpl_axes_api",
+    "lib/matplotlib/tests/test_figure.py::test_add_subplot_invalid",
+    "lib/matplotlib/tests/test_subplots.py::test_label_outer_non_gridspec",
+    "lib/matplotlib/tests/test_transforms.py::test_str_transform",
+    "lib/mpl_toolkits/tests/test_axisartist_grid_helper_curvelinear.py::test_custom_transform[png]",
+    "lib/mpl_toolkits/tests/test_mplot3d.py::test_axes3d_repr"
+  ],
+  "passing_checks": 1086
+}
