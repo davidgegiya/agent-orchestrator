@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3976",
+  "repository": "pydata/xarray",
+  "base_commit": "2c77eb531b6689f9f1d2adbde0d8bf852f1f7362",
+  "topic": "In-place addition of arrays with the same coords but in a different order",
+  "upstream_created_at": "2020-04-16T15:46:56Z",
+  "dataset_row": 1229,
+  "problem_sha256": "0d7b2dc2f7921435b8663c856e3387eca4080177ef28b91e127c7b7ec12c05a2",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_inplace_math_automatic_alignment"
+  ],
+  "passing_checks": 777
+}
