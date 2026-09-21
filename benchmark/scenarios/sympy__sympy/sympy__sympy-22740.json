@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-22740",
+  "repository": "sympy/sympy",
+  "base_commit": "44588dbb8c7ab833a8acb0cad94e395db82685e5",
+  "topic": "lambdifying Heaviside(Min(x, y)) not working",
+  "upstream_created_at": "2021-12-21T19:45:34Z",
+  "dataset_row": 2260,
+  "problem_sha256": "27ad61cfd5762cd39413f0008b1a3761b9c0ca3910d4c790f4c9b0bf4862d5bd",
+  "regression_checks": [
+    "test_numpy_array"
+  ],
+  "passing_checks": 67
+}
