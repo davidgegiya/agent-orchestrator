@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13496",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "3aefc834dce72e850bff48689bea3c7dff5f3fad",
+  "topic": "Expose warm_start in Isolation forest",
+  "upstream_created_at": "2019-03-23T09:46:59Z",
+  "dataset_row": 1604,
+  "problem_sha256": "b502b706c799d1efe478771ad55cee5a01431d6476f603724768546fc7cf22c1",
+  "regression_checks": [
+    "sklearn/ensemble/tests/test_iforest.py::test_iforest_warm_start"
+  ],
+  "passing_checks": 19
+}
