@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11211",
+  "repository": "django/django",
+  "base_commit": "ba726067604ce5a8ca3919edf653496722b433ab",
+  "topic": "Prefetch related is not working when used GFK for model that uses UUID field as PK",
+  "upstream_created_at": "2019-04-13T12:01:14Z",
+  "dataset_row": 161,
+  "problem_sha256": "5bbfbfa0516be0ecfdb8293b751e4748692a21c8311de5389c4b4715a66ea88b",
+  "regression_checks": [
+    "test_prefetch_GFK_uuid_pk (prefetch_related.tests.GenericRelationTests)"
+  ],
+  "passing_checks": 76
+}
