@@ -1,0 +1,17 @@
+{
+  "id": "scikit-learn__scikit-learn-25744",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "2c867b8f822eb7a684f0d5c4359e4426e1c9cfe0",
+  "topic": "Setting min_samples_split=1 in DecisionTreeClassifier does not raise exception",
+  "upstream_created_at": "2023-03-02T17:04:42Z",
+  "dataset_row": 1697,
+  "problem_sha256": "777988ddc61fd815ab2e036b6ebff128740bb3b6bbe7bfa92a19f9207d23248d",
+  "regression_checks": [
+    "sklearn/tree/tests/test_tree.py::test_min_sample_split_1_error[DecisionTreeClassifier]",
+    "sklearn/tree/tests/test_tree.py::test_min_sample_split_1_error[ExtraTreeClassifier]",
+    "sklearn/tree/tests/test_tree.py::test_min_sample_split_1_error[DecisionTreeRegressor]",
+    "sklearn/tree/tests/test_tree.py::test_min_sample_split_1_error[ExtraTreeRegressor]",
+    "sklearn/utils/tests/test_param_validation.py::test_interval_real_not_int"
+  ],
+  "passing_checks": 485
+}
