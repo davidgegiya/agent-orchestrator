@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7648",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "d426a79a90351dff0492fbd40404b1256b24f91f",
+  "topic": "Since pytest 6.0.0, pylint complains about unimplemented abstract methods in custom collector",
+  "upstream_created_at": "2020-08-15T08:45:13Z",
+  "dataset_row": 1453,
+  "problem_sha256": "37c0d933dff0106c9b31b9ee9994d73830f4578a9a05d178f278c0778026bb22",
+  "regression_checks": [
+    "testing/deprecated_test.py::test_fscollector_gethookproxy_isinitpath"
+  ],
+  "passing_checks": 9
+}
