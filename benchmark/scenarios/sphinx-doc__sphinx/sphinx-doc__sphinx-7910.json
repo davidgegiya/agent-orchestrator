@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7910",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "27ac10de04697e2372d31db5548e56a7c6d9265d",
+  "topic": "Decorated __init__ doesn't show up in docs",
+  "upstream_created_at": "2020-07-04T01:08:20Z",
+  "dataset_row": 1794,
+  "problem_sha256": "6087ebddf1d0ff769e2c665b68198f9f7a0872eda1f3dbc0ad6f5819ad0eb8eb",
+  "regression_checks": [
+    "tests/test_ext_napoleon.py::SkipMemberTest::test_class_decorated_doc"
+  ],
+  "passing_checks": 16
+}
