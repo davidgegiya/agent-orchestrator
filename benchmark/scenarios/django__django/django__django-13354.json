@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13354",
+  "repository": "django/django",
+  "base_commit": "225261b70136fa90e63b6cf4ea10341e793d7341",
+  "topic": "MigrationOptimizer mangles operation order if app name contains uppercase letters",
+  "upstream_created_at": "2020-08-27T13:16:37Z",
+  "dataset_row": 447,
+  "problem_sha256": "21590831c4ae8ea90559da337e72a9e54e7a0d5fbb968e52dcb002b4e1cfd711",
+  "regression_checks": [
+    "test_bases_first_mixed_case_app_label (migrations.test_autodetector.AutodetectorTests)"
+  ],
+  "passing_checks": 123
+}
