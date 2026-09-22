@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13852",
+  "repository": "sympy/sympy",
+  "base_commit": "c935e1d106743efd5bf0705fbeedbd18fadff4dc",
+  "topic": "Add evaluation for polylog",
+  "upstream_created_at": "2018-01-06T23:54:51Z",
+  "dataset_row": 1998,
+  "problem_sha256": "7b412c6d559b401051a0bc619aac2d05e342f5f67fcf9df1764db0e17c935ae9",
+  "regression_checks": [
+    "test_polylog_values"
+  ],
+  "passing_checks": 4
+}
