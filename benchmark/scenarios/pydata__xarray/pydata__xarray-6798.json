@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-6798",
+  "repository": "pydata/xarray",
+  "base_commit": "9f8d47c8acfaa925b3499e824a0807d7f20424c7",
+  "topic": "Dropping a MultiIndex variable raises an error after explicit indexes refactor",
+  "upstream_created_at": "2022-07-16T21:13:05Z",
+  "dataset_row": 1287,
+  "problem_sha256": "f9a84f625c92f4efa75df540c975b497577df3b25852f088ae22c68e7595a424",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_assign_coords_existing_multiindex",
+    "xarray/tests/test_dataset.py::TestDataset::test_assign_coords_existing_multiindex"
+  ],
+  "passing_checks": 805
+}
