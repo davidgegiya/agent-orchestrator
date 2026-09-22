@@ -1,0 +1,13 @@
+{
+  "id": "django__django-10390",
+  "repository": "django/django",
+  "base_commit": "4c086d7da4c5cf23935a5340dbb9a8d6835cf7cc",
+  "topic": "Trunc() should allow passing is_dst resolution to avoid NonExistentTimeError/AmbiguousTimeError",
+  "upstream_created_at": "2018-09-14T17:50:40Z",
+  "dataset_row": 101,
+  "problem_sha256": "1936e0c8ed5973ccae054162f952e1c258a5f67e0baf0c6f4961eb444e5298a7",
+  "regression_checks": [
+    "test_trunc_ambiguous_and_invalid_times (db_functions.datetime.test_extract_trunc.DateFunctionWithTimeZoneTests)"
+  ],
+  "passing_checks": 72
+}
