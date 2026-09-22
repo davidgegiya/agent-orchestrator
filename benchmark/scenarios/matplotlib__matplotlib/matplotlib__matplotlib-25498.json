@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25498",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "78bf53caacbb5ce0dc7aa73f07a74c99f1ed919b",
+  "topic": "Update colorbar after changing mappable.norm",
+  "upstream_created_at": "2023-03-18T17:01:11Z",
+  "dataset_row": 1082,
+  "problem_sha256": "5011b93933b294c3ed3ab7242cdd4a60721fdbd53ccc5dbe48e0fbda670341e6",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_scale_reset"
+  ],
+  "passing_checks": 69
+}
