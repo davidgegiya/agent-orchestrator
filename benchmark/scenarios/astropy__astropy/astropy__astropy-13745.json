@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-13745",
+  "repository": "astropy/astropy",
+  "base_commit": "0446f168dc6e34996482394f00770b52756b8f9c",
+  "topic": "float32 representation of pi/2 is rejected by `Latitude`",
+  "upstream_created_at": "2022-09-23T11:54:47Z",
+  "dataset_row": 37,
+  "problem_sha256": "1be31e5ae336f753a576c3c55006e1ff5d133c316d3b9bf7e827585d54c0833f",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_angles.py::test_latitude_limits[value2-expected_value2-None-float32--1]",
+    "astropy/coordinates/tests/test_angles.py::test_latitude_limits[value2-expected_value2-None-float32-1]",
+    "astropy/coordinates/tests/test_angles.py::test_latitude_limits[value3-expected_value3-float32-float32--1]",
+    "astropy/coordinates/tests/test_angles.py::test_latitude_limits[value3-expected_value3-float32-float32-1]"
+  ],
+  "passing_checks": 66
+}
