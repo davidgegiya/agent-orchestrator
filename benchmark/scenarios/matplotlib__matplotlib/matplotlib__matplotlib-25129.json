@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-25129",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "1367ea5fd2420d264fcd63fbbc0521661f868cce",
+  "topic": "annotated_cursor example seems broken",
+  "upstream_created_at": "2023-02-02T01:42:19Z",
+  "dataset_row": 1066,
+  "problem_sha256": "68212366584c14f417e97b896bb54910df2c0643a7b7490defcb586a0cfeecd7",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[False-False]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[False-True]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-False]",
+    "lib/matplotlib/tests/test_widgets.py::test_MultiCursor[True-True]"
+  ],
+  "passing_checks": 111
+}
