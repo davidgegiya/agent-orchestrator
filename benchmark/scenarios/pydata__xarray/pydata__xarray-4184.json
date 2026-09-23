@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-4184",
+  "repository": "pydata/xarray",
+  "base_commit": "65ca92a5c0a4143d00dd7a822bcb1d49738717f1",
+  "topic": "Stack + to_array before to_xarray is much faster that a simple to_xarray",
+  "upstream_created_at": "2020-06-26T07:39:14Z",
+  "dataset_row": 1236,
+  "problem_sha256": "236ddeec777bf808ca229ce4500814a86c4f07333a6241742c866ed5a487e235",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_multiindex",
+    "xarray/tests/test_dataset.py::TestDataset::test_from_dataframe_unsorted_levels"
+  ],
+  "passing_checks": 863
+}
