@@ -35,7 +35,7 @@ def task_topic(problem: str) -> str | None:
 def sample_scenarios(source: Path, count: int) -> list[Scenario]:
     if sha256(source.read_bytes()).hexdigest() != SOURCE_SHA256:
         raise ValueError("source file hash differs from the pinned SWE-bench artifact")
-    table = parquet.read_table(source, columns=[*COLUMNS, "created_at"])
+    table = parquet.read_table(source, columns=COLUMNS)
     candidates = defaultdict(list)
     for index, row in enumerate(table.to_pylist()):
         topic = task_topic(row["problem_statement"])

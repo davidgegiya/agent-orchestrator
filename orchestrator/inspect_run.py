@@ -10,7 +10,7 @@ from typing import Any
 def inspect_report(run_dir: Path) -> dict[str, Any]:
     data = json.loads((run_dir / "artifacts.json").read_text(encoding="utf-8"))
     summary = {
-        key: data[key] for key in ("workspace", "base_sha", "final_verdict", "final_action", "error")
+        key: data[key] for key in ("workspace", "base_sha", "task_sha256", "final_verdict", "final_action", "error")
         if key in data
     }
     summary["completed"] = bool(data.get("ended_at"))

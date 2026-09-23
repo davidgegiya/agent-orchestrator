@@ -26,6 +26,8 @@ def record_outcome(case: Scenario, variant: str, run_dir: Path) -> Outcome:
     report = inspect_report(run_dir)
     if report.get("base_sha") != case.base_commit:
         raise ValueError("run did not use the scenario's pinned base commit")
+    if report.get("task_sha256") != case.problem_sha256:
+        raise ValueError("run did not use the pinned scenario problem statement")
     rounds = report["rounds"]
     if any(round_info["patch_verified"] is False for round_info in rounds):
         raise ValueError("a saved patch differs from its recorded hash")

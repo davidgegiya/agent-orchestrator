@@ -527,6 +527,7 @@ def _run_workflow(
         task_text = DEMO_TASK
         task_source = "demo"
     artifacts["task_source"] = task_source
+    artifacts["task_sha256"] = digest_text(task_text.rstrip())
 
     vision = _load_optional(repo_root / "project" / "vision.md")
     architecture = _load_optional(repo_root / "project" / "architecture.md")

@@ -21,6 +21,7 @@ def case():
 def test_source_verification_rejects_modified_task(case):
     source = {
         "instance_id": case.id, "repo": case.repository, "base_commit": case.base_commit,
+        "created_at": case.upstream_created_at.isoformat(),
         "problem_statement": "Fix it.", "FAIL_TO_PASS": ["test_bad_input"], "PASS_TO_PASS": ["test_good_input"],
     }
     verify_source_row(case, source)
@@ -39,7 +40,8 @@ def test_catalog_rejects_a_scenario_filed_under_the_wrong_id(tmp_path, case):
 
 def test_run_result_requires_a_checked_patch(case, tmp_path):
     (tmp_path / "artifacts.json").write_text(json.dumps({
-        "base_sha": case.base_commit, "ended_at": "complete", "final_verdict": "PASS",
+        "base_sha": case.base_commit, "task_sha256": case.problem_sha256,
+        "ended_at": "complete", "final_verdict": "PASS",
         "rounds": [{"round": 1, "checks": [{"returncode": 0}]}],
     }))
     with pytest.raises(ValueError, match="verified patch"):

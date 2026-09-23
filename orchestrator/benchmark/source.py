@@ -1,5 +1,6 @@
 """Verify task provenance against the pinned SWE-bench data."""
 
+from datetime import datetime
 from hashlib import sha256
 from pathlib import Path
 
@@ -10,17 +11,21 @@ DATASET_URL = (
     f"https://huggingface.co/datasets/SWE-bench/SWE-bench/resolve/{DATASET_REVISION}"
     "/data/test-00000-of-00001.parquet"
 )
-COLUMNS = ["instance_id", "repo", "base_commit", "problem_statement", "FAIL_TO_PASS", "PASS_TO_PASS"]
+COLUMNS = ["instance_id", "repo", "base_commit", "problem_statement", "FAIL_TO_PASS", "PASS_TO_PASS", "created_at"]
 
 
 def problem_digest(problem: str) -> str:
-    return sha256(problem.encode("utf-8")).hexdigest()
+    normalized = problem.replace("\r\n", "\n").replace("\r", "\n").rstrip()
+    return sha256(normalized.encode("utf-8")).hexdigest()
 
 
 def verify_source_row(case: Scenario, row: dict) -> None:
     source_fields = (row["instance_id"], row["repo"], row["base_commit"])
     if source_fields != (case.id, case.repository, case.base_commit):
         raise ValueError(f"source identity mismatch for {case.id}")
+    source_date = datetime.fromisoformat(row["created_at"].replace("Z", "+00:00"))
+    if source_date != case.upstream_created_at:
+        raise ValueError(f"upstream timestamp differs from the pinned revision for {case.id}")
     if problem_digest(row["problem_statement"]) != case.problem_sha256:
         raise ValueError(f"problem statement does not match the pinned revision for {case.id}")
     if tuple(dict.fromkeys(row["FAIL_TO_PASS"])) != case.regression_checks:
