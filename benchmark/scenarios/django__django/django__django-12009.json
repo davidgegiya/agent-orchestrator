@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12009",
+  "repository": "django/django",
+  "base_commit": "82a88d2f48e13ef5d472741d5ed1c183230cfe4c",
+  "topic": "Django installs /usr/bin/django-admin and /usr/bin/django-admin.py",
+  "upstream_created_at": "2019-11-02T04:49:18Z",
+  "dataset_row": 273,
+  "problem_sha256": "46871f7606d572e16335e4382c53a2e7d68325e55451c7f6175084651bde8ac0",
+  "regression_checks": [
+    "test_django_admin_py_deprecated (admin_scripts.test_django_admin_py.DeprecationTests)"
+  ],
+  "passing_checks": 187
+}
