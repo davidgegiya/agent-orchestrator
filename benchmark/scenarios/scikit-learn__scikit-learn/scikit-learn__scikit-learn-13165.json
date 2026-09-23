@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-13165",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "1c8668b0a021832386470ddf740d834e02c66f69",
+  "topic": "Fix #13194: Ensure monotonic bin edges for KBinsDiscretizer strategy quantile",
+  "upstream_created_at": "2019-02-14T14:53:40Z",
+  "dataset_row": 1583,
+  "problem_sha256": "c4e292b4b18085e99d549bea3ce0caa989eda4476f63c6f7e62d700a7f9bc001",
+  "regression_checks": [
+    "sklearn/preprocessing/tests/test_discretization.py::test_redundant_bins[quantile-expected_bin_edges0]",
+    "sklearn/preprocessing/tests/test_discretization.py::test_redundant_bins[kmeans-expected_bin_edges1]",
+    "sklearn/preprocessing/tests/test_discretization.py::test_percentile_numeric_stability"
+  ],
+  "passing_checks": 34
+}
