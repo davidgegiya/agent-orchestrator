@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4248",
+  "repository": "pydata/xarray",
+  "base_commit": "98dc1f4ea18738492e074e9e51ddfed5cd30ab94",
+  "topic": "Feature request: show units in dataset overview",
+  "upstream_created_at": "2020-07-22T14:54:03Z",
+  "dataset_row": 1237,
+  "problem_sha256": "b602dcca8d3d6fccfdf37b7de40f13d0148c465d6447ec75efc180805d2750a5",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test_inline_variable_array_repr_custom_repr"
+  ],
+  "passing_checks": 18
+}
