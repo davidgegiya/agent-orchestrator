@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-9911",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "2ba8fd5bc50f293fea11a863c2b8c4dc3488762b",
+  "topic": "Improved error when `()` (empty tuple) is passed to `pytest.raises()` or `pytest.warns()`",
+  "upstream_created_at": "2022-05-02T17:17:01Z",
+  "dataset_row": 1490,
+  "problem_sha256": "3d9e89861f447d6a290771b0f5fd8a6a12af18a933e0ff6e46eb5289dd5f2d1f",
+  "regression_checks": [
+    "testing/python/raises.py::TestRaises::test_raises_does_not_allow_none",
+    "testing/python/raises.py::TestRaises::test_raises_does_not_allow_empty_tuple"
+  ],
+  "passing_checks": 24
+}
