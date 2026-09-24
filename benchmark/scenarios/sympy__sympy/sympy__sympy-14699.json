@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-14699",
+  "repository": "sympy/sympy",
+  "base_commit": "6e95230e0ee183a4fb8803a7e49d7744f0a0025c",
+  "topic": "orientnew in sympy.physics.mechanics does not support indices",
+  "upstream_created_at": "2018-05-04T18:30:31Z",
+  "dataset_row": 2030,
+  "problem_sha256": "8fb6556e3071dbbfecbeab66887245796e39b7f2c5a0a0c2c980d62b44a373d4",
+  "regression_checks": [
+    "test_orientnew_respects_input_indices",
+    "test_orientnew_respects_input_latexs",
+    "test_orientnew_respects_input_variables"
+  ],
+  "passing_checks": 7
+}
