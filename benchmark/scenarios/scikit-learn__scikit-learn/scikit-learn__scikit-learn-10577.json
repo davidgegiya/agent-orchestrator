@@ -1,0 +1,18 @@
+{
+  "id": "scikit-learn__scikit-learn-10577",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b90661d6a46aa3619d3eec94d5281f5888add501",
+  "topic": "Allow n_samples to be a tuple in make_blobs",
+  "upstream_created_at": "2018-02-02T17:19:08Z",
+  "dataset_row": 1509,
+  "problem_sha256": "45c8fe4aa426db12269c2a170fb2a84cbc53843c3b3f2124e39a85b51ff180ad",
+  "regression_checks": [
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_n_samples_list",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_n_samples_list_with_centers",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_n_samples_centers_none[n_samples0]",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_n_samples_centers_none[n_samples1]",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_n_samples_centers_none[n_samples2]",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_blobs_error"
+  ],
+  "passing_checks": 22
+}
