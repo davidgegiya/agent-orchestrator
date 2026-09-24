@@ -1,0 +1,15 @@
+{
+  "id": "django__django-13355",
+  "repository": "django/django",
+  "base_commit": "e26a7a8ef41f0d69951affb21655cdc2cf94a209",
+  "topic": "Here is some sample code that can reproduce the issue",
+  "upstream_created_at": "2020-08-27T18:08:56Z",
+  "dataset_row": 448,
+  "problem_sha256": "77a0a5862d8247e85452447c3f659ce8a993898fc03b4822c872614fa4d962b3",
+  "regression_checks": [
+    "test_add_css_deduplication (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_add_empty (forms_tests.tests.test_media.FormsMediaTestCase)",
+    "test_add_js_deduplication (forms_tests.tests.test_media.FormsMediaTestCase)"
+  ],
+  "passing_checks": 19
+}
