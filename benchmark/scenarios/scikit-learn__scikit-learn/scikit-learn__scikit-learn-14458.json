@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14458",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "243d0526ee921babd478d9f95390e29880db3c94",
+  "topic": "Need for conversion with SAG",
+  "upstream_created_at": "2019-07-24T14:39:51Z",
+  "dataset_row": 1640,
+  "problem_sha256": "7927b43871bfd8d5301aadafebb6de0f809fb9842a6642d6d59517718d744d72",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_ridge.py::test_ridge_sag_with_X_fortran"
+  ],
+  "passing_checks": 294
+}
