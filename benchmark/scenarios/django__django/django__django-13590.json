@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13590",
+  "repository": "django/django",
+  "base_commit": "755dbf39fcdc491fe9b588358303e259c7750be4",
+  "topic": "Upgrading 2.2>3.0 causes named tuples used as arguments to __range to error",
+  "upstream_created_at": "2020-10-23T09:34:55Z",
+  "dataset_row": 485,
+  "problem_sha256": "74396509b0c09973350cef4dad3959ff549f160d5c3d3eb5eea6874cac91a15c",
+  "regression_checks": [
+    "test_range_lookup_namedtuple (expressions.tests.IterableLookupInnerExpressionsTests)"
+  ],
+  "passing_checks": 145
+}
