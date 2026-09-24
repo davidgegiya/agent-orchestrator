@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24971",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a3011dfd1aaa2487cce8aa7369475533133ef777",
+  "topic": "compressed layout setting can be forgotten on second save",
+  "upstream_created_at": "2023-01-13T14:32:35Z",
+  "dataset_row": 1059,
+  "problem_sha256": "5f2055cb28a7027b6ea214529e1a42806b099388982ea7853f837250df938831",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_figure.py::test_savefig_preserve_layout_engine"
+  ],
+  "passing_checks": 117
+}
