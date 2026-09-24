@@ -1,0 +1,28 @@
+{
+  "id": "pydata__xarray-7400",
+  "repository": "pydata/xarray",
+  "base_commit": "b21f62ee37eea3650a58e9ffa3a7c9f4ae83006b",
+  "topic": "Add defaults during concat 508",
+  "upstream_created_at": "2022-12-22T14:41:56Z",
+  "dataset_row": 1314,
+  "problem_sha256": "a1e2fcd817811d770d31437e053b0971988deda2750db33b61f5f40587ae5219",
+  "regression_checks": [
+    "xarray/tests/test_concat.py::test_concat_compat",
+    "xarray/tests/test_concat.py::test_concat_missing_var",
+    "xarray/tests/test_concat.py::test_concat_missing_multiple_consecutive_var",
+    "xarray/tests/test_concat.py::test_concat_second_empty",
+    "xarray/tests/test_concat.py::test_concat_multiple_missing_variables",
+    "xarray/tests/test_concat.py::test_concat_multiple_datasets_missing_vars[True]",
+    "xarray/tests/test_concat.py::test_concat_multiple_datasets_missing_vars[False]",
+    "xarray/tests/test_concat.py::test_concat_multiple_datasets_with_multiple_missing_variables",
+    "xarray/tests/test_concat.py::test_concat_type_of_missing_fill",
+    "xarray/tests/test_concat.py::test_concat_order_when_filling_missing",
+    "xarray/tests/test_concat.py::test_concat_fill_missing_variables[True-True]",
+    "xarray/tests/test_concat.py::test_concat_fill_missing_variables[True-False]",
+    "xarray/tests/test_concat.py::test_concat_fill_missing_variables[False-True]",
+    "xarray/tests/test_concat.py::test_concat_fill_missing_variables[False-False]",
+    "xarray/tests/test_concat.py::TestConcatDataset::test_concat_merge_variables_present_in_some_datasets",
+    "xarray/tests/test_concat.py::test_concat_merge_single_non_dim_coord"
+  ],
+  "passing_checks": 79
+}
