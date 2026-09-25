@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-13398",
+  "repository": "astropy/astropy",
+  "base_commit": "6500928dc0e57be8f06d1162eacc3ba5e2eff692",
+  "topic": "A direct approach to ITRS to Observed transformations that stays within the ITRS",
+  "upstream_created_at": "2022-06-24T15:22:11Z",
+  "dataset_row": 22,
+  "problem_sha256": "a1b1b230c9085285fa80852acb4ac38db150304db01df3961661b90967d6da34",
+  "regression_checks": [
+    "astropy/coordinates/tests/test_intermediate_transformations.py::test_itrs_topo_to_altaz_with_refraction",
+    "astropy/coordinates/tests/test_intermediate_transformations.py::test_itrs_topo_to_hadec_with_refraction",
+    "astropy/coordinates/tests/test_intermediate_transformations.py::test_cirs_itrs_topo",
+    "astropy/coordinates/tests/test_intermediate_transformations.py::test_itrs_straight_overhead"
+  ],
+  "passing_checks": 68
+}
