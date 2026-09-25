@@ -225,6 +225,8 @@ def _scan_red_flags(workspace_dir: Path) -> Tuple[str, Dict[str, Any]]:
             except FileNotFoundError:
                 continue
             try:
+                if path.is_symlink():
+                    continue
                 content = path.read_text(encoding="utf-8", errors="ignore")
             except Exception:
                 continue
@@ -252,7 +254,9 @@ def _scan_red_flags(workspace_dir: Path) -> Tuple[str, Dict[str, Any]]:
     return ("\n".join(hits), meta)
 
 
-def _run_local_cmd(args: List[str], *, cwd: Path, timeout_seconds: int) -> Dict[str, Any]:
+def _run_local_cmd(
+    args: List[str], *, cwd: Path, timeout_seconds: int, env: Optional[Dict[str, str]] = None,
+) -> Dict[str, Any]:
     try:
         result = subprocess.run(
             args,
@@ -260,6 +264,7 @@ def _run_local_cmd(args: List[str], *, cwd: Path, timeout_seconds: int) -> Dict[
             capture_output=True,
             text=True,
             timeout=timeout_seconds,
+            env=env,
         )
         return {
             "cmd": " ".join(args),
@@ -448,13 +453,14 @@ def _safe_run(
 
     for attempt in range(1, max_attempts + 1):
         try:
-            from agents import Runner
+            from agents import RunConfig, Runner
 
             result = Runner.run_sync(
                 agent,
                 input=input_text,
                 max_turns=max_turns,
                 context=context,
+                run_config=RunConfig(trace_include_sensitive_data=False),
             )
             meta = {
                 "role": role,
@@ -689,7 +695,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             report.write_artifacts(artifacts)
             print(f"Round {round_idx}: FAIL SKIP ({artifacts['error']})")
             return 1
-        check_results = [_run_local_cmd(command, cwd=workspace, timeout_seconds=120) for command in checks]
+        check_env = {key: value for key, value in os.environ.items() if key != "OPENAI_API_KEY"}
+        check_results = [
+            _run_local_cmd(command, cwd=workspace, timeout_seconds=120, env=check_env)
+            for command in checks
+        ]
         round_record["checks"] = [_cmd_meta(check, limit=4000) for check in check_results]
         tool_outputs = _format_tool_outputs([
             *implementer_ctx.tool_events, *({"tool": "run_cmd", **check} for check in check_results),
