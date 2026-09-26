@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13010",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "365c1b2071b4020cdce1cb81da1cba43a004e370",
+  "topic": "StandardScaler fit overflows on float16",
+  "upstream_created_at": "2019-01-18T07:14:27Z",
+  "dataset_row": 1573,
+  "problem_sha256": "7237271df38d0c19e6e52a69294fbdf4ca720de50ba601afb6b6258545f598c2",
+  "regression_checks": [
+    "sklearn/preprocessing/tests/test_data.py::test_scaler_float16_overflow"
+  ],
+  "passing_checks": 186
+}
