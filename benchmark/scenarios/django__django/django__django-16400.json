@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16400",
+  "repository": "django/django",
+  "base_commit": "0bd2c0c9015b53c41394a1c0989afbfd94dc2830",
+  "topic": "migrate management command does not respect database parameter when adding Permissions",
+  "upstream_created_at": "2022-12-23T17:17:00Z",
+  "dataset_row": 850,
+  "problem_sha256": "08c95a1ca67350c05268f05185c68575f864bdb935551a4ebfb9c44f181d52f5",
+  "regression_checks": [
+    "test_set_permissions_fk_to_using_parameter (auth_tests.test_management.CreatePermissionsMultipleDatabasesTests)"
+  ],
+  "passing_checks": 63
+}
