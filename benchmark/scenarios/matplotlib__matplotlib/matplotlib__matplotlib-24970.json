@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24970",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a3011dfd1aaa2487cce8aa7369475533133ef777",
+  "topic": "NumPy 1.24 deprecation warnings",
+  "upstream_created_at": "2023-01-13T14:23:39Z",
+  "dataset_row": 1058,
+  "problem_sha256": "5c4a1ee0788edd4f479efc4529d295f2cb4df9af829a360f0b65617ebee7ab62",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_index_dtype[uint8]"
+  ],
+  "passing_checks": 253
+}
