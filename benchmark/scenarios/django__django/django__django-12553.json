@@ -1,0 +1,17 @@
+{
+  "id": "django__django-12553",
+  "repository": "django/django",
+  "base_commit": "7072bff1fd13ea706b2dc0ca10feef755872eb68",
+  "topic": "Increase default password salt size in BasePasswordHasher",
+  "upstream_created_at": "2020-03-10T21:55:27Z",
+  "dataset_row": 344,
+  "problem_sha256": "eb198a818b7e016663c0a406bae98cc74f8c6e7add4fccc7904410a1a43e3abd",
+  "regression_checks": [
+    "test_view_user_password_is_readonly (auth_tests.test_views.ChangelistTests)",
+    "test_argon2 (auth_tests.test_hashers.TestUtilsHashPassArgon2)",
+    "test_md5 (auth_tests.test_hashers.TestUtilsHashPass)",
+    "test_pbkdf2 (auth_tests.test_hashers.TestUtilsHashPass)",
+    "test_sha1 (auth_tests.test_hashers.TestUtilsHashPass)"
+  ],
+  "passing_checks": 139
+}
