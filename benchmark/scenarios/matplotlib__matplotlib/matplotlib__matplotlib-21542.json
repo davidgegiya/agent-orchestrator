@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21542",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0632c0fc7339f68e992ed63ae4cfac76cd41aad",
+  "topic": "use new style format strings for colorbar ticks",
+  "upstream_created_at": "2021-11-04T22:23:30Z",
+  "dataset_row": 981,
+  "problem_sha256": "a3fb28c1089d5f41589a38e7baf8ac645b9bb95aae1d400b65692c0c5467c6ce",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colorbar.py::test_colorbar_format[{x:.2e}]"
+  ],
+  "passing_checks": 41
+}
