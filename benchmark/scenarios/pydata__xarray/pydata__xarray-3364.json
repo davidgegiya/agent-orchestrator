@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-3364",
+  "repository": "pydata/xarray",
+  "base_commit": "863e49066ca4d61c9adfe62aca3bf21b90e1af8c",
+  "topic": "Ignore missing variables when concatenating datasets?",
+  "upstream_created_at": "2019-10-01T21:15:54Z",
+  "dataset_row": 1217,
+  "problem_sha256": "9de47267362ee4e4c6a6f1c0a3843bed2c4e9871693aaa92118c3384c016668b",
+  "regression_checks": [
+    "xarray/tests/test_combine.py::TestAutoCombineOldAPI::test_auto_combine_with_new_variables",
+    "xarray/tests/test_concat.py::TestConcatDataset::test_concat_merge_variables_present_in_some_datasets"
+  ],
+  "passing_checks": 110
+}
