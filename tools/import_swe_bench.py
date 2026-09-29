@@ -19,9 +19,11 @@ def task_topic(problem: str) -> str | None:
         line = " ".join(original_line.strip().lstrip("#").split())
         line = re.sub(r"^\[(BUG|MNT|ENH|DOC|FEAT)\]\s*:\s*", "", line, flags=re.IGNORECASE)
         words = line.split()
-        if not 4 <= len(words) <= 30 or line.startswith(("<", ">", "[", chr(96) * 3, "|")):
+        if not 4 <= len(words) <= 30 or line.startswith(("<", ">", "[", chr(96) * 3, "|", "-", "*")):
             continue
-        if re.match(r"^(describe|bug report|what happened|steps to|reproduc|expected behavior|thanks|hello|hi\b)", line, re.I):
+        if re.match(r"^\d+[.)]\s", line):
+            continue
+        if re.match(r"^(describe|bug report|what happened|steps to|reproduc|expected behavior|actual behavior|thanks|hello|hi\b)", line, re.I):
             continue
         if re.search(r"(https?://|[A-Za-z0-9_-]{30,}|token\s*[:=]|password\s*[:=])", line, re.I):
             continue
