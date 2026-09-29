@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-6283",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6df0b9c41a30c39d4e9c5b560f1b50700a175a61",
+  "topic": "Calls to logging.xxx() in skipif causes all logging calls to be duplicated to stderr",
+  "upstream_created_at": "2019-11-27T11:03:42Z",
+  "dataset_row": 1422,
+  "problem_sha256": "54998c4239ada6419318f9ee3b50730395221dcd0162211ea78634c716dea161",
+  "regression_checks": [
+    "testing/test_capture.py::test_logging_while_collecting"
+  ],
+  "passing_checks": 122
+}
