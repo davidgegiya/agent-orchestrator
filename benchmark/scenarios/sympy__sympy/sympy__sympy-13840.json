@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13840",
+  "repository": "sympy/sympy",
+  "base_commit": "8be967b5b2b81365c12030c41da68230e39cdf33",
+  "topic": "Max & Min converting using SymPy",
+  "upstream_created_at": "2018-01-05T02:48:34Z",
+  "dataset_row": 1997,
+  "problem_sha256": "4e46779cb0ed6ebd985ec1a904f9c3e4bb8abe2cc1677adfbe57cf1f5c14c3fc",
+  "regression_checks": [
+    "test_rcode_functions"
+  ],
+  "passing_checks": 22
+}
