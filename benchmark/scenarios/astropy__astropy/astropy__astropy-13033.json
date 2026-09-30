@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13033",
+  "repository": "astropy/astropy",
+  "base_commit": "298ccb478e6bf092953bca67a3d29dc6c35f6752",
+  "topic": "TimeSeries: misleading exception when required column check fails",
+  "upstream_created_at": "2022-03-31T23:28:27Z",
+  "dataset_row": 11,
+  "problem_sha256": "2911cee03faaf4ec3145a5e5d83c5b0645eaf2160f1d1f6cda7bcdb6c7fc5c70",
+  "regression_checks": [
+    "astropy/timeseries/tests/test_sampled.py::test_required_columns"
+  ],
+  "passing_checks": 20
+}
