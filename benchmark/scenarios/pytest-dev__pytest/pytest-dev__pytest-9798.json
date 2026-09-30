@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-9798",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6a6a32ceca8db2bb8c8385f7fe54dc335f48663a",
+  "topic": "ModuleNotFoundError for Numpy when pytest.approx fails",
+  "upstream_created_at": "2022-03-20T14:26:09Z",
+  "dataset_row": 1489,
+  "problem_sha256": "a7b35009d1fc33eb1f20aeed3c11468c9610c36815ba217ee94db0f51f6ccb76",
+  "regression_checks": [
+    "testing/python/approx.py::TestApprox::test_error_messages_native_dtypes"
+  ],
+  "passing_checks": 58
+}
