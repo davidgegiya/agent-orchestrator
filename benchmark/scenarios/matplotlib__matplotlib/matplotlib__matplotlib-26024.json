@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26024",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "bfaa6eb677b9c56cafb6a99d6897c9d0cd9d4210",
+  "topic": "Just browsed the available mathematical operators and compared with the ones defined",
+  "upstream_created_at": "2023-06-01T04:01:41Z",
+  "dataset_row": 1104,
+  "problem_sha256": "69ba41ea7834377f4d7d26411df35cc7d33489651c943fe9e930787e546a5ce1",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_mathtext.py::test_mathtext_operators"
+  ],
+  "passing_checks": 1089
+}
