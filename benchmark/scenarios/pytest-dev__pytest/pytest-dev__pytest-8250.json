@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8250",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "7f782c72ba157aaa26f74553ab328c898dab949c",
+  "topic": "Problem with faulthandler when used with Twisted Logger and \"pytest --capture=no\"",
+  "upstream_created_at": "2021-01-17T19:08:35Z",
+  "dataset_row": 1463,
+  "problem_sha256": "eeecc1948d598f3f97187227958570fe9383facb9e3f859030c80bdd716b1a3b",
+  "regression_checks": [
+    "testing/test_faulthandler.py::test_get_stderr_fileno_invalid_fd"
+  ],
+  "passing_checks": 8
+}
