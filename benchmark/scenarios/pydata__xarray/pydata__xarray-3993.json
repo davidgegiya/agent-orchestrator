@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-3993",
+  "repository": "pydata/xarray",
+  "base_commit": "8cc34cb412ba89ebca12fc84f76a9e452628f1bc",
+  "topic": "DataArray.integrate has a 'dim' arg, but Dataset.integrate has a 'coord' arg",
+  "upstream_created_at": "2020-04-21T20:30:35Z",
+  "dataset_row": 1231,
+  "problem_sha256": "d62226c585c1059fd6fecf6b6523810c4e05dca16592d97d4510024c6bc232be",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::test_integrate[True]",
+    "xarray/tests/test_dataset.py::test_integrate[False]"
+  ],
+  "passing_checks": 2398
+}
