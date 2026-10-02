@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25779",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "06305a2f5dc589888697b3b909859103b8259153",
+  "topic": "Plot ellipse with arrow showing rotation",
+  "upstream_created_at": "2023-04-27T11:44:41Z",
+  "dataset_row": 1097,
+  "problem_sha256": "805506de704bdf81b75b3f292825e3b391a1de00603e2f2f9f4ba0c37f53081d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_patches.py::test_ellipse_vertices"
+  ],
+  "passing_checks": 54
+}
