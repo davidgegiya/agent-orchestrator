@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-12907",
+  "repository": "astropy/astropy",
+  "base_commit": "d16bfe05a744909de4b27f5875fe0d4ed41ce607",
+  "topic": "Modeling's `separability_matrix` does not compute separability correctly for nested CompoundModels",
+  "upstream_created_at": "2022-03-03T15:14:54Z",
+  "dataset_row": 8,
+  "problem_sha256": "63001854ac41837142acfae9d6ae102a99ceb2773567de2fc6af410ef6fe04db",
+  "regression_checks": [
+    "astropy/modeling/tests/test_separable.py::test_separable[compound_model6-result6]",
+    "astropy/modeling/tests/test_separable.py::test_separable[compound_model9-result9]"
+  ],
+  "passing_checks": 13
+}
