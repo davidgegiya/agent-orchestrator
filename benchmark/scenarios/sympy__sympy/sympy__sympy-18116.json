@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-18116",
+  "repository": "sympy/sympy",
+  "base_commit": "4a735bb4f38f7534f11c6634ab1cc36a8d57885e",
+  "topic": "Separate boolean and symbolic relationals",
+  "upstream_created_at": "2019-12-24T12:10:27Z",
+  "dataset_row": 2148,
+  "problem_sha256": "7536b5dc1a49159026d5ef83533f7eb868cd512ab2e103e176ba212f141f4c5c",
+  "regression_checks": [
+    "test_cooperative_operations",
+    "test_set_operations_nonsets"
+  ],
+  "passing_checks": 323
+}
