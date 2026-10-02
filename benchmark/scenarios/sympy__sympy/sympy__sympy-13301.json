@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13301",
+  "repository": "sympy/sympy",
+  "base_commit": "daac289bed6a780e91a452a0538ad6421c2ed8d5",
+  "topic": "AccumBounds needs recreatable str/srepr",
+  "upstream_created_at": "2017-09-11T20:59:50Z",
+  "dataset_row": 1968,
+  "problem_sha256": "50703b11a3a3a0b4f007992f10bbc6ee949c876aea1617022bed4173cbc45d9a",
+  "regression_checks": [
+    "test_AccumBounds"
+  ],
+  "passing_checks": 74
+}
