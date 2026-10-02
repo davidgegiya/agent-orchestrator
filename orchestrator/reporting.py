@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from tempfile import mkdtemp
+from tempfile import NamedTemporaryFile, mkdtemp
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -48,10 +48,15 @@ class RunReport:
         self.tech_writer_path.write_text(content.strip() + "\n", encoding="utf-8")
 
     def write_artifacts(self, data: Dict[str, Any]) -> None:
-        self.artifacts_path.write_text(
-            json.dumps(data, indent=2, sort_keys=True),
-            encoding="utf-8",
-        )
+        with NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.run_dir, delete=False) as handle:
+            temp_path = Path(handle.name)
+            try:
+                json.dump(data, handle, indent=2, sort_keys=True)
+                handle.write("\n")
+                handle.close()
+                temp_path.replace(self.artifacts_path)
+            finally:
+                temp_path.unlink(missing_ok=True)
 
 
 def create_run_dir(reports_root: Path) -> Path:

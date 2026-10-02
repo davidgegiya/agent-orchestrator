@@ -635,6 +635,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 1
     report.write_plan(plan_text)
     artifacts["plan_path"] = str(report.plan_path)
+    report.write_artifacts(artifacts)
 
     implementer = build_implementer_agent() if args.implementer == "sdk" else None
     reviewer = build_reviewer_agent()
@@ -778,6 +779,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             },
         })
         artifacts["rounds"].append(round_record)
+        report.write_artifacts(artifacts)
 
         if is_stuck(previous_reviewer_text, reviewer_report):
             review_decision = ReviewDecision(
