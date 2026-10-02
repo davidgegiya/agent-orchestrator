@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25238",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f726d2cf4e61bc3e01db99bc09a7871d0f574990",
+  "topic": "FFMpegWriter does not check if out path exists when initialized",
+  "upstream_created_at": "2023-02-17T06:03:51Z",
+  "dataset_row": 1067,
+  "problem_sha256": "b8eed0c529480956d4a899ca88af3a03979f383e5063406e9f73b0fc36356409",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_animation.py::test_movie_writer_invalid_path"
+  ],
+  "passing_checks": 63
+}
