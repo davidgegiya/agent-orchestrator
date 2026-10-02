@@ -1,0 +1,18 @@
+{
+  "id": "scikit-learn__scikit-learn-14764",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "af2bad4f34e938cb16ada0ae19cc713a275682d6",
+  "topic": "datasets :: make_classification() weights parameter should be a sequence (not just a list)",
+  "upstream_created_at": "2019-08-24T17:02:34Z",
+  "dataset_row": 1651,
+  "problem_sha256": "c29ae42fa51f03ef177862846436e7a6deaca85c3a1ea64b2b746d343b00cc83",
+  "regression_checks": [
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_type[weights0-ValueError-Weights",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_type[weights2-ValueError-Weights",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_type[weights3-ValueError-Weights",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_type[weights4-ValueError-Weights",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_array_or_list_ok[kwargs0]",
+    "sklearn/datasets/tests/test_samples_generator.py::test_make_classification_weights_array_or_list_ok[kwargs1]"
+  ],
+  "passing_checks": 29
+}
