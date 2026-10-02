@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11141",
+  "repository": "django/django",
+  "base_commit": "5d9cf79baf07fc4aed7ad1b06990532a65378155",
+  "topic": "Allow migrations directories without __init__.py files",
+  "upstream_created_at": "2019-03-28T20:49:53Z",
+  "dataset_row": 147,
+  "problem_sha256": "95c5c7b87edc882b63c8f16604daa85b7bd38c3df91ef21f0928135ec36ee185",
+  "regression_checks": [
+    "Migration directories without an __init__.py file are loaded."
+  ],
+  "passing_checks": 24
+}
