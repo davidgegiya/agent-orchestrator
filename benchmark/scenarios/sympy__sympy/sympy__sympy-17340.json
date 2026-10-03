@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-17340",
+  "repository": "sympy/sympy",
+  "base_commit": "4a9bdbc72dcf35172fd2279ca995ab24353f6edf",
+  "topic": "Permutation args are now subtypes of Basic",
+  "upstream_created_at": "2019-08-05T05:18:21Z",
+  "dataset_row": 2129,
+  "problem_sha256": "cd3173c8e70faf75f26c3248e069848df3038dd7d1b8ebc2dc335aa571fe3d34",
+  "regression_checks": [
+    "test_elements",
+    "test_sympy__combinatorics__permutations__Permutation"
+  ],
+  "passing_checks": 854
+}
