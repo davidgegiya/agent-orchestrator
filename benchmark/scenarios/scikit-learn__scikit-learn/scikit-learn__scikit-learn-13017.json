@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13017",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "db17f3e2221fb6cec256d2d3501e259c5d5db934",
+  "topic": "ColumnTransformer behavior for negative column indexes",
+  "upstream_created_at": "2019-01-19T15:51:13Z",
+  "dataset_row": 1575,
+  "problem_sha256": "16b3494416b41f89899f0833c0ee0b6ffce677d99d6705c04d039162f6701527",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_column_transformer_negative_column_indexes"
+  ],
+  "passing_checks": 52
+}
