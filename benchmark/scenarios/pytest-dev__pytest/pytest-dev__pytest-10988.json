@@ -1,0 +1,28 @@
+{
+  "id": "pytest-dev__pytest-10988",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "78403237cf5026f23618ea7a867bf8b674116e6f",
+  "topic": "Pytest trying to check if custom argument is a file crashes due to filename being too long",
+  "upstream_created_at": "2023-05-11T12:31:49Z",
+  "dataset_row": 1385,
+  "problem_sha256": "ff70744bdf3f702d940b60c7fc3fb47a70a1b87742ebcb930aac29f40f15673a",
+  "regression_checks": [
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_not_existing[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_by_path[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_with_confmod[global]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_not_existing[inpackage]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_by_path[inpackage]",
+    "testing/test_conftest.py::TestConftestValueAccessGlobal::test_value_access_with_confmod[inpackage]",
+    "testing/test_conftest.py::test_conftest_in_nonpkg_with_init",
+    "testing/test_collection.py::test_initial_conftests_with_testpaths",
+    "testing/test_conftest.py::test_doubledash_considered",
+    "testing/test_conftest.py::test_issue151_load_all_conftests",
+    "testing/test_conftest.py::test_conftestcutdir",
+    "testing/test_conftest.py::test_conftestcutdir_inplace_considered",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[test]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[tests]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[whatever]",
+    "testing/test_conftest.py::test_setinitial_conftest_subdirs[.dotdir]"
+  ],
+  "passing_checks": 123
+}
