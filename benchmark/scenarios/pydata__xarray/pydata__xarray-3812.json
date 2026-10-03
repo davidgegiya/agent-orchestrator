@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3812",
+  "repository": "pydata/xarray",
+  "base_commit": "8512b7bf498c0c300f146447c0b05545842e9404",
+  "topic": "Turn on _repr_html_ by default?",
+  "upstream_created_at": "2020-02-28T21:12:43Z",
+  "dataset_row": 1227,
+  "problem_sha256": "417cf270028337fcd1c34a9ec7a643fe61c4647fda4558746579cc6141230718",
+  "regression_checks": [
+    "xarray/tests/test_options.py::test_display_style"
+  ],
+  "passing_checks": 11
+}
