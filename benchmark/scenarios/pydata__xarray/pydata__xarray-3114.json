@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3114",
+  "repository": "pydata/xarray",
+  "base_commit": "b3ba4ba5f9508e4b601d9cf5dbcd9024993adf37",
+  "topic": "expand_dims() modifies numpy.ndarray.flags to write only, upon manually reverting this flag back, attempting to set a single inner",
+  "upstream_created_at": "2019-07-13T21:13:45Z",
+  "dataset_row": 1209,
+  "problem_sha256": "c02135884b6009468641c8d5dfbe78288b46fd1fb8c77b2d81c55f9d3c0715a1",
+  "regression_checks": [
+    "xarray/tests/test_indexing.py::TestIndexers::test_read_only_view"
+  ],
+  "passing_checks": 120
+}
