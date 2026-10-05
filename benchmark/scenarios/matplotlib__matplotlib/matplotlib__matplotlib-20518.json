@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20518",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "1d129737743d7a1c000367c363cbb890183450bc",
+  "topic": "Sketch params ignored when using PGF backend",
+  "upstream_created_at": "2021-06-25T09:59:27Z",
+  "dataset_row": 964,
+  "problem_sha256": "266d6db6d4bc8e241a9d14be77832bc7cb167bc49e492844e7fe5058f0523fc8",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_pgf.py::test_sketch_params"
+  ],
+  "passing_checks": 23
+}
