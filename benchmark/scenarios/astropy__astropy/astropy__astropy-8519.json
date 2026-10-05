@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-8519",
+  "repository": "astropy/astropy",
+  "base_commit": "0e1d299f8f7084b8cb6286caed92e3169317027f",
+  "topic": "Adding/subtracting ABmag Quantities loses the \"type\" of magnitude",
+  "upstream_created_at": "2019-03-21T17:59:36Z",
+  "dataset_row": 90,
+  "problem_sha256": "2a1034d067298915975a8a42032f5735b9e300a09b684a71966ae593fa2584ba",
+  "regression_checks": [
+    "astropy/units/tests/test_logarithmic.py::TestLogUnitConversion::test_magnitude_conversion_fails_message"
+  ],
+  "passing_checks": 203
+}
