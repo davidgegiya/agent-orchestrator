@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-15555",
+  "repository": "sympy/sympy",
+  "base_commit": "29034f1104c9ce5500a1ae8fa23e3608464a362d",
+  "topic": "primepi doesn't work with symbolic arguments",
+  "upstream_created_at": "2018-11-28T05:06:46Z",
+  "dataset_row": 2057,
+  "problem_sha256": "b07a7dbc34196ab72bbf6e93ef35171c634b91fd10d578d515c70324d36e0bd3",
+  "regression_checks": [
+    "test_sympy__ntheory__generate__primepi",
+    "test_primepi"
+  ],
+  "passing_checks": 765
+}
