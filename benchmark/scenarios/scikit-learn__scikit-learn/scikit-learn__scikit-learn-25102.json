@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-25102",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "f9a1cf072da9d7375d6c2163f68a6038b13b310f",
+  "topic": "Preserving dtypes for DataFrame output by transformers that do not modify the input values",
+  "upstream_created_at": "2022-12-02T20:03:37Z",
+  "dataset_row": 1681,
+  "problem_sha256": "bc716c9f2e6f449ed23cbfe8a349f74616784beedc9ae3856ff5cf04428a1fbb",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_base.py::test_output_dataframe",
+    "sklearn/feature_selection/tests/test_feature_select.py::test_dataframe_output_dtypes"
+  ],
+  "passing_checks": 59
+}
