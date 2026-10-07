@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25232",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "f7eea978097085a6781a0e92fc14ba7712a52d75",
+  "topic": "IterativeImputer has no parameter \"fill_value\"",
+  "upstream_created_at": "2022-12-24T15:32:44Z",
+  "dataset_row": 1682,
+  "problem_sha256": "38df5b411d9bd49a2fcab63afbd4df54fa256b5e8e81464670f94575020a9720",
+  "regression_checks": [
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_constant_fill_value"
+  ],
+  "passing_checks": 214
+}
