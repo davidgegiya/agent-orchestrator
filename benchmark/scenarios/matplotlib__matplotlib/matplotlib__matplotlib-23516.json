@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-23516",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "12d3c8e6389728fe584d395bb5f9635a817d39ac",
+  "topic": "scatter plot color settings discarded unless c given",
+  "upstream_created_at": "2022-07-29T18:24:47Z",
+  "dataset_row": 1021,
+  "problem_sha256": "d0f2684dfd767c43617c5fdb11210cf2b957495a324598e3bc6ec5a9d0472426",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_color_warning[kwargs0]",
+    "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_color_warning[kwargs1]",
+    "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_color_warning[kwargs2]",
+    "lib/matplotlib/tests/test_axes.py::TestScatter::test_scatter_color_warning[kwargs3]"
+  ],
+  "passing_checks": 812
+}
