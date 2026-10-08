@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13264",
+  "repository": "sympy/sympy",
+  "base_commit": "ae3d62ab736d0f5cad3fdcf9b482365d4de4c147",
+  "topic": "simplify doesn't do the last simplification step",
+  "upstream_created_at": "2017-09-06T15:57:13Z",
+  "dataset_row": 1964,
+  "problem_sha256": "9c0c03ed7d6915a6af8c70e22815107321212c8ff72ba629a6cea80215b25dce",
+  "regression_checks": [
+    "test_simplify_rational"
+  ],
+  "passing_checks": 35
+}
