@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4629",
+  "repository": "pydata/xarray",
+  "base_commit": "a41edc7bf5302f2ea327943c0c48c532b12009bc",
+  "topic": "merge(combine_attrs='override') does not copy attrs but instead references attrs from the first object",
+  "upstream_created_at": "2020-11-30T23:06:17Z",
+  "dataset_row": 1245,
+  "problem_sha256": "f7557058535a9927657ea2ce0757a39e1577d1ebf1e7f8ec060d8c2eb15191ad",
+  "regression_checks": [
+    "xarray/tests/test_merge.py::TestMergeFunction::test_merge_attrs_override_copy"
+  ],
+  "passing_checks": 32
+}
