@@ -1,0 +1,15 @@
+{
+  "id": "django__django-16786",
+  "repository": "django/django",
+  "base_commit": "3fe0c609cf6d50e45e1246492ebac02660561177",
+  "topic": "FilteredRelation resolves its conditions too late which can result in unknown alias references at SQL compilation time",
+  "upstream_created_at": "2023-04-20T04:27:12Z",
+  "dataset_row": 896,
+  "problem_sha256": "ae142fa3b791e51503449530e1f1886c073349da71527a305a5e0bbf1f3383d5",
+  "regression_checks": [
+    "test_condition_self_ref (filtered_relation.tests.FilteredRelationAggregationTests.test_condition_self_ref)",
+    "test_condition_spans_join (filtered_relation.tests.FilteredRelationAggregationTests.test_condition_spans_join)",
+    "test_condition_spans_join_chained (filtered_relation.tests.FilteredRelationAggregationTests.test_condition_spans_join_chained)"
+  ],
+  "passing_checks": 42
+}
