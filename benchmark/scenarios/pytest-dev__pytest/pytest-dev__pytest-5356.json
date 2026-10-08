@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5356",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "a8f4e56d8ca63252706c6200dcfb036078be39a7",
+  "topic": "Version 4.6.0 skips tests without apparent reason",
+  "upstream_created_at": "2019-06-01T20:51:42Z",
+  "dataset_row": 1402,
+  "problem_sha256": "c893d60c036ecfe85881f3682f6fff1ca70868fc8db811939d74658c5921e63d",
+  "regression_checks": [
+    "testing/test_mark.py::test_parametrize_iterator"
+  ],
+  "passing_checks": 72
+}
