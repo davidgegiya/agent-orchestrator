@@ -42,6 +42,7 @@ def test_run_result_requires_a_checked_patch(case, tmp_path):
     (tmp_path / "artifacts.json").write_text(json.dumps({
         "base_sha": case.base_commit, "task_sha256": case.problem_sha256,
         "ended_at": "complete", "final_verdict": "PASS",
+        "required_checks": [["python", "-m", "pytest"]],
         "rounds": [{"round": 1, "checks": [{"returncode": 0}]}],
     }))
     with pytest.raises(ValueError, match="verified patch"):
@@ -49,12 +50,13 @@ def test_run_result_requires_a_checked_patch(case, tmp_path):
 
 
 def test_comparison_excludes_unpaired_cases(case):
-    base = {"base_commit": case.base_commit, "rounds": 1, "checks": 1}
+    base = {"base_commit": case.base_commit, "checks_sha256": "a" * 64, "rounds": 1, "checks": 1}
     values = [
         Outcome(case_id=case.id, variant="a", result="rejected", **base),
         Outcome(case_id=case.id, variant="b", result="accepted", **base),
         Outcome(case_id="owner__repo-234", variant="b", result="accepted", **base),
+        Outcome(case_id=case.id, variant="b", result="accepted", **{**base, "checks_sha256": "b" * 64}),
     ]
     summary = compare_outcomes(values, "a", "b")
-    assert summary["paired_cases"] == summary["right_only"] == 1
+    assert summary["paired_cases"] == 1 and summary["right_only"] == 2
     assert summary["transitions"] == {"rejected -> accepted": 1}

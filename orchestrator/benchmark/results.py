@@ -1,6 +1,7 @@
 """Compare paired workflow outcomes without treating them as model scores."""
 
 from collections import Counter
+from hashlib import sha256
 import json
 from pathlib import Path
 from typing import Literal
@@ -16,6 +17,7 @@ class Outcome(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     case_id: str
     base_commit: str = Field(pattern=r"^[a-f0-9]{40}$")
+    checks_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
     variant: str = Field(min_length=1, max_length=100)
     result: Literal["accepted", "rejected", "incomplete"]
     rounds: int = Field(ge=0)
@@ -28,6 +30,10 @@ def record_outcome(case: Scenario, variant: str, run_dir: Path) -> Outcome:
         raise ValueError("run did not use the scenario's pinned base commit")
     if report.get("task_sha256") != case.problem_sha256:
         raise ValueError("run did not use the pinned scenario problem statement")
+    check_commands = report.get("required_checks")
+    if not check_commands:
+        raise ValueError("run does not identify its required check commands")
+    checks_sha256 = sha256(json.dumps(check_commands, ensure_ascii=False).encode("utf-8")).hexdigest()
     rounds = report["rounds"]
     if any(round_info["patch_verified"] is False for round_info in rounds):
         raise ValueError("a saved patch differs from its recorded hash")
@@ -43,7 +49,8 @@ def record_outcome(case: Scenario, variant: str, run_dir: Path) -> Outcome:
     else:
         result = "incomplete"
     return Outcome(
-        case_id=case.id, base_commit=case.base_commit, variant=variant, result=result,
+        case_id=case.id, base_commit=case.base_commit, checks_sha256=checks_sha256,
+        variant=variant, result=result,
         rounds=len(rounds), checks=sum(len(round_info["check_exit_codes"]) for round_info in rounds),
     )
 
@@ -51,19 +58,19 @@ def record_outcome(case: Scenario, variant: str, run_dir: Path) -> Outcome:
 def compare_outcomes(outcomes: list[Outcome], left: str, right: str) -> dict:
     if left == right:
         raise ValueError("comparison requires two distinct variants")
-    variants: dict[str, dict[tuple[str, str], Outcome]] = {left: {}, right: {}}
+    variants: dict[str, dict[tuple[str, str, str], Outcome]] = {left: {}, right: {}}
     for outcome in outcomes:
         records = variants.get(outcome.variant)
         if records is None:
             continue
-        key = (outcome.case_id, outcome.base_commit)
+        key = (outcome.case_id, outcome.base_commit, outcome.checks_sha256)
         if key in records:
             raise ValueError(f"duplicate result for {outcome.case_id} in {outcome.variant}")
         records[key] = outcome
     left_cases, right_cases = variants[left], variants[right]
     pairs = left_cases.keys() & right_cases.keys()
     if not pairs:
-        raise ValueError("no common cases with the same base commit")
+        raise ValueError("no common cases with the same base commit and required checks")
     transitions = Counter((left_cases[key].result, right_cases[key].result) for key in pairs)
     return {
         "left": left, "right": right, "paired_cases": len(pairs),

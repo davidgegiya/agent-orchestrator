@@ -473,6 +473,7 @@ def _run_workflow(
         "workspace": str(workspace),
         "base_sha": base_sha,
         "implementer_backend": args.implementer,
+        "required_checks": checks,
         "started_at": datetime.now().isoformat(timespec="seconds"),
         "rounds": [],
         "final_verdict": "FAIL",
