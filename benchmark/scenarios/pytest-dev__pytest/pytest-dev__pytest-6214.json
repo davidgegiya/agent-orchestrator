@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-6214",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "f24f20a46e0efd8b375ab3457e9f6864e59979e5",
+  "topic": "I have the following example",
+  "upstream_created_at": "2019-11-17T22:54:57Z",
+  "dataset_row": 1421,
+  "problem_sha256": "39f3fd97598c836af1d02765d45e06884eb8b16aec5da4b06cf8767df8f54885",
+  "regression_checks": [
+    "testing/python/setup_plan.py::test_show_multi_test_fixture_setup_and_teardown_correctly_simple",
+    "testing/python/setup_plan.py::test_show_multi_test_fixture_setup_and_teardown_same_as_setup_show"
+  ],
+  "passing_checks": 1
+}
