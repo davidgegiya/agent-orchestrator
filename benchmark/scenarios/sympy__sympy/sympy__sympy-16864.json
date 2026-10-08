@@ -1,0 +1,25 @@
+{
+  "id": "sympy__sympy-16864",
+  "repository": "sympy/sympy",
+  "base_commit": "dec525f376a5b62bfc3dd361db057b44e7ebff14",
+  "topic": "imageset evaluation problems with complex values",
+  "upstream_created_at": "2019-05-20T21:24:45Z",
+  "dataset_row": 2102,
+  "problem_sha256": "ad32a5acb51db278e76bfae9ceac91cb290b3148e854de1fe85df1df9edd81e8",
+  "regression_checks": [
+    "test_Mod",
+    "test_ImageSet",
+    "test_Integers_eval_imageset",
+    "test_ImageSet_simplification",
+    "test_ImageSet_contains",
+    "test_issue_9543",
+    "test_imageset",
+    "test_intersect1",
+    "test_is_subset",
+    "test_invert_real",
+    "test_nonlinsolve_complex",
+    "test_issue_5132_1",
+    "test_issue_5132_substitution"
+  ],
+  "passing_checks": 286
+}
