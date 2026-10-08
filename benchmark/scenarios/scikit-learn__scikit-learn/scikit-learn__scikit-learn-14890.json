@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-14890",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "14f5302b7000e9096de93beef37dcdb08f55f128",
+  "topic": "Fitting TransformedTargetRegressor with sample_weight in Pipeline",
+  "upstream_created_at": "2019-09-05T13:19:06Z",
+  "dataset_row": 1655,
+  "problem_sha256": "483f5989f728013e801b3c629cdf566c7d9bb3e0468fef9b904ca6cf9bb1ede1",
+  "regression_checks": [
+    "sklearn/compose/tests/test_target.py::test_transform_target_regressor_pass_fit_parameters",
+    "sklearn/compose/tests/test_target.py::test_transform_target_regressor_route_pipeline"
+  ],
+  "passing_checks": 13
+}
