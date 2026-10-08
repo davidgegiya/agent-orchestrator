@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25334",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "07c43e4a87130880b5a01eca16de492bb800c26e",
+  "topic": "plt.contour with all NaNs fails assertion in _contour.cpp",
+  "upstream_created_at": "2023-02-26T22:03:38Z",
+  "dataset_row": 1072,
+  "problem_sha256": "93b0fc67708bf4584fdd8110455621a7200a879bb2e959e2d0fec9fd76e84974",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_all_nan"
+  ],
+  "passing_checks": 65
+}
