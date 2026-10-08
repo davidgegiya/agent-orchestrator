@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25746",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "4bdae2e004b29d075f96a7dbbee918f7dfb13ed1",
+  "topic": "Add fontfamily/labelfont to tick_params",
+  "upstream_created_at": "2023-04-21T12:49:56Z",
+  "dataset_row": 1094,
+  "problem_sha256": "e77a48f5c6d7075473bb2f03cdc41322ecf4e8d6f2aead8f66b9c369841689b5",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_tick_param_labelfont"
+  ],
+  "passing_checks": 804
+}
