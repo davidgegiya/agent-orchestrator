@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-16106",
+  "repository": "sympy/sympy",
+  "base_commit": "0e987498b00167fdd4a08a41c852a97cb70ce8f2",
+  "topic": "mathml printer for IndexedBase required",
+  "upstream_created_at": "2019-02-28T17:21:46Z",
+  "dataset_row": 2079,
+  "problem_sha256": "a54e6260e2ea94e60a58af8209a22ecda147d39d98ce639bd82e144c31725577",
+  "regression_checks": [
+    "test_print_IndexedBase"
+  ],
+  "passing_checks": 55
+}
