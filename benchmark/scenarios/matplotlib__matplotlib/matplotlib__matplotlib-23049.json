@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23049",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "17a7aca12399311f6252c55db0ece3694c5758b2",
+  "topic": "Should plt.xticks() get a minor keyword argument",
+  "upstream_created_at": "2022-05-14T14:58:51Z",
+  "dataset_row": 1003,
+  "problem_sha256": "f49f26abfd038865532c41d667e43c402c22341ed9a23c6ac3238a8ac91b6e4b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pyplot.py::test_minor_ticks"
+  ],
+  "passing_checks": 23
+}
