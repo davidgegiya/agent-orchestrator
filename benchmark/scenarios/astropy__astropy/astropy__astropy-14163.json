@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-14163",
+  "repository": "astropy/astropy",
+  "base_commit": "d083189bbc188807c3d62bd419ea5bbf38cf7d56",
+  "topic": "Should calling `np.array_equal()` on `astropy.units.Quantity` instances with incompatible units return `False`?",
+  "upstream_created_at": "2022-12-10T03:40:34Z",
+  "dataset_row": 45,
+  "problem_sha256": "7ff25a19660485ad85f57f7f5f3c24ecf0bf83206dff080be5e0cc975fe1d839",
+  "regression_checks": [
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestReductionLikeFunctions::test_array_equal_incompatible_units",
+    "astropy/units/tests/test_quantity_non_ufuncs.py::TestReductionLikeFunctions::test_array_equiv_incompatible_units"
+  ],
+  "passing_checks": 262
+}
