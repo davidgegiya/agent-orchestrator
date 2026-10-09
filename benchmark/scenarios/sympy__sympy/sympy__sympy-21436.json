@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-21436",
+  "repository": "sympy/sympy",
+  "base_commit": "45d4e5f7fe1ac8bcdfa425bbac722481d2ec183f",
+  "topic": "Support orienting adjacent reference frames in arbitrary orders",
+  "upstream_created_at": "2021-05-06T06:38:29Z",
+  "dataset_row": 2233,
+  "problem_sha256": "c4950a21dab730d9944cb1902f33c0affe5aba2be0e0b677a5bb38ab3a014c65",
+  "regression_checks": [
+    "test_looped_frame_warning"
+  ],
+  "passing_checks": 23
+}
