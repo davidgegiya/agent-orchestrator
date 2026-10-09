@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15799",
+  "repository": "django/django",
+  "base_commit": "90d2f9f41671ef01c8e8e7b5648f95c9bf512aae",
+  "topic": "SelectMultiple in ModelAdminForm display help text when allow_multiple_selected is False",
+  "upstream_created_at": "2022-06-27T02:15:54Z",
+  "dataset_row": 789,
+  "problem_sha256": "5ae0ec91bb0ecab7a2449c6a3b274190c23227a7a4ed7396ba02d5f686ec37f4",
+  "regression_checks": [
+    "test_m2m_widgets_no_allow_multiple_selected (admin_widgets.tests.AdminFormfieldForDBFieldTests)"
+  ],
+  "passing_checks": 63
+}
