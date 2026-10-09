@@ -1,0 +1,14 @@
+{
+  "id": "django__django-14170",
+  "repository": "django/django",
+  "base_commit": "6efc35b4fe3009666e56a60af0675d7d532bf4ff",
+  "topic": "Query optimization in YearLookup breaks filtering by \"__iso_year\"",
+  "upstream_created_at": "2021-03-23T08:53:41Z",
+  "dataset_row": 567,
+  "problem_sha256": "9bb2f1f55399aeecc72f873bdfb71034d8511cb27f6c3131894ff73dcf09535a",
+  "regression_checks": [
+    "test_extract_iso_year_func_boundaries (db_functions.datetime.test_extract_trunc.DateFunctionTests)",
+    "test_extract_iso_year_func_boundaries (db_functions.datetime.test_extract_trunc.DateFunctionWithTimeZoneTests)"
+  ],
+  "passing_checks": 76
+}
