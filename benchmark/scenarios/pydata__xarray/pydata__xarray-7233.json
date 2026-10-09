@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7233",
+  "repository": "pydata/xarray",
+  "base_commit": "51d37d1be95547059251076b3fadaa317750aab3",
+  "topic": "ds.Coarsen.construct demotes non-dimensional coordinates to variables",
+  "upstream_created_at": "2022-10-27T23:46:49Z",
+  "dataset_row": 1310,
+  "problem_sha256": "307125bfda958712c6abdca8c9a0a8e1153778fe3effd7e8b993256dcd4e96e9",
+  "regression_checks": [
+    "xarray/tests/test_coarsen.py::TestCoarsenConstruct::test_coarsen_construct_keeps_all_coords"
+  ],
+  "passing_checks": 189
+}
