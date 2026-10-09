@@ -1,0 +1,28 @@
+{
+  "id": "scikit-learn__scikit-learn-14012",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "15b54340ee7dc7cb870a418d1b5f6f553672f5dd",
+  "topic": "Feature request: warm starting for histogram-based GBM",
+  "upstream_created_at": "2019-06-03T15:16:58Z",
+  "dataset_row": 1627,
+  "problem_sha256": "b01a76ab3cb32d3b835ca86dd9d5b794d07adad98dd529b0d17a7ed108bd2f98",
+  "regression_checks": [
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_max_iter_with_warm_start_validation[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_max_iter_with_warm_start_validation[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_yields_identical_results[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_yields_identical_results[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_max_depth[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_max_depth[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_early_stopping[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_early_stopping[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_equal_n_estimators[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_equal_n_estimators[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_clear[HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_warm_start_clear[HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[int-HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[int-HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[instance-HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[instance-HistGradientBoostingRegressor-X1-y1]"
+  ],
+  "passing_checks": 0
+}
