@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-14043",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6e49e89c4a1a3b2e238833bc8935d34b8056304e",
+  "topic": "bar plot yerr lines/caps should respect zorder",
+  "upstream_created_at": "2019-04-25T20:29:56Z",
+  "dataset_row": 953,
+  "problem_sha256": "a5815318df87d0774aa67728249950c44c45259cffe94b9798c416c0cee3f09b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_bar_errbar_zorder"
+  ],
+  "passing_checks": 416
+}
