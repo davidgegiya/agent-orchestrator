@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-11502",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "71db08c05197545944949d5aa76cd340e7143627",
+  "topic": "Keep 'translated' node attribute",
+  "upstream_created_at": "2023-07-23T14:35:44Z",
+  "dataset_row": 1757,
+  "problem_sha256": "f5602950e2e9c3ad246342415a37c6cd21e72efa4776a4a3052b08941e0f33d1",
+  "regression_checks": [
+    "tests/test_intl.py::test_node_translated_attribute"
+  ],
+  "passing_checks": 53
+}
