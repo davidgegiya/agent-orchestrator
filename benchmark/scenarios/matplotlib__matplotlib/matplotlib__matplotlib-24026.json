@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-24026",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "14c96b510ebeba40f573e512299b1976f35b620e",
+  "topic": "stackplot should not change Axes cycler",
+  "upstream_created_at": "2022-09-28T02:45:01Z",
+  "dataset_row": 1031,
+  "problem_sha256": "97d9804d4bad7728a235c432a83e821df50c01bf6e29f81acf90dcb4af778fdc",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_stackplot[png]",
+    "lib/matplotlib/tests/test_axes.py::test_stackplot[pdf]"
+  ],
+  "passing_checks": 764
+}
