@@ -363,7 +363,7 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
     if status_out:
         diff_parts.append("# GIT STATUS (workspace)\n" + status_out)
 
-    tracked = _run_local_cmd(["git", "diff", "--no-color", "--no-ext-diff", "--no-textconv", base_sha, "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
+    tracked = _run_local_cmd(["git", "diff", "--no-color", "--binary", "--no-ext-diff", "--no-textconv", base_sha, "--", *pathspec], cwd=git_cwd, timeout_seconds=30)
     meta["commands"].append({**_cmd_meta(tracked), "tool": "local_cmd", "cwd": str(git_cwd)})
     tracked_out = (tracked.get("stdout") or "").rstrip()
     if tracked_out:
@@ -383,7 +383,7 @@ def _compute_workspace_diff(workspace_dir: Path, base_sha: str = "HEAD") -> Tupl
     null_path = "/dev/null" if Path("/dev/null").exists() else "NUL"
     for rel_path in untracked_files:
         patch = _run_local_cmd(
-            ["git", "diff", "--no-color", "--no-index", "--no-ext-diff", "--no-textconv", "--", null_path, rel_path],
+            ["git", "diff", "--no-color", "--binary", "--no-index", "--no-ext-diff", "--no-textconv", "--", null_path, rel_path],
             cwd=git_cwd,
             timeout_seconds=30,
         )
@@ -510,6 +510,8 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument("--task", type=Path, help="Markdown task to run")
     parser.add_argument("--implementer", choices=("sdk", "codex"), default="sdk")
     parser.add_argument("--codex-timeout", type=int, default=900)
+    parser.add_argument("--write-project-notes", action="store_true",
+                        help="Allow the documentation role to update this project's notes")
     parser.add_argument("--check", action="append", help="Required check command (repeatable; no shell)")
     args = parser.parse_args(argv)
     if args.codex_timeout < 1:
@@ -639,7 +641,7 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     implementer = build_implementer_agent() if args.implementer == "sdk" else None
     reviewer = build_reviewer_agent()
-    tech_writer = build_tech_writer_agent()
+    write_project_notes = not args.workspace or args.write_project_notes
 
     previous_reviewer_text = ""
     review_decision: Optional[ReviewDecision] = None
@@ -706,14 +708,13 @@ def main(argv: Optional[List[str]] = None) -> int:
             *implementer_ctx.tool_events, *({"tool": "run_cmd", **check} for check in check_results),
         ])
 
-
         red_flags_text, red_flags_meta = _scan_red_flags(workspace)
         red_flags_max_chars = int(os.environ.get("ORCH_REVIEWER_RED_FLAGS_MAX_CHARS", "4000"))
         reviewer_red_flags = _truncate(red_flags_text, red_flags_max_chars) if red_flags_text.strip() != "- None" else "- None"
 
         diff_text, diff_meta = _compute_workspace_diff(workspace, base_sha)
         diff_max_chars = int(os.environ.get("ORCH_REVIEWER_DIFF_MAX_CHARS", "12000"))
-        reviewer_diff = _truncate(diff_text, diff_max_chars) if diff_text.strip() != "- None" else "- None"
+        reviewer_diff = diff_text
         diff_path = run_dir / f"diff_round_{round_idx}.patch"
         diff_path.write_text(diff_text, encoding="utf-8")
         round_record["diff"] = {
@@ -825,7 +826,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         artifacts["reason"] = "max_rounds"
 
     docs_update = review_decision is not None and _needs_docs_update(review_decision)
-    if review_decision and (review_decision.verdict == "PASS" or docs_update):
+    if write_project_notes and review_decision and (review_decision.verdict == "PASS" or docs_update):
+        tech_writer = build_tech_writer_agent()
         tech_ctx = RunContext(
             role="tech_writer",
             repo_root=repo_root,

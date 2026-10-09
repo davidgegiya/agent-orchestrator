@@ -48,14 +48,15 @@ class RunReport:
         self.tech_writer_path.write_text(content.strip() + "\n", encoding="utf-8")
 
     def write_artifacts(self, data: Dict[str, Any]) -> None:
-        with NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.run_dir, delete=False) as handle:
-            temp_path = Path(handle.name)
-            try:
+        temp_path = None
+        try:
+            with NamedTemporaryFile(mode="w", encoding="utf-8", dir=self.run_dir, delete=False) as handle:
+                temp_path = Path(handle.name)
                 json.dump(data, handle, indent=2, sort_keys=True)
                 handle.write("\n")
-                handle.close()
-                temp_path.replace(self.artifacts_path)
-            finally:
+            temp_path.replace(self.artifacts_path)
+        finally:
+            if temp_path is not None:
                 temp_path.unlink(missing_ok=True)
 
 
