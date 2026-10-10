@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12155",
+  "repository": "django/django",
+  "base_commit": "e8fcdaad5c428878d0a5d6ba820d957013f75595",
+  "topic": "docutils reports an error rendering view docstring when the first line is not empty",
+  "upstream_created_at": "2019-11-28T16:24:23Z",
+  "dataset_row": 288,
+  "problem_sha256": "26d30b685948fad2680bae4fe429c9cdd3903d89ad55676542c5aff6a658997b",
+  "regression_checks": [
+    "test_parse_rst_with_docstring_no_leading_line_feed (admin_docs.test_utils.TestUtils)"
+  ],
+  "passing_checks": 6
+}
