@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-8509",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "143e7fe1e7706d454a39ad23ec91e832a8762879",
+  "topic": "Use uplatex for default latex_engine for Japanese docs",
+  "upstream_created_at": "2020-11-29T05:51:39Z",
+  "dataset_row": 1829,
+  "problem_sha256": "82f8c0af1c00b73c40c117c2e78e9933efdd81f4ecfd89b72807745a620e886c",
+  "regression_checks": [
+    "tests/test_build_latex.py::test_latex_basic_manual_ja",
+    "tests/test_build_latex.py::test_latex_basic_howto_ja"
+  ],
+  "passing_checks": 58
+}
