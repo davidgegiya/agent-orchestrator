@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-14508",
+  "repository": "astropy/astropy",
+  "base_commit": "a3f4ae6cd24d5ecdf49f213d77b3513dd509a06c",
+  "topic": "`io.fits.Card` may use a string representation of floats that is larger than necessary",
+  "upstream_created_at": "2023-03-09T11:08:51Z",
+  "dataset_row": 58,
+  "problem_sha256": "b345e25884e4b0c6bd407fb93f50385e1e3e392c3a9ac495df3dec9d8c48fd7e",
+  "regression_checks": [
+    "astropy/io/fits/tests/test_header.py::TestHeaderFunctions::test_floating_point_string_representation_card"
+  ],
+  "passing_checks": 174
+}
