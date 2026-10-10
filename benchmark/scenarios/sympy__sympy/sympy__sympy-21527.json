@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-21527",
+  "repository": "sympy/sympy",
+  "base_commit": "31d469a5335c81ec4a437e36a861945a6b43d916",
+  "topic": "linsolve fails simple system of two equations",
+  "upstream_created_at": "2021-05-26T23:53:16Z",
+  "dataset_row": 2235,
+  "problem_sha256": "4ea20e126d045fa3f309eb3173457e6c6869f4e49d6236256f141a287b7857a9",
+  "regression_checks": [
+    "test__linsolve_float",
+    "test_construct_domain",
+    "test_Poly__new__"
+  ],
+  "passing_checks": 160
+}
