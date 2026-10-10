@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8037",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "0cfb433b25c085071ea46c3ecf8e84f17228643f",
+  "topic": "sphinx.util.cfamily.DefinitionError: Error in template parameter list",
+  "upstream_created_at": "2020-08-02T08:38:10Z",
+  "dataset_row": 1805,
+  "problem_sha256": "1a57eff0d83152151f940c6da7edaf7f9b9d17b0df07c9107bcec8d7aa226b8d",
+  "regression_checks": [
+    "tests/test_domain_cpp.py::test_templates"
+  ],
+  "passing_checks": 27
+}
