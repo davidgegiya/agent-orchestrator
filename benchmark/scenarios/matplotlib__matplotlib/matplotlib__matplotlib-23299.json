@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23299",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3eadeacc06c9f2ddcdac6ae39819faa9fbee9e39",
+  "topic": "get_backend() clears figures from Gcf.figs if they were created under rc_context",
+  "upstream_created_at": "2022-06-18T01:34:39Z",
+  "dataset_row": 1015,
+  "problem_sha256": "f6bc76158a4ef18bd22d861dc93d4d44753d6e027ea87454eb31f06711d5fa06",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_rcparams.py::test_no_backend_reset_rccontext"
+  ],
+  "passing_checks": 192
+}
