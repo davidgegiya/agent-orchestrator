@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10774",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "ccbf9975fcf1676f6ac4f311e388529d3a3c4d3f",
+  "topic": "return_X_y should be available on more dataset loaders/fetchers",
+  "upstream_created_at": "2018-03-08T02:48:49Z",
+  "dataset_row": 1512,
+  "problem_sha256": "1369b6b81df19832929b2ad074ce560470d441ce014217b2b6c68c1927c77e70",
+  "regression_checks": [
+    "sklearn/datasets/tests/test_lfw.py::test_load_fake_lfw_people"
+  ],
+  "passing_checks": 23
+}
