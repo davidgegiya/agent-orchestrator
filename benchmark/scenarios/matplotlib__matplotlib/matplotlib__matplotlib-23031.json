@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23031",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "c3cf938bc02cbbb0d853c54255c4197b6e90ea1e",
+  "topic": "Require that matplotlibrc/style files use utf-8 (or have an encoding cookie)",
+  "upstream_created_at": "2022-05-10T15:30:51Z",
+  "dataset_row": 1001,
+  "problem_sha256": "71b705cc90ed9c5807b52e6a9979a3bca0a343521f2fdaaf009c073e696018c6",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_rcparams.py::test_Issue_1713"
+  ],
+  "passing_checks": 207
+}
