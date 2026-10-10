@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13436",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "77b73d63d05bc198ba89193582aee93cae1f69a4",
+  "topic": "Confusing pretty print repr for nested Pipeline",
+  "upstream_created_at": "2019-03-12T14:40:46Z",
+  "dataset_row": 1597,
+  "problem_sha256": "ca892acce3e36c4fb22c94acf8d84f44cfc3a103a88a8a9e94d5d1eeb1215866",
+  "regression_checks": [
+    "sklearn/utils/tests/test_pprint.py::test_bruteforce_ellipsis"
+  ],
+  "passing_checks": 8
+}
