@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13704",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "57726672b52421aca17123cc313136a340344d0d",
+  "topic": "VarianceThreshold doesn't remove feature with zero variance",
+  "upstream_created_at": "2019-04-23T15:57:53Z",
+  "dataset_row": 1614,
+  "problem_sha256": "db89ca05a27ef67e836f5af27e87bba7cb575e34565155347317e461b9065b21",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_variance_threshold.py::test_zero_variance_floating_point_error"
+  ],
+  "passing_checks": 2
+}
