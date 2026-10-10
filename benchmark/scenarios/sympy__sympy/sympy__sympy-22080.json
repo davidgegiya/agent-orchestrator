@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-22080",
+  "repository": "sympy/sympy",
+  "base_commit": "3f8c8c2377cb8e0daaf8073e8d03ac7d87580813",
+  "topic": "Mod function lambdify bug",
+  "upstream_created_at": "2021-09-12T07:11:33Z",
+  "dataset_row": 2252,
+  "problem_sha256": "e4534b7d832203f1311b57a2d86b0b561744b2bab5d094f63ba1f3578ca36cf5",
+  "regression_checks": [
+    "test_create_expand_pow_optimization",
+    "test_PythonCodePrinter",
+    "test_empty_modules"
+  ],
+  "passing_checks": 91
+}
