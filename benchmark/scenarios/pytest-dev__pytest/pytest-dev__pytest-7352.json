@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7352",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "0821c5c81d115c161a081fc048e4cf59521fe17e",
+  "topic": "FileNotFoundError: [Errno 2] No such file or directory: '/tmp/pytest-of-jenkins/pytest-1681/.lock'",
+  "upstream_created_at": "2020-06-11T19:54:52Z",
+  "dataset_row": 1440,
+  "problem_sha256": "77da56d2a95320168e865aa5c9953fe913b5840d6e360d8532d41d732c8c5aaa",
+  "regression_checks": [
+    "testing/test_pathlib.py::test_suppress_error_removing_lock"
+  ],
+  "passing_checks": 41
+}
