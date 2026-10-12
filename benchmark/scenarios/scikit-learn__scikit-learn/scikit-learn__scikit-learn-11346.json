@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-11346",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "93382cc41fb95abbbf534aed4c4cf2405c38d601",
+  "topic": "ValueError: assignment destination is read-only, when paralleling with n_jobs > 1",
+  "upstream_created_at": "2018-06-22T15:01:54Z",
+  "dataset_row": 1537,
+  "problem_sha256": "c8564278b3aa51643f43945ed09e2e97ba5bb226c047064b687186aca97c861d",
+  "regression_checks": [
+    "sklearn/decomposition/tests/test_dict_learning.py::test_sparse_coder_parallel_mmap",
+    "sklearn/linear_model/tests/test_omp.py::test_orthogonal_mp_gram_readonly"
+  ],
+  "passing_checks": 72
+}
