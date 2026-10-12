@@ -1,0 +1,22 @@
+{
+  "id": "matplotlib__matplotlib-24691",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "78bf53caacbb5ce0dc7aa73f07a74c99f1ed919b",
+  "topic": "set facecolor and edgecolor alpha separately",
+  "upstream_created_at": "2022-12-10T18:13:37Z",
+  "dataset_row": 1051,
+  "problem_sha256": "892ded91c84d04aafaf63a31caecc565f3cda291dbbd4e89ea120d6482d8b6bb",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_array_accepts_color_alpha_tuple",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_array_explicit_alpha_overrides_tuple_alpha",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_array_accepts_color_alpha_tuple_with_multiple_colors",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_array_error_with_color_invalid_alpha_tuple",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_accepts_color_alpha_tuple[rgba_alpha0]",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_accepts_color_alpha_tuple[rgba_alpha1]",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_accepts_color_alpha_tuple[rgba_alpha2]",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_accepts_color_alpha_tuple[rgba_alpha3]",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_explicit_alpha_overrides_tuple_alpha",
+    "lib/matplotlib/tests/test_colors.py::test_to_rgba_error_with_color_invalid_alpha_tuple"
+  ],
+  "passing_checks": 254
+}
