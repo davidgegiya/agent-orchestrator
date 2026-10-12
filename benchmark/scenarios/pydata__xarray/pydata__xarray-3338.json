@@ -1,0 +1,15 @@
+{
+  "id": "pydata__xarray-3338",
+  "repository": "pydata/xarray",
+  "base_commit": "3f0049ffc51e4c709256cf174c435f741370148d",
+  "topic": "Dataset.groupby reductions give \"Dataset does not contain dimensions error\" in v0.13",
+  "upstream_created_at": "2019-09-24T14:39:02Z",
+  "dataset_row": 1216,
+  "problem_sha256": "866c540446d7a7d24dafbf61cdcf18fb3872299463b0789f32f7425e7189349a",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj0-z]",
+    "xarray/tests/test_groupby.py::test_groupby_repr[obj1-z]",
+    "xarray/tests/test_groupby.py::test_groupby_grouping_errors"
+  ],
+  "passing_checks": 668
+}
