@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13480",
+  "repository": "sympy/sympy",
+  "base_commit": "f57fe3f4b3f2cab225749e1b3b38ae1bf80b62f0",
+  "topic": ".subs on coth(log(tan(x))) errors for certain integral values",
+  "upstream_created_at": "2017-10-18T17:27:03Z",
+  "dataset_row": 1979,
+  "problem_sha256": "6f5cb92c60fd59783946537bdba117191704faf159e4911e2b45206756059dcc",
+  "regression_checks": [
+    "test_coth"
+  ],
+  "passing_checks": 43
+}
