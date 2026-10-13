@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-8674",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "2444c4711e9142a40dee4032bb921867c8f2b9fb",
+  "topic": "Enable passing options to pygments",
+  "upstream_created_at": "2021-01-10T17:01:02Z",
+  "dataset_row": 1845,
+  "problem_sha256": "530e0739e3fa362e83daa9daeb86d231efa2ebcc21a20409c2102de2ca3d8074",
+  "regression_checks": [
+    "tests/test_build_html.py::test_highlight_options"
+  ],
+  "passing_checks": 442
+}
