@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-24066",
+  "repository": "sympy/sympy",
+  "base_commit": "514579c655bf22e2af14f0743376ae1d7befe345",
+  "topic": "SI._collect_factor_and_dimension() cannot properly detect that exponent is dimensionless",
+  "upstream_created_at": "2022-09-16T22:58:15Z",
+  "dataset_row": 2279,
+  "problem_sha256": "ed79e5753fad00825dbc449f03cd9b9cdd0cfa7e67aba812f02f73b5e3b4ac18",
+  "regression_checks": [
+    "test_issue_24062"
+  ],
+  "passing_checks": 30
+}
