@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25565",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7ab47b41b6046c9b237fe96a4c6cfd454e2380c7",
+  "topic": "legend for Poly3dCollection fails",
+  "upstream_created_at": "2023-03-28T04:16:07Z",
+  "dataset_row": 1087,
+  "problem_sha256": "9274f0c5232ca8a7fad1e5be9dfd25a979717473a72b770ebefc4d3f1096f8e3",
+  "regression_checks": [
+    "lib/mpl_toolkits/mplot3d/tests/test_legend3d.py::test_legend_Poly3dCollection"
+  ],
+  "passing_checks": 7
+}
