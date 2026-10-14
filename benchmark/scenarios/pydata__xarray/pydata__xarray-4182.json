@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-4182",
+  "repository": "pydata/xarray",
+  "base_commit": "65ca92a5c0a4143d00dd7a822bcb1d49738717f1",
+  "topic": "Pre-expand data and attributes in DataArray/Variable HTML repr?",
+  "upstream_created_at": "2020-06-26T02:25:08Z",
+  "dataset_row": 1235,
+  "problem_sha256": "dc7ceec52e0d7a98839b7cbccd56a3364d77f91c8e472518d214f80ae91e4933",
+  "regression_checks": [
+    "xarray/tests/test_formatting_html.py::test_repr_of_dataarray"
+  ],
+  "passing_checks": 13
+}
