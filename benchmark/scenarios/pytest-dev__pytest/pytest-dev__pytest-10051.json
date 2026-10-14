@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-10051",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "aa55975c7d3f6c9f6d7f68accc41bb7cadf0eb9a",
+  "topic": "caplog.get_records and caplog.clear conflict",
+  "upstream_created_at": "2022-06-15T17:39:53Z",
+  "dataset_row": 1373,
+  "problem_sha256": "c4236cfb08c54d940cf1ec836f495649a2f453de771d6de593b547481308f955",
+  "regression_checks": [
+    "testing/logging/test_fixture.py::test_clear_for_call_stage"
+  ],
+  "passing_checks": 15
+}
