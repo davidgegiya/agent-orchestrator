@@ -1,0 +1,18 @@
+{
+  "id": "scikit-learn__scikit-learn-13584",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "0e3c1879b06d839171b7d0a607d71bbb19a966a9",
+  "topic": "bug in print_changed_only in new repr: vector values",
+  "upstream_created_at": "2019-04-05T23:09:48Z",
+  "dataset_row": 1609,
+  "problem_sha256": "4fdd70a81c4e873e0396e3a0170d1e89c97438899f118e4bda91967b37adbd29",
+  "regression_checks": [
+    "sklearn/utils/tests/test_pprint.py::test_changed_only",
+    "sklearn/utils/tests/test_pprint.py::test_pipeline",
+    "sklearn/utils/tests/test_pprint.py::test_deeply_nested",
+    "sklearn/utils/tests/test_pprint.py::test_gridsearch",
+    "sklearn/utils/tests/test_pprint.py::test_gridsearch_pipeline",
+    "sklearn/utils/tests/test_pprint.py::test_n_max_elements_to_show"
+  ],
+  "passing_checks": 3
+}
