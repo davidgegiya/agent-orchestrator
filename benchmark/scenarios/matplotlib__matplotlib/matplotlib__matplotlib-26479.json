@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-26479",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "04492d95a12328373161d7b8ffc8c2f4b0575974",
+  "topic": "Postscript backend gives wrong page sizes",
+  "upstream_created_at": "2023-08-09T09:45:45Z",
+  "dataset_row": 1127,
+  "problem_sha256": "6dd1a29d7dd9b00e52fd220b2a3e9c54c4ef128fb23343b1538abd99fb8f153e",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_backend_ps.py::test_savefig_to_stringio[ps-portrait-figure]",
+    "lib/matplotlib/tests/test_backend_ps.py::test_savefig_to_stringio[ps-landscape-figure]",
+    "lib/matplotlib/tests/test_backend_ps.py::test_savefig_to_stringio[eps-portrait-figure]",
+    "lib/matplotlib/tests/test_backend_ps.py::test_savefig_to_stringio[eps-landscape-figure]"
+  ],
+  "passing_checks": 24
+}
