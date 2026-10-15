@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16661",
+  "repository": "django/django",
+  "base_commit": "d687febce5868545f99974d2499a91f81a32fef5",
+  "topic": "ModelAdmin.lookup_allowed() incorrectly raises DisallowedModelAdminLookup lookup with foreign key as primary key",
+  "upstream_created_at": "2023-03-18T09:26:58Z",
+  "dataset_row": 882,
+  "problem_sha256": "7d09a8902534eec4f7d7832a4cdec48db7b1513711245ea54bdc7e460e0866ca",
+  "regression_checks": [
+    "test_lookup_allowed_foreign_primary (modeladmin.tests.ModelAdminTests.test_lookup_allowed_foreign_primary)"
+  ],
+  "passing_checks": 36
+}
