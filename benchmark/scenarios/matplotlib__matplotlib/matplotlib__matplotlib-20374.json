@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20374",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d385b2caa8fae238fafd7d2a6ba493703b100b8c",
+  "topic": "plot_directive is confused by include directives, part 2 (context option)",
+  "upstream_created_at": "2021-06-06T01:19:36Z",
+  "dataset_row": 961,
+  "problem_sha256": "4dff78cc7d452e6e202c3b1eb6a68e68cebddd246df1694ac78344f75a25bcd6",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_sphinxext.py::test_tinypages"
+  ],
+  "passing_checks": 0
+}
