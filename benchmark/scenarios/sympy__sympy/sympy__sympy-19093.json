@@ -1,0 +1,28 @@
+{
+  "id": "sympy__sympy-19093",
+  "repository": "sympy/sympy",
+  "base_commit": "64d28fe0534f6993695d11244ea740f783958dc8",
+  "topic": "Regression: can't make expressions with mutable BlockDiagMatrix's",
+  "upstream_created_at": "2020-04-08T21:22:25Z",
+  "dataset_row": 2186,
+  "problem_sha256": "cc2900567c334343ec9f1a4b3045687446e259b97e86c7bfe0cc5e552090f850",
+  "regression_checks": [
+    "test_invertible",
+    "test_symmetric",
+    "test_fullrank",
+    "test_positive_definite",
+    "test_triangular",
+    "test_diagonal",
+    "test_matrix_element_sets",
+    "test_BlockMatrix_trace",
+    "test_BlockMatrix_Determinant",
+    "test_BlockMatrix_inverse",
+    "test_BlockDiagMatrix_nonsquare",
+    "test_BlockDiagMatrix_determinant",
+    "test_BlockDiagMatrix_trace",
+    "test_issue_2460",
+    "test_inverse",
+    "test_inverse_non_invertible"
+  ],
+  "passing_checks": 39
+}
