@@ -1,0 +1,28 @@
+{
+  "id": "scikit-learn__scikit-learn-13641",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "badaa153e67ffa56fb1a413b3b7b5b8507024291",
+  "topic": "CountVectorizer with custom analyzer ignores input argument",
+  "upstream_created_at": "2019-04-14T21:20:41Z",
+  "dataset_row": 1613,
+  "problem_sha256": "943748bda2276f2ea5768fd109f6513d43ebd30c4cc4a6af480e5394656554cf",
+  "regression_checks": [
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_error[filename-FileNotFoundError--CountVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_error[filename-FileNotFoundError--TfidfVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_error[filename-FileNotFoundError--HashingVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_error[file-AttributeError-'str'",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>0-CountVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>0-TfidfVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>0-HashingVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>1-CountVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>1-TfidfVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[file-<lambda>1-HashingVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>0-CountVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>0-TfidfVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>0-HashingVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>1-CountVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>1-TfidfVectorizer]",
+    "sklearn/feature_extraction/tests/test_text.py::test_callable_analyzer_change_behavior[filename-<lambda>1-HashingVectorizer]"
+  ],
+  "passing_checks": 70
+}
