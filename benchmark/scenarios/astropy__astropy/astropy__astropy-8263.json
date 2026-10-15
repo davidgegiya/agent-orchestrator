@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-8263",
+  "repository": "astropy/astropy",
+  "base_commit": "e4bee4aa1b393d128e3df419d3ff91f8de626f37",
+  "topic": "units: 's / m' and 's / m' are not convertible",
+  "upstream_created_at": "2018-12-11T20:02:50Z",
+  "dataset_row": 87,
+  "problem_sha256": "4a84082afbf71eb392f700475c27ec65ce2a6a3b714ff8a8db1bd999fd4313c5",
+  "regression_checks": [
+    "astropy/units/tests/test_units.py::test_raise_to_negative_power"
+  ],
+  "passing_checks": 248
+}
