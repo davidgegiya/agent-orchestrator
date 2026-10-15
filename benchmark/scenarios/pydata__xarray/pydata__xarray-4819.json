@@ -1,0 +1,15 @@
+{
+  "id": "pydata__xarray-4819",
+  "repository": "pydata/xarray",
+  "base_commit": "a2b1712afd957deaf189c9b1a04e469596d853c9",
+  "topic": "drop_sel indices in dimension that doesn't have coordinates?",
+  "upstream_created_at": "2021-01-17T12:08:18Z",
+  "dataset_row": 1255,
+  "problem_sha256": "1bdd092af697638bb91e66c39f092951b413621b61f8adbaf252433c5276dd19",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_drop_index_positions",
+    "xarray/tests/test_dataset.py::TestDataset::test_drop_index_labels",
+    "xarray/tests/test_dataset.py::TestDataset::test_drop_labels_by_position"
+  ],
+  "passing_checks": 1792
+}
