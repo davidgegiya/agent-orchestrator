@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-9939",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "f247ad5adfe86b2ee64a4a3db1b496c8bf1c9dff",
+  "topic": "Incorrect predictions when fitting a LogisticRegression model on binary outcomes with `multi_class='multinomial'`",
+  "upstream_created_at": "2017-10-17T10:52:38Z",
+  "dataset_row": 1720,
+  "problem_sha256": "16743b74edb496ac7a3669b8472410172524a33bbc63704ae7268570e732dcd4",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_logistic.py::test_multinomial_binary_probabilities"
+  ],
+  "passing_checks": 42
+}
