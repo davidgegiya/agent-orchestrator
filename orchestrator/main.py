@@ -782,7 +782,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         artifacts["rounds"].append(round_record)
         report.write_artifacts(artifacts)
 
-        if is_stuck(previous_reviewer_text, reviewer_report):
+        review_fingerprint = f"{round_record['diff']['sha256']}\n{reviewer_report}"
+        if is_stuck(previous_reviewer_text, review_fingerprint):
             review_decision = ReviewDecision(
                 verdict="FAIL",
                 action="SKIP",
@@ -796,7 +797,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             loop_exhausted = False
             break
 
-        previous_reviewer_text = reviewer_report
+        previous_reviewer_text = review_fingerprint
 
         if review_decision.verdict == "PASS":
             current_patch, current_meta = _compute_workspace_diff(workspace, base_sha)
