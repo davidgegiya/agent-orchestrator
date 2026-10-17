@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-11693",
+  "repository": "astropy/astropy",
+  "base_commit": "3832210580d516365ddae1a62071001faf94d416",
+  "topic": "'WCS.all_world2pix' failed to converge when plotting WCS with non linear distortions",
+  "upstream_created_at": "2021-05-04T10:05:33Z",
+  "dataset_row": 0,
+  "problem_sha256": "1905bf5ef124da8a8fe1d6e2ea98dc5283b235de1fe74267e2df5eef006438c6",
+  "regression_checks": [
+    "astropy/wcs/wcsapi/tests/test_fitswcs.py::test_non_convergence_warning"
+  ],
+  "passing_checks": 27
+}
