@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5808",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "404cf0c872880f2aac8214bb490b26c9a659548e",
+  "topic": "Lexer \"python3\" in --pastebin feature causes HTTP errors",
+  "upstream_created_at": "2019-08-30T19:36:55Z",
+  "dataset_row": 1413,
+  "problem_sha256": "1c19ef4b1029e90df850e6fc3db4de27d753c61dced038bf51d9dcabd4565ff2",
+  "regression_checks": [
+    "testing/test_pastebin.py::TestPaste::test_create_new_paste"
+  ],
+  "passing_checks": 6
+}
