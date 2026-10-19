@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-25340",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "5e8c140da6f61338c8eeb04c6fe2335ffbacd78e",
+  "topic": "set_val of rangeslider sets incorrect value",
+  "upstream_created_at": "2023-02-28T01:02:54Z",
+  "dataset_row": 1073,
+  "problem_sha256": "6414b8819518dc3c79aaf65255a8b9b6842257aa6e6e47edc911ab9933343d8d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_range_slider[horizontal]",
+    "lib/matplotlib/tests/test_widgets.py::test_range_slider[vertical]"
+  ],
+  "passing_checks": 114
+}
