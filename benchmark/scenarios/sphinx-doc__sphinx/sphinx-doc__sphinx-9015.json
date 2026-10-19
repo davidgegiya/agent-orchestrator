@@ -1,0 +1,14 @@
+{
+  "id": "sphinx-doc__sphinx-9015",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "9f62b9cccbd69d250ff84a3cfb346725476f83a8",
+  "topic": "Property gets linked instead of external type in class with inline type annotations",
+  "upstream_created_at": "2021-03-17T14:38:22Z",
+  "dataset_row": 1860,
+  "problem_sha256": "8805f43a035ab0dda40682c19b58a9fa2b3232c1d62c04a60074e468a08df5da",
+  "regression_checks": [
+    "tests/test_util_typing.py::test_restify",
+    "tests/test_util_typing.py::test_stringify"
+  ],
+  "passing_checks": 17
+}
