@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-21568",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0632c0fc7339f68e992ed63ae4cfac76cd41aad",
+  "topic": "Datetime axis with usetex is unclear",
+  "upstream_created_at": "2021-11-08T18:41:08Z",
+  "dataset_row": 984,
+  "problem_sha256": "2def19f8ea6215aabc59e526dd3cb540fbe576659a9b8e8579019ef68aaed141",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex[delta2-expected2]",
+    "lib/matplotlib/tests/test_dates.py::test_date_formatter_usetex[delta3-expected3]",
+    "lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta2-expected2]",
+    "lib/matplotlib/tests/test_dates.py::test_concise_formatter_usetex[t_delta3-expected3]"
+  ],
+  "passing_checks": 73
+}
