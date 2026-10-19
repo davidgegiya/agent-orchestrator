@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-25805",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "67ea7206bc052eb752f7881eb6043a00fe27c800",
+  "topic": "CalibratedClassifierCV fails on lgbm fit_params",
+  "upstream_created_at": "2023-03-10T12:37:03Z",
+  "dataset_row": 1701,
+  "problem_sha256": "ba7cc800f092deda25ec7609f8191a31c0afa243fa29459c28e6d02883583177",
+  "regression_checks": [
+    "sklearn/tests/test_calibration.py::test_calibration_with_non_sample_aligned_fit_param"
+  ],
+  "passing_checks": 79
+}
