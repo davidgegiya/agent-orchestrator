@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-19091",
+  "repository": "sympy/sympy",
+  "base_commit": "64d28fe0534f6993695d11244ea740f783958dc8",
+  "topic": "Tensor contractions are wrong",
+  "upstream_created_at": "2020-04-08T07:43:30Z",
+  "dataset_row": 2185,
+  "problem_sha256": "da9af3f20130e0b4e579a44b9e32c13e7e64f78ff7f058fdebab4a140d9b42c6",
+  "regression_checks": [
+    "test_tensor_replacement"
+  ],
+  "passing_checks": 54
+}
