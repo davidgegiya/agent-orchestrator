@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-13808",
+  "repository": "sympy/sympy",
+  "base_commit": "4af4487cfd254af747670a2324b6f24ae0a55a66",
+  "topic": "Actually for integrate(1/(a-cos(theta)),(theta,0,pi)) for a > 1 should be pi/sqrt((a-1)*(a+1)). So, the right answer should be pi/sqrt(3)",
+  "upstream_created_at": "2017-12-29T17:24:26Z",
+  "dataset_row": 1996,
+  "problem_sha256": "4eed8378f9609de78058b4535ce224211a070d8ae47e7ee8ffa3a7f46766e975",
+  "regression_checks": [
+    "test_issue_8623",
+    "test_issue_9569",
+    "test_issue_13749"
+  ],
+  "passing_checks": 93
+}
