@@ -1,0 +1,14 @@
+{
+  "id": "django__django-16032",
+  "repository": "django/django",
+  "base_commit": "0c3981eb5094419fe200eb46c71b5376a2266166",
+  "topic": "__in doesn't clear selected fields on the RHS when QuerySet.alias() is used after annotate()",
+  "upstream_created_at": "2022-09-06T09:54:57Z",
+  "dataset_row": 809,
+  "problem_sha256": "7128fd2c8dfd91056a508f87f442c87cdca189810c98aa4bee5a991e56ae4ba1",
+  "regression_checks": [
+    "test_annotation_and_alias_filter_in_subquery (annotations.tests.NonAggregateAnnotationTestCase)",
+    "test_annotation_and_alias_filter_related_in_subquery (annotations.tests.NonAggregateAnnotationTestCase)"
+  ],
+  "passing_checks": 77
+}
