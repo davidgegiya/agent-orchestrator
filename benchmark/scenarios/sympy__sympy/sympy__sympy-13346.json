@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13346",
+  "repository": "sympy/sympy",
+  "base_commit": "19c75f32f62e1d8900520861261d5eccda243194",
+  "topic": "Test failures on non-NumPy environment",
+  "upstream_created_at": "2017-09-25T10:30:00Z",
+  "dataset_row": 1970,
+  "problem_sha256": "bde9b1effad698912d406d27b992e2c64faf766bac1d8b00daa05bacb00ed1ce",
+  "regression_checks": [
+    "test_sin"
+  ],
+  "passing_checks": 46
+}
