@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15052",
+  "repository": "django/django",
+  "base_commit": "25157033e979c134d455d46995a6db0838457d98",
+  "topic": "Aggregate filtered by an Exists subquery crashes",
+  "upstream_created_at": "2021-11-03T14:48:01Z",
+  "dataset_row": 679,
+  "problem_sha256": "3d67e86789bb2f366dc3c3ae00adf787c47ad14bed98faac7e381372adc52525",
+  "regression_checks": [
+    "test_filtered_aggregate_on_exists (aggregation.test_filter_argument.FilteredAggregateTests)"
+  ],
+  "passing_checks": 14
+}
