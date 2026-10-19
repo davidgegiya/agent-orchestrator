@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20859",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "64619e53e9d0ed417daba287ac0d3a06943a54d5",
+  "topic": "Adding a legend to a `SubFigure` doesn't work",
+  "upstream_created_at": "2021-08-19T09:03:04Z",
+  "dataset_row": 974,
+  "problem_sha256": "497f091c0c6a0ec11a163aa0eff6b259e83a34e076b53a1ea075f082c5ce5e69",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_subfigure_legend"
+  ],
+  "passing_checks": 88
+}
