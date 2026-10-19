@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-6394",
+  "repository": "pydata/xarray",
+  "base_commit": "c604ee1fe852d51560100df6af79b4c28660f6b5",
+  "topic": "DataArray groupby returning Dataset broken in some cases",
+  "upstream_created_at": "2022-03-21T14:43:21Z",
+  "dataset_row": 1278,
+  "problem_sha256": "e89740bc24e055a3234233a6cadb2a88e7eacbe1d0a58976b99847177b35c1c1",
+  "regression_checks": [
+    "xarray/tests/test_groupby.py::test_groupby_dataarray_map_dataset_func"
+  ],
+  "passing_checks": 102
+}
