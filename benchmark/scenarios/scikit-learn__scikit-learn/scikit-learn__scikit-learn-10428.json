@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10428",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "db127bd9693068a5b187d49d08738e690c5c7d98",
+  "topic": "Add common test to ensure all(predict(X[mask]) == predict(X)[mask])",
+  "upstream_created_at": "2018-01-08T21:07:00Z",
+  "dataset_row": 1500,
+  "problem_sha256": "ba0ec1524dc1a127d015010acfba866c2818001b9fe08c629f6b7ca05c896f57",
+  "regression_checks": [
+    "sklearn/utils/tests/test_estimator_checks.py::test_check_estimator"
+  ],
+  "passing_checks": 4
+}
