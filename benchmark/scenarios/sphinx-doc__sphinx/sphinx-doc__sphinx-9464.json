@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9464",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "810a1e2988b14f4d139b5ef328a91967f5ed7a08",
+  "topic": "PEP 585 type hints not rendered correctly",
+  "upstream_created_at": "2021-07-17T17:02:31Z",
+  "dataset_row": 1886,
+  "problem_sha256": "dfd50bd27971cc6db354bac3331a4dc8a6eccc93626cd9f06982e69043641d56",
+  "regression_checks": [
+    "tests/test_util_typing.py::test_stringify_type_hints_pep_585"
+  ],
+  "passing_checks": 21
+}
