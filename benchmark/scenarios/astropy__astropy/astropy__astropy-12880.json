@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-12880",
+  "repository": "astropy/astropy",
+  "base_commit": "b49ad06b4de9577648a55d499d914e08baeef2c6",
+  "topic": "No longer able to read BinnedTimeSeries with datetime column saved as ECSV after upgrading from 4.2.1 -> 5.0+",
+  "upstream_created_at": "2022-02-21T13:57:37Z",
+  "dataset_row": 6,
+  "problem_sha256": "16d46014ce369634336f3f860f9e40fea02aa6c07d3fb8d41106e9c0fb4e1544",
+  "regression_checks": [
+    "astropy/io/ascii/tests/test_ecsv.py::test_read_complex_v09",
+    "astropy/io/ascii/tests/test_ecsv.py::test_read_bad_datatype_v09"
+  ],
+  "passing_checks": 180
+}
