@@ -780,6 +780,10 @@ def _run_workflow(
         artifacts["tech_writer_run"] = tech_meta
         if tech_error:
             artifacts["error"] = f"Tech writer failed: {tech_error}"
+            artifacts["review_verdict"] = artifacts["final_verdict"]
+            artifacts["final_verdict"] = "FAIL"
+            artifacts["final_action"] = "SKIP"
+            artifacts["ended_at"] = datetime.now().isoformat(timespec="seconds")
             report.write_artifacts(artifacts)
             print("Verdict: FAIL")
             print("Action: SKIP")
