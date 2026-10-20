@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21443",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d448de31b7deaec8310caaf8bba787e097bf9211",
+  "topic": "axes(position = [...]) behavior",
+  "upstream_created_at": "2021-10-23T18:27:39Z",
+  "dataset_row": 978,
+  "problem_sha256": "d603f6f3b60c1ab96e2677eba976b6bfde262eedf06963aad6a9f81f7480cc18",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pyplot.py::test_fallback_position"
+  ],
+  "passing_checks": 18
+}
