@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-13773",
+  "repository": "sympy/sympy",
+  "base_commit": "7121bdf1facdd90d05b6994b4c2e5b2865a4638a",
+  "topic": "@ (__matmul__) should fail if one argument is not a matrix",
+  "upstream_created_at": "2017-12-19T10:44:38Z",
+  "dataset_row": 1993,
+  "problem_sha256": "50a2586bcbdff1611fed5b7ac2e0f611c1416efac7170adf14f04091db3d8e10",
+  "regression_checks": [
+    "test_matmul"
+  ],
+  "passing_checks": 69
+}
