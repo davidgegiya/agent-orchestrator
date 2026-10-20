@@ -1,0 +1,15 @@
+{
+  "id": "pytest-dev__pytest-6926",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "c26bbdfaf027d031e694227a2e3414108d17f1a8",
+  "topic": "SysCaptureBinary: decode in writeorg",
+  "upstream_created_at": "2020-03-14T14:19:34Z",
+  "dataset_row": 1426,
+  "problem_sha256": "55f34b7861240a5f3a534f92009515a2d6877bb32b7fa65f3630a827b0112c29",
+  "regression_checks": [
+    "test_capsysbinary.py::test_hello",
+    "testing/test_capture.py::test_capturing_unicode[fd]",
+    "testing/test_capture.py::TestCaptureFixture::test_capsysbinary"
+  ],
+  "passing_checks": 119
+}
