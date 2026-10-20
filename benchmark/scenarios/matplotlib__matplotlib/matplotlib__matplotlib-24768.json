@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24768",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "ecf6e26f0b0241bdc80466e13ee0c13a0c12f412",
+  "topic": "pcolormesh(rasterized=True) conflicts with set_rasterization_zorder()",
+  "upstream_created_at": "2022-12-18T20:07:59Z",
+  "dataset_row": 1053,
+  "problem_sha256": "fa927caecf4e050c43a4320be55f8ae4774f1707596e45d69efdb4c1854bc4c0",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_zorder_and_explicit_rasterization"
+  ],
+  "passing_checks": 779
+}
