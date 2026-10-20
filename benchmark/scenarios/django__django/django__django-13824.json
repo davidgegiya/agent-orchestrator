@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13824",
+  "repository": "django/django",
+  "base_commit": "74fd233b1433da8c68de636172ee1c9c6d1c08c9",
+  "topic": "(last modified by Adam Hooper)",
+  "upstream_created_at": "2020-12-30T10:22:34Z",
+  "dataset_row": 528,
+  "problem_sha256": "d21faa77b4d937ca4b4d6b50c9f5470769488b36bf9015c31cec3a296cd0c9c9",
+  "regression_checks": [
+    "test_not_prefixed (settings_tests.tests.MediaURLStaticURLPrefixTest)"
+  ],
+  "passing_checks": 53
+}
