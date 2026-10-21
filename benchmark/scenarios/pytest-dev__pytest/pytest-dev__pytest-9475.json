@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-9475",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "71baf24b6d41da6704433ca9909b5e6d954564b9",
+  "topic": "9133 added a new `deselected` parameter to `assert_outcomes()`, cc @okken",
+  "upstream_created_at": "2022-01-04T14:01:03Z",
+  "dataset_row": 1483,
+  "problem_sha256": "b51b1dd2380f260b34b7e9c07b650d6ef399a9fa72bed89f2ffcb20c728800e9",
+  "regression_checks": [
+    "testing/test_pytester.py::test_pytester_assert_outcomes_warnings",
+    "testing/test_pytester.py::test_pytester_outcomes_deselected"
+  ],
+  "passing_checks": 48
+}
