@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-10382",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "1e1417cab24e5602d2d4db85e218d5277f13aeda",
+  "topic": "TfidfVectorizer dtype argument ignored",
+  "upstream_created_at": "2017-12-28T07:05:13Z",
+  "dataset_row": 1497,
+  "problem_sha256": "e33bda544702f33b8322ec93f8371ff550f4996b4a43817dcd384070167573d1",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_validation.py::test_fit_and_score"
+  ],
+  "passing_checks": 45
+}
