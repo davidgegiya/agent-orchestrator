@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-7393",
+  "repository": "pydata/xarray",
+  "base_commit": "41fef6f1352be994cd90056d47440fe9aa4c068f",
+  "topic": "stack casts int32 dtype coordinate to int64",
+  "upstream_created_at": "2022-12-20T04:34:24Z",
+  "dataset_row": 1313,
+  "problem_sha256": "b10c13859bbd6dcbf00ae717adb9e845e18062e4e392a5edf93f892d6c66c974",
+  "regression_checks": [
+    "xarray/tests/test_indexes.py::test_restore_dtype_on_multiindexes[int32]",
+    "xarray/tests/test_indexes.py::test_restore_dtype_on_multiindexes[float32]"
+  ],
+  "passing_checks": 71
+}
