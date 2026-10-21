@@ -1,0 +1,15 @@
+{
+  "id": "django__django-11477",
+  "repository": "django/django",
+  "base_commit": "e28671187903e6aca2428374fdd504fca3032aee",
+  "topic": "translate_url() creates an incorrect URL when optional named groups are missing in the URL pattern",
+  "upstream_created_at": "2019-06-14T17:40:45Z",
+  "dataset_row": 201,
+  "problem_sha256": "bd26553334e5a6ea856491de8647fae42e8d5b473f6f1f49120b5843baa20894",
+  "regression_checks": [
+    "test_re_path_with_optional_parameter (urlpatterns.tests.SimplifiedURLTests)",
+    "test_two_variable_at_start_of_path_pattern (urlpatterns.tests.SimplifiedURLTests)",
+    "test_translate_url_utility (i18n.patterns.tests.URLTranslationTests)"
+  ],
+  "passing_checks": 151
+}
