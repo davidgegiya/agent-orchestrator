@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11039",
+  "repository": "django/django",
+  "base_commit": "d5276398046ce4a102776a1e67dcac2884d80dfe",
+  "topic": "sqlmigrate wraps it's outpout in BEGIN/COMMIT even if the database doesn't support transactional DDL",
+  "upstream_created_at": "2019-03-01T10:24:38Z",
+  "dataset_row": 128,
+  "problem_sha256": "0b010716e1f0420065f155494ba30105737550b3cc202ecf81558b6c14b630c1",
+  "regression_checks": [
+    "test_sqlmigrate_for_non_transactional_databases (migrations.test_commands.MigrateTests)"
+  ],
+  "passing_checks": 88
+}
