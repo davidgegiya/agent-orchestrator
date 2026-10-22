@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20761",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "7413aa92b5be5760c73e31641ab0770f328ad546",
+  "topic": "subfigure position shifts on y-axis when x kwarg added to supxlabel",
+  "upstream_created_at": "2021-07-28T22:36:30Z",
+  "dataset_row": 969,
+  "problem_sha256": "a21895b3c5f150cbf2273b3327cbc6629252168bffbb880671c28583d42e4e72",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_constrainedlayout.py::test_suplabels"
+  ],
+  "passing_checks": 33
+}
