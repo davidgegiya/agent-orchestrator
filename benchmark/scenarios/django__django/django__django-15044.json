@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15044",
+  "repository": "django/django",
+  "base_commit": "1f9874d4ca3e7376036646aedf6ac3060f22fd69",
+  "topic": "CacheMiddleware and FetchFromCacheMiddleware are not thread safe",
+  "upstream_created_at": "2021-11-01T02:34:46Z",
+  "dataset_row": 678,
+  "problem_sha256": "80f13487e69116050caed0a68c9099b0b80fe4402dda3f7c36865b45be3f7cb8",
+  "regression_checks": [
+    "The cache instance is different for each thread."
+  ],
+  "passing_checks": 349
+}
