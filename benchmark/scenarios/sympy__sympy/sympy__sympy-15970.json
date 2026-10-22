@@ -1,0 +1,18 @@
+{
+  "id": "sympy__sympy-15970",
+  "repository": "sympy/sympy",
+  "base_commit": "c267d554e16f0392af2b22a2922cbe0db7e8c798",
+  "topic": "Use '\\ ' instead of '\\quad' for latex of lists, tuples, and dicts",
+  "upstream_created_at": "2019-02-12T18:36:06Z",
+  "dataset_row": 2071,
+  "problem_sha256": "34e0045f6c56ae3dd4d8690bdeeffef497fae075d0490a5c2579c752c004a144",
+  "regression_checks": [
+    "test_latex_functions",
+    "test_latex",
+    "test_latex_dict",
+    "test_latex_list",
+    "test_latex_Lambda",
+    "test_categories"
+  ],
+  "passing_checks": 117
+}
