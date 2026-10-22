@@ -1,0 +1,14 @@
+{
+  "id": "astropy__astropy-13638",
+  "repository": "astropy/astropy",
+  "base_commit": "c00626462ee48a483791d92197582e7d1366c9e0",
+  "topic": "`Quantity.__ilshift__` throws exception with `dtype=int`",
+  "upstream_created_at": "2022-09-11T23:32:16Z",
+  "dataset_row": 33,
+  "problem_sha256": "9537b7e1cb03b9a532fce8d847da81292caf7cb7b2dce75897710cf6610ad2d4",
+  "regression_checks": [
+    "astropy/units/tests/test_quantity.py::test_regression_12964",
+    "astropy/units/tests/test_structured.py::TestStructuredQuantity::test_inplace_conversion"
+  ],
+  "passing_checks": 158
+}
