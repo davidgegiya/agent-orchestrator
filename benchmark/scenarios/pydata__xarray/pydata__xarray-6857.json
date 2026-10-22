@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-6857",
+  "repository": "pydata/xarray",
+  "base_commit": "434f9e8929942afc2380eab52a07e77d30cc7885",
+  "topic": "Testing DataArray equality using built-in '==' operator leads to mutilated DataArray.attrs dictionary",
+  "upstream_created_at": "2022-08-01T10:57:16Z",
+  "dataset_row": 1290,
+  "problem_sha256": "07b4df5c9d1981e5f9690766344937a2b461377f7755267de02c1526129e7ec7",
+  "regression_checks": [
+    "xarray/tests/test_dataset.py::TestDataset::test_align_index_var_attrs[left]",
+    "xarray/tests/test_dataset.py::TestDataset::test_align_index_var_attrs[override]"
+  ],
+  "passing_checks": 367
+}
