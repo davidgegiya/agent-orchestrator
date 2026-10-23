@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-20741",
+  "repository": "sympy/sympy",
+  "base_commit": "25216a2153156b0744f1f0169264a0eab59d8d6e",
+  "topic": "Matrix expressions aren't simplified properly",
+  "upstream_created_at": "2021-01-05T09:10:46Z",
+  "dataset_row": 2218,
+  "problem_sha256": "9f16c635859a872f4c7ba70c9453bcfa151226e5899445ead4ba92c5592456bc",
+  "regression_checks": [
+    "test_simplify_matrix_expressions",
+    "test_MatMul_MatAdd",
+    "test_MatrixSymbol_printing"
+  ],
+  "passing_checks": 129
+}
