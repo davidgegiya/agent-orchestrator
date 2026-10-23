@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-26399",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "00afcc0c6d4d2e4390338127f05b8f4fdb4e7087",
+  "topic": "ContourSet.antialiased attribute not present",
+  "upstream_created_at": "2023-07-27T11:32:39Z",
+  "dataset_row": 1123,
+  "problem_sha256": "678c02efa13fa792a8ef561b236233c7d49ba61442f4214b507b9ff2e0e076e0",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_deprecated_apis"
+  ],
+  "passing_checks": 82
+}
