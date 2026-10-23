@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5254",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "654d8da9f7ffd7a88e02ae2081ffcb2ca2e765b3",
+  "topic": "`pytest.mark.parametrize` does not correctly hide fixtures of the same name (it misses its dependencies)",
+  "upstream_created_at": "2019-05-12T23:50:35Z",
+  "dataset_row": 1399,
+  "problem_sha256": "4e70147ba6c8659a8da8fbbcd7b50d181a2ffae194d25573778b925fce257450",
+  "regression_checks": [
+    "testing/python/fixtures.py::test_fixture_param_shadowing"
+  ],
+  "passing_checks": 172
+}
