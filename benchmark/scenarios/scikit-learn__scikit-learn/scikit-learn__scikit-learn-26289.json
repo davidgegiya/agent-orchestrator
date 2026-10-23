@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-26289",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "8521819eecbacb93deb87fce28842680ab1a5301",
+  "topic": "sklearn.tree.export_text failing when feature_names supplied",
+  "upstream_created_at": "2023-04-27T13:39:27Z",
+  "dataset_row": 1707,
+  "problem_sha256": "d7820ff6e3f0dfcb1275dedef9d40d3c9d20615181a2ef773e28c1f57af37f58",
+  "regression_checks": [
+    "sklearn/tree/tests/test_export.py::test_export_text_errors",
+    "sklearn/tree/tests/test_export.py::test_export_text_feature_class_names_array_support[array]"
+  ],
+  "passing_checks": 11
+}
