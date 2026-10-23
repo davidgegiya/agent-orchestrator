@@ -1,0 +1,21 @@
+{
+  "id": "scikit-learn__scikit-learn-14806",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "5cf88db24491112d2b8672f75df22f65a140d167",
+  "topic": "IterativeImputer behaviour on missing nan's in fit data",
+  "upstream_created_at": "2019-08-25T17:40:52Z",
+  "dataset_row": 1652,
+  "problem_sha256": "af079fa56ab78d3d6d313b63bb3a762c7db2895e10accd0215489b5ed3817a84",
+  "regression_checks": [
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_one_feature[X0]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_one_feature[X1]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_imputation_order[random]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_imputation_order[roman]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_imputation_order[ascending]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_imputation_order[descending]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_imputation_order[arabic]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_skip_non_missing[True]",
+    "sklearn/impute/tests/test_impute.py::test_iterative_imputer_skip_non_missing[False]"
+  ],
+  "passing_checks": 151
+}
