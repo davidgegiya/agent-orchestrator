@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-15120",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "7cb5dafebbebefbe7e991272fad1feb12f4d630c",
+  "topic": "mean_shift and MeanShift don't have the same API",
+  "upstream_created_at": "2019-10-02T12:41:40Z",
+  "dataset_row": 1668,
+  "problem_sha256": "9ea8ddd284b440550431a3d2c6de5fcfdd3cac1f2d624fc833e5e3982bff51b0",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_mean_shift.py::test_max_iter[1]",
+    "sklearn/cluster/tests/test_mean_shift.py::test_max_iter[100]"
+  ],
+  "passing_checks": 12
+}
