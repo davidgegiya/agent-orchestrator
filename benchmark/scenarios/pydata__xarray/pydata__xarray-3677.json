@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-3677",
+  "repository": "pydata/xarray",
+  "base_commit": "ef6e6a7b86f8479b9a1fecf15ad5b88a2326b31e",
+  "topic": "Merging dataArray into dataset using dataset method fails",
+  "upstream_created_at": "2020-01-09T16:07:14Z",
+  "dataset_row": 1225,
+  "problem_sha256": "aab8ef78642243bbabed401c890734a717013d81d3b3bcf8719409ce2ff6ae27",
+  "regression_checks": [
+    "xarray/tests/test_merge.py::TestMergeMethod::test_merge_dataarray"
+  ],
+  "passing_checks": 21
+}
