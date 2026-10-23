@@ -1,0 +1,18 @@
+{
+  "id": "pytest-dev__pytest-6323",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "e8c8559efa2461104ac748c66d75764ff5c90a29",
+  "topic": "disallow absolute and non-normalized paths for mktemp",
+  "upstream_created_at": "2019-12-06T21:28:13Z",
+  "dataset_row": 1423,
+  "problem_sha256": "49d8545a18d19d1aeef61f14e746452765220613634317ae8681be643471dcfd",
+  "regression_checks": [
+    "testing/test_tmpdir.py::test_mktemp[/mypath1-False]",
+    "testing/test_tmpdir.py::test_mktemp[../mypath3-False]",
+    "testing/test_tmpdir.py::test_mktemp[../../mypath4-False]",
+    "testing/test_tmpdir.py::test_mktemp[mypath5/..-False]",
+    "testing/test_tmpdir.py::test_mktemp[mypath6/../mypath6-True]",
+    "testing/test_tmpdir.py::test_mktemp[mypath7/../mypath7/..-False]"
+  ],
+  "passing_checks": 26
+}
