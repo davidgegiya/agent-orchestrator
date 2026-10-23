@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7432",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "e6e300e729dd33956e5448d8be9a0b1540b4e53a",
+  "topic": "skipping: --runxfail breaks pytest.mark.skip location reporting",
+  "upstream_created_at": "2020-06-29T21:51:15Z",
+  "dataset_row": 1442,
+  "problem_sha256": "8a3a1bd7632980be8862f731e3fb9c22807efe33abd8748dc1c8c572e1c3af79",
+  "regression_checks": [
+    "testing/test_skipping.py::TestXFail::test_xfail_run_with_skip_mark[test_input1-expected1]"
+  ],
+  "passing_checks": 77
+}
