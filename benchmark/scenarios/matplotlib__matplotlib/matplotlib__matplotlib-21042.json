@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21042",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "8a8dd9093d381500555bccf46fc5d46b42d132ec",
+  "topic": "MatplotlibDeprecationWarning when updating rcparams",
+  "upstream_created_at": "2021-09-11T13:02:29Z",
+  "dataset_row": 975,
+  "problem_sha256": "8aca99ce2d0f022023fc923c19d14b28a4538071466f6f9876f6b67a8889faec",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_rcparams.py::test_deprecation"
+  ],
+  "passing_checks": 182
+}
