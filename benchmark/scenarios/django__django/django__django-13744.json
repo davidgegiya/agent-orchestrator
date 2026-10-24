@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13744",
+  "repository": "django/django",
+  "base_commit": "d8dfff2ab0edf7a1ca5255eccf45c447b2f9d57e",
+  "topic": "I think it's time to deprecate the django.core.cache.backends.memcached.MemcachedCache backend in Django 3.2 and remove it in Django 4.1",
+  "upstream_created_at": "2020-12-03T08:23:13Z",
+  "dataset_row": 510,
+  "problem_sha256": "ba3b4dba497adf914810efe201f24071e4c08717137e8ab1a838053e583d95d4",
+  "regression_checks": [
+    "test_warning (cache.tests.MemcachedCacheDeprecationTests)"
+  ],
+  "passing_checks": 356
+}
