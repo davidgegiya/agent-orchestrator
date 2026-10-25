@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-13989",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a3e2897bfaf9eaac1d6649da535c4e721c89fa69",
+  "topic": "hist() no longer respects range=... when density=True",
+  "upstream_created_at": "2019-04-19T01:47:57Z",
+  "dataset_row": 952,
+  "problem_sha256": "ba6b71f7ad332ce4e790f501861c799c1b3acaac170249f71bc6b5f69a56ec86",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_hist_range_and_density"
+  ],
+  "passing_checks": 411
+}
