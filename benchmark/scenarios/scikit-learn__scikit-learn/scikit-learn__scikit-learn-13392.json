@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13392",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "21fc1d97452d4e3a6d744d0eef95ecaf7e87859c",
+  "topic": "Missing multi-output checks in common tests",
+  "upstream_created_at": "2019-03-05T15:33:46Z",
+  "dataset_row": 1596,
+  "problem_sha256": "16b8884c1c58cb4304a141e86d2561d8c1b12924178bbabfeecff4bb0cc7f5c7",
+  "regression_checks": [
+    "sklearn/utils/tests/test_estimator_checks.py::test_check_estimator"
+  ],
+  "passing_checks": 448
+}
