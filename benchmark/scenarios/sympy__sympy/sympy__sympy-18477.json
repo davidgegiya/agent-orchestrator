@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-18477",
+  "repository": "sympy/sympy",
+  "base_commit": "93d836fcdb38c6b3235f785adc45b34eb2a64a9e",
+  "topic": "Allow to set min_fixed and max_fixed for Float in the printers",
+  "upstream_created_at": "2020-01-27T08:27:23Z",
+  "dataset_row": 2161,
+  "problem_sha256": "55f82e0808559413b60784d318ea90ad4a115d87a052bfe37275c63a233ab25e",
+  "regression_checks": [
+    "test_latex_Float",
+    "test_Float"
+  ],
+  "passing_checks": 214
+}
