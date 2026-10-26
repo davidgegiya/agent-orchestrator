@@ -1,0 +1,22 @@
+{
+  "id": "scikit-learn__scikit-learn-13554",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "c903d71c5b06aa4cf518de7e3676c207519e0295",
+  "topic": "Numerical precision of euclidean_distances with float32",
+  "upstream_created_at": "2019-04-01T14:41:03Z",
+  "dataset_row": 1608,
+  "problem_sha256": "258ecfa94e053ab01d7ddb326d8bb44ad0ab7efcaf4790fa97749961a88e252e",
+  "regression_checks": [
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_with_norms[dense-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_with_norms[sparse-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances[dense-dense-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances[dense-sparse-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances[sparse-dense-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances[sparse-sparse-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_sym[dense-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_sym[sparse-float32]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_extreme_values[1-float32-0.0001-1e-05]",
+    "sklearn/metrics/tests/test_pairwise.py::test_euclidean_distances_extreme_values[1000000-float32-0.0001-1e-05]"
+  ],
+  "passing_checks": 93
+}
