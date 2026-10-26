@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-14333",
+  "repository": "sympy/sympy",
+  "base_commit": "3f935daa5634c765345bf99df9d85b3d31def1ec",
+  "topic": "Modular inverse for negative modulo and sign resolve",
+  "upstream_created_at": "2018-02-25T13:35:25Z",
+  "dataset_row": 2024,
+  "problem_sha256": "de174adf9102f2f7b93358eee4530ee95cd2f9d1bd650d7c835519a5996d4b0f",
+  "regression_checks": [
+    "test_mod_inverse"
+  ],
+  "passing_checks": 85
+}
