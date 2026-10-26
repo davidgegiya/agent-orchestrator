@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-23174",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "d73ba9e00eddae34610bf9982876b5aa62114ad5",
+  "topic": "Crash when adding clabels to subfigures",
+  "upstream_created_at": "2022-06-01T10:32:18Z",
+  "dataset_row": 1008,
+  "problem_sha256": "20b9708a3bc95dc87ceddefb536d219ab4102fbce3daa60f9a6b9e8097b9ef45",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_contour.py::test_subfigure_clabel"
+  ],
+  "passing_checks": 54
+}
