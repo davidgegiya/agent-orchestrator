@@ -1,0 +1,15 @@
+{
+  "id": "scikit-learn__scikit-learn-25570",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "cd25abee0ad0ac95225d4a9be8948eff69f49690",
+  "topic": "ColumnTransformer with pandas output can't handle transformers with no features",
+  "upstream_created_at": "2023-02-08T18:28:21Z",
+  "dataset_row": 1689,
+  "problem_sha256": "06bfac58c9af3083a5117165243014f6c939718bafeecf52b71d9f8898315f52",
+  "regression_checks": [
+    "sklearn/compose/tests/test_column_transformer.py::test_empty_selection_pandas_output[list]",
+    "sklearn/compose/tests/test_column_transformer.py::test_empty_selection_pandas_output[bool]",
+    "sklearn/compose/tests/test_column_transformer.py::test_empty_selection_pandas_output[bool_int]"
+  ],
+  "passing_checks": 184
+}
