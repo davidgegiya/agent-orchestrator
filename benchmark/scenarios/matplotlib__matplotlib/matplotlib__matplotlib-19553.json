@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-19553",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "ca275dca26d746fb1ce59a16e8c0f7db42d6813a",
+  "topic": "make `Normalize` objects notifiy scalar-mappables on changes",
+  "upstream_created_at": "2021-02-21T18:02:30Z",
+  "dataset_row": 958,
+  "problem_sha256": "2ed3db43254f73eeb23befe72d9ae378830afa310bd5036ecbfc1e4430a2027b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_colors.py::test_norm_callback",
+    "lib/matplotlib/tests/test_colors.py::test_scalarmappable_norm_update"
+  ],
+  "passing_checks": 359
+}
