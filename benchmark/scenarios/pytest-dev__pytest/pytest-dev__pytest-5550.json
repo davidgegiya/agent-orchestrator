@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-5550",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "60a358fa2dc82a571c68d1be2d25703b51351538",
+  "topic": "xunit2 format does not contain a root <testsuites> tag",
+  "upstream_created_at": "2019-07-03T23:45:34Z",
+  "dataset_row": 1407,
+  "problem_sha256": "2745d140292b2790848b97f5e2316340b3c28bf9cfe0bdfee8fb8e87d0bb253f",
+  "regression_checks": [
+    "testing/test_junitxml.py::test_root_testsuites_tag"
+  ],
+  "passing_checks": 67
+}
