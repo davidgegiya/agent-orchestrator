@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-11897",
+  "repository": "sympy/sympy",
+  "base_commit": "e2918c1205c47345eb73c9be68b14c0f15fdeb17",
+  "topic": "LaTeX printer inconsistent with pretty printer",
+  "upstream_created_at": "2016-12-03T14:40:51Z",
+  "dataset_row": 1922,
+  "problem_sha256": "064b69ab7bf0f84004fe4dc46ef1cf382c0f1e84b764177d58173e9ace421ef8",
+  "regression_checks": [
+    "test_latex_Piecewise"
+  ],
+  "passing_checks": 95
+}
