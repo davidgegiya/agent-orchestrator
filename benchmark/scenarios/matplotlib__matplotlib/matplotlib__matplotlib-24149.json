@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24149",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "af39f1edffcd828f05cfdd04f2e59506bb4a27bc",
+  "topic": "ax.bar raises for all-nan data on matplotlib 3.6.1",
+  "upstream_created_at": "2022-10-12T22:00:54Z",
+  "dataset_row": 1034,
+  "problem_sha256": "521a87d25669d71095d329b94c041c32f2cebfe642ea0b644b44c99f242a2d9b",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_bar_all_nan[png]"
+  ],
+  "passing_checks": 767
+}
