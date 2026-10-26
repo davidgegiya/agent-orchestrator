@@ -1,0 +1,14 @@
+{
+  "id": "django__django-12532",
+  "repository": "django/django",
+  "base_commit": "7d8cdad6b704051bb69a47721913701349463ead",
+  "topic": "forms.ModelMultipleChoiceField should use \"invalid_list\" as error message key",
+  "upstream_created_at": "2020-03-05T22:30:13Z",
+  "dataset_row": 343,
+  "problem_sha256": "6d10668782c8d19d9e04b296ca6b90b14796e4c34e3a2d1c3d006677736ef271",
+  "regression_checks": [
+    "test_modelchoicefield (forms_tests.tests.test_error_messages.ModelChoiceFieldErrorMessagesTestCase)",
+    "test_list_error_message_warning (forms_tests.tests.test_error_messages.DeprecationTests)"
+  ],
+  "passing_checks": 19
+}
