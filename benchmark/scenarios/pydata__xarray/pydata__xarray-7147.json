@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7147",
+  "repository": "pydata/xarray",
+  "base_commit": "9f390f50718ee94237084cbc1badb66f9a8083d6",
+  "topic": "Time decoding error message does not include the problematic variable's name",
+  "upstream_created_at": "2022-10-08T17:53:23Z",
+  "dataset_row": 1305,
+  "problem_sha256": "63fb50ec5223989d30fe5eee93db6d64abba0793a591aedaecb57aff5141949e",
+  "regression_checks": [
+    "xarray/tests/test_conventions.py::test_decode_cf_error_includes_variable_name"
+  ],
+  "passing_checks": 79
+}
