@@ -72,3 +72,41 @@ def test_workspace_change_during_review_blocks_pass(workspace, monkeypatch):
     code, result = run(workspace, monkeypatch, "pass", change_while_reviewing=True)
     assert code == 1 and result["final_verdict"] == "FAIL"
     assert "changed during review" in result["error"]
+
+
+def test_resume_rechecks_saved_patch_without_rerunning_writer(workspace, monkeypatch):
+    product, task, reports = workspace
+    roles = []
+    check_marker = product.parent / "check-runs.txt"
+    check_script = product.parent / "verify.py"
+    check_script.write_text(
+        f"from pathlib import Path\nwith Path({str(check_marker)!r}).open('a') as stream:\n"
+        "    stream.write('checked\\n')\n"
+    )
+
+    def fake_run(agent, **kwargs):
+        roles.append(agent.name)
+        if agent.name == "Implementer":
+            (product / "implementation.txt").write_text("accepted\n")
+        if agent.name == "Reviewer":
+            if roles.count("Reviewer") == 1:
+                raise RuntimeError("offline interruption")
+            assert "+accepted" in kwargs["input"]
+            return SimpleNamespace(final_output=ReviewerOutput(verdict="PASS", action="CONTINUE", fixes=[]))
+        return SimpleNamespace(final_output="Implement the change.")
+
+    monkeypatch.setattr(Runner, "run_sync", fake_run)
+    from shlex import join
+    args = ["--workspace", str(product), "--task", str(task), "--check", join([sys.executable, str(check_script)])]
+    assert main.main(args) == 1
+    source = next(reports.iterdir())
+    assert main.main([*args, "--resume", str(source)]) == 0
+    assert roles == ["Planner", "Implementer", "Reviewer", "Reviewer"]
+    assert check_marker.read_text().splitlines() == ["checked", "checked"]
+    resumed = next(path for path in reports.iterdir() if path != source)
+    assert json.loads((resumed / "artifacts.json").read_text())["resumed_from"] == str(source)
+
+    (product / "implementation.txt").write_text("different patch\n")
+    with pytest.raises(SystemExit) as error:
+        main.main([*args, "--resume", str(source)])
+    assert error.value.code == 2
