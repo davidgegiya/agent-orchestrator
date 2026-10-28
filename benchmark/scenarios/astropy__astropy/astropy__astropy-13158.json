@@ -1,0 +1,29 @@
+{
+  "id": "astropy__astropy-13158",
+  "repository": "astropy/astropy",
+  "base_commit": "b185ca184f8dd574531dcc21e797f00537fefa6a",
+  "topic": "Model evaluation fails if any model parameter is a `MagUnit` type value",
+  "upstream_created_at": "2022-04-22T17:32:23Z",
+  "dataset_row": 16,
+  "problem_sha256": "1a10e794f033ce12f79f3ac2adb427caf5f9b469b994eab03559664e4699f39c",
+  "regression_checks": [
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_with_units[model38]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_with_units_x_array[model38]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_with_units_param_array[model38]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model0]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model1]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model4]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model5]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model6]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model7]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model8]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model9]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model10]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model11]",
+    "astropy/modeling/tests/test_models_quantities.py::test_models_evaluate_magunits[model12]",
+    "astropy/modeling/tests/test_models_quantities.py::test_Schechter1D_errors",
+    "astropy/modeling/tests/test_parameters.py::TestParameters::test__set_unit",
+    "astropy/modeling/tests/test_quantities_parameters.py::test_magunit_parameter"
+  ],
+  "passing_checks": 355
+}
