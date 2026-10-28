@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-20470",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0632c0fc7339f68e992ed63ae4cfac76cd41aad",
+  "topic": "Handle and label not created for Text with label",
+  "upstream_created_at": "2021-06-19T22:21:18Z",
+  "dataset_row": 962,
+  "problem_sha256": "a654a2eaae01e0c2e74881692c2623f7f66da64c447129830ef9ab20e27054da",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_legend.py::test_text_nohandler_warning"
+  ],
+  "passing_checks": 89
+}
