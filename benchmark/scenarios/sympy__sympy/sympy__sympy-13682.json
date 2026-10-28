@@ -1,0 +1,22 @@
+{
+  "id": "sympy__sympy-13682",
+  "repository": "sympy/sympy",
+  "base_commit": "53fc684467088cdf0acccb6ad770cbde97e32268",
+  "topic": "It would be nice if SymPy would have provided ordinal arithmetic",
+  "upstream_created_at": "2017-12-06T12:25:36Z",
+  "dataset_row": 1988,
+  "problem_sha256": "094965117d4006195f720be3b156bb0ee0e17281875b74c7c71fc5cd489fae97",
+  "regression_checks": [
+    "test_sympy__sets__ordinals__OmegaPower",
+    "test_sympy__sets__ordinals__Ordinal",
+    "test_sympy__sets__ordinals__OrdinalOmega",
+    "test_sympy__sets__ordinals__OrdinalZero",
+    "test_string_ordinals",
+    "test_addition_with_integers",
+    "test_addition_with_ordinals",
+    "test_comparison",
+    "test_multiplication_with_integers",
+    "test_multiplication"
+  ],
+  "passing_checks": 633
+}
