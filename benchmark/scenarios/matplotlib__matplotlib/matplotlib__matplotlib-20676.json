@@ -1,0 +1,14 @@
+{
+  "id": "matplotlib__matplotlib-20676",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "6786f437df54ca7780a047203cbcfaa1db8dc542",
+  "topic": "interactive SpanSelector incorrectly forces axes limits to include 0",
+  "upstream_created_at": "2021-07-19T10:10:07Z",
+  "dataset_row": 966,
+  "problem_sha256": "ff61d8ff808cddd9f636b3fdedebd201ad8a49647cd4853a82ab2d9977db43d0",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[horizontal]",
+    "lib/matplotlib/tests/test_widgets.py::test_span_selector_bound[vertical]"
+  ],
+  "passing_checks": 32
+}
