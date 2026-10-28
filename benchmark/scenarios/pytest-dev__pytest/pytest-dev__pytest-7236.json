@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7236",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "c98bc4cd3d687fe9b392d8eecd905627191d4f06",
+  "topic": "unittest.TestCase.tearDown executed on skipped tests when running --pdb",
+  "upstream_created_at": "2020-05-21T19:53:14Z",
+  "dataset_row": 1436,
+  "problem_sha256": "f100e2f7e4e26ddfc67e4a8526d175416e43da92ea171f200ae80f45734bcd51",
+  "regression_checks": [
+    "testing/test_unittest.py::test_pdb_teardown_skipped[@unittest.skip]"
+  ],
+  "passing_checks": 51
+}
