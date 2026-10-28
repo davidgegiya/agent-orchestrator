@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-18532",
+  "repository": "sympy/sympy",
+  "base_commit": "74227f900b05009d4eed62e34a166228788a32ca",
+  "topic": "expr.atoms() should return objects with no args instead of subclasses of Atom",
+  "upstream_created_at": "2020-02-01T17:26:30Z",
+  "dataset_row": 2163,
+  "problem_sha256": "92878d1d80ef58f7bf64ce12f1f8922554390136b7b270d645fc3d6430c97272",
+  "regression_checks": [
+    "test_sizeof",
+    "test_atoms"
+  ],
+  "passing_checks": 28
+}
