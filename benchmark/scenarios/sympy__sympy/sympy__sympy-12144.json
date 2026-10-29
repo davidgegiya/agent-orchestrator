@@ -1,0 +1,16 @@
+{
+  "id": "sympy__sympy-12144",
+  "repository": "sympy/sympy",
+  "base_commit": "075402d6cf9704493d7b3033d214f8a25ebc20b1",
+  "topic": "Dummy fails when is re-evaluated in S and srepr",
+  "upstream_created_at": "2017-02-10T07:25:55Z",
+  "dataset_row": 1928,
+  "problem_sha256": "bedaa4fbbfd90023fea300e4e8ed1736c5930a701f25dd594f59fb235e0313fb",
+  "regression_checks": [
+    "test_Dummy",
+    "test_Dummy_force_dummy_index",
+    "test_Dummy_assumption",
+    "test_Dummy_from_Symbol"
+  ],
+  "passing_checks": 30
+}
