@@ -1,0 +1,13 @@
+{
+  "id": "django__django-11244",
+  "repository": "django/django",
+  "base_commit": "0c916255eb4d94e06e123fafec93efdba45b1259",
+  "topic": "Remove the LANGUAGES_BIDI<=LANGUAGES check",
+  "upstream_created_at": "2019-04-17T06:51:04Z",
+  "dataset_row": 166,
+  "problem_sha256": "bd25fd6414e92badc05d45619188d4b3bd00c8b0b0154ca546da214e36421ace",
+  "regression_checks": [
+    "test_inconsistent_language_settings (check_framework.test_translation.TranslationCheckTests)"
+  ],
+  "passing_checks": 6
+}
