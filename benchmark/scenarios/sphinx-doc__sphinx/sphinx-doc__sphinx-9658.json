@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-9658",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "232dbe41c5250eb7d559d40438c4743483e95f15",
+  "topic": "Inherited classes not correctly documented when mocked",
+  "upstream_created_at": "2021-09-20T17:04:23Z",
+  "dataset_row": 1892,
+  "problem_sha256": "162157a6f9dee360f3af36e597215965a2f4ce870989af8cfa2f4753a95e49c2",
+  "regression_checks": [
+    "tests/test_util_typing.py::test_restify_mock"
+  ],
+  "passing_checks": 24
+}
