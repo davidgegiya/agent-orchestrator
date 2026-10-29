@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-24265",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "e148998d9bed9d1b53a91587ad48f9bb43c7737f",
+  "topic": "Setting matplotlib.pyplot.style.library['seaborn-colorblind'] result in key error on matplotlib v3.6.1",
+  "upstream_created_at": "2022-10-25T02:03:19Z",
+  "dataset_row": 1040,
+  "problem_sha256": "5f4c32262ffe270cfa0d9b6448bfa3cc4508fb6542cc1714935d5dc797d7946d",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_style.py::test_deprecated_seaborn_styles"
+  ],
+  "passing_checks": 16
+}
