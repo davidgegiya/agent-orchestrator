@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-8906",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "69356d20cfee9a81972dcbf93d8caf9eabe113e8",
+  "topic": "Improve handling of skip for module level",
+  "upstream_created_at": "2021-07-14T08:00:50Z",
+  "dataset_row": 1473,
+  "problem_sha256": "9ef2e1d0d514107deea7918b8b463b16d103746e755c84a10d3fbed862a8e4d9",
+  "regression_checks": [
+    "testing/test_skipping.py::test_module_level_skip_error"
+  ],
+  "passing_checks": 84
+}
