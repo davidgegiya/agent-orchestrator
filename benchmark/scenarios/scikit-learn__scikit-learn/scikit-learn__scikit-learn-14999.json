@@ -1,0 +1,18 @@
+{
+  "id": "scikit-learn__scikit-learn-14999",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "d2476fb679f05e80c56e8b151ff0f6d7a470e4ae",
+  "topic": "data leak in GBDT due to warm start",
+  "upstream_created_at": "2019-09-17T07:06:27Z",
+  "dataset_row": 1660,
+  "problem_sha256": "b1505171d1f5e7b4b66a701ffe27b4d55c09844de737707f8e280702cd8c5e09",
+  "regression_checks": [
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[none-HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[none-HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[int-HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[int-HistGradientBoostingRegressor-X1-y1]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[instance-HistGradientBoostingClassifier-X0-y0]",
+    "sklearn/ensemble/_hist_gradient_boosting/tests/test_warm_start.py::test_random_seeds_warm_start[instance-HistGradientBoostingRegressor-X1-y1]"
+  ],
+  "passing_checks": 12
+}
