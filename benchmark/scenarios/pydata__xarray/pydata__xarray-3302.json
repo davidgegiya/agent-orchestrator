@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-3302",
+  "repository": "pydata/xarray",
+  "base_commit": "94525bbaf417476dbe9a70b98801ae04aceaebf3",
+  "topic": "Improving interpolate_na()'s limit argument",
+  "upstream_created_at": "2019-09-12T15:07:20Z",
+  "dataset_row": 1214,
+  "problem_sha256": "11032f116a3400d3f193c7e92c16165d3064071936267e470ab4194655f2c106",
+  "regression_checks": [
+    "xarray/tests/test_missing.py::test_interpolate_no_dim_raises",
+    "xarray/tests/test_missing.py::test_interpolate_2d_coord_raises"
+  ],
+  "passing_checks": 43
+}
