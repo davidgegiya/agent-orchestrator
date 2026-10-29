@@ -1,0 +1,13 @@
+{
+  "id": "django__django-16343",
+  "repository": "django/django",
+  "base_commit": "3fec3bf90bef36b26efe5e47a92bf5a8041a207b",
+  "topic": "Deprecate passing positional arguments to Signer",
+  "upstream_created_at": "2022-11-30T15:33:24Z",
+  "dataset_row": 845,
+  "problem_sha256": "548e87c87ee1d3d6ae23c2d1ac0f1905ef8680e9c3b2342a14c439197b39869a",
+  "regression_checks": [
+    "test_deprecation (signing.tests.SignerPositionalArgumentsDeprecationTests)"
+  ],
+  "passing_checks": 20
+}
