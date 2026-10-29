@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-8554",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "a320c085b75b8d18b3d10e7283a5e7695806bc1a",
+  "topic": "Isomap and LocallyLinearEmbedding do not accept sparse matrix input (contrary to documentation)",
+  "upstream_created_at": "2017-03-07T23:11:25Z",
+  "dataset_row": 1715,
+  "problem_sha256": "99447828c8d5bf7e9abd8958a55cd09ebebc19f24be396a8feae108f662614be",
+  "regression_checks": [
+    "sklearn/manifold/tests/test_isomap.py::test_sparse_input"
+  ],
+  "passing_checks": 5
+}
