@@ -1,0 +1,16 @@
+{
+  "id": "matplotlib__matplotlib-24619",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "0aac9f17b9373f66c709f436149568bda69595b3",
+  "topic": "integer colours for pcolorfast / quadmesh",
+  "upstream_created_at": "2022-12-04T17:55:35Z",
+  "dataset_row": 1048,
+  "problem_sha256": "856ae16526d148f736466581ed022362856d3e59f57b887b53e5fb094d1bcff1",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_axes.py::test_pcolormesh_rgba[png-3-1]",
+    "lib/matplotlib/tests/test_axes.py::test_pcolormesh_rgba[png-4-0.5]",
+    "lib/matplotlib/tests/test_collections.py::test_quadmesh_set_array_validation",
+    "lib/matplotlib/tests/test_collections.py::test_array_wrong_dimensions"
+  ],
+  "passing_checks": 843
+}
