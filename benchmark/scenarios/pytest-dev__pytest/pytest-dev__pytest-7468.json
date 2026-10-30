@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-7468",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "678c1a0745f1cf175c442c719906a1f13e496910",
+  "topic": "If you provide a path with a subdirectory, which does not exist, it crashes with",
+  "upstream_created_at": "2020-07-08T23:11:32Z",
+  "dataset_row": 1444,
+  "problem_sha256": "1144917048171d0a6506650f6a8495f4d423d6247e9de2ab1bb6a8ec66d3c65c",
+  "regression_checks": [
+    "testing/logging/test_reporting.py::test_log_file_cli_subdirectories_are_successfully_created"
+  ],
+  "passing_checks": 42
+}
