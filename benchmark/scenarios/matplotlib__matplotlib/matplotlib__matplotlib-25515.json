@@ -1,0 +1,19 @@
+{
+  "id": "matplotlib__matplotlib-25515",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "3218d1f9d3242d29e7d789fd4d27bffcc7da64a4",
+  "topic": "Our plot directive makes 100-dpi figures for the webpage. These look pretty fuzzy on hiDPI screens, and we",
+  "upstream_created_at": "2023-03-20T18:39:07Z",
+  "dataset_row": 1084,
+  "problem_sha256": "e7218be60801190960f58d29ffe652d0c6a77d7b250aafeffbb81eec4cbe0600",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_sphinxext.py::test_tinypages",
+    "lib/matplotlib/tests/test_sphinxext.py::test_plot_html_show_source_link",
+    "lib/matplotlib/tests/test_sphinxext.py::test_show_source_link_true[0]",
+    "lib/matplotlib/tests/test_sphinxext.py::test_show_source_link_true[1]",
+    "lib/matplotlib/tests/test_sphinxext.py::test_show_source_link_false[0]",
+    "lib/matplotlib/tests/test_sphinxext.py::test_show_source_link_false[1]",
+    "lib/matplotlib/tests/test_sphinxext.py::test_srcset_version"
+  ],
+  "passing_checks": 0
+}
