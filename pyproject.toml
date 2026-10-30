@@ -4,15 +4,22 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agents-orchestrator"
-version = "0.1.0"
+version = "0.2.0"
 description = "OpenAI Agents SDK-based agent orchestration"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-  "openai-agents>=0.0.6",
-  "openai>=1.0.0",
+  "openai-agents>=0.23,<0.25",
+  "openai>=3,<4",
   "python-dotenv>=1.0.0",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"
 
 [tool.setuptools.packages.find]
 where = ["."]
