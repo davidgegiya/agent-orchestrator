@@ -1,0 +1,13 @@
+{
+  "id": "django__django-12469",
+  "repository": "django/django",
+  "base_commit": "8bebb8f126aae3334da78339ccc4ded0f35692df",
+  "topic": "Admin date_hierarchy filter by month displays an extra day at timezone boundary",
+  "upstream_created_at": "2020-02-18T14:18:28Z",
+  "dataset_row": 328,
+  "problem_sha256": "7a05c9811d5994a4aad478e3e3901f248a6c53029b796efddcb1a5689094d1f0",
+  "regression_checks": [
+    "test_date_hierarchy_local_date_differ_from_utc (admin_views.tests.AdminViewBasicTest)"
+  ],
+  "passing_checks": 297
+}
