@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-15599",
+  "repository": "sympy/sympy",
+  "base_commit": "5e17a90c19f7eecfa10c1ab872648ae7e2131323",
+  "topic": "diff --git a/sympy/core/mod.py b/sympy/core/mod.py",
+  "upstream_created_at": "2018-12-06T17:45:49Z",
+  "dataset_row": 2061,
+  "problem_sha256": "f25972112cabdc5749be5c94eda1fc9353bfe831ee937f1c53100697c3a067ba",
+  "regression_checks": [
+    "test_Mod"
+  ],
+  "passing_checks": 80
+}
