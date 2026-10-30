@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22871",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "a7b7260bf06c20d408215d95ce20a1a01c12e5b1",
+  "topic": "ConciseDateFormatter not showing year anywhere when plotting <12 months",
+  "upstream_created_at": "2022-04-21T13:10:50Z",
+  "dataset_row": 994,
+  "problem_sha256": "f867be5c48985f8f531d6d9d0c6ded814ddae71b4cc436449b5ad9b82f78631f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_dates.py::test_offset_changes"
+  ],
+  "passing_checks": 88
+}
