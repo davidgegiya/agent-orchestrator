@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13618",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "13981bdce97ab2dd49b6b8707f3f27b5c148b9c0",
+  "topic": "Allow setting of initial hyperparameters of BayesianRidge",
+  "upstream_created_at": "2019-04-11T11:04:24Z",
+  "dataset_row": 1610,
+  "problem_sha256": "7dda23f7c54c67e7a819cc6d6374cf2d17e525e150a98af7c7918ab2db31f612",
+  "regression_checks": [
+    "sklearn/linear_model/tests/test_bayes.py::test_bayesian_initial_params"
+  ],
+  "passing_checks": 11
+}
