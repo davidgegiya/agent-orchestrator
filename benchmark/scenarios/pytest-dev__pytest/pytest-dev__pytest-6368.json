@@ -1,0 +1,17 @@
+{
+  "id": "pytest-dev__pytest-6368",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "197c99634551401d7e39be04fdae53350c9cf198",
+  "topic": "Module re-write doesn't work with non dist-info based installations",
+  "upstream_created_at": "2019-12-25T11:47:59Z",
+  "dataset_row": 1424,
+  "problem_sha256": "898ecf6bffa5a379acb46d43ae87fcb4f994cc9c1a46d564afb030b8cf4d7d6e",
+  "regression_checks": [
+    "testing/test_config.py::TestConfigAPI::test_iter_rewritable_modules[names1-expected1]",
+    "testing/test_config.py::TestConfigAPI::test_iter_rewritable_modules[names5-expected5]",
+    "testing/test_config.py::TestConfigAPI::test_iter_rewritable_modules[names6-expected6]",
+    "testing/test_config.py::TestConfigAPI::test_iter_rewritable_modules[names7-expected7]",
+    "testing/test_config.py::TestConfigAPI::test_iter_rewritable_modules[names8-expected8]"
+  ],
+  "passing_checks": 114
+}
