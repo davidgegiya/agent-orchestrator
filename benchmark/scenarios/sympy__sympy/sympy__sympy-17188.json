@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-17188",
+  "repository": "sympy/sympy",
+  "base_commit": "8e6095743973c20a7ad95b50f61e87d0d376494a",
+  "topic": "Piecewise simplification (to avoid doit growth)",
+  "upstream_created_at": "2019-07-13T17:53:25Z",
+  "dataset_row": 2119,
+  "problem_sha256": "837b62e066173c421e97271f31a8caa74a24e77b8e3a823ea4091dac6bc32b0f",
+  "regression_checks": [
+    "test_doit"
+  ],
+  "passing_checks": 48
+}
