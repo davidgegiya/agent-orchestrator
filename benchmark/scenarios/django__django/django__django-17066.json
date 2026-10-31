@@ -1,0 +1,15 @@
+{
+  "id": "django__django-17066",
+  "repository": "django/django",
+  "base_commit": "4afaeb14c293725d7b2530788083fce1c120ff65",
+  "topic": "Migration serializer for sets results in non-deterministic order",
+  "upstream_created_at": "2023-07-11T17:50:10Z",
+  "dataset_row": 929,
+  "problem_sha256": "fc0d7b3e2553fc7d68f49996d1964a4b59269359d2b747349fee435d6792bd77",
+  "regression_checks": [
+    "test_serialize_frozensets (migrations.test_writer.WriterTests.test_serialize_frozensets)",
+    "test_serialize_set (migrations.test_writer.WriterTests.test_serialize_set)",
+    "test_sorted_dependencies (migrations.test_writer.WriterTests.test_sorted_dependencies)"
+  ],
+  "passing_checks": 50
+}
