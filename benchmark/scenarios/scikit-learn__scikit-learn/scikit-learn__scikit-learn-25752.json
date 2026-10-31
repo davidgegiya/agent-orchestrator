@@ -1,0 +1,16 @@
+{
+  "id": "scikit-learn__scikit-learn-25752",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "b397b8f2d952a26344cc062ff912c663f4afa6d5",
+  "topic": "KMeans initialization does not use sample weights",
+  "upstream_created_at": "2023-03-03T09:07:31Z",
+  "dataset_row": 1699,
+  "problem_sha256": "e5319ea34bc8a00ae2f3fba2430a7a7fb42c18ad3d129c99615a54c4533c5066",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_k_means.py::test_sample_weight_init[42-k-means++]",
+    "sklearn/cluster/tests/test_k_means.py::test_sample_weight_init[42-random]",
+    "sklearn/cluster/tests/test_k_means.py::test_sample_weight_zero[42-k-means++]",
+    "sklearn/cluster/tests/test_k_means.py::test_sample_weight_zero[42-random]"
+  ],
+  "passing_checks": 229
+}
