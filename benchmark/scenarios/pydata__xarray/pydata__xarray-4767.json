@@ -1,0 +1,16 @@
+{
+  "id": "pydata__xarray-4767",
+  "repository": "pydata/xarray",
+  "base_commit": "7298df0c05168896a9813249b54a2d11f35cfa8f",
+  "topic": "DataArray transpose inconsistent with Dataset Ellipsis usage",
+  "upstream_created_at": "2021-01-05T17:49:05Z",
+  "dataset_row": 1253,
+  "problem_sha256": "8f12d91a2b88e05dbfb6e5bda1e174af9b9928a76053210b5e33448c6a6bab25",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_isel",
+    "xarray/tests/test_dataarray.py::TestDataArray::test_transpose",
+    "xarray/tests/test_dataset.py::TestDataset::test_isel",
+    "xarray/tests/test_variable.py::TestVariable::test_isel"
+  ],
+  "passing_checks": 2144
+}
