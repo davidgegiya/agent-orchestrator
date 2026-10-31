@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-14450",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "68044b061d7abc0c16f632890939438033306161",
+  "topic": "PLS reports \"array must not contain nan\" if a feature is constant",
+  "upstream_created_at": "2019-07-23T19:31:07Z",
+  "dataset_row": 1639,
+  "problem_sha256": "0ff4632879432212ca5913570518a5d7e07ca7878c237b2c9cee51db57a54f77",
+  "regression_checks": [
+    "sklearn/cross_decomposition/tests/test_pls.py::test_pls"
+  ],
+  "passing_checks": 7
+}
