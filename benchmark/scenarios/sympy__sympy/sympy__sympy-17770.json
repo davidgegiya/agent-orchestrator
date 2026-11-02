@@ -1,0 +1,15 @@
+{
+  "id": "sympy__sympy-17770",
+  "repository": "sympy/sympy",
+  "base_commit": "22ee6c048379d4d4d924dc497a2028a45d0d8b46",
+  "topic": "Corrected functions in subclasses of `HyperbolicFunction`",
+  "upstream_created_at": "2019-10-21T18:38:27Z",
+  "dataset_row": 2137,
+  "problem_sha256": "43c65c4bc31363b77d8b16e0e95eaca65d256e0867ae3e828be0eb3c2e947a63",
+  "regression_checks": [
+    "test_sinh",
+    "test_cosh",
+    "test_tanh"
+  ],
+  "passing_checks": 55
+}
