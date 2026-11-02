@@ -1,0 +1,16 @@
+{
+  "id": "astropy__astropy-8251",
+  "repository": "astropy/astropy",
+  "base_commit": "2002221360f4ad75f6b275bbffe4fa68412299b3",
+  "topic": "FITS-standard unit parsing fails on some types of exponents",
+  "upstream_created_at": "2018-12-07T20:21:59Z",
+  "dataset_row": 86,
+  "problem_sha256": "9101def01393461523329189529bdebd7ee1baf9683576628e983c3eebcdeeae",
+  "regression_checks": [
+    "astropy/units/tests/test_format.py::test_fits_scale_factor[10**2-100-10**2]",
+    "astropy/units/tests/test_format.py::test_fits_scale_factor[10**(2)-100-10**2]",
+    "astropy/units/tests/test_format.py::test_fits_scale_factor[10^2-100-10**2]",
+    "astropy/units/tests/test_format.py::test_fits_scale_factor[10^(2)-100-10**2]"
+  ],
+  "passing_checks": 642
+}
