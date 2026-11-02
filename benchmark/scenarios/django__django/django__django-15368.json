@@ -1,0 +1,13 @@
+{
+  "id": "django__django-15368",
+  "repository": "django/django",
+  "base_commit": "e972620ada4f9ed7bc57f28e133e85c85b0a7b20",
+  "topic": "bulk_update() does not work with plain F('...') expressions",
+  "upstream_created_at": "2022-01-27T13:44:35Z",
+  "dataset_row": 722,
+  "problem_sha256": "994611e49b76ddfd8e26a197e715e542921049da3f852dc6cce18ddf92f85c6c",
+  "regression_checks": [
+    "test_f_expression (queries.test_bulk_update.BulkUpdateTests)"
+  ],
+  "passing_checks": 29
+}
