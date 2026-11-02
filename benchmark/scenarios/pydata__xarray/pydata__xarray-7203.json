@@ -1,0 +1,13 @@
+{
+  "id": "pydata__xarray-7203",
+  "repository": "pydata/xarray",
+  "base_commit": "9951491e0b849834c369de522de2df8172a2e298",
+  "topic": "Avoid loading any data for reprs",
+  "upstream_created_at": "2022-10-24T05:12:40Z",
+  "dataset_row": 1308,
+  "problem_sha256": "9fa68c5bc8cc6062ed8c8b7c0b5c924512d5cba401039d5a0a3f052065dbf491",
+  "regression_checks": [
+    "xarray/tests/test_formatting.py::test_lazy_array_wont_compute"
+  ],
+  "passing_checks": 31
+}
