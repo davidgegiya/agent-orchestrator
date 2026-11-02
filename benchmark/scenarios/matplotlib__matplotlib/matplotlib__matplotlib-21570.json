@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-21570",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f0632c0fc7339f68e992ed63ae4cfac76cd41aad",
+  "topic": "`ValueError` upon deepcopy of a `Figure` object",
+  "upstream_created_at": "2021-11-09T06:20:19Z",
+  "dataset_row": 985,
+  "problem_sha256": "af4faea0a2ce52c47eedc380a5b05db7524cdfe1b4dcfac8164a295eba8c1ced",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_spines.py::test_spine_class"
+  ],
+  "passing_checks": 8
+}
