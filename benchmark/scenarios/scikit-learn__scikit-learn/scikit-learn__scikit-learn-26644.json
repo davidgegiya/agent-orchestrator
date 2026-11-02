@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-26644",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "33a1f1690e7a7007633f59b6bee32017f4229864",
+  "topic": "partial_dependence should respect sample weights",
+  "upstream_created_at": "2023-06-21T04:24:21Z",
+  "dataset_row": 1712,
+  "problem_sha256": "a5a1611e49812cd79877b1caa9c84543b4db6562cd223e9372b1c6ade6270f83",
+  "regression_checks": [
+    "sklearn/inspection/_plot/tests/test_plot_partial_dependence.py::test_partial_dependence_display_with_constant_sample_weight"
+  ],
+  "passing_checks": 102
+}
