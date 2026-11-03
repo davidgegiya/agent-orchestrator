@@ -1,0 +1,14 @@
+{
+  "id": "pytest-dev__pytest-5692",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "29e336bd9bf87eaef8e2683196ee1975f1ad4088",
+  "topic": "Hostname and timestamp properties in generated JUnit XML reports",
+  "upstream_created_at": "2019-08-03T14:15:04Z",
+  "dataset_row": 1411,
+  "problem_sha256": "0e5fd34377f968c7ed6cc4f57e322b31df5823d0cf003d0e17a6ddebae1ebd46",
+  "regression_checks": [
+    "testing/test_junitxml.py::TestPython::test_hostname_in_xml",
+    "testing/test_junitxml.py::TestPython::test_timestamp_in_xml"
+  ],
+  "passing_checks": 68
+}
