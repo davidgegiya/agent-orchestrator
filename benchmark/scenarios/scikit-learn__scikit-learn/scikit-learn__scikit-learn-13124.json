@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13124",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "9f0b959a8c9195d1b6e203f08b698e052b426ca9",
+  "topic": "sklearn.model_selection.StratifiedKFold either shuffling is wrong or documentation is misleading",
+  "upstream_created_at": "2019-02-09T02:15:23Z",
+  "dataset_row": 1578,
+  "problem_sha256": "74b53b3536f81bdad52c039a8b3ad3b1493d4044a6c1bb511f25eebdabe593e0",
+  "regression_checks": [
+    "sklearn/model_selection/tests/test_split.py::test_shuffle_stratifiedkfold"
+  ],
+  "passing_checks": 60
+}
