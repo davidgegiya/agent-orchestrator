@@ -1,0 +1,13 @@
+{
+  "id": "sympy__sympy-18605",
+  "repository": "sympy/sympy",
+  "base_commit": "c0a02c3c928dbbc42c008ed460bb662fc602f9d4",
+  "topic": "Idx object can accepts non-integer bounds",
+  "upstream_created_at": "2020-02-08T18:04:45Z",
+  "dataset_row": 2165,
+  "problem_sha256": "06f6ea0736fc7febf5342972be9be0387d50a76e3032de0f16c3dec83b815e80",
+  "regression_checks": [
+    "test_issue_18604"
+  ],
+  "passing_checks": 27
+}
