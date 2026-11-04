@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-22815",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "19992285cb2bff300ac1c1a688dae2cde1999b81",
+  "topic": "make_norm_from_scale should create picklable classes even when used in-line",
+  "upstream_created_at": "2022-04-09T21:14:55Z",
+  "dataset_row": 991,
+  "problem_sha256": "e21992f4a32b9f2efdb4fbf2dbafdf0c750234b129a9d8661867db2eadab6101",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_pickle.py::test_standard_norm"
+  ],
+  "passing_checks": 180
+}
