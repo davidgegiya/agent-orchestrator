@@ -1,0 +1,13 @@
+{
+  "id": "astropy__astropy-13838",
+  "repository": "astropy/astropy",
+  "base_commit": "a6c712375ed38d422812e013566a34f928677acd",
+  "topic": "Printing tables doesn't work correctly with 0-length array cells",
+  "upstream_created_at": "2022-10-15T11:03:12Z",
+  "dataset_row": 39,
+  "problem_sha256": "50ddd1ec24f98569362ece9bd43e29d37a24b11bbd19a9c8f6f7259287dfc98b",
+  "regression_checks": [
+    "astropy/table/tests/test_pprint.py::test_multidims_with_zero_dim"
+  ],
+  "passing_checks": 83
+}
