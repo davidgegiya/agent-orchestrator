@@ -1,0 +1,13 @@
+{
+  "id": "pytest-dev__pytest-11143",
+  "repository": "pytest-dev/pytest",
+  "base_commit": "6995257cf470d2143ad1683824962de4071c0eb7",
+  "topic": "Rewrite fails when first expression of file is a number and mistaken as docstring",
+  "upstream_created_at": "2023-06-26T06:44:43Z",
+  "dataset_row": 1390,
+  "problem_sha256": "ff8b5421c1321d3d51236c63fda8407c9f0a5e5cc35f5a6a45f935c170a6d301",
+  "regression_checks": [
+    "testing/test_assertrewrite.py::TestIssue11140::test_constant_not_picked_as_module_docstring"
+  ],
+  "passing_checks": 114
+}
