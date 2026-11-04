@@ -1,0 +1,17 @@
+{
+  "id": "scikit-learn__scikit-learn-11635",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "be6bf6902c199b27f4f001ce3597e521c3a0d0aa",
+  "topic": "Is there any reason for SelectFromModel.transform to use force_all_finite=True in check_array?",
+  "upstream_created_at": "2018-07-19T16:56:01Z",
+  "dataset_row": 1545,
+  "problem_sha256": "134301c94458992f496274d87637d0a904bb3f8a1150fd7a98cc42e61b1c9651",
+  "regression_checks": [
+    "sklearn/feature_selection/tests/test_from_model.py::test_transform_accepts_nan_inf",
+    "sklearn/feature_selection/tests/test_from_model.py::test_allow_nan_tag_comes_from_estimator",
+    "sklearn/feature_selection/tests/test_rfe.py::test_rfe_allow_nan_inf_in_x[None]",
+    "sklearn/feature_selection/tests/test_rfe.py::test_rfe_allow_nan_inf_in_x[5]",
+    "sklearn/feature_selection/tests/test_variance_threshold.py::test_variance_nan"
+  ],
+  "passing_checks": 37
+}
