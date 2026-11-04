@@ -1,0 +1,13 @@
+{
+  "id": "scikit-learn__scikit-learn-13536",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "c863ed3d57e3b5ceeb4e7e8001c96aad7110c605",
+  "topic": "improve error message when passing sample_weight to Pipeline",
+  "upstream_created_at": "2019-03-28T08:05:48Z",
+  "dataset_row": 1606,
+  "problem_sha256": "6a8588fb2c05f407a177b36e4b812327c495b0469c86705fc2191ae35ea748ae",
+  "regression_checks": [
+    "sklearn/tests/test_pipeline.py::test_pipeline_param_error"
+  ],
+  "passing_checks": 41
+}
