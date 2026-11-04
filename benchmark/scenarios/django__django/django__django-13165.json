@@ -1,0 +1,13 @@
+{
+  "id": "django__django-13165",
+  "repository": "django/django",
+  "base_commit": "779e615e362108862f1681f965ee9e4f1d0ae6d2",
+  "topic": "ExpressionWrapper loses output_field for combined expression without an output_field",
+  "upstream_created_at": "2020-07-08T11:02:29Z",
+  "dataset_row": 413,
+  "problem_sha256": "fe17335661e37ff4c11484cac7f19dbe855cb559654aee13a650348bb971c1a6",
+  "regression_checks": [
+    "test_combined_f_expression_annotation_with_aggregation (annotations.tests.NonAggregateAnnotationTestCase)"
+  ],
+  "passing_checks": 40
+}
