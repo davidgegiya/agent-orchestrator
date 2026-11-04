@@ -1,6 +1,7 @@
 from hashlib import sha256
 import json
 from pathlib import Path
+from shlex import join
 import subprocess
 import sys
 from types import SimpleNamespace
@@ -96,7 +97,6 @@ def test_resume_rechecks_saved_patch_without_rerunning_writer(workspace, monkeyp
         return SimpleNamespace(final_output="Implement the change.")
 
     monkeypatch.setattr(Runner, "run_sync", fake_run)
-    from shlex import join
     args = ["--workspace", str(product), "--task", str(task), "--check", join([sys.executable, str(check_script)])]
     assert main.main(args) == 1
     source = next(reports.iterdir())

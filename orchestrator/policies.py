@@ -4,7 +4,7 @@ import os
 from dataclasses import dataclass
 from typing import List, Literal
 
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel, ConfigDict, ValidationError
 
 MAX_ROUNDS = 8
 
@@ -123,6 +123,8 @@ def normalize_review(text: str) -> str:
 
 
 class ReviewerOutput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     verdict: Literal["PASS", "FAIL"]
     action: Literal["CONTINUE", "SKIP"]
     fixes: list[str]
