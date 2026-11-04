@@ -1,0 +1,13 @@
+{
+  "id": "sphinx-doc__sphinx-7975",
+  "repository": "sphinx-doc/sphinx",
+  "base_commit": "4ec6cbe341fd84468c448e20082c778043bbea4b",
+  "topic": "Two sections called Symbols in index",
+  "upstream_created_at": "2020-07-18T06:39:32Z",
+  "dataset_row": 1798,
+  "problem_sha256": "c02dec6ebdabed2e17c4e70aa80f5ad878ff928441ebbdd044c0d09eaf3187b1",
+  "regression_checks": [
+    "tests/test_environment_indexentries.py::test_create_single_index"
+  ],
+  "passing_checks": 7
+}
