@@ -1,0 +1,14 @@
+{
+  "id": "sympy__sympy-17239",
+  "repository": "sympy/sympy",
+  "base_commit": "8a375578647590e16aff119a2363a12ff171306c",
+  "topic": "from sympy import *",
+  "upstream_created_at": "2019-07-21T14:32:26Z",
+  "dataset_row": 2122,
+  "problem_sha256": "101b34af80b00c6c46bfe17c1da3fa667972c8f2306d7c7b8144cb6cc0567693",
+  "regression_checks": [
+    "test_glsl_code_Relational",
+    "test_Relational"
+  ],
+  "passing_checks": 115
+}
