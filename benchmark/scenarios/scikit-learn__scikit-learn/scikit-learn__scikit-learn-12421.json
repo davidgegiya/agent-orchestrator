@@ -1,0 +1,14 @@
+{
+  "id": "scikit-learn__scikit-learn-12421",
+  "repository": "scikit-learn/scikit-learn",
+  "base_commit": "013d295a13721ffade7ac321437c6d4458a64c7d",
+  "topic": "OPTICS: self.core_distances_ inconsistent with documentation&R implementation",
+  "upstream_created_at": "2018-10-19T09:32:51Z",
+  "dataset_row": 1547,
+  "problem_sha256": "4a40d2b3eeeab797c4ee50426c15fde7d17a1efc109b33b9f36774f1a7250c93",
+  "regression_checks": [
+    "sklearn/cluster/tests/test_optics.py::test_processing_order",
+    "sklearn/cluster/tests/test_optics.py::test_compare_to_ELKI"
+  ],
+  "passing_checks": 24
+}
