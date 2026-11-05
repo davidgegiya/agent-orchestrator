@@ -1,0 +1,14 @@
+{
+  "id": "pydata__xarray-7101",
+  "repository": "pydata/xarray",
+  "base_commit": "e678a1d7884a3c24dba22d41b2eef5d7fe5258e7",
+  "topic": "Broken state when using assign_coords with multiindex",
+  "upstream_created_at": "2022-09-28T16:21:48Z",
+  "dataset_row": 1301,
+  "problem_sha256": "52894f0bde7a0a3f5ad96f5bd55fa2c2aff3932df2086129f71370046bb84dd0",
+  "regression_checks": [
+    "xarray/tests/test_dataarray.py::TestDataArray::test_assign_coords_existing_multiindex",
+    "xarray/tests/test_dataset.py::TestDataset::test_assign_coords_existing_multiindex"
+  ],
+  "passing_checks": 824
+}
