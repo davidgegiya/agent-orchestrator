@@ -23,18 +23,21 @@ cp .env.example .env
 
 ## Задача в отдельном checkout
 
-Сделай чистый worktree целевого репозитория и подготовь отдельный Markdown
-с задачей, ограничениями и критериями приёмки.
+Подготовь Markdown с задачей, ограничениями и критериями приёмки.
+`--worktree` создаёт отдельный detached checkout из HEAD исходного репозитория.
+Для уже подготовленного чистого checkout передай его как `--workspace`.
 
 ```sh
-git -C /path/to/product worktree add --detach /path/to/task-worktree HEAD
-python -m orchestrator.main --workspace /path/to/task-worktree --task /path/to/task.md --check 'python -m pytest -q'
+agent-orchestrator --workspace /path/to/product --worktree /path/to/task-worktree --task /path/to/task.md --check 'python -m pytest -q'
 ```
+
+Чтобы запускать установленную команду вне клона оркестратора, укажи
+`--project-dir`. Это папка с `.env`, контекстом `project/` и отчётами.
 
 Каждый `--check` задаёт отдельную команду. По умолчанию оркестратор запускает
 `python -m pytest -q` своим интерпретатором. Команды запускаются локально
-из целевого checkout без shell. Используй их с доверенным кодом и готовым
-окружением. SDK-исполнитель получает файловые инструменты с ограничением по
+из целевого checkout без shell. Лимит задаёт `--check-timeout` в секундах.
+Используй проверки с доверенным кодом и готовым окружением. SDK-исполнитель получает файловые инструменты с ограничением по
 каталогу.
 
 Для Codex добавь `--implementer codex` к команде. Нужен установленный и
@@ -59,6 +62,22 @@ python -m orchestrator.main --workspace /path/to/task-worktree --task /path/to/t
 Для внешнего checkout Tech Writer включается через `--write-project-notes`.
 Контекст и инструкции для ролей находятся в `project/` и
 `orchestrator/prompts/`.
+
+## Продолжение после сбоя
+
+После изменения файлов оркестратор сохраняет `review-checkpoint.json`. Если
+прогон прервался на проверках или ревью, передай папку прогона и те же команды
+проверки. Используй путь к созданному worktree в качестве `--workspace`.
+
+```sh
+agent-orchestrator --workspace /path/to/task-worktree --task /path/to/task.md --check 'python -m pytest -q' --resume /path/to/run-directory
+python -m orchestrator.inspect_run /path/to/run-directory
+```
+
+При возобновлении оркестратор сверяет базовый коммит, патч, контекст задачи и
+команды. При совпадении он заново запускает проверки и ревью сохранённого
+патча. Результаты появляются в новой папке. Команда `inspect_run` работает
+офлайн и показывает исход проверок, вердикт и совпадение хеша патча.
 
 ## Локальные проверки
 
