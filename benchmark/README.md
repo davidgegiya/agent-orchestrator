@@ -1,6 +1,6 @@
 # Репозиторные сценарии
 
-Каталог содержит 897 задач из 12 открытых проектов. Каждый JSON фиксирует
+Каталог содержит 1296 задач из 12 открытых проектов. Каждый JSON фиксирует
 репозиторий, исходный коммит, строку в источнике, хеш постановки и регрессионные
 проверки. Исправления, патчи тестов и подсказки из датасета хранятся у источника.
 Отбор воспроизводим и ограничен задачами с различимыми заголовками и конечным
@@ -15,6 +15,7 @@ python -m pip install -e '.[dev,benchmark]'
 agent-orchestrator-bench list --summary
 agent-orchestrator-bench list --repo pallets/flask
 agent-orchestrator-bench list --repo django/django --match migrations --limit 10
+agent-orchestrator-bench list --repo django/django --match migrations --json > scenarios.json
 curl -fL "$(agent-orchestrator-bench source)" -o swe-bench-test.parquet
 agent-orchestrator-bench verify swe-bench-test.parquet
 ```
@@ -54,5 +55,5 @@ agent-orchestrator-bench compare outcomes.jsonl sdk codex
 Повторно собрать каталог можно в пустую папку.
 
 ```sh
-PYTHONPATH=. python tools/import_swe_bench.py swe-bench-test.parquet /tmp/rebuilt-scenarios --count 897
+PYTHONPATH=. python tools/import_swe_bench.py swe-bench-test.parquet /tmp/rebuilt-scenarios --count 1296
 ```
