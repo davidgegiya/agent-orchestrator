@@ -1,0 +1,13 @@
+{
+  "id": "matplotlib__matplotlib-25126",
+  "repository": "matplotlib/matplotlib",
+  "base_commit": "f3938be9f3be3446065e184b810ee0a8bcb54901",
+  "topic": "ax.plot(x,y) disappears after changing y_scale",
+  "upstream_created_at": "2023-02-01T22:10:54Z",
+  "dataset_row": 1065,
+  "problem_sha256": "1c26ab4401b59d5405fa79c00c9c6b9da46505c994fc89a0b03b357b0a43df7f",
+  "regression_checks": [
+    "lib/matplotlib/tests/test_transforms.py::test_scale_swapping[png]"
+  ],
+  "passing_checks": 44
+}
