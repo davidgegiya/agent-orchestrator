@@ -1,0 +1,14 @@
+{
+  "id": "django__django-12957",
+  "repository": "django/django",
+  "base_commit": "a7b4a04d6c54679cb0fbc8679367848bd7dae718",
+  "topic": "Geodjango js template should use `|safe` for float values to avoid DECIMAL_SEPARATOR ruin the js syntax",
+  "upstream_created_at": "2020-05-22T20:40:19Z",
+  "dataset_row": 386,
+  "problem_sha256": "91b685ddc68711d477767651d65c1157c6b93b4180a769e299006691005eb1c9",
+  "regression_checks": [
+    "A string representation is returned for unlocalized numbers.",
+    "test_sanitize_separators (i18n.tests.FormattingTests)"
+  ],
+  "passing_checks": 89
+}
