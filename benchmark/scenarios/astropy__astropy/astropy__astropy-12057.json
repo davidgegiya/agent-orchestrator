@@ -1,0 +1,20 @@
+{
+  "id": "astropy__astropy-12057",
+  "repository": "astropy/astropy",
+  "base_commit": "b6769c18c0881b6d290e543e9334c25043018b3f",
+  "topic": "Add helpers to convert between different types of uncertainties",
+  "upstream_created_at": "2021-08-14T10:06:53Z",
+  "dataset_row": 1,
+  "problem_sha256": "333d34625a6d4f24ef7a3bf9ad7d89b6ab33d07f660bc95dc4a04d93d5d9a63a",
+  "regression_checks": [
+    "astropy/nddata/tests/test_nduncertainty.py::test_self_conversion_via_variance_supported[StdDevUncertainty]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_self_conversion_via_variance_supported[VarianceUncertainty]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_self_conversion_via_variance_supported[InverseVariance]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_conversion_to_from_variance_supported[StdDevUncertainty-<lambda>]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_conversion_to_from_variance_supported[VarianceUncertainty-<lambda>]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_conversion_to_from_variance_supported[InverseVariance-<lambda>]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_self_conversion_via_variance_not_supported[FakeUncertainty]",
+    "astropy/nddata/tests/test_nduncertainty.py::test_self_conversion_via_variance_not_supported[UnknownUncertainty]"
+  ],
+  "passing_checks": 75
+}
